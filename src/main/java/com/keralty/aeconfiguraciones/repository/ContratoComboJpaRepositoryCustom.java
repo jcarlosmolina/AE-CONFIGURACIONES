@@ -1,0 +1,21 @@
+package com.keralty.aeconfiguraciones.repository;
+
+import com.keralty.aeconfiguraciones.persistence.ContratoCombo;
+import com.keralty.aeconfiguraciones.sqlutils.SQLParam;
+import com.keralty.aeconfiguraciones.sqlutils.SQLSelect;
+import java.util.List;
+
+public interface ContratoComboJpaRepositoryCustom {
+
+    List<ContratoCombo> solveQuery(SQLSelect query);
+    
+    List<ContratoCombo> solveQuery(SQLSelect query, int pageSize, int pageNumber);
+    
+    int solveCountQuery(SQLSelect query);
+
+    public List<ContratoCombo> executeQuery(String query);
+
+    public List<ContratoCombo> executeQuery(String query, List<SQLParam> params);
+
+    void refreshEntity(Object object);
+}
