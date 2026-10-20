@@ -216,7 +216,7 @@ public class Pais extends AbstractAppEntity {
     * @param direccionesC The instance to add to the <code>DireccionesC</code> role.
     */
     public void add2DireccionesC(DireccionC direccionesC) {
-        this.getDireccionesC().add(direccionesC);
+        this.direccionesC.add(direccionesC);
     }
     /**
      * Sets instances of <code>DireccionC</code> related through the <code>DireccionesC</code> role.
@@ -252,7 +252,7 @@ public class Pais extends AbstractAppEntity {
     * @param direcciones The instance to add to the <code>Direcciones</code> role.
     */
     public void add2Direcciones(Direccion direcciones) {
-        this.getDirecciones().add(direcciones);
+        this.direcciones.add(direcciones);
     }
     /**
      * Sets instances of <code>Direccion</code> related through the <code>Direcciones</code> role.
@@ -288,7 +288,7 @@ public class Pais extends AbstractAppEntity {
     * @param dirSucursalC The instance to add to the <code>DirSucursalC</code> role.
     */
     public void add2DirSucursalC(DirSucursalC dirSucursalC) {
-        this.getDirSucursalC().add(dirSucursalC);
+        this.dirSucursalC.add(dirSucursalC);
     }
     /**
      * Sets instances of <code>DirSucursalC</code> related through the <code>DirSucursalC</code> role.
@@ -324,7 +324,7 @@ public class Pais extends AbstractAppEntity {
     * @param novedadCT The instance to add to the <code>NovedadCT</code> role.
     */
     public void add2NovedadCT(NovedadCT novedadCT) {
-        this.getNovedadCT().add(novedadCT);
+        this.novedadCT.add(novedadCT);
     }
     /**
      * Sets instances of <code>NovedadCT</code> related through the <code>NovedadCT</code> role.
@@ -360,7 +360,7 @@ public class Pais extends AbstractAppEntity {
     * @param novedadesMD The instance to add to the <code>NovedadesMD</code> role.
     */
     public void add2NovedadesMD(NovedadMD novedadesMD) {
-        this.getNovedadesMD().add(novedadesMD);
+        this.novedadesMD.add(novedadesMD);
     }
     /**
      * Sets instances of <code>NovedadMD</code> related through the <code>NovedadesMD</code> role.

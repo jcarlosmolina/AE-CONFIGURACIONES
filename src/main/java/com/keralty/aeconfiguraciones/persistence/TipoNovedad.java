@@ -324,7 +324,7 @@ public class TipoNovedad extends AbstractAppEntity {
     * @param novedades The instance to add to the <code>Novedades</code> role.
     */
     public void add2Novedades(Novedad novedades) {
-        this.getNovedades().add(novedades);
+        this.novedades.add(novedades);
     }
     /**
      * Sets instances of <code>Novedad</code> related through the <code>Novedades</code> role.

@@ -427,7 +427,7 @@ public class DireccionC extends AbstractAppEntity {
     * @param telefonosC The instance to add to the <code>TelefonosC</code> role.
     */
     public void add2TelefonosC(TelefonoC telefonosC) {
-        this.getTelefonosC().add(telefonosC);
+        this.telefonosC.add(telefonosC);
     }
     /**
      * Sets instances of <code>TelefonoC</code> related through the <code>TelefonosC</code> role.

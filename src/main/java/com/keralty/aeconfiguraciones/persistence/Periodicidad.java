@@ -335,7 +335,7 @@ public class Periodicidad extends AbstractAppEntity {
     * @param dominios The instance to add to the <code>Dominios</code> role.
     */
     public void add2Dominios(Dominio dominios) {
-        this.getDominios().add(dominios);
+        this.dominios.add(dominios);
     }
     /**
      * Sets instances of <code>Dominio</code> related through the <code>Dominios</code> role.
@@ -371,7 +371,7 @@ public class Periodicidad extends AbstractAppEntity {
     * @param solicitudes The instance to add to the <code>Solicitudes</code> role.
     */
     public void add2Solicitudes(Solicitud solicitudes) {
-        this.getSolicitudes().add(solicitudes);
+        this.solicitudes.add(solicitudes);
     }
     /**
      * Sets instances of <code>Solicitud</code> related through the <code>Solicitudes</code> role.
@@ -407,7 +407,7 @@ public class Periodicidad extends AbstractAppEntity {
     * @param anexosMat The instance to add to the <code>AnexosMat</code> role.
     */
     public void add2AnexosMat(AnexoMat anexosMat) {
-        this.getAnexosMat().add(anexosMat);
+        this.anexosMat.add(anexosMat);
     }
     /**
      * Sets instances of <code>AnexoMat</code> related through the <code>AnexosMat</code> role.
@@ -443,7 +443,7 @@ public class Periodicidad extends AbstractAppEntity {
     * @param anexosNeo The instance to add to the <code>AnexosNeo</code> role.
     */
     public void add2AnexosNeo(AnexoNeo anexosNeo) {
-        this.getAnexosNeo().add(anexosNeo);
+        this.anexosNeo.add(anexosNeo);
     }
     /**
      * Sets instances of <code>AnexoNeo</code> related through the <code>AnexosNeo</code> role.
@@ -479,7 +479,7 @@ public class Periodicidad extends AbstractAppEntity {
     * @param contratosC The instance to add to the <code>ContratosC</code> role.
     */
     public void add2ContratosC(ContratoC contratosC) {
-        this.getContratosC().add(contratosC);
+        this.contratosC.add(contratosC);
     }
     /**
      * Sets instances of <code>ContratoC</code> related through the <code>ContratosC</code> role.
@@ -515,7 +515,7 @@ public class Periodicidad extends AbstractAppEntity {
     * @param anexosC The instance to add to the <code>AnexosC</code> role.
     */
     public void add2AnexosC(AnexoC anexosC) {
-        this.getAnexosC().add(anexosC);
+        this.anexosC.add(anexosC);
     }
     /**
      * Sets instances of <code>AnexoC</code> related through the <code>AnexosC</code> role.
@@ -551,7 +551,7 @@ public class Periodicidad extends AbstractAppEntity {
     * @param solicitudesNovedad The instance to add to the <code>SolicitudesNovedad</code> role.
     */
     public void add2SolicitudesNovedad(SolicitudNovedad solicitudesNovedad) {
-        this.getSolicitudesNovedad().add(solicitudesNovedad);
+        this.solicitudesNovedad.add(solicitudesNovedad);
     }
     /**
      * Sets instances of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedad</code> role.
@@ -587,7 +587,7 @@ public class Periodicidad extends AbstractAppEntity {
     * @param solicitudesNovedadNueva The instance to add to the <code>SolicitudesNovedadNueva</code> role.
     */
     public void add2SolicitudesNovedadNueva(SolicitudNovedad solicitudesNovedadNueva) {
-        this.getSolicitudesNovedadNueva().add(solicitudesNovedadNueva);
+        this.solicitudesNovedadNueva.add(solicitudesNovedadNueva);
     }
     /**
      * Sets instances of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedadNueva</code> role.

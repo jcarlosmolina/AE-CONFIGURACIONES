@@ -557,7 +557,7 @@ Nos guardamos en código de Tarifa enviado por el CORE, lo utilizaremos para loc
     * @param solicitudes The instance to add to the <code>Solicitudes</code> role.
     */
     public void add2Solicitudes(Solicitud solicitudes) {
-        this.getSolicitudes().add(solicitudes);
+        this.solicitudes.add(solicitudes);
     }
     /**
      * Sets instances of <code>Solicitud</code> related through the <code>Solicitudes</code> role.
@@ -593,7 +593,7 @@ Nos guardamos en código de Tarifa enviado por el CORE, lo utilizaremos para loc
     * @param contratosC The instance to add to the <code>ContratosC</code> role.
     */
     public void add2ContratosC(ContratoC contratosC) {
-        this.getContratosC().add(contratosC);
+        this.contratosC.add(contratosC);
     }
     /**
      * Sets instances of <code>ContratoC</code> related through the <code>ContratosC</code> role.
@@ -629,7 +629,7 @@ Nos guardamos en código de Tarifa enviado por el CORE, lo utilizaremos para loc
     * @param solicitudesNovedad The instance to add to the <code>SolicitudesNovedad</code> role.
     */
     public void add2SolicitudesNovedad(SolicitudNovedad solicitudesNovedad) {
-        this.getSolicitudesNovedad().add(solicitudesNovedad);
+        this.solicitudesNovedad.add(solicitudesNovedad);
     }
     /**
      * Sets instances of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedad</code> role.

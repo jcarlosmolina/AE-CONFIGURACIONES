@@ -173,7 +173,7 @@ public class MotivoExcepcionSolNov extends AbstractAppEntity {
     * @param solicitudes The instance to add to the <code>Solicitudes</code> role.
     */
     public void add2Solicitudes(SolicitudNovedad solicitudes) {
-        this.getSolicitudes().add(solicitudes);
+        this.solicitudes.add(solicitudes);
     }
     /**
      * Sets instances of <code>SolicitudNovedad</code> related through the <code>Solicitudes</code> role.

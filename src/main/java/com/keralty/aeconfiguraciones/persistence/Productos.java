@@ -561,7 +561,7 @@ public class Productos extends AbstractAppEntity {
     * @param planes The instance to add to the <code>Planes</code> role.
     */
     public void add2Planes(Planes planes) {
-        this.getPlanes().add(planes);
+        this.planes.add(planes);
     }
     /**
      * Sets instances of <code>Planes</code> related through the <code>Planes</code> role.
@@ -597,7 +597,7 @@ public class Productos extends AbstractAppEntity {
     * @param dominios The instance to add to the <code>Dominios</code> role.
     */
     public void add2Dominios(Dominio dominios) {
-        this.getDominios().add(dominios);
+        this.dominios.add(dominios);
     }
     /**
      * Sets instances of <code>Dominio</code> related through the <code>Dominios</code> role.
@@ -633,7 +633,7 @@ public class Productos extends AbstractAppEntity {
     * @param tarifas The instance to add to the <code>Tarifas</code> role.
     */
     public void add2Tarifas(Tarifa tarifas) {
-        this.getTarifas().add(tarifas);
+        this.tarifas.add(tarifas);
     }
     /**
      * Sets instances of <code>Tarifa</code> related through the <code>Tarifas</code> role.
@@ -669,7 +669,7 @@ public class Productos extends AbstractAppEntity {
     * @param gruposAsociados The instance to add to the <code>GruposAsociados</code> role.
     */
     public void add2GruposAsociados(GrupoAsociado gruposAsociados) {
-        this.getGruposAsociados().add(gruposAsociados);
+        this.gruposAsociados.add(gruposAsociados);
     }
     /**
      * Sets instances of <code>GrupoAsociado</code> related through the <code>GruposAsociados</code> role.
@@ -705,7 +705,7 @@ public class Productos extends AbstractAppEntity {
     * @param tiposIVA The instance to add to the <code>TiposIVA</code> role.
     */
     public void add2TiposIVA(TipoIVA tiposIVA) {
-        this.getTiposIVA().add(tiposIVA);
+        this.tiposIVA.add(tiposIVA);
     }
     /**
      * Sets instances of <code>TipoIVA</code> related through the <code>TiposIVA</code> role.
@@ -741,7 +741,7 @@ public class Productos extends AbstractAppEntity {
     * @param aESOLICITUDES The instance to add to the <code>AESOLICITUDES</code> role.
     */
     public void add2AESOLICITUDES(Aesolicitudes aESOLICITUDES) {
-        this.getAESOLICITUDES().add(aESOLICITUDES);
+        this.aESOLICITUDES.add(aESOLICITUDES);
     }
     /**
      * Sets instances of <code>Aesolicitudes</code> related through the <code>AESOLICITUDES</code> role.
@@ -777,7 +777,7 @@ public class Productos extends AbstractAppEntity {
     * @param proteccionDatosC The instance to add to the <code>ProteccionDatosC</code> role.
     */
     public void add2ProteccionDatosC(ProteccionDatosC proteccionDatosC) {
-        this.getProteccionDatosC().add(proteccionDatosC);
+        this.proteccionDatosC.add(proteccionDatosC);
     }
     /**
      * Sets instances of <code>ProteccionDatosC</code> related through the <code>ProteccionDatosC</code> role.
@@ -813,7 +813,7 @@ public class Productos extends AbstractAppEntity {
     * @param proteccionesDatos The instance to add to the <code>ProteccionesDatos</code> role.
     */
     public void add2ProteccionesDatos(ProteccionDatos proteccionesDatos) {
-        this.getProteccionesDatos().add(proteccionesDatos);
+        this.proteccionesDatos.add(proteccionesDatos);
     }
     /**
      * Sets instances of <code>ProteccionDatos</code> related through the <code>ProteccionesDatos</code> role.
@@ -849,7 +849,7 @@ public class Productos extends AbstractAppEntity {
     * @param contratosC The instance to add to the <code>ContratosC</code> role.
     */
     public void add2ContratosC(ContratoC contratosC) {
-        this.getContratosC().add(contratosC);
+        this.contratosC.add(contratosC);
     }
     /**
      * Sets instances of <code>ContratoC</code> related through the <code>ContratosC</code> role.
@@ -885,7 +885,7 @@ public class Productos extends AbstractAppEntity {
     * @param marcaMedicaC The instance to add to the <code>MarcaMedicaC</code> role.
     */
     public void add2MarcaMedicaC(MarcaMedicaC marcaMedicaC) {
-        this.getMarcaMedicaC().add(marcaMedicaC);
+        this.marcaMedicaC.add(marcaMedicaC);
     }
     /**
      * Sets instances of <code>MarcaMedicaC</code> related through the <code>MarcaMedicaC</code> role.
@@ -921,7 +921,7 @@ public class Productos extends AbstractAppEntity {
     * @param agentexProducto The instance to add to the <code>AgentexProducto</code> role.
     */
     public void add2AgentexProducto(AgentexProducto agentexProducto) {
-        this.getAgentexProducto().add(agentexProducto);
+        this.agentexProducto.add(agentexProducto);
     }
     /**
      * Sets instances of <code>AgentexProducto</code> related through the <code>AgentexProducto</code> role.

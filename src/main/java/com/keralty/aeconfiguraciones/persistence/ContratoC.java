@@ -1616,7 +1616,7 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
     * @param solicitud The instance to add to the <code>Solicitud</code> role.
     */
     public void add2Solicitud(Solicitud solicitud) {
-        this.getSolicitud().add(solicitud);
+        this.solicitud.add(solicitud);
     }
     /**
      * Sets instances of <code>Solicitud</code> related through the <code>Solicitud</code> role.
@@ -1689,7 +1689,7 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
     * @param direccionesC The instance to add to the <code>DireccionesC</code> role.
     */
     public void add2DireccionesC(DireccionC direccionesC) {
-        this.getDireccionesC().add(direccionesC);
+        this.direccionesC.add(direccionesC);
     }
     /**
      * Sets instances of <code>DireccionC</code> related through the <code>DireccionesC</code> role.
@@ -1725,7 +1725,7 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
     * @param observacionesC The instance to add to the <code>ObservacionesC</code> role.
     */
     public void add2ObservacionesC(ObservacionesC observacionesC) {
-        this.getObservacionesC().add(observacionesC);
+        this.observacionesC.add(observacionesC);
     }
     /**
      * Sets instances of <code>ObservacionesC</code> related through the <code>ObservacionesC</code> role.
@@ -1761,7 +1761,7 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
     * @param beneficiariosC The instance to add to the <code>BeneficiariosC</code> role.
     */
     public void add2BeneficiariosC(BeneficiarioC beneficiariosC) {
-        this.getBeneficiariosC().add(beneficiariosC);
+        this.beneficiariosC.add(beneficiariosC);
     }
     /**
      * Sets instances of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.
@@ -1797,7 +1797,7 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
     * @param familiasC The instance to add to the <code>FamiliasC</code> role.
     */
     public void add2FamiliasC(FamiliaC familiasC) {
-        this.getFamiliasC().add(familiasC);
+        this.familiasC.add(familiasC);
     }
     /**
      * Sets instances of <code>FamiliaC</code> related through the <code>FamiliasC</code> role.

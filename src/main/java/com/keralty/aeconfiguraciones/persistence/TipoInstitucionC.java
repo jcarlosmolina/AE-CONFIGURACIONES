@@ -168,7 +168,7 @@ public class TipoInstitucionC extends AbstractAppEntity {
     * @param personasC The instance to add to the <code>PersonasC</code> role.
     */
     public void add2PersonasC(PersonaC personasC) {
-        this.getPersonasC().add(personasC);
+        this.personasC.add(personasC);
     }
     /**
      * Sets instances of <code>PersonaC</code> related through the <code>PersonasC</code> role.

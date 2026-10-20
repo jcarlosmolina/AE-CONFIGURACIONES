@@ -272,7 +272,7 @@ public class ParamConfig extends AbstractAppEntity {
     * @param logs The instance to add to the <code>Logs</code> role.
     */
     public void add2Logs(LogParam logs) {
-        this.getLogs().add(logs);
+        this.logs.add(logs);
     }
     /**
      * Sets instances of <code>LogParam</code> related through the <code>Logs</code> role.

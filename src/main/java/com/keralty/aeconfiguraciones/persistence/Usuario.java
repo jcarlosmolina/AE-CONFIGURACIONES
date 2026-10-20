@@ -2191,7 +2191,7 @@ Se solicita cambiar el nombre de 'Póliza internacional' por 'Respaldo global'.<
     * @param preexistencias The instance to add to the <code>Preexistencias</code> role.
     */
     public void add2Preexistencias(Preexistencia preexistencias) {
-        this.getPreexistencias().add(preexistencias);
+        this.preexistencias.add(preexistencias);
     }
     /**
      * Sets instances of <code>Preexistencia</code> related through the <code>Preexistencias</code> role.

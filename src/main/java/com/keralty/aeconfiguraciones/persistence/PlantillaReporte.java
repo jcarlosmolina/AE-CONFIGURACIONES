@@ -382,7 +382,7 @@ public class PlantillaReporte extends AbstractAppEntity {
     * @param reportesDominio The instance to add to the <code>ReportesDominio</code> role.
     */
     public void add2ReportesDominio(ReportesDominio reportesDominio) {
-        this.getReportesDominio().add(reportesDominio);
+        this.reportesDominio.add(reportesDominio);
     }
     /**
      * Sets instances of <code>ReportesDominio</code> related through the <code>ReportesDominio</code> role.

@@ -184,7 +184,7 @@ public class Rol extends AbstractAppEntity {
     * @param agentes The instance to add to the <code>Agentes</code> role.
     */
     public void add2Agentes(Funcionario agentes) {
-        this.getAgentes().add(agentes);
+        this.agentes.add(agentes);
     }
     /**
      * Sets instances of <code>Funcionario</code> related through the <code>Agentes</code> role.
@@ -220,7 +220,7 @@ public class Rol extends AbstractAppEntity {
     * @param dominios The instance to add to the <code>Dominios</code> role.
     */
     public void add2Dominios(Dominio dominios) {
-        this.getDominios().add(dominios);
+        this.dominios.add(dominios);
     }
     /**
      * Sets instances of <code>Dominio</code> related through the <code>Dominios</code> role.

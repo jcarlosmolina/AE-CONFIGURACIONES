@@ -2820,7 +2820,7 @@ Este derivado sirve para:
     * @param familias The instance to add to the <code>Familias</code> role.
     */
     public void add2Familias(FamiliaNovedad familias) {
-        this.getFamilias().add(familias);
+        this.familias.add(familias);
     }
     /**
      * Sets instances of <code>FamiliaNovedad</code> related through the <code>Familias</code> role.
@@ -2856,7 +2856,7 @@ Este derivado sirve para:
     * @param documentos The instance to add to the <code>Documentos</code> role.
     */
     public void add2Documentos(DocumentoNovedad documentos) {
-        this.getDocumentos().add(documentos);
+        this.documentos.add(documentos);
     }
     /**
      * Sets instances of <code>DocumentoNovedad</code> related through the <code>Documentos</code> role.
@@ -2892,7 +2892,7 @@ Este derivado sirve para:
     * @param logEstados The instance to add to the <code>LogEstados</code> role.
     */
     public void add2LogEstados(LogEstadoSN logEstados) {
-        this.getLogEstados().add(logEstados);
+        this.logEstados.add(logEstados);
     }
     /**
      * Sets instances of <code>LogEstadoSN</code> related through the <code>LogEstados</code> role.
@@ -2928,7 +2928,7 @@ Este derivado sirve para:
     * @param logUsrSolNov The instance to add to the <code>LogUsrSolNov</code> role.
     */
     public void add2LogUsrSolNov(LogUsrSolNov logUsrSolNov) {
-        this.getLogUsrSolNov().add(logUsrSolNov);
+        this.logUsrSolNov.add(logUsrSolNov);
     }
     /**
      * Sets instances of <code>LogUsrSolNov</code> related through the <code>LogUsrSolNov</code> role.

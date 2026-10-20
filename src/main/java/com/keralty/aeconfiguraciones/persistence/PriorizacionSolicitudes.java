@@ -196,7 +196,7 @@ public class PriorizacionSolicitudes extends AbstractAppEntity {
     * @param logPriorizacionSol The instance to add to the <code>LogPriorizacionSol</code> role.
     */
     public void add2LogPriorizacionSol(LogPriorizacionSol logPriorizacionSol) {
-        this.getLogPriorizacionSol().add(logPriorizacionSol);
+        this.logPriorizacionSol.add(logPriorizacionSol);
     }
     /**
      * Sets instances of <code>LogPriorizacionSol</code> related through the <code>LogPriorizacionSol</code> role.

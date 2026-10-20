@@ -250,7 +250,7 @@ public class Seccion extends AbstractAppEntity {
     * @param preguntas The instance to add to the <code>Preguntas</code> role.
     */
     public void add2Preguntas(Pregunta preguntas) {
-        this.getPreguntas().add(preguntas);
+        this.preguntas.add(preguntas);
     }
     /**
      * Sets instances of <code>Pregunta</code> related through the <code>Preguntas</code> role.

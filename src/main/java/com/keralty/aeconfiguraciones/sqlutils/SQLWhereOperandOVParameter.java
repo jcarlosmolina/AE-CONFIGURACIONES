@@ -183,12 +183,12 @@ public class SQLWhereOperandOVParameter extends SQLWhereOperandPathInstance {
             Object[] oidValues = parameterValue.getValue();
             String[] oidDataTypes = parameterValue.getDataTypes();
             for (int i = 0; i < oidValues.length; i++) {
-            	addParameter(new SQLParam("", oidValues[i], oidDataTypes[i]));
+                addParameter(new SQLParam("", oidValues[i], oidDataTypes[i]));
                 addOidExpression("?");
             }
         } else {
             for (int i = 0; i < oidFields.size(); i++) {
-            	addParameter(new SQLParam("", null, ""));
+                addParameter(new SQLParam("", null, ""));
                 addOidExpression("?");
             }
         }

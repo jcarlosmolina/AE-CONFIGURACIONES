@@ -583,7 +583,7 @@ public class DirSucursalC extends AbstractAppEntity {
     * @param telefonosC The instance to add to the <code>TelefonosC</code> role.
     */
     public void add2TelefonosC(TelefonoC telefonosC) {
-        this.getTelefonosC().add(telefonosC);
+        this.telefonosC.add(telefonosC);
     }
     /**
      * Sets instances of <code>TelefonoC</code> related through the <code>TelefonosC</code> role.
@@ -668,7 +668,7 @@ public class DirSucursalC extends AbstractAppEntity {
     * @param tiposSucursalC The instance to add to the <code>TiposSucursalC</code> role.
     */
     public void add2TiposSucursalC(TipoSucursalC tiposSucursalC) {
-        this.getTiposSucursalC().add(tiposSucursalC);
+        this.tiposSucursalC.add(tiposSucursalC);
     }
     /**
      * Sets instances of <code>TipoSucursalC</code> related through the <code>TiposSucursalC</code> role.

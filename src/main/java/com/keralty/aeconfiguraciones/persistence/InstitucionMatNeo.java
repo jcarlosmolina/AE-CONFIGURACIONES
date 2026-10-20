@@ -510,7 +510,7 @@ public class InstitucionMatNeo extends AbstractAppEntity {
     * @param anexoMat The instance to add to the <code>AnexoMat</code> role.
     */
     public void add2AnexoMat(AnexoMat anexoMat) {
-        this.getAnexoMat().add(anexoMat);
+        this.anexoMat.add(anexoMat);
     }
     /**
      * Sets instances of <code>AnexoMat</code> related through the <code>AnexoMat</code> role.
@@ -546,7 +546,7 @@ public class InstitucionMatNeo extends AbstractAppEntity {
     * @param anexoNeo The instance to add to the <code>AnexoNeo</code> role.
     */
     public void add2AnexoNeo(AnexoNeo anexoNeo) {
-        this.getAnexoNeo().add(anexoNeo);
+        this.anexoNeo.add(anexoNeo);
     }
     /**
      * Sets instances of <code>AnexoNeo</code> related through the <code>AnexoNeo</code> role.

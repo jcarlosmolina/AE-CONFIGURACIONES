@@ -297,7 +297,7 @@ public class FormaPago extends AbstractAppEntity {
     * @param dominios The instance to add to the <code>Dominios</code> role.
     */
     public void add2Dominios(Dominio dominios) {
-        this.getDominios().add(dominios);
+        this.dominios.add(dominios);
     }
     /**
      * Sets instances of <code>Dominio</code> related through the <code>Dominios</code> role.
@@ -333,7 +333,7 @@ public class FormaPago extends AbstractAppEntity {
     * @param solicitudes The instance to add to the <code>Solicitudes</code> role.
     */
     public void add2Solicitudes(Solicitud solicitudes) {
-        this.getSolicitudes().add(solicitudes);
+        this.solicitudes.add(solicitudes);
     }
     /**
      * Sets instances of <code>Solicitud</code> related through the <code>Solicitudes</code> role.
@@ -369,7 +369,7 @@ public class FormaPago extends AbstractAppEntity {
     * @param contratosC The instance to add to the <code>ContratosC</code> role.
     */
     public void add2ContratosC(ContratoC contratosC) {
-        this.getContratosC().add(contratosC);
+        this.contratosC.add(contratosC);
     }
     /**
      * Sets instances of <code>ContratoC</code> related through the <code>ContratosC</code> role.

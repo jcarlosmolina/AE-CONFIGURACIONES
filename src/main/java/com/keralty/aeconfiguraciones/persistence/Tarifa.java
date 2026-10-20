@@ -299,7 +299,7 @@ public class Tarifa extends AbstractAppEntity {
     * @param contratosC The instance to add to the <code>ContratosC</code> role.
     */
     public void add2ContratosC(ContratoC contratosC) {
-        this.getContratosC().add(contratosC);
+        this.contratosC.add(contratosC);
     }
     /**
      * Sets instances of <code>ContratoC</code> related through the <code>ContratosC</code> role.
@@ -335,7 +335,7 @@ public class Tarifa extends AbstractAppEntity {
     * @param detallesTarifa The instance to add to the <code>DetallesTarifa</code> role.
     */
     public void add2DetallesTarifa(DetalleTarifa detallesTarifa) {
-        this.getDetallesTarifa().add(detallesTarifa);
+        this.detallesTarifa.add(detallesTarifa);
     }
     /**
      * Sets instances of <code>DetalleTarifa</code> related through the <code>DetallesTarifa</code> role.
@@ -371,7 +371,7 @@ public class Tarifa extends AbstractAppEntity {
     * @param institucionMatNeo The instance to add to the <code>InstitucionMatNeo</code> role.
     */
     public void add2InstitucionMatNeo(InstitucionMatNeo institucionMatNeo) {
-        this.getInstitucionMatNeo().add(institucionMatNeo);
+        this.institucionMatNeo.add(institucionMatNeo);
     }
     /**
      * Sets instances of <code>InstitucionMatNeo</code> related through the <code>InstitucionMatNeo</code> role.

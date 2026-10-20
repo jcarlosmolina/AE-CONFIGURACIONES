@@ -859,7 +859,7 @@ Si se selecciona “No condicionada”, no será obligatorio diligenciar el dato
     * @param valores The instance to add to the <code>Valores</code> role.
     */
     public void add2Valores(Valor valores) {
-        this.getValores().add(valores);
+        this.valores.add(valores);
     }
     /**
      * Sets instances of <code>Valor</code> related through the <code>Valores</code> role.
@@ -895,7 +895,7 @@ Si se selecciona “No condicionada”, no será obligatorio diligenciar el dato
     * @param preguntasPersona The instance to add to the <code>PreguntasPersona</code> role.
     */
     public void add2PreguntasPersona(PreguntaP preguntasPersona) {
-        this.getPreguntasPersona().add(preguntasPersona);
+        this.preguntasPersona.add(preguntasPersona);
     }
     /**
      * Sets instances of <code>PreguntaP</code> related through the <code>PreguntasPersona</code> role.

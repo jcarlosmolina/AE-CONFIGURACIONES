@@ -1405,7 +1405,7 @@ public class PersonaC extends AbstractAppEntity {
     * @param direccionesC The instance to add to the <code>DireccionesC</code> role.
     */
     public void add2DireccionesC(DireccionC direccionesC) {
-        this.getDireccionesC().add(direccionesC);
+        this.direccionesC.add(direccionesC);
     }
     /**
      * Sets instances of <code>DireccionC</code> related through the <code>DireccionesC</code> role.
@@ -1441,7 +1441,7 @@ public class PersonaC extends AbstractAppEntity {
     * @param proteccionesDatosC The instance to add to the <code>ProteccionesDatosC</code> role.
     */
     public void add2ProteccionesDatosC(ProteccionDatosC proteccionesDatosC) {
-        this.getProteccionesDatosC().add(proteccionesDatosC);
+        this.proteccionesDatosC.add(proteccionesDatosC);
     }
     /**
      * Sets instances of <code>ProteccionDatosC</code> related through the <code>ProteccionesDatosC</code> role.
@@ -1477,7 +1477,7 @@ public class PersonaC extends AbstractAppEntity {
     * @param pregsCuesMedC The instance to add to the <code>PregsCuesMedC</code> role.
     */
     public void add2PregsCuesMedC(PregCuesMedC pregsCuesMedC) {
-        this.getPregsCuesMedC().add(pregsCuesMedC);
+        this.pregsCuesMedC.add(pregsCuesMedC);
     }
     /**
      * Sets instances of <code>PregCuesMedC</code> related through the <code>PregsCuesMedC</code> role.
@@ -1513,7 +1513,7 @@ public class PersonaC extends AbstractAppEntity {
     * @param dirSucursalesC The instance to add to the <code>DirSucursalesC</code> role.
     */
     public void add2DirSucursalesC(DirSucursalC dirSucursalesC) {
-        this.getDirSucursalesC().add(dirSucursalesC);
+        this.dirSucursalesC.add(dirSucursalesC);
     }
     /**
      * Sets instances of <code>DirSucursalC</code> related through the <code>DirSucursalesC</code> role.
@@ -1549,7 +1549,7 @@ public class PersonaC extends AbstractAppEntity {
     * @param preexistenciasC The instance to add to the <code>PreexistenciasC</code> role.
     */
     public void add2PreexistenciasC(PreexistenciaC preexistenciasC) {
-        this.getPreexistenciasC().add(preexistenciasC);
+        this.preexistenciasC.add(preexistenciasC);
     }
     /**
      * Sets instances of <code>PreexistenciaC</code> related through the <code>PreexistenciasC</code> role.
@@ -1585,7 +1585,7 @@ public class PersonaC extends AbstractAppEntity {
     * @param marcasMedicasC The instance to add to the <code>MarcasMedicasC</code> role.
     */
     public void add2MarcasMedicasC(MarcaMedicaC marcasMedicasC) {
-        this.getMarcasMedicasC().add(marcasMedicasC);
+        this.marcasMedicasC.add(marcasMedicasC);
     }
     /**
      * Sets instances of <code>MarcaMedicaC</code> related through the <code>MarcasMedicasC</code> role.

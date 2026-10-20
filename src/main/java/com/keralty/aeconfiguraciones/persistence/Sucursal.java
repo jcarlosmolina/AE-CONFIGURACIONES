@@ -207,7 +207,7 @@ public class Sucursal extends AbstractAppEntity {
     * @param agentes The instance to add to the <code>Agentes</code> role.
     */
     public void add2Agentes(Funcionario agentes) {
-        this.getAgentes().add(agentes);
+        this.agentes.add(agentes);
     }
     /**
      * Sets instances of <code>Funcionario</code> related through the <code>Agentes</code> role.
@@ -243,7 +243,7 @@ public class Sucursal extends AbstractAppEntity {
     * @param contratosC The instance to add to the <code>ContratosC</code> role.
     */
     public void add2ContratosC(ContratoC contratosC) {
-        this.getContratosC().add(contratosC);
+        this.contratosC.add(contratosC);
     }
     /**
      * Sets instances of <code>ContratoC</code> related through the <code>ContratosC</code> role.

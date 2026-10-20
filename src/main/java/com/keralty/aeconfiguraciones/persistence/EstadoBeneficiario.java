@@ -376,7 +376,7 @@ public class EstadoBeneficiario extends AbstractAppEntity {
     * @param estadoBeneficiarioAE The instance to add to the <code>EstadoBeneficiarioAE</code> role.
     */
     public void add2EstadoBeneficiarioAE(EstadoBeneficiarioAE estadoBeneficiarioAE) {
-        this.getEstadoBeneficiarioAE().add(estadoBeneficiarioAE);
+        this.estadoBeneficiarioAE.add(estadoBeneficiarioAE);
     }
     /**
      * Sets instances of <code>EstadoBeneficiarioAE</code> related through the <code>EstadoBeneficiarioAE</code> role.
@@ -412,7 +412,7 @@ public class EstadoBeneficiario extends AbstractAppEntity {
     * @param usuarioS The instance to add to the <code>UsuarioS</code> role.
     */
     public void add2UsuarioS(Usuario usuarioS) {
-        this.getUsuarioS().add(usuarioS);
+        this.usuarioS.add(usuarioS);
     }
     /**
      * Sets instances of <code>Usuario</code> related through the <code>UsuarioS</code> role.
@@ -448,7 +448,7 @@ public class EstadoBeneficiario extends AbstractAppEntity {
     * @param beneficiariosC The instance to add to the <code>BeneficiariosC</code> role.
     */
     public void add2BeneficiariosC(BeneficiarioC beneficiariosC) {
-        this.getBeneficiariosC().add(beneficiariosC);
+        this.beneficiariosC.add(beneficiariosC);
     }
     /**
      * Sets instances of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.
@@ -484,7 +484,7 @@ public class EstadoBeneficiario extends AbstractAppEntity {
     * @param usuariosReg The instance to add to the <code>UsuariosReg</code> role.
     */
     public void add2UsuariosReg(UsuarioReg usuariosReg) {
-        this.getUsuariosReg().add(usuariosReg);
+        this.usuariosReg.add(usuariosReg);
     }
     /**
      * Sets instances of <code>UsuarioReg</code> related through the <code>UsuariosReg</code> role.
@@ -520,7 +520,7 @@ public class EstadoBeneficiario extends AbstractAppEntity {
     * @param usuariosNovedad The instance to add to the <code>UsuariosNovedad</code> role.
     */
     public void add2UsuariosNovedad(UsuarioNovedad usuariosNovedad) {
-        this.getUsuariosNovedad().add(usuariosNovedad);
+        this.usuariosNovedad.add(usuariosNovedad);
     }
     /**
      * Sets instances of <code>UsuarioNovedad</code> related through the <code>UsuariosNovedad</code> role.

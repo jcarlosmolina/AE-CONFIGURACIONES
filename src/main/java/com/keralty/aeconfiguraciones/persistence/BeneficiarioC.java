@@ -1136,7 +1136,7 @@ Cambiado el 26/8/2016 a petición de JC Quinche<br>
     * @param anexosC The instance to add to the <code>AnexosC</code> role.
     */
     public void add2AnexosC(AnexoC anexosC) {
-        this.getAnexosC().add(anexosC);
+        this.anexosC.add(anexosC);
     }
     /**
      * Sets instances of <code>AnexoC</code> related through the <code>AnexosC</code> role.
@@ -1172,7 +1172,7 @@ Cambiado el 26/8/2016 a petición de JC Quinche<br>
     * @param conceptosC The instance to add to the <code>ConceptosC</code> role.
     */
     public void add2ConceptosC(ConceptoC conceptosC) {
-        this.getConceptosC().add(conceptosC);
+        this.conceptosC.add(conceptosC);
     }
     /**
      * Sets instances of <code>ConceptoC</code> related through the <code>ConceptosC</code> role.

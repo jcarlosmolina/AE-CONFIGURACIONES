@@ -1471,7 +1471,7 @@ Si existe un conyuge no activo su vigencia no puede estar traslapada con el nuev
     * @param documentos The instance to add to the <code>Documentos</code> role.
     */
     public void add2Documentos(DocumentoNovedad documentos) {
-        this.getDocumentos().add(documentos);
+        this.documentos.add(documentos);
     }
     /**
      * Sets instances of <code>DocumentoNovedad</code> related through the <code>Documentos</code> role.

@@ -303,7 +303,7 @@ public class ReportesProcAlm extends AbstractAppEntity {
     * @param parametros The instance to add to the <code>Parametros</code> role.
     */
     public void add2Parametros(ParamReporte parametros) {
-        this.getParametros().add(parametros);
+        this.parametros.add(parametros);
     }
     /**
      * Sets instances of <code>ParamReporte</code> related through the <code>Parametros</code> role.
@@ -339,7 +339,7 @@ public class ReportesProcAlm extends AbstractAppEntity {
     * @param funcionarios The instance to add to the <code>Funcionarios</code> role.
     */
     public void add2Funcionarios(Funcionario funcionarios) {
-        this.getFuncionarios().add(funcionarios);
+        this.funcionarios.add(funcionarios);
     }
     /**
      * Sets instances of <code>Funcionario</code> related through the <code>Funcionarios</code> role.

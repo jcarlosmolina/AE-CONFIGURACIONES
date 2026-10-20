@@ -1346,7 +1346,7 @@ Condiciones:
     * @param solicitudesContratante The instance to add to the <code>SolicitudesContratante</code> role.
     */
     public void add2SolicitudesContratante(Solicitud solicitudesContratante) {
-        this.getSolicitudesContratante().add(solicitudesContratante);
+        this.solicitudesContratante.add(solicitudesContratante);
     }
     /**
      * Sets instances of <code>Solicitud</code> related through the <code>SolicitudesContratante</code> role.
@@ -1382,7 +1382,7 @@ Condiciones:
     * @param solicitudesTitular The instance to add to the <code>SolicitudesTitular</code> role.
     */
     public void add2SolicitudesTitular(Solicitud solicitudesTitular) {
-        this.getSolicitudesTitular().add(solicitudesTitular);
+        this.solicitudesTitular.add(solicitudesTitular);
     }
     /**
      * Sets instances of <code>Solicitud</code> related through the <code>SolicitudesTitular</code> role.
@@ -1418,7 +1418,7 @@ Condiciones:
     * @param direcciones The instance to add to the <code>Direcciones</code> role.
     */
     public void add2Direcciones(Direccion direcciones) {
-        this.getDirecciones().add(direcciones);
+        this.direcciones.add(direcciones);
     }
     /**
      * Sets instances of <code>Direccion</code> related through the <code>Direcciones</code> role.
@@ -1491,7 +1491,7 @@ Condiciones:
     * @param documentosG The instance to add to the <code>DocumentosG</code> role.
     */
     public void add2DocumentosG(DocumentoG documentosG) {
-        this.getDocumentosG().add(documentosG);
+        this.documentosG.add(documentosG);
     }
     /**
      * Sets instances of <code>DocumentoG</code> related through the <code>DocumentosG</code> role.

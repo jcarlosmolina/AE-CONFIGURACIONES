@@ -225,7 +225,7 @@ public class CuestionarioP extends AbstractAppEntity {
     * @param secciones The instance to add to the <code>Secciones</code> role.
     */
     public void add2Secciones(SeccionP secciones) {
-        this.getSecciones().add(secciones);
+        this.secciones.add(secciones);
     }
     /**
      * Sets instances of <code>SeccionP</code> related through the <code>Secciones</code> role.

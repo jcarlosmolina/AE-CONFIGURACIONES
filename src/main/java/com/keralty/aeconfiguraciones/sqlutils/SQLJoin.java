@@ -99,6 +99,14 @@ public class SQLJoin {
     }
 
     /**
+     * This method returns the list of where conjunctions of the join (conditions in the ON clause).
+     * @return {@link Collection}<{@link String}>
+     */
+    public Collection<String> getWheres() {
+        return wheres;
+    }
+
+    /**
      * This methods returns the name of the target table of the join.
      * @return {@link String} Table name
      */

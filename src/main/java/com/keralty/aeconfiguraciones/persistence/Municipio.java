@@ -513,7 +513,7 @@ public class Municipio extends AbstractAppEntity {
     * @param personas The instance to add to the <code>Personas</code> role.
     */
     public void add2Personas(Persona personas) {
-        this.getPersonas().add(personas);
+        this.personas.add(personas);
     }
     /**
      * Sets instances of <code>Persona</code> related through the <code>Personas</code> role.
@@ -549,7 +549,7 @@ public class Municipio extends AbstractAppEntity {
     * @param personasC The instance to add to the <code>PersonasC</code> role.
     */
     public void add2PersonasC(PersonaC personasC) {
-        this.getPersonasC().add(personasC);
+        this.personasC.add(personasC);
     }
     /**
      * Sets instances of <code>PersonaC</code> related through the <code>PersonasC</code> role.
@@ -585,7 +585,7 @@ public class Municipio extends AbstractAppEntity {
     * @param direccionesC The instance to add to the <code>DireccionesC</code> role.
     */
     public void add2DireccionesC(DireccionC direccionesC) {
-        this.getDireccionesC().add(direccionesC);
+        this.direccionesC.add(direccionesC);
     }
     /**
      * Sets instances of <code>DireccionC</code> related through the <code>DireccionesC</code> role.
@@ -621,7 +621,7 @@ public class Municipio extends AbstractAppEntity {
     * @param direcciones The instance to add to the <code>Direcciones</code> role.
     */
     public void add2Direcciones(Direccion direcciones) {
-        this.getDirecciones().add(direcciones);
+        this.direcciones.add(direcciones);
     }
     /**
      * Sets instances of <code>Direccion</code> related through the <code>Direcciones</code> role.
@@ -657,7 +657,7 @@ public class Municipio extends AbstractAppEntity {
     * @param contratantes The instance to add to the <code>Contratantes</code> role.
     */
     public void add2Contratantes(Contratante contratantes) {
-        this.getContratantes().add(contratantes);
+        this.contratantes.add(contratantes);
     }
     /**
      * Sets instances of <code>Contratante</code> related through the <code>Contratantes</code> role.
@@ -693,7 +693,7 @@ public class Municipio extends AbstractAppEntity {
     * @param contratanteRes The instance to add to the <code>ContratanteRes</code> role.
     */
     public void add2ContratanteRes(Contratante contratanteRes) {
-        this.getContratanteRes().add(contratanteRes);
+        this.contratanteRes.add(contratanteRes);
     }
     /**
      * Sets instances of <code>Contratante</code> related through the <code>ContratanteRes</code> role.
@@ -729,7 +729,7 @@ public class Municipio extends AbstractAppEntity {
     * @param contratosC The instance to add to the <code>ContratosC</code> role.
     */
     public void add2ContratosC(ContratoC contratosC) {
-        this.getContratosC().add(contratosC);
+        this.contratosC.add(contratosC);
     }
     /**
      * Sets instances of <code>ContratoC</code> related through the <code>ContratosC</code> role.
@@ -765,7 +765,7 @@ public class Municipio extends AbstractAppEntity {
     * @param dirSucursalC The instance to add to the <code>DirSucursalC</code> role.
     */
     public void add2DirSucursalC(DirSucursalC dirSucursalC) {
-        this.getDirSucursalC().add(dirSucursalC);
+        this.dirSucursalC.add(dirSucursalC);
     }
     /**
      * Sets instances of <code>DirSucursalC</code> related through the <code>DirSucursalC</code> role.
@@ -801,7 +801,7 @@ public class Municipio extends AbstractAppEntity {
     * @param familiaC The instance to add to the <code>FamiliaC</code> role.
     */
     public void add2FamiliaC(FamiliaC familiaC) {
-        this.getFamiliaC().add(familiaC);
+        this.familiaC.add(familiaC);
     }
     /**
      * Sets instances of <code>FamiliaC</code> related through the <code>FamiliaC</code> role.
@@ -837,7 +837,7 @@ public class Municipio extends AbstractAppEntity {
     * @param titulares The instance to add to the <code>Titulares</code> role.
     */
     public void add2Titulares(Titular titulares) {
-        this.getTitulares().add(titulares);
+        this.titulares.add(titulares);
     }
     /**
      * Sets instances of <code>Titular</code> related through the <code>Titulares</code> role.
@@ -873,7 +873,7 @@ public class Municipio extends AbstractAppEntity {
     * @param institucionMatNeo The instance to add to the <code>InstitucionMatNeo</code> role.
     */
     public void add2InstitucionMatNeo(InstitucionMatNeo institucionMatNeo) {
-        this.getInstitucionMatNeo().add(institucionMatNeo);
+        this.institucionMatNeo.add(institucionMatNeo);
     }
     /**
      * Sets instances of <code>InstitucionMatNeo</code> related through the <code>InstitucionMatNeo</code> role.
@@ -909,7 +909,7 @@ public class Municipio extends AbstractAppEntity {
     * @param novedadCTNac The instance to add to the <code>NovedadCTNac</code> role.
     */
     public void add2NovedadCTNac(NovedadCT novedadCTNac) {
-        this.getNovedadCTNac().add(novedadCTNac);
+        this.novedadCTNac.add(novedadCTNac);
     }
     /**
      * Sets instances of <code>NovedadCT</code> related through the <code>NovedadCTNac</code> role.
@@ -945,7 +945,7 @@ public class Municipio extends AbstractAppEntity {
     * @param novedadCTRes The instance to add to the <code>NovedadCTRes</code> role.
     */
     public void add2NovedadCTRes(NovedadCT novedadCTRes) {
-        this.getNovedadCTRes().add(novedadCTRes);
+        this.novedadCTRes.add(novedadCTRes);
     }
     /**
      * Sets instances of <code>NovedadCT</code> related through the <code>NovedadCTRes</code> role.
@@ -981,7 +981,7 @@ public class Municipio extends AbstractAppEntity {
     * @param novedadesMD The instance to add to the <code>NovedadesMD</code> role.
     */
     public void add2NovedadesMD(NovedadMD novedadesMD) {
-        this.getNovedadesMD().add(novedadesMD);
+        this.novedadesMD.add(novedadesMD);
     }
     /**
      * Sets instances of <code>NovedadMD</code> related through the <code>NovedadesMD</code> role.

@@ -1441,7 +1441,7 @@ RADIO=1;
     * @param planes The instance to add to the <code>Planes</code> role.
     */
     public void add2Planes(Planes planes) {
-        this.getPlanes().add(planes);
+        this.planes.add(planes);
     }
     /**
      * Sets instances of <code>Planes</code> related through the <code>Planes</code> role.

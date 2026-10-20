@@ -847,7 +847,7 @@ public class TipoIdentificacion extends AbstractAppEntity {
     * @param asesores The instance to add to the <code>Asesores</code> role.
     */
     public void add2Asesores(Asesor asesores) {
-        this.getAsesores().add(asesores);
+        this.asesores.add(asesores);
     }
     /**
      * Sets instances of <code>Asesor</code> related through the <code>Asesores</code> role.
@@ -883,7 +883,7 @@ public class TipoIdentificacion extends AbstractAppEntity {
     * @param personas The instance to add to the <code>Personas</code> role.
     */
     public void add2Personas(Persona personas) {
-        this.getPersonas().add(personas);
+        this.personas.add(personas);
     }
     /**
      * Sets instances of <code>Persona</code> related through the <code>Personas</code> role.
@@ -919,7 +919,7 @@ public class TipoIdentificacion extends AbstractAppEntity {
     * @param personasC The instance to add to the <code>PersonasC</code> role.
     */
     public void add2PersonasC(PersonaC personasC) {
-        this.getPersonasC().add(personasC);
+        this.personasC.add(personasC);
     }
     /**
      * Sets instances of <code>PersonaC</code> related through the <code>PersonasC</code> role.
@@ -955,7 +955,7 @@ public class TipoIdentificacion extends AbstractAppEntity {
     * @param usuarioS The instance to add to the <code>UsuarioS</code> role.
     */
     public void add2UsuarioS(Usuario usuarioS) {
-        this.getUsuarioS().add(usuarioS);
+        this.usuarioS.add(usuarioS);
     }
     /**
      * Sets instances of <code>Usuario</code> related through the <code>UsuarioS</code> role.
@@ -991,7 +991,7 @@ public class TipoIdentificacion extends AbstractAppEntity {
     * @param contratantes The instance to add to the <code>Contratantes</code> role.
     */
     public void add2Contratantes(Contratante contratantes) {
-        this.getContratantes().add(contratantes);
+        this.contratantes.add(contratantes);
     }
     /**
      * Sets instances of <code>Contratante</code> related through the <code>Contratantes</code> role.
@@ -1027,7 +1027,7 @@ public class TipoIdentificacion extends AbstractAppEntity {
     * @param anexosC The instance to add to the <code>AnexosC</code> role.
     */
     public void add2AnexosC(AnexoC anexosC) {
-        this.getAnexosC().add(anexosC);
+        this.anexosC.add(anexosC);
     }
     /**
      * Sets instances of <code>AnexoC</code> related through the <code>AnexosC</code> role.
@@ -1063,7 +1063,7 @@ public class TipoIdentificacion extends AbstractAppEntity {
     * @param titulares The instance to add to the <code>Titulares</code> role.
     */
     public void add2Titulares(Titular titulares) {
-        this.getTitulares().add(titulares);
+        this.titulares.add(titulares);
     }
     /**
      * Sets instances of <code>Titular</code> related through the <code>Titulares</code> role.
@@ -1099,7 +1099,7 @@ public class TipoIdentificacion extends AbstractAppEntity {
     * @param institucionMatNeo The instance to add to the <code>InstitucionMatNeo</code> role.
     */
     public void add2InstitucionMatNeo(InstitucionMatNeo institucionMatNeo) {
-        this.getInstitucionMatNeo().add(institucionMatNeo);
+        this.institucionMatNeo.add(institucionMatNeo);
     }
     /**
      * Sets instances of <code>InstitucionMatNeo</code> related through the <code>InstitucionMatNeo</code> role.
@@ -1135,7 +1135,7 @@ public class TipoIdentificacion extends AbstractAppEntity {
     * @param solicitudesNovedad The instance to add to the <code>SolicitudesNovedad</code> role.
     */
     public void add2SolicitudesNovedad(SolicitudNovedad solicitudesNovedad) {
-        this.getSolicitudesNovedad().add(solicitudesNovedad);
+        this.solicitudesNovedad.add(solicitudesNovedad);
     }
     /**
      * Sets instances of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedad</code> role.
@@ -1171,7 +1171,7 @@ public class TipoIdentificacion extends AbstractAppEntity {
     * @param familiasNovedad The instance to add to the <code>FamiliasNovedad</code> role.
     */
     public void add2FamiliasNovedad(FamiliaNovedad familiasNovedad) {
-        this.getFamiliasNovedad().add(familiasNovedad);
+        this.familiasNovedad.add(familiasNovedad);
     }
     /**
      * Sets instances of <code>FamiliaNovedad</code> related through the <code>FamiliasNovedad</code> role.
@@ -1207,7 +1207,7 @@ public class TipoIdentificacion extends AbstractAppEntity {
     * @param usuariosNovedad The instance to add to the <code>UsuariosNovedad</code> role.
     */
     public void add2UsuariosNovedad(UsuarioNovedad usuariosNovedad) {
-        this.getUsuariosNovedad().add(usuariosNovedad);
+        this.usuariosNovedad.add(usuariosNovedad);
     }
     /**
      * Sets instances of <code>UsuarioNovedad</code> related through the <code>UsuariosNovedad</code> role.
@@ -1243,7 +1243,7 @@ public class TipoIdentificacion extends AbstractAppEntity {
     * @param usuarioNovedad The instance to add to the <code>UsuarioNovedad</code> role.
     */
     public void add2UsuarioNovedad(UsuarioNovedad usuarioNovedad) {
-        this.getUsuarioNovedad().add(usuarioNovedad);
+        this.usuarioNovedad.add(usuarioNovedad);
     }
     /**
      * Sets instances of <code>UsuarioNovedad</code> related through the <code>UsuarioNovedad</code> role.
@@ -1279,7 +1279,7 @@ public class TipoIdentificacion extends AbstractAppEntity {
     * @param novedadesCT The instance to add to the <code>NovedadesCT</code> role.
     */
     public void add2NovedadesCT(NovedadCT novedadesCT) {
-        this.getNovedadesCT().add(novedadesCT);
+        this.novedadesCT.add(novedadesCT);
     }
     /**
      * Sets instances of <code>NovedadCT</code> related through the <code>NovedadesCT</code> role.

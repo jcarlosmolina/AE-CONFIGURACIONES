@@ -973,7 +973,7 @@ public class FamiliaNovedad extends AbstractAppEntity {
     * @param usuarioNovedad The instance to add to the <code>UsuarioNovedad</code> role.
     */
     public void add2UsuarioNovedad(UsuarioNovedad usuarioNovedad) {
-        this.getUsuarioNovedad().add(usuarioNovedad);
+        this.usuarioNovedad.add(usuarioNovedad);
     }
     /**
      * Sets instances of <code>UsuarioNovedad</code> related through the <code>UsuarioNovedad</code> role.

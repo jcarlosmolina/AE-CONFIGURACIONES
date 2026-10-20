@@ -766,7 +766,7 @@ RADIO=1;
     * @param logConfiguracionANS The instance to add to the <code>LogConfiguracionANS</code> role.
     */
     public void add2LogConfiguracionANS(LogConfiguracionANS logConfiguracionANS) {
-        this.getLogConfiguracionANS().add(logConfiguracionANS);
+        this.logConfiguracionANS.add(logConfiguracionANS);
     }
     /**
      * Sets instances of <code>LogConfiguracionANS</code> related through the <code>LogConfiguracionANS</code> role.

@@ -250,7 +250,7 @@ public class SQLScalar extends SQLSelect {
                 this.createFrom(currentAlias.getFacet(), currentAlias);
 
                 if (!this.getAliases().contains(currentAlias)) {
-                    this.getAliases().add(currentAlias);
+                    this.addAlias(currentAlias);
                 }
             }
         }

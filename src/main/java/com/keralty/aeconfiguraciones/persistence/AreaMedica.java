@@ -1252,7 +1252,7 @@ RADIO=1;
     * @param solicitudesArMe The instance to add to the <code>SolicitudesArMe</code> role.
     */
     public void add2SolicitudesArMe(Solicitud solicitudesArMe) {
-        this.getSolicitudesArMe().add(solicitudesArMe);
+        this.solicitudesArMe.add(solicitudesArMe);
     }
     /**
      * Sets instances of <code>Solicitud</code> related through the <code>SolicitudesArMe</code> role.

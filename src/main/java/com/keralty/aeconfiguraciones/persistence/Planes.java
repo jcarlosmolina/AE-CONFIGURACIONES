@@ -550,7 +550,7 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
     * @param dominios The instance to add to the <code>Dominios</code> role.
     */
     public void add2Dominios(Dominio dominios) {
-        this.getDominios().add(dominios);
+        this.dominios.add(dominios);
     }
     /**
      * Sets instances of <code>Dominio</code> related through the <code>Dominios</code> role.
@@ -586,7 +586,7 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
     * @param tarifas The instance to add to the <code>Tarifas</code> role.
     */
     public void add2Tarifas(Tarifa tarifas) {
-        this.getTarifas().add(tarifas);
+        this.tarifas.add(tarifas);
     }
     /**
      * Sets instances of <code>Tarifa</code> related through the <code>Tarifas</code> role.
@@ -622,7 +622,7 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
     * @param gruposAsociados The instance to add to the <code>GruposAsociados</code> role.
     */
     public void add2GruposAsociados(GrupoAsociado gruposAsociados) {
-        this.getGruposAsociados().add(gruposAsociados);
+        this.gruposAsociados.add(gruposAsociados);
     }
     /**
      * Sets instances of <code>GrupoAsociado</code> related through the <code>GruposAsociados</code> role.
@@ -658,7 +658,7 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
     * @param tiposIVA The instance to add to the <code>TiposIVA</code> role.
     */
     public void add2TiposIVA(TipoIVA tiposIVA) {
-        this.getTiposIVA().add(tiposIVA);
+        this.tiposIVA.add(tiposIVA);
     }
     /**
      * Sets instances of <code>TipoIVA</code> related through the <code>TiposIVA</code> role.
@@ -694,7 +694,7 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
     * @param aESOLICITUDES The instance to add to the <code>AESOLICITUDES</code> role.
     */
     public void add2AESOLICITUDES(Aesolicitudes aESOLICITUDES) {
-        this.getAESOLICITUDES().add(aESOLICITUDES);
+        this.aESOLICITUDES.add(aESOLICITUDES);
     }
     /**
      * Sets instances of <code>Aesolicitudes</code> related through the <code>AESOLICITUDES</code> role.
@@ -730,7 +730,7 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
     * @param contratosC The instance to add to the <code>ContratosC</code> role.
     */
     public void add2ContratosC(ContratoC contratosC) {
-        this.getContratosC().add(contratosC);
+        this.contratosC.add(contratosC);
     }
     /**
      * Sets instances of <code>ContratoC</code> related through the <code>ContratosC</code> role.
@@ -766,7 +766,7 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
     * @param afiliaciones The instance to add to the <code>Afiliaciones</code> role.
     */
     public void add2Afiliaciones(Afiliaciones afiliaciones) {
-        this.getAfiliaciones().add(afiliaciones);
+        this.afiliaciones.add(afiliaciones);
     }
     /**
      * Sets instances of <code>Afiliaciones</code> related through the <code>Afiliaciones</code> role.
@@ -802,7 +802,7 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
     * @param solicitudesNovedad The instance to add to the <code>SolicitudesNovedad</code> role.
     */
     public void add2SolicitudesNovedad(SolicitudNovedad solicitudesNovedad) {
-        this.getSolicitudesNovedad().add(solicitudesNovedad);
+        this.solicitudesNovedad.add(solicitudesNovedad);
     }
     /**
      * Sets instances of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedad</code> role.

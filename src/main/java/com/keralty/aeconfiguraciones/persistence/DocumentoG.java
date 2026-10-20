@@ -808,7 +808,7 @@ public class DocumentoG extends AbstractAppEntity {
     * @param obsEstado The instance to add to the <code>ObsEstado</code> role.
     */
     public void add2ObsEstado(ObsEstado obsEstado) {
-        this.getObsEstado().add(obsEstado);
+        this.obsEstado.add(obsEstado);
     }
     /**
      * Sets instances of <code>ObsEstado</code> related through the <code>ObsEstado</code> role.

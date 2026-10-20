@@ -4489,7 +4489,7 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
     * @param usuarios The instance to add to the <code>Usuarios</code> role.
     */
     public void add2Usuarios(Usuario usuarios) {
-        this.getUsuarios().add(usuarios);
+        this.usuarios.add(usuarios);
     }
     /**
      * Sets instances of <code>Usuario</code> related through the <code>Usuarios</code> role.
@@ -4649,7 +4649,7 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
     * @param usuariosRegistrados The instance to add to the <code>UsuariosRegistrados</code> role.
     */
     public void add2UsuariosRegistrados(UsuarioReg usuariosRegistrados) {
-        this.getUsuariosRegistrados().add(usuariosRegistrados);
+        this.usuariosRegistrados.add(usuariosRegistrados);
     }
     /**
      * Sets instances of <code>UsuarioReg</code> related through the <code>UsuariosRegistrados</code> role.
@@ -4722,7 +4722,7 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
     * @param documentosGestor The instance to add to the <code>DocumentosGestor</code> role.
     */
     public void add2DocumentosGestor(DocumentoG documentosGestor) {
-        this.getDocumentosGestor().add(documentosGestor);
+        this.documentosGestor.add(documentosGestor);
     }
     /**
      * Sets instances of <code>DocumentoG</code> related through the <code>DocumentosGestor</code> role.
@@ -4758,7 +4758,7 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
     * @param erroresWS The instance to add to the <code>ErroresWS</code> role.
     */
     public void add2ErroresWS(ErrorWS erroresWS) {
-        this.getErroresWS().add(erroresWS);
+        this.erroresWS.add(erroresWS);
     }
     /**
      * Sets instances of <code>ErrorWS</code> related through the <code>ErroresWS</code> role.
@@ -4794,7 +4794,7 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
     * @param logEstado The instance to add to the <code>LogEstado</code> role.
     */
     public void add2LogEstado(LogEstado logEstado) {
-        this.getLogEstado().add(logEstado);
+        this.logEstado.add(logEstado);
     }
     /**
      * Sets instances of <code>LogEstado</code> related through the <code>LogEstado</code> role.
@@ -4830,7 +4830,7 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
     * @param logAsignaciones The instance to add to the <code>LogAsignaciones</code> role.
     */
     public void add2LogAsignaciones(LogAsignaciones logAsignaciones) {
-        this.getLogAsignaciones().add(logAsignaciones);
+        this.logAsignaciones.add(logAsignaciones);
     }
     /**
      * Sets instances of <code>LogAsignaciones</code> related through the <code>LogAsignaciones</code> role.

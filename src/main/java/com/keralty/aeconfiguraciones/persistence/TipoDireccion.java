@@ -286,7 +286,7 @@ public class TipoDireccion extends AbstractAppEntity {
     * @param direccionesC The instance to add to the <code>DireccionesC</code> role.
     */
     public void add2DireccionesC(DireccionC direccionesC) {
-        this.getDireccionesC().add(direccionesC);
+        this.direccionesC.add(direccionesC);
     }
     /**
      * Sets instances of <code>DireccionC</code> related through the <code>DireccionesC</code> role.
@@ -322,7 +322,7 @@ public class TipoDireccion extends AbstractAppEntity {
     * @param direcciones The instance to add to the <code>Direcciones</code> role.
     */
     public void add2Direcciones(Direccion direcciones) {
-        this.getDirecciones().add(direcciones);
+        this.direcciones.add(direcciones);
     }
     /**
      * Sets instances of <code>Direccion</code> related through the <code>Direcciones</code> role.

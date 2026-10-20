@@ -500,7 +500,7 @@ public class FamiliaC extends AbstractAppEntity {
     * @param beneficiariosC The instance to add to the <code>BeneficiariosC</code> role.
     */
     public void add2BeneficiariosC(BeneficiarioC beneficiariosC) {
-        this.getBeneficiariosC().add(beneficiariosC);
+        this.beneficiariosC.add(beneficiariosC);
     }
     /**
      * Sets instances of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.

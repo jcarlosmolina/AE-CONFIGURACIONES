@@ -537,6 +537,7 @@ public class SQLSelect {
      * @param selectPart SELECT part of the SQL sentence
      */
     public void setSelectPart(List<String> selectPart) {
+
         this.selectPart = selectPart;
     }
 
@@ -643,6 +644,14 @@ public class SQLSelect {
         return aliases;
     }
 
+    /**
+     * Adds an alias
+     * @param alias Alias to add
+     */
+    public void addAlias(SQLAlias alias) {
+    	aliases.add(alias);
+    }
+    
     /**
      * Parameter names used in the SQL sentence.
      * 
@@ -755,7 +764,6 @@ public class SQLSelect {
     /**
      * This method creates an alias structure with a valid name.
      * 
-     * @param table        Table name of the alias
      * @param path         Path that represents the alias
      * @param facet        Target class of the path
      * @param intermediate If the alias to search is the intermediate table

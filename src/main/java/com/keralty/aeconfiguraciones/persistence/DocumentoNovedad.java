@@ -682,7 +682,7 @@ En el caso de novedad solo será documento de identificación. Lo mantenemos com
     * @param logEstadoDocNov The instance to add to the <code>LogEstadoDocNov</code> role.
     */
     public void add2LogEstadoDocNov(LogEstadoDocNov logEstadoDocNov) {
-        this.getLogEstadoDocNov().add(logEstadoDocNov);
+        this.logEstadoDocNov.add(logEstadoDocNov);
     }
     /**
      * Sets instances of <code>LogEstadoDocNov</code> related through the <code>LogEstadoDocNov</code> role.

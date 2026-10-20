@@ -1574,7 +1574,7 @@ RADIO=1;
     * @param solicitudes The instance to add to the <code>Solicitudes</code> role.
     */
     public void add2Solicitudes(Solicitud solicitudes) {
-        this.getSolicitudes().add(solicitudes);
+        this.solicitudes.add(solicitudes);
     }
     /**
      * Sets instances of <code>Solicitud</code> related through the <code>Solicitudes</code> role.
@@ -1610,7 +1610,7 @@ RADIO=1;
     * @param solicitudesAfiliacion The instance to add to the <code>SolicitudesAfiliacion</code> role.
     */
     public void add2SolicitudesAfiliacion(Solicitud solicitudesAfiliacion) {
-        this.getSolicitudesAfiliacion().add(solicitudesAfiliacion);
+        this.solicitudesAfiliacion.add(solicitudesAfiliacion);
     }
     /**
      * Sets instances of <code>Solicitud</code> related through the <code>SolicitudesAfiliacion</code> role.
@@ -1646,7 +1646,7 @@ RADIO=1;
     * @param obsEstado The instance to add to the <code>ObsEstado</code> role.
     */
     public void add2ObsEstado(ObsEstado obsEstado) {
-        this.getObsEstado().add(obsEstado);
+        this.obsEstado.add(obsEstado);
     }
     /**
      * Sets instances of <code>ObsEstado</code> related through the <code>ObsEstado</code> role.
@@ -1718,7 +1718,7 @@ RADIO=1;
     * @param solicitudesNovedad The instance to add to the <code>SolicitudesNovedad</code> role.
     */
     public void add2SolicitudesNovedad(SolicitudNovedad solicitudesNovedad) {
-        this.getSolicitudesNovedad().add(solicitudesNovedad);
+        this.solicitudesNovedad.add(solicitudesNovedad);
     }
     /**
      * Sets instances of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedad</code> role.
@@ -1754,7 +1754,7 @@ RADIO=1;
     * @param solNovAifliaciones The instance to add to the <code>SolNovAifliaciones</code> role.
     */
     public void add2SolNovAifliaciones(SolicitudNovedad solNovAifliaciones) {
-        this.getSolNovAifliaciones().add(solNovAifliaciones);
+        this.solNovAifliaciones.add(solNovAifliaciones);
     }
     /**
      * Sets instances of <code>SolicitudNovedad</code> related through the <code>SolNovAifliaciones</code> role.
@@ -1790,7 +1790,7 @@ RADIO=1;
     * @param grupoAsignacion The instance to add to the <code>GrupoAsignacion</code> role.
     */
     public void add2GrupoAsignacion(GrupoAsignacion grupoAsignacion) {
-        this.getGrupoAsignacion().add(grupoAsignacion);
+        this.grupoAsignacion.add(grupoAsignacion);
     }
     /**
      * Sets instances of <code>GrupoAsignacion</code> related through the <code>GrupoAsignacion</code> role.
@@ -1826,7 +1826,7 @@ RADIO=1;
     * @param logFuncionario The instance to add to the <code>LogFuncionario</code> role.
     */
     public void add2LogFuncionario(LogFuncionario logFuncionario) {
-        this.getLogFuncionario().add(logFuncionario);
+        this.logFuncionario.add(logFuncionario);
     }
     /**
      * Sets instances of <code>LogFuncionario</code> related through the <code>LogFuncionario</code> role.

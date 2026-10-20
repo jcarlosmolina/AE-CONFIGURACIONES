@@ -522,7 +522,7 @@ RADIO=1;
     * @param solicitudes The instance to add to the <code>Solicitudes</code> role.
     */
     public void add2Solicitudes(SolicitudNovedad solicitudes) {
-        this.getSolicitudes().add(solicitudes);
+        this.solicitudes.add(solicitudes);
     }
     /**
      * Sets instances of <code>SolicitudNovedad</code> related through the <code>Solicitudes</code> role.
@@ -558,7 +558,7 @@ RADIO=1;
     * @param grupoAsignacionNovedad The instance to add to the <code>GrupoAsignacionNovedad</code> role.
     */
     public void add2GrupoAsignacionNovedad(GrupoAsignacionNovedad grupoAsignacionNovedad) {
-        this.getGrupoAsignacionNovedad().add(grupoAsignacionNovedad);
+        this.grupoAsignacionNovedad.add(grupoAsignacionNovedad);
     }
     /**
      * Sets instances of <code>GrupoAsignacionNovedad</code> related through the <code>GrupoAsignacionNovedad</code> role.
@@ -594,7 +594,7 @@ RADIO=1;
     * @param configuracionesANS The instance to add to the <code>ConfiguracionesANS</code> role.
     */
     public void add2ConfiguracionesANS(ConfiguracionANS configuracionesANS) {
-        this.getConfiguracionesANS().add(configuracionesANS);
+        this.configuracionesANS.add(configuracionesANS);
     }
     /**
      * Sets instances of <code>ConfiguracionANS</code> related through the <code>ConfiguracionesANS</code> role.

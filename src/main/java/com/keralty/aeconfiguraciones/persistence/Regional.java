@@ -235,7 +235,7 @@ public class Regional extends AbstractAppEntity {
     * @param sucursales The instance to add to the <code>Sucursales</code> role.
     */
     public void add2Sucursales(Sucursal sucursales) {
-        this.getSucursales().add(sucursales);
+        this.sucursales.add(sucursales);
     }
     /**
      * Sets instances of <code>Sucursal</code> related through the <code>Sucursales</code> role.
@@ -271,7 +271,7 @@ public class Regional extends AbstractAppEntity {
     * @param dirSucursalC The instance to add to the <code>DirSucursalC</code> role.
     */
     public void add2DirSucursalC(DirSucursalC dirSucursalC) {
-        this.getDirSucursalC().add(dirSucursalC);
+        this.dirSucursalC.add(dirSucursalC);
     }
     /**
      * Sets instances of <code>DirSucursalC</code> related through the <code>DirSucursalC</code> role.

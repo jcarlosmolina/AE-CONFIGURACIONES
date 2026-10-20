@@ -1440,7 +1440,7 @@ Indica el número de solicitudes no terminadas que tiene asignadas el usuario. S
     * @param contratosC The instance to add to the <code>ContratosC</code> role.
     */
     public void add2ContratosC(ContratoC contratosC) {
-        this.getContratosC().add(contratosC);
+        this.contratosC.add(contratosC);
     }
     /**
      * Sets instances of <code>ContratoC</code> related through the <code>ContratosC</code> role.
@@ -1476,7 +1476,7 @@ Indica el número de solicitudes no terminadas que tiene asignadas el usuario. S
     * @param agentexProducto The instance to add to the <code>AgentexProducto</code> role.
     */
     public void add2AgentexProducto(AgentexProducto agentexProducto) {
-        this.getAgentexProducto().add(agentexProducto);
+        this.agentexProducto.add(agentexProducto);
     }
     /**
      * Sets instances of <code>AgentexProducto</code> related through the <code>AgentexProducto</code> role.
@@ -1512,7 +1512,7 @@ Indica el número de solicitudes no terminadas que tiene asignadas el usuario. S
     * @param logInformacionAsesor The instance to add to the <code>LogInformacionAsesor</code> role.
     */
     public void add2LogInformacionAsesor(LogInformacionAsesor logInformacionAsesor) {
-        this.getLogInformacionAsesor().add(logInformacionAsesor);
+        this.logInformacionAsesor.add(logInformacionAsesor);
     }
     /**
      * Sets instances of <code>LogInformacionAsesor</code> related through the <code>LogInformacionAsesor</code> role.
@@ -1548,7 +1548,7 @@ Indica el número de solicitudes no terminadas que tiene asignadas el usuario. S
     * @param logHistoricoPlanes The instance to add to the <code>LogHistoricoPlanes</code> role.
     */
     public void add2LogHistoricoPlanes(LogHistoricoPlanes logHistoricoPlanes) {
-        this.getLogHistoricoPlanes().add(logHistoricoPlanes);
+        this.logHistoricoPlanes.add(logHistoricoPlanes);
     }
     /**
      * Sets instances of <code>LogHistoricoPlanes</code> related through the <code>LogHistoricoPlanes</code> role.

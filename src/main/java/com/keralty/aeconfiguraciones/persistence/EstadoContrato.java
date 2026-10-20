@@ -196,7 +196,7 @@ public class EstadoContrato extends AbstractAppEntity {
     * @param aESOLICITUDES The instance to add to the <code>AESOLICITUDES</code> role.
     */
     public void add2AESOLICITUDES(Aesolicitudes aESOLICITUDES) {
-        this.getAESOLICITUDES().add(aESOLICITUDES);
+        this.aESOLICITUDES.add(aESOLICITUDES);
     }
     /**
      * Sets instances of <code>Aesolicitudes</code> related through the <code>AESOLICITUDES</code> role.
@@ -232,7 +232,7 @@ public class EstadoContrato extends AbstractAppEntity {
     * @param contratosC The instance to add to the <code>ContratosC</code> role.
     */
     public void add2ContratosC(ContratoC contratosC) {
-        this.getContratosC().add(contratosC);
+        this.contratosC.add(contratosC);
     }
     /**
      * Sets instances of <code>ContratoC</code> related through the <code>ContratosC</code> role.
@@ -268,7 +268,7 @@ public class EstadoContrato extends AbstractAppEntity {
     * @param solicitudesNovedad The instance to add to the <code>SolicitudesNovedad</code> role.
     */
     public void add2SolicitudesNovedad(SolicitudNovedad solicitudesNovedad) {
-        this.getSolicitudesNovedad().add(solicitudesNovedad);
+        this.solicitudesNovedad.add(solicitudesNovedad);
     }
     /**
      * Sets instances of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedad</code> role.

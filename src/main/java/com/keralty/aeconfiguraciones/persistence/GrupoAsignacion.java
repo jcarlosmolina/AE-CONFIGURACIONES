@@ -336,7 +336,7 @@ public class GrupoAsignacion extends AbstractAppEntity {
     * @param dominioAsesores The instance to add to the <code>DominioAsesores</code> role.
     */
     public void add2DominioAsesores(Dominio dominioAsesores) {
-        this.getDominioAsesores().add(dominioAsesores);
+        this.dominioAsesores.add(dominioAsesores);
     }
     /**
      * Sets instances of <code>Dominio</code> related through the <code>DominioAsesores</code> role.
@@ -372,7 +372,7 @@ public class GrupoAsignacion extends AbstractAppEntity {
     * @param dominioAreaMedica The instance to add to the <code>DominioAreaMedica</code> role.
     */
     public void add2DominioAreaMedica(Dominio dominioAreaMedica) {
-        this.getDominioAreaMedica().add(dominioAreaMedica);
+        this.dominioAreaMedica.add(dominioAreaMedica);
     }
     /**
      * Sets instances of <code>Dominio</code> related through the <code>DominioAreaMedica</code> role.
@@ -408,7 +408,7 @@ public class GrupoAsignacion extends AbstractAppEntity {
     * @param logGrupoAsignacion The instance to add to the <code>LogGrupoAsignacion</code> role.
     */
     public void add2LogGrupoAsignacion(LogGrupoAsignacion logGrupoAsignacion) {
-        this.getLogGrupoAsignacion().add(logGrupoAsignacion);
+        this.logGrupoAsignacion.add(logGrupoAsignacion);
     }
     /**
      * Sets instances of <code>LogGrupoAsignacion</code> related through the <code>LogGrupoAsignacion</code> role.
@@ -444,7 +444,7 @@ public class GrupoAsignacion extends AbstractAppEntity {
     * @param dominioCausalUsuario The instance to add to the <code>DominioCausalUsuario</code> role.
     */
     public void add2DominioCausalUsuario(GrupoAsignacionNovedad dominioCausalUsuario) {
-        this.getDominioCausalUsuario().add(dominioCausalUsuario);
+        this.dominioCausalUsuario.add(dominioCausalUsuario);
     }
     /**
      * Sets instances of <code>GrupoAsignacionNovedad</code> related through the <code>DominioCausalUsuario</code> role.
@@ -480,7 +480,7 @@ public class GrupoAsignacion extends AbstractAppEntity {
     * @param funcionario The instance to add to the <code>Funcionario</code> role.
     */
     public void add2Funcionario(Funcionario funcionario) {
-        this.getFuncionario().add(funcionario);
+        this.funcionario.add(funcionario);
     }
     /**
      * Sets instances of <code>Funcionario</code> related through the <code>Funcionario</code> role.

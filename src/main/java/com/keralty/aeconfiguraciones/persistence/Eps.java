@@ -234,7 +234,7 @@ public class Eps extends AbstractAppEntity {
     * @param atributosUsuario The instance to add to the <code>AtributosUsuario</code> role.
     */
     public void add2AtributosUsuario(Usuario atributosUsuario) {
-        this.getAtributosUsuario().add(atributosUsuario);
+        this.atributosUsuario.add(atributosUsuario);
     }
     /**
      * Sets instances of <code>Usuario</code> related through the <code>AtributosUsuario</code> role.
@@ -270,7 +270,7 @@ public class Eps extends AbstractAppEntity {
     * @param beneficiariosC The instance to add to the <code>BeneficiariosC</code> role.
     */
     public void add2BeneficiariosC(BeneficiarioC beneficiariosC) {
-        this.getBeneficiariosC().add(beneficiariosC);
+        this.beneficiariosC.add(beneficiariosC);
     }
     /**
      * Sets instances of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.

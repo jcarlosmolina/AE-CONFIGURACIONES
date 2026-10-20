@@ -761,7 +761,7 @@ RADIO=1;
     * @param dominios The instance to add to the <code>Dominios</code> role.
     */
     public void add2Dominios(Dominio dominios) {
-        this.getDominios().add(dominios);
+        this.dominios.add(dominios);
     }
     /**
      * Sets instances of <code>Dominio</code> related through the <code>Dominios</code> role.
@@ -797,7 +797,7 @@ RADIO=1;
     * @param causales The instance to add to the <code>Causales</code> role.
     */
     public void add2Causales(Causal causales) {
-        this.getCausales().add(causales);
+        this.causales.add(causales);
     }
     /**
      * Sets instances of <code>Causal</code> related through the <code>Causales</code> role.
@@ -833,7 +833,7 @@ RADIO=1;
     * @param solicitudes The instance to add to the <code>Solicitudes</code> role.
     */
     public void add2Solicitudes(SolicitudNovedad solicitudes) {
-        this.getSolicitudes().add(solicitudes);
+        this.solicitudes.add(solicitudes);
     }
     /**
      * Sets instances of <code>SolicitudNovedad</code> related through the <code>Solicitudes</code> role.
@@ -869,7 +869,7 @@ RADIO=1;
     * @param causasExclusion The instance to add to the <code>CausasExclusion</code> role.
     */
     public void add2CausasExclusion(CausaExclusion causasExclusion) {
-        this.getCausasExclusion().add(causasExclusion);
+        this.causasExclusion.add(causasExclusion);
     }
     /**
      * Sets instances of <code>CausaExclusion</code> related through the <code>CausasExclusion</code> role.
@@ -905,7 +905,7 @@ RADIO=1;
     * @param configuracionesANS The instance to add to the <code>ConfiguracionesANS</code> role.
     */
     public void add2ConfiguracionesANS(ConfiguracionANS configuracionesANS) {
-        this.getConfiguracionesANS().add(configuracionesANS);
+        this.configuracionesANS.add(configuracionesANS);
     }
     /**
      * Sets instances of <code>ConfiguracionANS</code> related through the <code>ConfiguracionesANS</code> role.

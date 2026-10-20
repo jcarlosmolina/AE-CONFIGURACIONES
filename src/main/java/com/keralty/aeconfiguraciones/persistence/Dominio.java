@@ -2023,7 +2023,7 @@ RADIO=1;
     * @param dominiosConIncompatibilidad The instance to add to the <code>DominiosConIncompatibilidad</code> role.
     */
     public void add2DominiosConIncompatibilidad(Dominio dominiosConIncompatibilidad) {
-        this.getDominiosConIncompatibilidad().add(dominiosConIncompatibilidad);
+        this.dominiosConIncompatibilidad.add(dominiosConIncompatibilidad);
     }
     /**
      * Sets instances of <code>Dominio</code> related through the <code>DominiosConIncompatibilidad</code> role.
@@ -2059,7 +2059,7 @@ RADIO=1;
     * @param parentescosDom The instance to add to the <code>ParentescosDom</code> role.
     */
     public void add2ParentescosDom(ParentescoDom parentescosDom) {
-        this.getParentescosDom().add(parentescosDom);
+        this.parentescosDom.add(parentescosDom);
     }
     /**
      * Sets instances of <code>ParentescoDom</code> related through the <code>ParentescosDom</code> role.
@@ -2095,7 +2095,7 @@ RADIO=1;
     * @param agentexProducto The instance to add to the <code>AgentexProducto</code> role.
     */
     public void add2AgentexProducto(AgentexProducto agentexProducto) {
-        this.getAgentexProducto().add(agentexProducto);
+        this.agentexProducto.add(agentexProducto);
     }
     /**
      * Sets instances of <code>AgentexProducto</code> related through the <code>AgentexProducto</code> role.
@@ -2131,7 +2131,7 @@ RADIO=1;
     * @param prorrateos The instance to add to the <code>Prorrateos</code> role.
     */
     public void add2Prorrateos(Prorrateo prorrateos) {
-        this.getProrrateos().add(prorrateos);
+        this.prorrateos.add(prorrateos);
     }
     /**
      * Sets instances of <code>Prorrateo</code> related through the <code>Prorrateos</code> role.
@@ -2167,7 +2167,7 @@ RADIO=1;
     * @param logGruposUsuarios The instance to add to the <code>LogGruposUsuarios</code> role.
     */
     public void add2LogGruposUsuarios(LogGruposUsuarios logGruposUsuarios) {
-        this.getLogGruposUsuarios().add(logGruposUsuarios);
+        this.logGruposUsuarios.add(logGruposUsuarios);
     }
     /**
      * Sets instances of <code>LogGruposUsuarios</code> related through the <code>LogGruposUsuarios</code> role.
@@ -2203,7 +2203,7 @@ RADIO=1;
     * @param grupoAsignacionNovedad The instance to add to the <code>GrupoAsignacionNovedad</code> role.
     */
     public void add2GrupoAsignacionNovedad(GrupoAsignacionNovedad grupoAsignacionNovedad) {
-        this.getGrupoAsignacionNovedad().add(grupoAsignacionNovedad);
+        this.grupoAsignacionNovedad.add(grupoAsignacionNovedad);
     }
     /**
      * Sets instances of <code>GrupoAsignacionNovedad</code> related through the <code>GrupoAsignacionNovedad</code> role.
@@ -2239,7 +2239,7 @@ RADIO=1;
     * @param configuracionesANS The instance to add to the <code>ConfiguracionesANS</code> role.
     */
     public void add2ConfiguracionesANS(ConfiguracionANS configuracionesANS) {
-        this.getConfiguracionesANS().add(configuracionesANS);
+        this.configuracionesANS.add(configuracionesANS);
     }
     /**
      * Sets instances of <code>ConfiguracionANS</code> related through the <code>ConfiguracionesANS</code> role.
@@ -2275,7 +2275,7 @@ RADIO=1;
     * @param reportesDominio The instance to add to the <code>ReportesDominio</code> role.
     */
     public void add2ReportesDominio(ReportesDominio reportesDominio) {
-        this.getReportesDominio().add(reportesDominio);
+        this.reportesDominio.add(reportesDominio);
     }
     /**
      * Sets instances of <code>ReportesDominio</code> related through the <code>ReportesDominio</code> role.
@@ -2311,7 +2311,7 @@ RADIO=1;
     * @param logIncompatibilidades The instance to add to the <code>LogIncompatibilidades</code> role.
     */
     public void add2LogIncompatibilidades(LogIncompatibilidades logIncompatibilidades) {
-        this.getLogIncompatibilidades().add(logIncompatibilidades);
+        this.logIncompatibilidades.add(logIncompatibilidades);
     }
     /**
      * Sets instances of <code>LogIncompatibilidades</code> related through the <code>LogIncompatibilidades</code> role.
@@ -2347,7 +2347,7 @@ RADIO=1;
     * @param logDatosDominio The instance to add to the <code>LogDatosDominio</code> role.
     */
     public void add2LogDatosDominio(LogDatosDominio logDatosDominio) {
-        this.getLogDatosDominio().add(logDatosDominio);
+        this.logDatosDominio.add(logDatosDominio);
     }
     /**
      * Sets instances of <code>LogDatosDominio</code> related through the <code>LogDatosDominio</code> role.
@@ -2481,7 +2481,7 @@ RADIO=1;
     * @param periodicidades The instance to add to the <code>Periodicidades</code> role.
     */
     public void add2Periodicidades(Periodicidad periodicidades) {
-        this.getPeriodicidades().add(periodicidades);
+        this.periodicidades.add(periodicidades);
     }
     /**
      * Sets instances of <code>Periodicidad</code> related through the <code>Periodicidades</code> role.
@@ -2517,7 +2517,7 @@ RADIO=1;
     * @param roles The instance to add to the <code>Roles</code> role.
     */
     public void add2Roles(Rol roles) {
-        this.getRoles().add(roles);
+        this.roles.add(roles);
     }
     /**
      * Sets instances of <code>Rol</code> related through the <code>Roles</code> role.
@@ -2553,7 +2553,7 @@ RADIO=1;
     * @param formasPago The instance to add to the <code>FormasPago</code> role.
     */
     public void add2FormasPago(FormaPago formasPago) {
-        this.getFormasPago().add(formasPago);
+        this.formasPago.add(formasPago);
     }
     /**
      * Sets instances of <code>FormaPago</code> related through the <code>FormasPago</code> role.
@@ -2589,7 +2589,7 @@ RADIO=1;
     * @param plantillas The instance to add to the <code>Plantillas</code> role.
     */
     public void add2Plantillas(PlantillaEmail plantillas) {
-        this.getPlantillas().add(plantillas);
+        this.plantillas.add(plantillas);
     }
     /**
      * Sets instances of <code>PlantillaEmail</code> related through the <code>Plantillas</code> role.
@@ -2625,7 +2625,7 @@ RADIO=1;
     * @param novedades The instance to add to the <code>Novedades</code> role.
     */
     public void add2Novedades(Novedad novedades) {
-        this.getNovedades().add(novedades);
+        this.novedades.add(novedades);
     }
     /**
      * Sets instances of <code>Novedad</code> related through the <code>Novedades</code> role.
@@ -2759,7 +2759,7 @@ RADIO=1;
     * @param dominiosIncompatibles The instance to add to the <code>DominiosIncompatibles</code> role.
     */
     public void add2DominiosIncompatibles(Dominio dominiosIncompatibles) {
-        this.getDominiosIncompatibles().add(dominiosIncompatibles);
+        this.dominiosIncompatibles.add(dominiosIncompatibles);
     }
     /**
      * Sets instances of <code>Dominio</code> related through the <code>DominiosIncompatibles</code> role.

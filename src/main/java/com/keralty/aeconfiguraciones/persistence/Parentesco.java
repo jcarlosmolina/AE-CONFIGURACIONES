@@ -489,7 +489,7 @@ public class Parentesco extends AbstractAppEntity {
     * @param atributosUsuario The instance to add to the <code>AtributosUsuario</code> role.
     */
     public void add2AtributosUsuario(Usuario atributosUsuario) {
-        this.getAtributosUsuario().add(atributosUsuario);
+        this.atributosUsuario.add(atributosUsuario);
     }
     /**
      * Sets instances of <code>Usuario</code> related through the <code>AtributosUsuario</code> role.
@@ -525,7 +525,7 @@ public class Parentesco extends AbstractAppEntity {
     * @param beneficiariosC The instance to add to the <code>BeneficiariosC</code> role.
     */
     public void add2BeneficiariosC(BeneficiarioC beneficiariosC) {
-        this.getBeneficiariosC().add(beneficiariosC);
+        this.beneficiariosC.add(beneficiariosC);
     }
     /**
      * Sets instances of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.
@@ -561,7 +561,7 @@ public class Parentesco extends AbstractAppEntity {
     * @param usuariosReg The instance to add to the <code>UsuariosReg</code> role.
     */
     public void add2UsuariosReg(UsuarioReg usuariosReg) {
-        this.getUsuariosReg().add(usuariosReg);
+        this.usuariosReg.add(usuariosReg);
     }
     /**
      * Sets instances of <code>UsuarioReg</code> related through the <code>UsuariosReg</code> role.
@@ -597,7 +597,7 @@ public class Parentesco extends AbstractAppEntity {
     * @param parentescosDom The instance to add to the <code>ParentescosDom</code> role.
     */
     public void add2ParentescosDom(ParentescoDom parentescosDom) {
-        this.getParentescosDom().add(parentescosDom);
+        this.parentescosDom.add(parentescosDom);
     }
     /**
      * Sets instances of <code>ParentescoDom</code> related through the <code>ParentescosDom</code> role.
@@ -633,7 +633,7 @@ public class Parentesco extends AbstractAppEntity {
     * @param usuariosNovedad The instance to add to the <code>UsuariosNovedad</code> role.
     */
     public void add2UsuariosNovedad(UsuarioNovedad usuariosNovedad) {
-        this.getUsuariosNovedad().add(usuariosNovedad);
+        this.usuariosNovedad.add(usuariosNovedad);
     }
     /**
      * Sets instances of <code>UsuarioNovedad</code> related through the <code>UsuariosNovedad</code> role.
@@ -669,7 +669,7 @@ public class Parentesco extends AbstractAppEntity {
     * @param usuarioNovedad The instance to add to the <code>UsuarioNovedad</code> role.
     */
     public void add2UsuarioNovedad(UsuarioNovedad usuarioNovedad) {
-        this.getUsuarioNovedad().add(usuarioNovedad);
+        this.usuarioNovedad.add(usuarioNovedad);
     }
     /**
      * Sets instances of <code>UsuarioNovedad</code> related through the <code>UsuarioNovedad</code> role.
