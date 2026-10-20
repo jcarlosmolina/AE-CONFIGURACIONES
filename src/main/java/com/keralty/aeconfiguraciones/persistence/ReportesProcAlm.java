@@ -298,16 +298,16 @@ public class ReportesProcAlm extends AbstractAppEntity {
         return getParamReporteRepository().findByReporte(this);
     }
 
-   /**
-    * Adds an instance of <code>ParamReporte</code> related through the <code>Parametros</code> role.
-    * @param parametros The instance to add to the <code>Parametros</code> role.
-    */
+    /**
+     * Adds an instance of <code>ParamReporte</code> related through the <code>Parametros</code> role.
+     * @param parametros The instance to add to the <code>Parametros</code> role.
+     */
     public void add2Parametros(ParamReporte parametros) {
         this.parametros.add(parametros);
     }
     /**
      * Removes an instance of <code>ParamReporte</code> related through the <code>Parametros</code> role.
-     * @param dominios The instance to be removed
+     * @param parametros The instance to be removed
      */
     public void removeFromParametros(ParamReporte parametros) {
     	this.parametros.remove(parametros);
@@ -341,16 +341,16 @@ public class ReportesProcAlm extends AbstractAppEntity {
         return funcionarios;
     }
 
-   /**
-    * Adds an instance of <code>Funcionario</code> related through the <code>Funcionarios</code> role.
-    * @param funcionarios The instance to add to the <code>Funcionarios</code> role.
-    */
+    /**
+     * Adds an instance of <code>Funcionario</code> related through the <code>Funcionarios</code> role.
+     * @param funcionarios The instance to add to the <code>Funcionarios</code> role.
+     */
     public void add2Funcionarios(Funcionario funcionarios) {
         this.funcionarios.add(funcionarios);
     }
     /**
      * Removes an instance of <code>Funcionario</code> related through the <code>Funcionarios</code> role.
-     * @param dominios The instance to be removed
+     * @param funcionarios The instance to be removed
      */
     public void removeFromFuncionarios(Funcionario funcionarios) {
     	this.funcionarios.remove(funcionarios);

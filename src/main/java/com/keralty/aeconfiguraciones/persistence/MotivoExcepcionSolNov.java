@@ -168,16 +168,16 @@ public class MotivoExcepcionSolNov extends AbstractAppEntity {
         return getSolicitudNovedadRepository().findByMotivoExcepcion(this);
     }
 
-   /**
-    * Adds an instance of <code>SolicitudNovedad</code> related through the <code>Solicitudes</code> role.
-    * @param solicitudes The instance to add to the <code>Solicitudes</code> role.
-    */
+    /**
+     * Adds an instance of <code>SolicitudNovedad</code> related through the <code>Solicitudes</code> role.
+     * @param solicitudes The instance to add to the <code>Solicitudes</code> role.
+     */
     public void add2Solicitudes(SolicitudNovedad solicitudes) {
         this.solicitudes.add(solicitudes);
     }
     /**
      * Removes an instance of <code>SolicitudNovedad</code> related through the <code>Solicitudes</code> role.
-     * @param dominios The instance to be removed
+     * @param solicitudes The instance to be removed
      */
     public void removeFromSolicitudes(SolicitudNovedad solicitudes) {
     	this.solicitudes.remove(solicitudes);

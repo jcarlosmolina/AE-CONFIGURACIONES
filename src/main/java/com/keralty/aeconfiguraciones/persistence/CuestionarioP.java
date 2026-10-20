@@ -220,16 +220,16 @@ public class CuestionarioP extends AbstractAppEntity {
         return secciones;
     }
 
-   /**
-    * Adds an instance of <code>SeccionP</code> related through the <code>Secciones</code> role.
-    * @param secciones The instance to add to the <code>Secciones</code> role.
-    */
+    /**
+     * Adds an instance of <code>SeccionP</code> related through the <code>Secciones</code> role.
+     * @param secciones The instance to add to the <code>Secciones</code> role.
+     */
     public void add2Secciones(SeccionP secciones) {
         this.secciones.add(secciones);
     }
     /**
      * Removes an instance of <code>SeccionP</code> related through the <code>Secciones</code> role.
-     * @param dominios The instance to be removed
+     * @param secciones The instance to be removed
      */
     public void removeFromSecciones(SeccionP secciones) {
     	this.secciones.remove(secciones);
@@ -263,10 +263,10 @@ public class CuestionarioP extends AbstractAppEntity {
         return usuario;
     }
 
-   /**
-    * Adds an instance of <code>Usuario</code> related through the <code>Usuario</code> role.
-    * @param usuario The instance to add to the <code>Usuario</code> role.
-    */
+    /**
+     * Adds an instance of <code>Usuario</code> related through the <code>Usuario</code> role.
+     * @param usuario The instance to add to the <code>Usuario</code> role.
+     */
     public void add2Usuario(Usuario usuario) {
         if (usuario == null || usuario.isNull()) {
             this.modifiedUsuario = true;

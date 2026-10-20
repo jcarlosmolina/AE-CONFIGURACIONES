@@ -1611,16 +1611,16 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
         return getSolicitudRepository().findByContratoC(this);
     }
 
-   /**
-    * Adds an instance of <code>Solicitud</code> related through the <code>Solicitud</code> role.
-    * @param solicitud The instance to add to the <code>Solicitud</code> role.
-    */
+    /**
+     * Adds an instance of <code>Solicitud</code> related through the <code>Solicitud</code> role.
+     * @param solicitud The instance to add to the <code>Solicitud</code> role.
+     */
     public void add2Solicitud(Solicitud solicitud) {
         this.solicitud.add(solicitud);
     }
     /**
      * Removes an instance of <code>Solicitud</code> related through the <code>Solicitud</code> role.
-     * @param dominios The instance to be removed
+     * @param solicitud The instance to be removed
      */
     public void removeFromSolicitud(Solicitud solicitud) {
     	this.solicitud.remove(solicitud);
@@ -1662,10 +1662,10 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
         return (personaCContratante == null ? new PersonaC(null) : personaCContratante);
     }
 
-   /**
-    * Adds an instance of <code>PersonaC</code> related through the <code>PersonaCContratante</code> role.
-    * @param personaCContratante The instance to add to the <code>PersonaCContratante</code> role.
-    */
+    /**
+     * Adds an instance of <code>PersonaC</code> related through the <code>PersonaCContratante</code> role.
+     * @param personaCContratante The instance to add to the <code>PersonaCContratante</code> role.
+     */
     public void add2PersonaCContratante(PersonaC personaCContratante) {
         this.personaCContratante = (personaCContratante == null  || personaCContratante.isNull() ? null : personaCContratante);
     }
@@ -1691,16 +1691,16 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
         return getDireccionCRepository().findByContratoC(this);
     }
 
-   /**
-    * Adds an instance of <code>DireccionC</code> related through the <code>DireccionesC</code> role.
-    * @param direccionesC The instance to add to the <code>DireccionesC</code> role.
-    */
+    /**
+     * Adds an instance of <code>DireccionC</code> related through the <code>DireccionesC</code> role.
+     * @param direccionesC The instance to add to the <code>DireccionesC</code> role.
+     */
     public void add2DireccionesC(DireccionC direccionesC) {
         this.direccionesC.add(direccionesC);
     }
     /**
      * Removes an instance of <code>DireccionC</code> related through the <code>DireccionesC</code> role.
-     * @param dominios The instance to be removed
+     * @param direccionesC The instance to be removed
      */
     public void removeFromDireccionesC(DireccionC direccionesC) {
     	this.direccionesC.remove(direccionesC);
@@ -1734,16 +1734,16 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
         return observacionesC;
     }
 
-   /**
-    * Adds an instance of <code>ObservacionesC</code> related through the <code>ObservacionesC</code> role.
-    * @param observacionesC The instance to add to the <code>ObservacionesC</code> role.
-    */
+    /**
+     * Adds an instance of <code>ObservacionesC</code> related through the <code>ObservacionesC</code> role.
+     * @param observacionesC The instance to add to the <code>ObservacionesC</code> role.
+     */
     public void add2ObservacionesC(ObservacionesC observacionesC) {
         this.observacionesC.add(observacionesC);
     }
     /**
      * Removes an instance of <code>ObservacionesC</code> related through the <code>ObservacionesC</code> role.
-     * @param dominios The instance to be removed
+     * @param observacionesC The instance to be removed
      */
     public void removeFromObservacionesC(ObservacionesC observacionesC) {
     	this.observacionesC.remove(observacionesC);
@@ -1777,16 +1777,16 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
         return getBeneficiarioCRepository().findByContratoC(this);
     }
 
-   /**
-    * Adds an instance of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.
-    * @param beneficiariosC The instance to add to the <code>BeneficiariosC</code> role.
-    */
+    /**
+     * Adds an instance of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.
+     * @param beneficiariosC The instance to add to the <code>BeneficiariosC</code> role.
+     */
     public void add2BeneficiariosC(BeneficiarioC beneficiariosC) {
         this.beneficiariosC.add(beneficiariosC);
     }
     /**
      * Removes an instance of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.
-     * @param dominios The instance to be removed
+     * @param beneficiariosC The instance to be removed
      */
     public void removeFromBeneficiariosC(BeneficiarioC beneficiariosC) {
     	this.beneficiariosC.remove(beneficiariosC);
@@ -1820,16 +1820,16 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
         return getFamiliaCRepository().findByContratoC(this);
     }
 
-   /**
-    * Adds an instance of <code>FamiliaC</code> related through the <code>FamiliasC</code> role.
-    * @param familiasC The instance to add to the <code>FamiliasC</code> role.
-    */
+    /**
+     * Adds an instance of <code>FamiliaC</code> related through the <code>FamiliasC</code> role.
+     * @param familiasC The instance to add to the <code>FamiliasC</code> role.
+     */
     public void add2FamiliasC(FamiliaC familiasC) {
         this.familiasC.add(familiasC);
     }
     /**
      * Removes an instance of <code>FamiliaC</code> related through the <code>FamiliasC</code> role.
-     * @param dominios The instance to be removed
+     * @param familiasC The instance to be removed
      */
     public void removeFromFamiliasC(FamiliaC familiasC) {
     	this.familiasC.remove(familiasC);
@@ -1877,10 +1877,10 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
         return (periodicidadC == null ? new Periodicidad(null) : periodicidadC);
     }
 
-   /**
-    * Adds an instance of <code>Periodicidad</code> related through the <code>PeriodicidadC</code> role.
-    * @param periodicidadC The instance to add to the <code>PeriodicidadC</code> role.
-    */
+    /**
+     * Adds an instance of <code>Periodicidad</code> related through the <code>PeriodicidadC</code> role.
+     * @param periodicidadC The instance to add to the <code>PeriodicidadC</code> role.
+     */
     public void add2PeriodicidadC(Periodicidad periodicidadC) {
         if (periodicidadC == null || periodicidadC.isNull()) {
             this.modifiedPeriodicidadC = true;
@@ -1926,10 +1926,10 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
         return (formaPagoC == null ? new FormaPago(null) : formaPagoC);
     }
 
-   /**
-    * Adds an instance of <code>FormaPago</code> related through the <code>FormaPagoC</code> role.
-    * @param formaPagoC The instance to add to the <code>FormaPagoC</code> role.
-    */
+    /**
+     * Adds an instance of <code>FormaPago</code> related through the <code>FormaPagoC</code> role.
+     * @param formaPagoC The instance to add to the <code>FormaPagoC</code> role.
+     */
     public void add2FormaPagoC(FormaPago formaPagoC) {
         if (formaPagoC == null || formaPagoC.isNull()) {
             this.modifiedFormaPagoC = true;
@@ -1975,10 +1975,10 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
         return (estadoContratoC == null ? new EstadoContrato(null) : estadoContratoC);
     }
 
-   /**
-    * Adds an instance of <code>EstadoContrato</code> related through the <code>EstadoContratoC</code> role.
-    * @param estadoContratoC The instance to add to the <code>EstadoContratoC</code> role.
-    */
+    /**
+     * Adds an instance of <code>EstadoContrato</code> related through the <code>EstadoContratoC</code> role.
+     * @param estadoContratoC The instance to add to the <code>EstadoContratoC</code> role.
+     */
     public void add2EstadoContratoC(EstadoContrato estadoContratoC) {
         if (estadoContratoC == null || estadoContratoC.isNull()) {
             this.modifiedEstadoContratoC = true;
@@ -2024,10 +2024,10 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
         return (productoC == null ? new Productos(null) : productoC);
     }
 
-   /**
-    * Adds an instance of <code>Productos</code> related through the <code>ProductoC</code> role.
-    * @param productoC The instance to add to the <code>ProductoC</code> role.
-    */
+    /**
+     * Adds an instance of <code>Productos</code> related through the <code>ProductoC</code> role.
+     * @param productoC The instance to add to the <code>ProductoC</code> role.
+     */
     public void add2ProductoC(Productos productoC) {
         if (productoC == null || productoC.isNull()) {
             this.modifiedProductoC = true;
@@ -2073,10 +2073,10 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
         return (planC == null ? new Planes(null) : planC);
     }
 
-   /**
-    * Adds an instance of <code>Planes</code> related through the <code>PlanC</code> role.
-    * @param planC The instance to add to the <code>PlanC</code> role.
-    */
+    /**
+     * Adds an instance of <code>Planes</code> related through the <code>PlanC</code> role.
+     * @param planC The instance to add to the <code>PlanC</code> role.
+     */
     public void add2PlanC(Planes planC) {
         if (planC == null || planC.isNull()) {
             this.modifiedPlanC = true;
@@ -2122,10 +2122,10 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
         return (tarifaC == null ? new Tarifa(null) : tarifaC);
     }
 
-   /**
-    * Adds an instance of <code>Tarifa</code> related through the <code>TarifaC</code> role.
-    * @param tarifaC The instance to add to the <code>TarifaC</code> role.
-    */
+    /**
+     * Adds an instance of <code>Tarifa</code> related through the <code>TarifaC</code> role.
+     * @param tarifaC The instance to add to the <code>TarifaC</code> role.
+     */
     public void add2TarifaC(Tarifa tarifaC) {
         if (tarifaC == null || tarifaC.isNull()) {
             this.modifiedTarifaC = true;
@@ -2171,10 +2171,10 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
         return (grupoAsociadoC == null ? new GrupoAsociado(null) : grupoAsociadoC);
     }
 
-   /**
-    * Adds an instance of <code>GrupoAsociado</code> related through the <code>GrupoAsociadoC</code> role.
-    * @param grupoAsociadoC The instance to add to the <code>GrupoAsociadoC</code> role.
-    */
+    /**
+     * Adds an instance of <code>GrupoAsociado</code> related through the <code>GrupoAsociadoC</code> role.
+     * @param grupoAsociadoC The instance to add to the <code>GrupoAsociadoC</code> role.
+     */
     public void add2GrupoAsociadoC(GrupoAsociado grupoAsociadoC) {
         if (grupoAsociadoC == null || grupoAsociadoC.isNull()) {
             this.modifiedGrupoAsociadoC = true;
@@ -2220,10 +2220,10 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
         return (municipioC == null ? new Municipio(null) : municipioC);
     }
 
-   /**
-    * Adds an instance of <code>Municipio</code> related through the <code>MunicipioC</code> role.
-    * @param municipioC The instance to add to the <code>MunicipioC</code> role.
-    */
+    /**
+     * Adds an instance of <code>Municipio</code> related through the <code>MunicipioC</code> role.
+     * @param municipioC The instance to add to the <code>MunicipioC</code> role.
+     */
     public void add2MunicipioC(Municipio municipioC) {
         if (municipioC == null || municipioC.isNull()) {
             this.modifiedMunicipioC = true;
@@ -2269,10 +2269,10 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
         return (sucursalC == null ? new Sucursal(null) : sucursalC);
     }
 
-   /**
-    * Adds an instance of <code>Sucursal</code> related through the <code>SucursalC</code> role.
-    * @param sucursalC The instance to add to the <code>SucursalC</code> role.
-    */
+    /**
+     * Adds an instance of <code>Sucursal</code> related through the <code>SucursalC</code> role.
+     * @param sucursalC The instance to add to the <code>SucursalC</code> role.
+     */
     public void add2SucursalC(Sucursal sucursalC) {
         if (sucursalC == null || sucursalC.isNull()) {
             this.modifiedSucursalC = true;
@@ -2318,10 +2318,10 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
         return (asesorC == null ? new Asesor(null) : asesorC);
     }
 
-   /**
-    * Adds an instance of <code>Asesor</code> related through the <code>AsesorC</code> role.
-    * @param asesorC The instance to add to the <code>AsesorC</code> role.
-    */
+    /**
+     * Adds an instance of <code>Asesor</code> related through the <code>AsesorC</code> role.
+     * @param asesorC The instance to add to the <code>AsesorC</code> role.
+     */
     public void add2AsesorC(Asesor asesorC) {
         if (asesorC == null || asesorC.isNull()) {
             this.modifiedAsesorC = true;

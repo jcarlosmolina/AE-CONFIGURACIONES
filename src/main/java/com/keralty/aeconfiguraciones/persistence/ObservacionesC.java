@@ -276,10 +276,10 @@ public class ObservacionesC extends AbstractAppEntity {
         return contratoC;
     }
 
-   /**
-    * Adds an instance of <code>ContratoC</code> related through the <code>ContratoC</code> role.
-    * @param contratoC The instance to add to the <code>ContratoC</code> role.
-    */
+    /**
+     * Adds an instance of <code>ContratoC</code> related through the <code>ContratoC</code> role.
+     * @param contratoC The instance to add to the <code>ContratoC</code> role.
+     */
     public void add2ContratoC(ContratoC contratoC) {
         if (contratoC == null || contratoC.isNull()) {
             this.modifiedContratoC = true;

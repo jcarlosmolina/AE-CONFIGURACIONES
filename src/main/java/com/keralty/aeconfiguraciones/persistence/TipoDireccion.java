@@ -281,16 +281,16 @@ public class TipoDireccion extends AbstractAppEntity {
         return getDireccionCRepository().findByTipoDireccionC(this);
     }
 
-   /**
-    * Adds an instance of <code>DireccionC</code> related through the <code>DireccionesC</code> role.
-    * @param direccionesC The instance to add to the <code>DireccionesC</code> role.
-    */
+    /**
+     * Adds an instance of <code>DireccionC</code> related through the <code>DireccionesC</code> role.
+     * @param direccionesC The instance to add to the <code>DireccionesC</code> role.
+     */
     public void add2DireccionesC(DireccionC direccionesC) {
         this.direccionesC.add(direccionesC);
     }
     /**
      * Removes an instance of <code>DireccionC</code> related through the <code>DireccionesC</code> role.
-     * @param dominios The instance to be removed
+     * @param direccionesC The instance to be removed
      */
     public void removeFromDireccionesC(DireccionC direccionesC) {
     	this.direccionesC.remove(direccionesC);
@@ -324,16 +324,16 @@ public class TipoDireccion extends AbstractAppEntity {
         return getDireccionRepository().findByTipoDireccion(this);
     }
 
-   /**
-    * Adds an instance of <code>Direccion</code> related through the <code>Direcciones</code> role.
-    * @param direcciones The instance to add to the <code>Direcciones</code> role.
-    */
+    /**
+     * Adds an instance of <code>Direccion</code> related through the <code>Direcciones</code> role.
+     * @param direcciones The instance to add to the <code>Direcciones</code> role.
+     */
     public void add2Direcciones(Direccion direcciones) {
         this.direcciones.add(direcciones);
     }
     /**
      * Removes an instance of <code>Direccion</code> related through the <code>Direcciones</code> role.
-     * @param dominios The instance to be removed
+     * @param direcciones The instance to be removed
      */
     public void removeFromDirecciones(Direccion direcciones) {
     	this.direcciones.remove(direcciones);

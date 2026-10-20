@@ -191,16 +191,16 @@ public class PriorizacionSolicitudes extends AbstractAppEntity {
         return getLogPriorizacionSolRepository().findByPriSolicitud(this);
     }
 
-   /**
-    * Adds an instance of <code>LogPriorizacionSol</code> related through the <code>LogPriorizacionSol</code> role.
-    * @param logPriorizacionSol The instance to add to the <code>LogPriorizacionSol</code> role.
-    */
+    /**
+     * Adds an instance of <code>LogPriorizacionSol</code> related through the <code>LogPriorizacionSol</code> role.
+     * @param logPriorizacionSol The instance to add to the <code>LogPriorizacionSol</code> role.
+     */
     public void add2LogPriorizacionSol(LogPriorizacionSol logPriorizacionSol) {
         this.logPriorizacionSol.add(logPriorizacionSol);
     }
     /**
      * Removes an instance of <code>LogPriorizacionSol</code> related through the <code>LogPriorizacionSol</code> role.
-     * @param dominios The instance to be removed
+     * @param logPriorizacionSol The instance to be removed
      */
     public void removeFromLogPriorizacionSol(LogPriorizacionSol logPriorizacionSol) {
     	this.logPriorizacionSol.remove(logPriorizacionSol);

@@ -369,10 +369,10 @@ public class TipoIVA extends AbstractAppEntity {
         return (productoT == null ? new Productos(null) : productoT);
     }
 
-   /**
-    * Adds an instance of <code>Productos</code> related through the <code>ProductoT</code> role.
-    * @param productoT The instance to add to the <code>ProductoT</code> role.
-    */
+    /**
+     * Adds an instance of <code>Productos</code> related through the <code>ProductoT</code> role.
+     * @param productoT The instance to add to the <code>ProductoT</code> role.
+     */
     public void add2ProductoT(Productos productoT) {
         if (productoT == null || productoT.isNull()) {
             this.modifiedProductoT = true;
@@ -418,10 +418,10 @@ public class TipoIVA extends AbstractAppEntity {
         return (planT == null ? new Planes(null) : planT);
     }
 
-   /**
-    * Adds an instance of <code>Planes</code> related through the <code>PlanT</code> role.
-    * @param planT The instance to add to the <code>PlanT</code> role.
-    */
+    /**
+     * Adds an instance of <code>Planes</code> related through the <code>PlanT</code> role.
+     * @param planT The instance to add to the <code>PlanT</code> role.
+     */
     public void add2PlanT(Planes planT) {
         if (planT == null || planT.isNull()) {
             this.modifiedPlanT = true;

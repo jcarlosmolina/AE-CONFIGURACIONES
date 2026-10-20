@@ -677,16 +677,16 @@ En el caso de novedad solo será documento de identificación. Lo mantenemos com
         return logEstadoDocNov;
     }
 
-   /**
-    * Adds an instance of <code>LogEstadoDocNov</code> related through the <code>LogEstadoDocNov</code> role.
-    * @param logEstadoDocNov The instance to add to the <code>LogEstadoDocNov</code> role.
-    */
+    /**
+     * Adds an instance of <code>LogEstadoDocNov</code> related through the <code>LogEstadoDocNov</code> role.
+     * @param logEstadoDocNov The instance to add to the <code>LogEstadoDocNov</code> role.
+     */
     public void add2LogEstadoDocNov(LogEstadoDocNov logEstadoDocNov) {
         this.logEstadoDocNov.add(logEstadoDocNov);
     }
     /**
      * Removes an instance of <code>LogEstadoDocNov</code> related through the <code>LogEstadoDocNov</code> role.
-     * @param dominios The instance to be removed
+     * @param logEstadoDocNov The instance to be removed
      */
     public void removeFromLogEstadoDocNov(LogEstadoDocNov logEstadoDocNov) {
     	this.logEstadoDocNov.remove(logEstadoDocNov);
@@ -720,10 +720,10 @@ En el caso de novedad solo será documento de identificación. Lo mantenemos com
         return solicitud;
     }
 
-   /**
-    * Adds an instance of <code>SolicitudNovedad</code> related through the <code>Solicitud</code> role.
-    * @param solicitud The instance to add to the <code>Solicitud</code> role.
-    */
+    /**
+     * Adds an instance of <code>SolicitudNovedad</code> related through the <code>Solicitud</code> role.
+     * @param solicitud The instance to add to the <code>Solicitud</code> role.
+     */
     public void add2Solicitud(SolicitudNovedad solicitud) {
         if (solicitud == null || solicitud.isNull()) {
             this.modifiedSolicitud = true;
@@ -755,10 +755,10 @@ En el caso de novedad solo será documento de identificación. Lo mantenemos com
         return usuario;
     }
 
-   /**
-    * Adds an instance of <code>UsuarioNovedad</code> related through the <code>Usuario</code> role.
-    * @param usuario The instance to add to the <code>Usuario</code> role.
-    */
+    /**
+     * Adds an instance of <code>UsuarioNovedad</code> related through the <code>Usuario</code> role.
+     * @param usuario The instance to add to the <code>Usuario</code> role.
+     */
     public void add2Usuario(UsuarioNovedad usuario) {
         if (usuario == null || usuario.isNull()) {
             this.modifiedUsuario = true;

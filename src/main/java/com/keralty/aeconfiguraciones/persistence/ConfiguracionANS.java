@@ -761,16 +761,16 @@ RADIO=1;
         return getLogConfiguracionANSRepository().findByConfiguracionANS(this);
     }
 
-   /**
-    * Adds an instance of <code>LogConfiguracionANS</code> related through the <code>LogConfiguracionANS</code> role.
-    * @param logConfiguracionANS The instance to add to the <code>LogConfiguracionANS</code> role.
-    */
+    /**
+     * Adds an instance of <code>LogConfiguracionANS</code> related through the <code>LogConfiguracionANS</code> role.
+     * @param logConfiguracionANS The instance to add to the <code>LogConfiguracionANS</code> role.
+     */
     public void add2LogConfiguracionANS(LogConfiguracionANS logConfiguracionANS) {
         this.logConfiguracionANS.add(logConfiguracionANS);
     }
     /**
      * Removes an instance of <code>LogConfiguracionANS</code> related through the <code>LogConfiguracionANS</code> role.
-     * @param dominios The instance to be removed
+     * @param logConfiguracionANS The instance to be removed
      */
     public void removeFromLogConfiguracionANS(LogConfiguracionANS logConfiguracionANS) {
     	this.logConfiguracionANS.remove(logConfiguracionANS);
@@ -818,10 +818,10 @@ RADIO=1;
         return (dominio == null ? new Dominio(null) : dominio);
     }
 
-   /**
-    * Adds an instance of <code>Dominio</code> related through the <code>Dominio</code> role.
-    * @param dominio The instance to add to the <code>Dominio</code> role.
-    */
+    /**
+     * Adds an instance of <code>Dominio</code> related through the <code>Dominio</code> role.
+     * @param dominio The instance to add to the <code>Dominio</code> role.
+     */
     public void add2Dominio(Dominio dominio) {
         if (dominio == null || dominio.isNull()) {
             this.modifiedDominio = true;
@@ -867,10 +867,10 @@ RADIO=1;
         return (novedad == null ? new Novedad(null) : novedad);
     }
 
-   /**
-    * Adds an instance of <code>Novedad</code> related through the <code>Novedad</code> role.
-    * @param novedad The instance to add to the <code>Novedad</code> role.
-    */
+    /**
+     * Adds an instance of <code>Novedad</code> related through the <code>Novedad</code> role.
+     * @param novedad The instance to add to the <code>Novedad</code> role.
+     */
     public void add2Novedad(Novedad novedad) {
         if (novedad == null || novedad.isNull()) {
             this.modifiedNovedad = true;
@@ -916,10 +916,10 @@ RADIO=1;
         return (causal == null ? new Causal(null) : causal);
     }
 
-   /**
-    * Adds an instance of <code>Causal</code> related through the <code>Causal</code> role.
-    * @param causal The instance to add to the <code>Causal</code> role.
-    */
+    /**
+     * Adds an instance of <code>Causal</code> related through the <code>Causal</code> role.
+     * @param causal The instance to add to the <code>Causal</code> role.
+     */
     public void add2Causal(Causal causal) {
         if (causal == null || causal.isNull()) {
             this.modifiedCausal = true;

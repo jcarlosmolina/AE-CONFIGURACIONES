@@ -267,10 +267,10 @@ public class CausaExclusion extends AbstractAppEntity {
         return (novedad == null ? new Novedad(null) : novedad);
     }
 
-   /**
-    * Adds an instance of <code>Novedad</code> related through the <code>Novedad</code> role.
-    * @param novedad The instance to add to the <code>Novedad</code> role.
-    */
+    /**
+     * Adds an instance of <code>Novedad</code> related through the <code>Novedad</code> role.
+     * @param novedad The instance to add to the <code>Novedad</code> role.
+     */
     public void add2Novedad(Novedad novedad) {
         if (novedad == null || novedad.isNull()) {
             this.modifiedNovedad = true;

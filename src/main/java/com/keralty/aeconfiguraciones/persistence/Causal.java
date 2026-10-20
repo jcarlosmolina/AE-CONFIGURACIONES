@@ -517,16 +517,16 @@ RADIO=1;
         return getSolicitudNovedadRepository().findByCausal(this);
     }
 
-   /**
-    * Adds an instance of <code>SolicitudNovedad</code> related through the <code>Solicitudes</code> role.
-    * @param solicitudes The instance to add to the <code>Solicitudes</code> role.
-    */
+    /**
+     * Adds an instance of <code>SolicitudNovedad</code> related through the <code>Solicitudes</code> role.
+     * @param solicitudes The instance to add to the <code>Solicitudes</code> role.
+     */
     public void add2Solicitudes(SolicitudNovedad solicitudes) {
         this.solicitudes.add(solicitudes);
     }
     /**
      * Removes an instance of <code>SolicitudNovedad</code> related through the <code>Solicitudes</code> role.
-     * @param dominios The instance to be removed
+     * @param solicitudes The instance to be removed
      */
     public void removeFromSolicitudes(SolicitudNovedad solicitudes) {
     	this.solicitudes.remove(solicitudes);
@@ -560,16 +560,16 @@ RADIO=1;
         return getGrupoAsignacionNovedadRepository().findByCausal(this);
     }
 
-   /**
-    * Adds an instance of <code>GrupoAsignacionNovedad</code> related through the <code>GrupoAsignacionNovedad</code> role.
-    * @param grupoAsignacionNovedad The instance to add to the <code>GrupoAsignacionNovedad</code> role.
-    */
+    /**
+     * Adds an instance of <code>GrupoAsignacionNovedad</code> related through the <code>GrupoAsignacionNovedad</code> role.
+     * @param grupoAsignacionNovedad The instance to add to the <code>GrupoAsignacionNovedad</code> role.
+     */
     public void add2GrupoAsignacionNovedad(GrupoAsignacionNovedad grupoAsignacionNovedad) {
         this.grupoAsignacionNovedad.add(grupoAsignacionNovedad);
     }
     /**
      * Removes an instance of <code>GrupoAsignacionNovedad</code> related through the <code>GrupoAsignacionNovedad</code> role.
-     * @param dominios The instance to be removed
+     * @param grupoAsignacionNovedad The instance to be removed
      */
     public void removeFromGrupoAsignacionNovedad(GrupoAsignacionNovedad grupoAsignacionNovedad) {
     	this.grupoAsignacionNovedad.remove(grupoAsignacionNovedad);
@@ -603,16 +603,16 @@ RADIO=1;
         return getConfiguracionANSRepository().findByCausal(this);
     }
 
-   /**
-    * Adds an instance of <code>ConfiguracionANS</code> related through the <code>ConfiguracionesANS</code> role.
-    * @param configuracionesANS The instance to add to the <code>ConfiguracionesANS</code> role.
-    */
+    /**
+     * Adds an instance of <code>ConfiguracionANS</code> related through the <code>ConfiguracionesANS</code> role.
+     * @param configuracionesANS The instance to add to the <code>ConfiguracionesANS</code> role.
+     */
     public void add2ConfiguracionesANS(ConfiguracionANS configuracionesANS) {
         this.configuracionesANS.add(configuracionesANS);
     }
     /**
      * Removes an instance of <code>ConfiguracionANS</code> related through the <code>ConfiguracionesANS</code> role.
-     * @param dominios The instance to be removed
+     * @param configuracionesANS The instance to be removed
      */
     public void removeFromConfiguracionesANS(ConfiguracionANS configuracionesANS) {
     	this.configuracionesANS.remove(configuracionesANS);
@@ -660,10 +660,10 @@ RADIO=1;
         return (novedad == null ? new Novedad(null) : novedad);
     }
 
-   /**
-    * Adds an instance of <code>Novedad</code> related through the <code>Novedad</code> role.
-    * @param novedad The instance to add to the <code>Novedad</code> role.
-    */
+    /**
+     * Adds an instance of <code>Novedad</code> related through the <code>Novedad</code> role.
+     * @param novedad The instance to add to the <code>Novedad</code> role.
+     */
     public void add2Novedad(Novedad novedad) {
         if (novedad == null || novedad.isNull()) {
             this.modifiedNovedad = true;

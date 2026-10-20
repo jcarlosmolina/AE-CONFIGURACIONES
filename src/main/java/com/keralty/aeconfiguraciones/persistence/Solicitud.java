@@ -4418,10 +4418,10 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return (direccion == null ? new Direccion(null) : direccion);
     }
 
-   /**
-    * Adds an instance of <code>Direccion</code> related through the <code>Direccion</code> role.
-    * @param direccion The instance to add to the <code>Direccion</code> role.
-    */
+    /**
+     * Adds an instance of <code>Direccion</code> related through the <code>Direccion</code> role.
+     * @param direccion The instance to add to the <code>Direccion</code> role.
+     */
     public void add2Direccion(Direccion direccion) {
         this.direccion = (direccion == null  || direccion.isNull() ? null : direccion);
     }
@@ -4455,10 +4455,10 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return (proteccionDatos == null ? new ProteccionDatos(null) : proteccionDatos);
     }
 
-   /**
-    * Adds an instance of <code>ProteccionDatos</code> related through the <code>ProteccionDatos</code> role.
-    * @param proteccionDatos The instance to add to the <code>ProteccionDatos</code> role.
-    */
+    /**
+     * Adds an instance of <code>ProteccionDatos</code> related through the <code>ProteccionDatos</code> role.
+     * @param proteccionDatos The instance to add to the <code>ProteccionDatos</code> role.
+     */
     public void add2ProteccionDatos(ProteccionDatos proteccionDatos) {
         this.proteccionDatos = (proteccionDatos == null  || proteccionDatos.isNull() ? null : proteccionDatos);
     }
@@ -4484,16 +4484,16 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return getUsuarioRepository().findBySolicitud(this);
     }
 
-   /**
-    * Adds an instance of <code>Usuario</code> related through the <code>Usuarios</code> role.
-    * @param usuarios The instance to add to the <code>Usuarios</code> role.
-    */
+    /**
+     * Adds an instance of <code>Usuario</code> related through the <code>Usuarios</code> role.
+     * @param usuarios The instance to add to the <code>Usuarios</code> role.
+     */
     public void add2Usuarios(Usuario usuarios) {
         this.usuarios.add(usuarios);
     }
     /**
      * Removes an instance of <code>Usuario</code> related through the <code>Usuarios</code> role.
-     * @param dominios The instance to be removed
+     * @param usuarios The instance to be removed
      */
     public void removeFromUsuarios(Usuario usuarios) {
     	this.usuarios.remove(usuarios);
@@ -4535,10 +4535,10 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return (contratante == null ? new Contratante(null) : contratante);
     }
 
-   /**
-    * Adds an instance of <code>Contratante</code> related through the <code>Contratante</code> role.
-    * @param contratante The instance to add to the <code>Contratante</code> role.
-    */
+    /**
+     * Adds an instance of <code>Contratante</code> related through the <code>Contratante</code> role.
+     * @param contratante The instance to add to the <code>Contratante</code> role.
+     */
     public void add2Contratante(Contratante contratante) {
         this.contratante = (contratante == null  || contratante.isNull() ? null : contratante);
     }
@@ -4564,10 +4564,10 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return firma;
     }
 
-   /**
-    * Adds an instance of <code>Firma</code> related through the <code>Firma</code> role.
-    * @param firma The instance to add to the <code>Firma</code> role.
-    */
+    /**
+     * Adds an instance of <code>Firma</code> related through the <code>Firma</code> role.
+     * @param firma The instance to add to the <code>Firma</code> role.
+     */
     public void add2Firma(Firma firma) {
         this.firma = (firma == null  || firma.isNull() ? null : firma);
     }
@@ -4593,10 +4593,10 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return segundaFirma;
     }
 
-   /**
-    * Adds an instance of <code>Firma</code> related through the <code>SegundaFirma</code> role.
-    * @param segundaFirma The instance to add to the <code>SegundaFirma</code> role.
-    */
+    /**
+     * Adds an instance of <code>Firma</code> related through the <code>SegundaFirma</code> role.
+     * @param segundaFirma The instance to add to the <code>SegundaFirma</code> role.
+     */
     public void add2SegundaFirma(Firma segundaFirma) {
         this.segundaFirma = (segundaFirma == null  || segundaFirma.isNull() ? null : segundaFirma);
     }
@@ -4622,10 +4622,10 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return firmaContratanteIncl;
     }
 
-   /**
-    * Adds an instance of <code>Firma</code> related through the <code>FirmaContratanteIncl</code> role.
-    * @param firmaContratanteIncl The instance to add to the <code>FirmaContratanteIncl</code> role.
-    */
+    /**
+     * Adds an instance of <code>Firma</code> related through the <code>FirmaContratanteIncl</code> role.
+     * @param firmaContratanteIncl The instance to add to the <code>FirmaContratanteIncl</code> role.
+     */
     public void add2FirmaContratanteIncl(Firma firmaContratanteIncl) {
         this.firmaContratanteIncl = (firmaContratanteIncl == null  || firmaContratanteIncl.isNull() ? null : firmaContratanteIncl);
     }
@@ -4651,16 +4651,16 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return usuariosRegistrados;
     }
 
-   /**
-    * Adds an instance of <code>UsuarioReg</code> related through the <code>UsuariosRegistrados</code> role.
-    * @param usuariosRegistrados The instance to add to the <code>UsuariosRegistrados</code> role.
-    */
+    /**
+     * Adds an instance of <code>UsuarioReg</code> related through the <code>UsuariosRegistrados</code> role.
+     * @param usuariosRegistrados The instance to add to the <code>UsuariosRegistrados</code> role.
+     */
     public void add2UsuariosRegistrados(UsuarioReg usuariosRegistrados) {
         this.usuariosRegistrados.add(usuariosRegistrados);
     }
     /**
      * Removes an instance of <code>UsuarioReg</code> related through the <code>UsuariosRegistrados</code> role.
-     * @param dominios The instance to be removed
+     * @param usuariosRegistrados The instance to be removed
      */
     public void removeFromUsuariosRegistrados(UsuarioReg usuariosRegistrados) {
     	this.usuariosRegistrados.remove(usuariosRegistrados);
@@ -4702,10 +4702,10 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return (titular == null ? new Titular(null) : titular);
     }
 
-   /**
-    * Adds an instance of <code>Titular</code> related through the <code>Titular</code> role.
-    * @param titular The instance to add to the <code>Titular</code> role.
-    */
+    /**
+     * Adds an instance of <code>Titular</code> related through the <code>Titular</code> role.
+     * @param titular The instance to add to the <code>Titular</code> role.
+     */
     public void add2Titular(Titular titular) {
         this.titular = (titular == null  || titular.isNull() ? null : titular);
     }
@@ -4731,16 +4731,16 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return documentosGestor;
     }
 
-   /**
-    * Adds an instance of <code>DocumentoG</code> related through the <code>DocumentosGestor</code> role.
-    * @param documentosGestor The instance to add to the <code>DocumentosGestor</code> role.
-    */
+    /**
+     * Adds an instance of <code>DocumentoG</code> related through the <code>DocumentosGestor</code> role.
+     * @param documentosGestor The instance to add to the <code>DocumentosGestor</code> role.
+     */
     public void add2DocumentosGestor(DocumentoG documentosGestor) {
         this.documentosGestor.add(documentosGestor);
     }
     /**
      * Removes an instance of <code>DocumentoG</code> related through the <code>DocumentosGestor</code> role.
-     * @param dominios The instance to be removed
+     * @param documentosGestor The instance to be removed
      */
     public void removeFromDocumentosGestor(DocumentoG documentosGestor) {
     	this.documentosGestor.remove(documentosGestor);
@@ -4774,16 +4774,16 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return erroresWS;
     }
 
-   /**
-    * Adds an instance of <code>ErrorWS</code> related through the <code>ErroresWS</code> role.
-    * @param erroresWS The instance to add to the <code>ErroresWS</code> role.
-    */
+    /**
+     * Adds an instance of <code>ErrorWS</code> related through the <code>ErroresWS</code> role.
+     * @param erroresWS The instance to add to the <code>ErroresWS</code> role.
+     */
     public void add2ErroresWS(ErrorWS erroresWS) {
         this.erroresWS.add(erroresWS);
     }
     /**
      * Removes an instance of <code>ErrorWS</code> related through the <code>ErroresWS</code> role.
-     * @param dominios The instance to be removed
+     * @param erroresWS The instance to be removed
      */
     public void removeFromErroresWS(ErrorWS erroresWS) {
     	this.erroresWS.remove(erroresWS);
@@ -4817,16 +4817,16 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return logEstado;
     }
 
-   /**
-    * Adds an instance of <code>LogEstado</code> related through the <code>LogEstado</code> role.
-    * @param logEstado The instance to add to the <code>LogEstado</code> role.
-    */
+    /**
+     * Adds an instance of <code>LogEstado</code> related through the <code>LogEstado</code> role.
+     * @param logEstado The instance to add to the <code>LogEstado</code> role.
+     */
     public void add2LogEstado(LogEstado logEstado) {
         this.logEstado.add(logEstado);
     }
     /**
      * Removes an instance of <code>LogEstado</code> related through the <code>LogEstado</code> role.
-     * @param dominios The instance to be removed
+     * @param logEstado The instance to be removed
      */
     public void removeFromLogEstado(LogEstado logEstado) {
     	this.logEstado.remove(logEstado);
@@ -4860,16 +4860,16 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return logAsignaciones;
     }
 
-   /**
-    * Adds an instance of <code>LogAsignaciones</code> related through the <code>LogAsignaciones</code> role.
-    * @param logAsignaciones The instance to add to the <code>LogAsignaciones</code> role.
-    */
+    /**
+     * Adds an instance of <code>LogAsignaciones</code> related through the <code>LogAsignaciones</code> role.
+     * @param logAsignaciones The instance to add to the <code>LogAsignaciones</code> role.
+     */
     public void add2LogAsignaciones(LogAsignaciones logAsignaciones) {
         this.logAsignaciones.add(logAsignaciones);
     }
     /**
      * Removes an instance of <code>LogAsignaciones</code> related through the <code>LogAsignaciones</code> role.
-     * @param dominios The instance to be removed
+     * @param logAsignaciones The instance to be removed
      */
     public void removeFromLogAsignaciones(LogAsignaciones logAsignaciones) {
     	this.logAsignaciones.remove(logAsignaciones);
@@ -4917,10 +4917,10 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return (aesolicitudes == null ? new Aesolicitudes(null) : aesolicitudes);
     }
 
-   /**
-    * Adds an instance of <code>Aesolicitudes</code> related through the <code>Aesolicitudes</code> role.
-    * @param aesolicitudes The instance to add to the <code>Aesolicitudes</code> role.
-    */
+    /**
+     * Adds an instance of <code>Aesolicitudes</code> related through the <code>Aesolicitudes</code> role.
+     * @param aesolicitudes The instance to add to the <code>Aesolicitudes</code> role.
+     */
     public void add2Aesolicitudes(Aesolicitudes aesolicitudes) {
         if (aesolicitudes == null || aesolicitudes.isNull()) {
             this.modifiedAesolicitudes = true;
@@ -4965,10 +4965,10 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return (contratantePersona == null ? new Persona(null) : contratantePersona);
     }
 
-   /**
-    * Adds an instance of <code>Persona</code> related through the <code>ContratantePersona</code> role.
-    * @param contratantePersona The instance to add to the <code>ContratantePersona</code> role.
-    */
+    /**
+     * Adds an instance of <code>Persona</code> related through the <code>ContratantePersona</code> role.
+     * @param contratantePersona The instance to add to the <code>ContratantePersona</code> role.
+     */
     public void add2ContratantePersona(Persona contratantePersona) {
         if (contratantePersona == null || contratantePersona.isNull()) {
             this.modifiedContratantePersona = true;
@@ -5014,10 +5014,10 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return (titularPersona == null ? new Persona(null) : titularPersona);
     }
 
-   /**
-    * Adds an instance of <code>Persona</code> related through the <code>TitularPersona</code> role.
-    * @param titularPersona The instance to add to the <code>TitularPersona</code> role.
-    */
+    /**
+     * Adds an instance of <code>Persona</code> related through the <code>TitularPersona</code> role.
+     * @param titularPersona The instance to add to the <code>TitularPersona</code> role.
+     */
     public void add2TitularPersona(Persona titularPersona) {
         if (titularPersona == null || titularPersona.isNull()) {
             this.modifiedTitularPersona = true;
@@ -5063,10 +5063,10 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return (grupoAsociado == null ? new GrupoAsociado(null) : grupoAsociado);
     }
 
-   /**
-    * Adds an instance of <code>GrupoAsociado</code> related through the <code>GrupoAsociado</code> role.
-    * @param grupoAsociado The instance to add to the <code>GrupoAsociado</code> role.
-    */
+    /**
+     * Adds an instance of <code>GrupoAsociado</code> related through the <code>GrupoAsociado</code> role.
+     * @param grupoAsociado The instance to add to the <code>GrupoAsociado</code> role.
+     */
     public void add2GrupoAsociado(GrupoAsociado grupoAsociado) {
         if (grupoAsociado == null || grupoAsociado.isNull()) {
             this.modifiedGrupoAsociado = true;
@@ -5112,10 +5112,10 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return (agente == null ? new Funcionario(null) : agente);
     }
 
-   /**
-    * Adds an instance of <code>Funcionario</code> related through the <code>Agente</code> role.
-    * @param agente The instance to add to the <code>Agente</code> role.
-    */
+    /**
+     * Adds an instance of <code>Funcionario</code> related through the <code>Agente</code> role.
+     * @param agente The instance to add to the <code>Agente</code> role.
+     */
     public void add2Agente(Funcionario agente) {
         if (agente == null || agente.isNull()) {
             this.modifiedAgente = true;
@@ -5161,10 +5161,10 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return (formaPago == null ? new FormaPago(null) : formaPago);
     }
 
-   /**
-    * Adds an instance of <code>FormaPago</code> related through the <code>FormaPago</code> role.
-    * @param formaPago The instance to add to the <code>FormaPago</code> role.
-    */
+    /**
+     * Adds an instance of <code>FormaPago</code> related through the <code>FormaPago</code> role.
+     * @param formaPago The instance to add to the <code>FormaPago</code> role.
+     */
     public void add2FormaPago(FormaPago formaPago) {
         if (formaPago == null || formaPago.isNull()) {
             this.modifiedFormaPago = true;
@@ -5210,10 +5210,10 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return (periodicidad == null ? new Periodicidad(null) : periodicidad);
     }
 
-   /**
-    * Adds an instance of <code>Periodicidad</code> related through the <code>Periodicidad</code> role.
-    * @param periodicidad The instance to add to the <code>Periodicidad</code> role.
-    */
+    /**
+     * Adds an instance of <code>Periodicidad</code> related through the <code>Periodicidad</code> role.
+     * @param periodicidad The instance to add to the <code>Periodicidad</code> role.
+     */
     public void add2Periodicidad(Periodicidad periodicidad) {
         if (periodicidad == null || periodicidad.isNull()) {
             this.modifiedPeriodicidad = true;
@@ -5259,10 +5259,10 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return (contratoC == null ? new ContratoC(null) : contratoC);
     }
 
-   /**
-    * Adds an instance of <code>ContratoC</code> related through the <code>ContratoC</code> role.
-    * @param contratoC The instance to add to the <code>ContratoC</code> role.
-    */
+    /**
+     * Adds an instance of <code>ContratoC</code> related through the <code>ContratoC</code> role.
+     * @param contratoC The instance to add to the <code>ContratoC</code> role.
+     */
     public void add2ContratoC(ContratoC contratoC) {
         if (contratoC == null || contratoC.isNull()) {
             this.modifiedContratoC = true;
@@ -5308,10 +5308,10 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return (usrAreaMedica == null ? new AreaMedica(null) : usrAreaMedica);
     }
 
-   /**
-    * Adds an instance of <code>AreaMedica</code> related through the <code>UsrAreaMedica</code> role.
-    * @param usrAreaMedica The instance to add to the <code>UsrAreaMedica</code> role.
-    */
+    /**
+     * Adds an instance of <code>AreaMedica</code> related through the <code>UsrAreaMedica</code> role.
+     * @param usrAreaMedica The instance to add to the <code>UsrAreaMedica</code> role.
+     */
     public void add2UsrAreaMedica(AreaMedica usrAreaMedica) {
         if (usrAreaMedica == null || usrAreaMedica.isNull()) {
             this.modifiedUsrAreaMedica = true;
@@ -5357,10 +5357,10 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return (tipoFactura == null ? new TipoFactura(null) : tipoFactura);
     }
 
-   /**
-    * Adds an instance of <code>TipoFactura</code> related through the <code>TipoFactura</code> role.
-    * @param tipoFactura The instance to add to the <code>TipoFactura</code> role.
-    */
+    /**
+     * Adds an instance of <code>TipoFactura</code> related through the <code>TipoFactura</code> role.
+     * @param tipoFactura The instance to add to the <code>TipoFactura</code> role.
+     */
     public void add2TipoFactura(TipoFactura tipoFactura) {
         if (tipoFactura == null || tipoFactura.isNull()) {
             this.modifiedTipoFactura = true;
@@ -5406,10 +5406,10 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         return (usrAfiliacion == null ? new Funcionario(null) : usrAfiliacion);
     }
 
-   /**
-    * Adds an instance of <code>Funcionario</code> related through the <code>UsrAfiliacion</code> role.
-    * @param usrAfiliacion The instance to add to the <code>UsrAfiliacion</code> role.
-    */
+    /**
+     * Adds an instance of <code>Funcionario</code> related through the <code>UsrAfiliacion</code> role.
+     * @param usrAfiliacion The instance to add to the <code>UsrAfiliacion</code> role.
+     */
     public void add2UsrAfiliacion(Funcionario usrAfiliacion) {
         if (usrAfiliacion == null || usrAfiliacion.isNull()) {
             this.modifiedUsrAfiliacion = true;

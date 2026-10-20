@@ -202,16 +202,16 @@ public class Sucursal extends AbstractAppEntity {
         return getFuncionarioRepository().findBySucursal(this);
     }
 
-   /**
-    * Adds an instance of <code>Funcionario</code> related through the <code>Agentes</code> role.
-    * @param agentes The instance to add to the <code>Agentes</code> role.
-    */
+    /**
+     * Adds an instance of <code>Funcionario</code> related through the <code>Agentes</code> role.
+     * @param agentes The instance to add to the <code>Agentes</code> role.
+     */
     public void add2Agentes(Funcionario agentes) {
         this.agentes.add(agentes);
     }
     /**
      * Removes an instance of <code>Funcionario</code> related through the <code>Agentes</code> role.
-     * @param dominios The instance to be removed
+     * @param agentes The instance to be removed
      */
     public void removeFromAgentes(Funcionario agentes) {
     	this.agentes.remove(agentes);
@@ -245,16 +245,16 @@ public class Sucursal extends AbstractAppEntity {
         return getContratoCRepository().findBySucursalC(this);
     }
 
-   /**
-    * Adds an instance of <code>ContratoC</code> related through the <code>ContratosC</code> role.
-    * @param contratosC The instance to add to the <code>ContratosC</code> role.
-    */
+    /**
+     * Adds an instance of <code>ContratoC</code> related through the <code>ContratosC</code> role.
+     * @param contratosC The instance to add to the <code>ContratosC</code> role.
+     */
     public void add2ContratosC(ContratoC contratosC) {
         this.contratosC.add(contratosC);
     }
     /**
      * Removes an instance of <code>ContratoC</code> related through the <code>ContratosC</code> role.
-     * @param dominios The instance to be removed
+     * @param contratosC The instance to be removed
      */
     public void removeFromContratosC(ContratoC contratosC) {
     	this.contratosC.remove(contratosC);
@@ -302,10 +302,10 @@ public class Sucursal extends AbstractAppEntity {
         return (regional == null ? new Regional(null) : regional);
     }
 
-   /**
-    * Adds an instance of <code>Regional</code> related through the <code>Regional</code> role.
-    * @param regional The instance to add to the <code>Regional</code> role.
-    */
+    /**
+     * Adds an instance of <code>Regional</code> related through the <code>Regional</code> role.
+     * @param regional The instance to add to the <code>Regional</code> role.
+     */
     public void add2Regional(Regional regional) {
         if (regional == null || regional.isNull()) {
             this.modifiedRegional = true;

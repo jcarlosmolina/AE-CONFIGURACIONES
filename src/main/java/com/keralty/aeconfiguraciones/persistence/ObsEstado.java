@@ -366,10 +366,10 @@ public class ObsEstado extends AbstractAppEntity {
         return documentoG;
     }
 
-   /**
-    * Adds an instance of <code>DocumentoG</code> related through the <code>DocumentoG</code> role.
-    * @param documentoG The instance to add to the <code>DocumentoG</code> role.
-    */
+    /**
+     * Adds an instance of <code>DocumentoG</code> related through the <code>DocumentoG</code> role.
+     * @param documentoG The instance to add to the <code>DocumentoG</code> role.
+     */
     public void add2DocumentoG(DocumentoG documentoG) {
         if (documentoG == null || documentoG.isNull()) {
             this.modifiedDocumentoG = true;
@@ -401,10 +401,10 @@ public class ObsEstado extends AbstractAppEntity {
         return agente;
     }
 
-   /**
-    * Adds an instance of <code>Funcionario</code> related through the <code>Agente</code> role.
-    * @param agente The instance to add to the <code>Agente</code> role.
-    */
+    /**
+     * Adds an instance of <code>Funcionario</code> related through the <code>Agente</code> role.
+     * @param agente The instance to add to the <code>Agente</code> role.
+     */
     public void add2Agente(Funcionario agente) {
         if (agente == null || agente.isNull()) {
             this.modifiedAgente = true;

@@ -552,16 +552,16 @@ Nos guardamos en código de Tarifa enviado por el CORE, lo utilizaremos para loc
         return getSolicitudRepository().findByGrupoAsociado(this);
     }
 
-   /**
-    * Adds an instance of <code>Solicitud</code> related through the <code>Solicitudes</code> role.
-    * @param solicitudes The instance to add to the <code>Solicitudes</code> role.
-    */
+    /**
+     * Adds an instance of <code>Solicitud</code> related through the <code>Solicitudes</code> role.
+     * @param solicitudes The instance to add to the <code>Solicitudes</code> role.
+     */
     public void add2Solicitudes(Solicitud solicitudes) {
         this.solicitudes.add(solicitudes);
     }
     /**
      * Removes an instance of <code>Solicitud</code> related through the <code>Solicitudes</code> role.
-     * @param dominios The instance to be removed
+     * @param solicitudes The instance to be removed
      */
     public void removeFromSolicitudes(Solicitud solicitudes) {
     	this.solicitudes.remove(solicitudes);
@@ -595,16 +595,16 @@ Nos guardamos en código de Tarifa enviado por el CORE, lo utilizaremos para loc
         return getContratoCRepository().findByGrupoAsociadoC(this);
     }
 
-   /**
-    * Adds an instance of <code>ContratoC</code> related through the <code>ContratosC</code> role.
-    * @param contratosC The instance to add to the <code>ContratosC</code> role.
-    */
+    /**
+     * Adds an instance of <code>ContratoC</code> related through the <code>ContratosC</code> role.
+     * @param contratosC The instance to add to the <code>ContratosC</code> role.
+     */
     public void add2ContratosC(ContratoC contratosC) {
         this.contratosC.add(contratosC);
     }
     /**
      * Removes an instance of <code>ContratoC</code> related through the <code>ContratosC</code> role.
-     * @param dominios The instance to be removed
+     * @param contratosC The instance to be removed
      */
     public void removeFromContratosC(ContratoC contratosC) {
     	this.contratosC.remove(contratosC);
@@ -638,16 +638,16 @@ Nos guardamos en código de Tarifa enviado por el CORE, lo utilizaremos para loc
         return getSolicitudNovedadRepository().findByGrupoAsociado(this);
     }
 
-   /**
-    * Adds an instance of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedad</code> role.
-    * @param solicitudesNovedad The instance to add to the <code>SolicitudesNovedad</code> role.
-    */
+    /**
+     * Adds an instance of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedad</code> role.
+     * @param solicitudesNovedad The instance to add to the <code>SolicitudesNovedad</code> role.
+     */
     public void add2SolicitudesNovedad(SolicitudNovedad solicitudesNovedad) {
         this.solicitudesNovedad.add(solicitudesNovedad);
     }
     /**
      * Removes an instance of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedad</code> role.
-     * @param dominios The instance to be removed
+     * @param solicitudesNovedad The instance to be removed
      */
     public void removeFromSolicitudesNovedad(SolicitudNovedad solicitudesNovedad) {
     	this.solicitudesNovedad.remove(solicitudesNovedad);
@@ -695,10 +695,10 @@ Nos guardamos en código de Tarifa enviado por el CORE, lo utilizaremos para loc
         return (productoT == null ? new Productos(null) : productoT);
     }
 
-   /**
-    * Adds an instance of <code>Productos</code> related through the <code>ProductoT</code> role.
-    * @param productoT The instance to add to the <code>ProductoT</code> role.
-    */
+    /**
+     * Adds an instance of <code>Productos</code> related through the <code>ProductoT</code> role.
+     * @param productoT The instance to add to the <code>ProductoT</code> role.
+     */
     public void add2ProductoT(Productos productoT) {
         if (productoT == null || productoT.isNull()) {
             this.modifiedProductoT = true;
@@ -744,10 +744,10 @@ Nos guardamos en código de Tarifa enviado por el CORE, lo utilizaremos para loc
         return (planT == null ? new Planes(null) : planT);
     }
 
-   /**
-    * Adds an instance of <code>Planes</code> related through the <code>PlanT</code> role.
-    * @param planT The instance to add to the <code>PlanT</code> role.
-    */
+    /**
+     * Adds an instance of <code>Planes</code> related through the <code>PlanT</code> role.
+     * @param planT The instance to add to the <code>PlanT</code> role.
+     */
     public void add2PlanT(Planes planT) {
         if (planT == null || planT.isNull()) {
             this.modifiedPlanT = true;

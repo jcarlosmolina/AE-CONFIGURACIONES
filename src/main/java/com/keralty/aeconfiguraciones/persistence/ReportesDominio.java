@@ -289,10 +289,10 @@ Si en el Dominio de mi tipo y fecha posterior a la mia no hay ninguno  entonces 
         return (dominio == null ? new Dominio(null) : dominio);
     }
 
-   /**
-    * Adds an instance of <code>Dominio</code> related through the <code>Dominio</code> role.
-    * @param dominio The instance to add to the <code>Dominio</code> role.
-    */
+    /**
+     * Adds an instance of <code>Dominio</code> related through the <code>Dominio</code> role.
+     * @param dominio The instance to add to the <code>Dominio</code> role.
+     */
     public void add2Dominio(Dominio dominio) {
         if (dominio == null || dominio.isNull()) {
             this.modifiedDominio = true;
@@ -338,10 +338,10 @@ Si en el Dominio de mi tipo y fecha posterior a la mia no hay ninguno  entonces 
         return (plantillaReporte == null ? new PlantillaReporte(null) : plantillaReporte);
     }
 
-   /**
-    * Adds an instance of <code>PlantillaReporte</code> related through the <code>PlantillaReporte</code> role.
-    * @param plantillaReporte The instance to add to the <code>PlantillaReporte</code> role.
-    */
+    /**
+     * Adds an instance of <code>PlantillaReporte</code> related through the <code>PlantillaReporte</code> role.
+     * @param plantillaReporte The instance to add to the <code>PlantillaReporte</code> role.
+     */
     public void add2PlantillaReporte(PlantillaReporte plantillaReporte) {
         if (plantillaReporte == null || plantillaReporte.isNull()) {
             this.modifiedPlantillaReporte = true;

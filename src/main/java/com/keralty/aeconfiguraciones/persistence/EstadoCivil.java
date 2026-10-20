@@ -229,16 +229,16 @@ public class EstadoCivil extends AbstractAppEntity {
         return getPersonaRepository().findByEstadoCivil(this);
     }
 
-   /**
-    * Adds an instance of <code>Persona</code> related through the <code>Personas</code> role.
-    * @param personas The instance to add to the <code>Personas</code> role.
-    */
+    /**
+     * Adds an instance of <code>Persona</code> related through the <code>Personas</code> role.
+     * @param personas The instance to add to the <code>Personas</code> role.
+     */
     public void add2Personas(Persona personas) {
         this.personas.add(personas);
     }
     /**
      * Removes an instance of <code>Persona</code> related through the <code>Personas</code> role.
-     * @param dominios The instance to be removed
+     * @param personas The instance to be removed
      */
     public void removeFromPersonas(Persona personas) {
     	this.personas.remove(personas);
@@ -272,16 +272,16 @@ public class EstadoCivil extends AbstractAppEntity {
         return getPersonaCRepository().findByEstadoCivilC(this);
     }
 
-   /**
-    * Adds an instance of <code>PersonaC</code> related through the <code>PersonasC</code> role.
-    * @param personasC The instance to add to the <code>PersonasC</code> role.
-    */
+    /**
+     * Adds an instance of <code>PersonaC</code> related through the <code>PersonasC</code> role.
+     * @param personasC The instance to add to the <code>PersonasC</code> role.
+     */
     public void add2PersonasC(PersonaC personasC) {
         this.personasC.add(personasC);
     }
     /**
      * Removes an instance of <code>PersonaC</code> related through the <code>PersonasC</code> role.
-     * @param dominios The instance to be removed
+     * @param personasC The instance to be removed
      */
     public void removeFromPersonasC(PersonaC personasC) {
     	this.personasC.remove(personasC);

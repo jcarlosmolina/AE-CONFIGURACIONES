@@ -328,10 +328,10 @@ public class Firma extends AbstractAppEntity {
         return solicitudNovedad;
     }
 
-   /**
-    * Adds an instance of <code>SolicitudNovedad</code> related through the <code>SolicitudNovedad</code> role.
-    * @param solicitudNovedad The instance to add to the <code>SolicitudNovedad</code> role.
-    */
+    /**
+     * Adds an instance of <code>SolicitudNovedad</code> related through the <code>SolicitudNovedad</code> role.
+     * @param solicitudNovedad The instance to add to the <code>SolicitudNovedad</code> role.
+     */
     public void add2SolicitudNovedad(SolicitudNovedad solicitudNovedad) {
         this.solicitudNovedad = (solicitudNovedad == null  || solicitudNovedad.isNull() ? null : solicitudNovedad);
     }
@@ -357,10 +357,10 @@ public class Firma extends AbstractAppEntity {
         return familiaNovedad;
     }
 
-   /**
-    * Adds an instance of <code>FamiliaNovedad</code> related through the <code>FamiliaNovedad</code> role.
-    * @param familiaNovedad The instance to add to the <code>FamiliaNovedad</code> role.
-    */
+    /**
+     * Adds an instance of <code>FamiliaNovedad</code> related through the <code>FamiliaNovedad</code> role.
+     * @param familiaNovedad The instance to add to the <code>FamiliaNovedad</code> role.
+     */
     public void add2FamiliaNovedad(FamiliaNovedad familiaNovedad) {
         this.familiaNovedad = (familiaNovedad == null  || familiaNovedad.isNull() ? null : familiaNovedad);
     }
@@ -386,10 +386,10 @@ public class Firma extends AbstractAppEntity {
         return novedadesCT;
     }
 
-   /**
-    * Adds an instance of <code>NovedadCT</code> related through the <code>NovedadesCT</code> role.
-    * @param novedadesCT The instance to add to the <code>NovedadesCT</code> role.
-    */
+    /**
+     * Adds an instance of <code>NovedadCT</code> related through the <code>NovedadesCT</code> role.
+     * @param novedadesCT The instance to add to the <code>NovedadesCT</code> role.
+     */
     public void add2NovedadesCT(NovedadCT novedadesCT) {
         this.novedadesCT = (novedadesCT == null  || novedadesCT.isNull() ? null : novedadesCT);
     }
@@ -415,10 +415,10 @@ public class Firma extends AbstractAppEntity {
         return solicitud;
     }
 
-   /**
-    * Adds an instance of <code>Solicitud</code> related through the <code>Solicitud</code> role.
-    * @param solicitud The instance to add to the <code>Solicitud</code> role.
-    */
+    /**
+     * Adds an instance of <code>Solicitud</code> related through the <code>Solicitud</code> role.
+     * @param solicitud The instance to add to the <code>Solicitud</code> role.
+     */
     public void add2Solicitud(Solicitud solicitud) {
         if (solicitud == null || solicitud.isNull()) {
             this.modifiedSolicitud = true;
@@ -450,10 +450,10 @@ public class Firma extends AbstractAppEntity {
         return solicitudSegunda;
     }
 
-   /**
-    * Adds an instance of <code>Solicitud</code> related through the <code>SolicitudSegunda</code> role.
-    * @param solicitudSegunda The instance to add to the <code>SolicitudSegunda</code> role.
-    */
+    /**
+     * Adds an instance of <code>Solicitud</code> related through the <code>SolicitudSegunda</code> role.
+     * @param solicitudSegunda The instance to add to the <code>SolicitudSegunda</code> role.
+     */
     public void add2SolicitudSegunda(Solicitud solicitudSegunda) {
         if (solicitudSegunda == null || solicitudSegunda.isNull()) {
             this.modifiedSolicitudSegunda = true;
@@ -485,10 +485,10 @@ public class Firma extends AbstractAppEntity {
         return respRegional;
     }
 
-   /**
-    * Adds an instance of <code>RespRegional</code> related through the <code>RespRegional</code> role.
-    * @param respRegional The instance to add to the <code>RespRegional</code> role.
-    */
+    /**
+     * Adds an instance of <code>RespRegional</code> related through the <code>RespRegional</code> role.
+     * @param respRegional The instance to add to the <code>RespRegional</code> role.
+     */
     public void add2RespRegional(RespRegional respRegional) {
         if (respRegional == null || respRegional.isNull()) {
             this.modifiedRespRegional = true;
@@ -520,10 +520,10 @@ public class Firma extends AbstractAppEntity {
         return solicitudContratante;
     }
 
-   /**
-    * Adds an instance of <code>Solicitud</code> related through the <code>SolicitudContratante</code> role.
-    * @param solicitudContratante The instance to add to the <code>SolicitudContratante</code> role.
-    */
+    /**
+     * Adds an instance of <code>Solicitud</code> related through the <code>SolicitudContratante</code> role.
+     * @param solicitudContratante The instance to add to the <code>SolicitudContratante</code> role.
+     */
     public void add2SolicitudContratante(Solicitud solicitudContratante) {
         if (solicitudContratante == null || solicitudContratante.isNull()) {
             this.modifiedSolicitudContratante = true;

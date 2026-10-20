@@ -267,16 +267,16 @@ public class ParamConfig extends AbstractAppEntity {
         return getLogParamRepository().findByParamConfig(this);
     }
 
-   /**
-    * Adds an instance of <code>LogParam</code> related through the <code>Logs</code> role.
-    * @param logs The instance to add to the <code>Logs</code> role.
-    */
+    /**
+     * Adds an instance of <code>LogParam</code> related through the <code>Logs</code> role.
+     * @param logs The instance to add to the <code>Logs</code> role.
+     */
     public void add2Logs(LogParam logs) {
         this.logs.add(logs);
     }
     /**
      * Removes an instance of <code>LogParam</code> related through the <code>Logs</code> role.
-     * @param dominios The instance to be removed
+     * @param logs The instance to be removed
      */
     public void removeFromLogs(LogParam logs) {
     	this.logs.remove(logs);

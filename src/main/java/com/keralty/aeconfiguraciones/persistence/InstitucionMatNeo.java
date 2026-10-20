@@ -505,16 +505,16 @@ public class InstitucionMatNeo extends AbstractAppEntity {
         return getAnexoMatRepository().findByInstitucionMaternal(this);
     }
 
-   /**
-    * Adds an instance of <code>AnexoMat</code> related through the <code>AnexoMat</code> role.
-    * @param anexoMat The instance to add to the <code>AnexoMat</code> role.
-    */
+    /**
+     * Adds an instance of <code>AnexoMat</code> related through the <code>AnexoMat</code> role.
+     * @param anexoMat The instance to add to the <code>AnexoMat</code> role.
+     */
     public void add2AnexoMat(AnexoMat anexoMat) {
         this.anexoMat.add(anexoMat);
     }
     /**
      * Removes an instance of <code>AnexoMat</code> related through the <code>AnexoMat</code> role.
-     * @param dominios The instance to be removed
+     * @param anexoMat The instance to be removed
      */
     public void removeFromAnexoMat(AnexoMat anexoMat) {
     	this.anexoMat.remove(anexoMat);
@@ -548,16 +548,16 @@ public class InstitucionMatNeo extends AbstractAppEntity {
         return getAnexoNeoRepository().findByInstitucionNeonatal(this);
     }
 
-   /**
-    * Adds an instance of <code>AnexoNeo</code> related through the <code>AnexoNeo</code> role.
-    * @param anexoNeo The instance to add to the <code>AnexoNeo</code> role.
-    */
+    /**
+     * Adds an instance of <code>AnexoNeo</code> related through the <code>AnexoNeo</code> role.
+     * @param anexoNeo The instance to add to the <code>AnexoNeo</code> role.
+     */
     public void add2AnexoNeo(AnexoNeo anexoNeo) {
         this.anexoNeo.add(anexoNeo);
     }
     /**
      * Removes an instance of <code>AnexoNeo</code> related through the <code>AnexoNeo</code> role.
-     * @param dominios The instance to be removed
+     * @param anexoNeo The instance to be removed
      */
     public void removeFromAnexoNeo(AnexoNeo anexoNeo) {
     	this.anexoNeo.remove(anexoNeo);
@@ -605,10 +605,10 @@ public class InstitucionMatNeo extends AbstractAppEntity {
         return (tipoIdentificacion == null ? new TipoIdentificacion(null) : tipoIdentificacion);
     }
 
-   /**
-    * Adds an instance of <code>TipoIdentificacion</code> related through the <code>TipoIdentificacion</code> role.
-    * @param tipoIdentificacion The instance to add to the <code>TipoIdentificacion</code> role.
-    */
+    /**
+     * Adds an instance of <code>TipoIdentificacion</code> related through the <code>TipoIdentificacion</code> role.
+     * @param tipoIdentificacion The instance to add to the <code>TipoIdentificacion</code> role.
+     */
     public void add2TipoIdentificacion(TipoIdentificacion tipoIdentificacion) {
         if (tipoIdentificacion == null || tipoIdentificacion.isNull()) {
             this.modifiedTipoIdentificacion = true;
@@ -654,10 +654,10 @@ public class InstitucionMatNeo extends AbstractAppEntity {
         return (tarifa == null ? new Tarifa(null) : tarifa);
     }
 
-   /**
-    * Adds an instance of <code>Tarifa</code> related through the <code>Tarifa</code> role.
-    * @param tarifa The instance to add to the <code>Tarifa</code> role.
-    */
+    /**
+     * Adds an instance of <code>Tarifa</code> related through the <code>Tarifa</code> role.
+     * @param tarifa The instance to add to the <code>Tarifa</code> role.
+     */
     public void add2Tarifa(Tarifa tarifa) {
         if (tarifa == null || tarifa.isNull()) {
             this.modifiedTarifa = true;
@@ -703,10 +703,10 @@ public class InstitucionMatNeo extends AbstractAppEntity {
         return (municipio == null ? new Municipio(null) : municipio);
     }
 
-   /**
-    * Adds an instance of <code>Municipio</code> related through the <code>Municipio</code> role.
-    * @param municipio The instance to add to the <code>Municipio</code> role.
-    */
+    /**
+     * Adds an instance of <code>Municipio</code> related through the <code>Municipio</code> role.
+     * @param municipio The instance to add to the <code>Municipio</code> role.
+     */
     public void add2Municipio(Municipio municipio) {
         if (municipio == null || municipio.isNull()) {
             this.modifiedMunicipio = true;

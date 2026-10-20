@@ -371,16 +371,16 @@ public class EstadoBeneficiario extends AbstractAppEntity {
         return getEstadoBeneficiarioAERepository().findByEstadoBeneficiarioCORE(this);
     }
 
-   /**
-    * Adds an instance of <code>EstadoBeneficiarioAE</code> related through the <code>EstadoBeneficiarioAE</code> role.
-    * @param estadoBeneficiarioAE The instance to add to the <code>EstadoBeneficiarioAE</code> role.
-    */
+    /**
+     * Adds an instance of <code>EstadoBeneficiarioAE</code> related through the <code>EstadoBeneficiarioAE</code> role.
+     * @param estadoBeneficiarioAE The instance to add to the <code>EstadoBeneficiarioAE</code> role.
+     */
     public void add2EstadoBeneficiarioAE(EstadoBeneficiarioAE estadoBeneficiarioAE) {
         this.estadoBeneficiarioAE.add(estadoBeneficiarioAE);
     }
     /**
      * Removes an instance of <code>EstadoBeneficiarioAE</code> related through the <code>EstadoBeneficiarioAE</code> role.
-     * @param dominios The instance to be removed
+     * @param estadoBeneficiarioAE The instance to be removed
      */
     public void removeFromEstadoBeneficiarioAE(EstadoBeneficiarioAE estadoBeneficiarioAE) {
     	this.estadoBeneficiarioAE.remove(estadoBeneficiarioAE);
@@ -414,16 +414,16 @@ public class EstadoBeneficiario extends AbstractAppEntity {
         return getUsuarioRepository().findByEstadoBeneficiario(this);
     }
 
-   /**
-    * Adds an instance of <code>Usuario</code> related through the <code>UsuarioS</code> role.
-    * @param usuarioS The instance to add to the <code>UsuarioS</code> role.
-    */
+    /**
+     * Adds an instance of <code>Usuario</code> related through the <code>UsuarioS</code> role.
+     * @param usuarioS The instance to add to the <code>UsuarioS</code> role.
+     */
     public void add2UsuarioS(Usuario usuarioS) {
         this.usuarioS.add(usuarioS);
     }
     /**
      * Removes an instance of <code>Usuario</code> related through the <code>UsuarioS</code> role.
-     * @param dominios The instance to be removed
+     * @param usuarioS The instance to be removed
      */
     public void removeFromUsuarioS(Usuario usuarioS) {
     	this.usuarioS.remove(usuarioS);
@@ -457,16 +457,16 @@ public class EstadoBeneficiario extends AbstractAppEntity {
         return getBeneficiarioCRepository().findByEstadoBeneficiarioC(this);
     }
 
-   /**
-    * Adds an instance of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.
-    * @param beneficiariosC The instance to add to the <code>BeneficiariosC</code> role.
-    */
+    /**
+     * Adds an instance of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.
+     * @param beneficiariosC The instance to add to the <code>BeneficiariosC</code> role.
+     */
     public void add2BeneficiariosC(BeneficiarioC beneficiariosC) {
         this.beneficiariosC.add(beneficiariosC);
     }
     /**
      * Removes an instance of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.
-     * @param dominios The instance to be removed
+     * @param beneficiariosC The instance to be removed
      */
     public void removeFromBeneficiariosC(BeneficiarioC beneficiariosC) {
     	this.beneficiariosC.remove(beneficiariosC);
@@ -500,16 +500,16 @@ public class EstadoBeneficiario extends AbstractAppEntity {
         return usuariosReg;
     }
 
-   /**
-    * Adds an instance of <code>UsuarioReg</code> related through the <code>UsuariosReg</code> role.
-    * @param usuariosReg The instance to add to the <code>UsuariosReg</code> role.
-    */
+    /**
+     * Adds an instance of <code>UsuarioReg</code> related through the <code>UsuariosReg</code> role.
+     * @param usuariosReg The instance to add to the <code>UsuariosReg</code> role.
+     */
     public void add2UsuariosReg(UsuarioReg usuariosReg) {
         this.usuariosReg.add(usuariosReg);
     }
     /**
      * Removes an instance of <code>UsuarioReg</code> related through the <code>UsuariosReg</code> role.
-     * @param dominios The instance to be removed
+     * @param usuariosReg The instance to be removed
      */
     public void removeFromUsuariosReg(UsuarioReg usuariosReg) {
     	this.usuariosReg.remove(usuariosReg);
@@ -543,16 +543,16 @@ public class EstadoBeneficiario extends AbstractAppEntity {
         return getUsuarioNovedadRepository().findByEstadoBeneficiario(this);
     }
 
-   /**
-    * Adds an instance of <code>UsuarioNovedad</code> related through the <code>UsuariosNovedad</code> role.
-    * @param usuariosNovedad The instance to add to the <code>UsuariosNovedad</code> role.
-    */
+    /**
+     * Adds an instance of <code>UsuarioNovedad</code> related through the <code>UsuariosNovedad</code> role.
+     * @param usuariosNovedad The instance to add to the <code>UsuariosNovedad</code> role.
+     */
     public void add2UsuariosNovedad(UsuarioNovedad usuariosNovedad) {
         this.usuariosNovedad.add(usuariosNovedad);
     }
     /**
      * Removes an instance of <code>UsuarioNovedad</code> related through the <code>UsuariosNovedad</code> role.
-     * @param dominios The instance to be removed
+     * @param usuariosNovedad The instance to be removed
      */
     public void removeFromUsuariosNovedad(UsuarioNovedad usuariosNovedad) {
     	this.usuariosNovedad.remove(usuariosNovedad);

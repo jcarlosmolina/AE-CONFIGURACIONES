@@ -292,10 +292,10 @@ public class FormaPago extends AbstractAppEntity {
         return dominios;
     }
 
-   /**
-    * Adds an instance of <code>Dominio</code> related through the <code>Dominios</code> role.
-    * @param dominios The instance to add to the <code>Dominios</code> role.
-    */
+    /**
+     * Adds an instance of <code>Dominio</code> related through the <code>Dominios</code> role.
+     * @param dominios The instance to add to the <code>Dominios</code> role.
+     */
     public void add2Dominios(Dominio dominios) {
         this.dominios.add(dominios);
     }
@@ -335,16 +335,16 @@ public class FormaPago extends AbstractAppEntity {
         return getSolicitudRepository().findByFormaPago(this);
     }
 
-   /**
-    * Adds an instance of <code>Solicitud</code> related through the <code>Solicitudes</code> role.
-    * @param solicitudes The instance to add to the <code>Solicitudes</code> role.
-    */
+    /**
+     * Adds an instance of <code>Solicitud</code> related through the <code>Solicitudes</code> role.
+     * @param solicitudes The instance to add to the <code>Solicitudes</code> role.
+     */
     public void add2Solicitudes(Solicitud solicitudes) {
         this.solicitudes.add(solicitudes);
     }
     /**
      * Removes an instance of <code>Solicitud</code> related through the <code>Solicitudes</code> role.
-     * @param dominios The instance to be removed
+     * @param solicitudes The instance to be removed
      */
     public void removeFromSolicitudes(Solicitud solicitudes) {
     	this.solicitudes.remove(solicitudes);
@@ -378,16 +378,16 @@ public class FormaPago extends AbstractAppEntity {
         return getContratoCRepository().findByFormaPagoC(this);
     }
 
-   /**
-    * Adds an instance of <code>ContratoC</code> related through the <code>ContratosC</code> role.
-    * @param contratosC The instance to add to the <code>ContratosC</code> role.
-    */
+    /**
+     * Adds an instance of <code>ContratoC</code> related through the <code>ContratosC</code> role.
+     * @param contratosC The instance to add to the <code>ContratosC</code> role.
+     */
     public void add2ContratosC(ContratoC contratosC) {
         this.contratosC.add(contratosC);
     }
     /**
      * Removes an instance of <code>ContratoC</code> related through the <code>ContratosC</code> role.
-     * @param dominios The instance to be removed
+     * @param contratosC The instance to be removed
      */
     public void removeFromContratosC(ContratoC contratosC) {
     	this.contratosC.remove(contratosC);

@@ -331,16 +331,16 @@ public class GrupoAsignacion extends AbstractAppEntity {
         return getDominioRepository().findByGrupoAsesores(this);
     }
 
-   /**
-    * Adds an instance of <code>Dominio</code> related through the <code>DominioAsesores</code> role.
-    * @param dominioAsesores The instance to add to the <code>DominioAsesores</code> role.
-    */
+    /**
+     * Adds an instance of <code>Dominio</code> related through the <code>DominioAsesores</code> role.
+     * @param dominioAsesores The instance to add to the <code>DominioAsesores</code> role.
+     */
     public void add2DominioAsesores(Dominio dominioAsesores) {
         this.dominioAsesores.add(dominioAsesores);
     }
     /**
      * Removes an instance of <code>Dominio</code> related through the <code>DominioAsesores</code> role.
-     * @param dominios The instance to be removed
+     * @param dominioAsesores The instance to be removed
      */
     public void removeFromDominioAsesores(Dominio dominioAsesores) {
     	this.dominioAsesores.remove(dominioAsesores);
@@ -374,16 +374,16 @@ public class GrupoAsignacion extends AbstractAppEntity {
         return getDominioRepository().findByGrupoAreaMedica(this);
     }
 
-   /**
-    * Adds an instance of <code>Dominio</code> related through the <code>DominioAreaMedica</code> role.
-    * @param dominioAreaMedica The instance to add to the <code>DominioAreaMedica</code> role.
-    */
+    /**
+     * Adds an instance of <code>Dominio</code> related through the <code>DominioAreaMedica</code> role.
+     * @param dominioAreaMedica The instance to add to the <code>DominioAreaMedica</code> role.
+     */
     public void add2DominioAreaMedica(Dominio dominioAreaMedica) {
         this.dominioAreaMedica.add(dominioAreaMedica);
     }
     /**
      * Removes an instance of <code>Dominio</code> related through the <code>DominioAreaMedica</code> role.
-     * @param dominios The instance to be removed
+     * @param dominioAreaMedica The instance to be removed
      */
     public void removeFromDominioAreaMedica(Dominio dominioAreaMedica) {
     	this.dominioAreaMedica.remove(dominioAreaMedica);
@@ -417,16 +417,16 @@ public class GrupoAsignacion extends AbstractAppEntity {
         return getLogGrupoAsignacionRepository().findByGrupoAsignacion(this);
     }
 
-   /**
-    * Adds an instance of <code>LogGrupoAsignacion</code> related through the <code>LogGrupoAsignacion</code> role.
-    * @param logGrupoAsignacion The instance to add to the <code>LogGrupoAsignacion</code> role.
-    */
+    /**
+     * Adds an instance of <code>LogGrupoAsignacion</code> related through the <code>LogGrupoAsignacion</code> role.
+     * @param logGrupoAsignacion The instance to add to the <code>LogGrupoAsignacion</code> role.
+     */
     public void add2LogGrupoAsignacion(LogGrupoAsignacion logGrupoAsignacion) {
         this.logGrupoAsignacion.add(logGrupoAsignacion);
     }
     /**
      * Removes an instance of <code>LogGrupoAsignacion</code> related through the <code>LogGrupoAsignacion</code> role.
-     * @param dominios The instance to be removed
+     * @param logGrupoAsignacion The instance to be removed
      */
     public void removeFromLogGrupoAsignacion(LogGrupoAsignacion logGrupoAsignacion) {
     	this.logGrupoAsignacion.remove(logGrupoAsignacion);
@@ -460,16 +460,16 @@ public class GrupoAsignacion extends AbstractAppEntity {
         return getGrupoAsignacionNovedadRepository().findByGrupoUsuarios(this);
     }
 
-   /**
-    * Adds an instance of <code>GrupoAsignacionNovedad</code> related through the <code>DominioCausalUsuario</code> role.
-    * @param dominioCausalUsuario The instance to add to the <code>DominioCausalUsuario</code> role.
-    */
+    /**
+     * Adds an instance of <code>GrupoAsignacionNovedad</code> related through the <code>DominioCausalUsuario</code> role.
+     * @param dominioCausalUsuario The instance to add to the <code>DominioCausalUsuario</code> role.
+     */
     public void add2DominioCausalUsuario(GrupoAsignacionNovedad dominioCausalUsuario) {
         this.dominioCausalUsuario.add(dominioCausalUsuario);
     }
     /**
      * Removes an instance of <code>GrupoAsignacionNovedad</code> related through the <code>DominioCausalUsuario</code> role.
-     * @param dominios The instance to be removed
+     * @param dominioCausalUsuario The instance to be removed
      */
     public void removeFromDominioCausalUsuario(GrupoAsignacionNovedad dominioCausalUsuario) {
     	this.dominioCausalUsuario.remove(dominioCausalUsuario);
@@ -503,16 +503,16 @@ public class GrupoAsignacion extends AbstractAppEntity {
         return funcionario;
     }
 
-   /**
-    * Adds an instance of <code>Funcionario</code> related through the <code>Funcionario</code> role.
-    * @param funcionario The instance to add to the <code>Funcionario</code> role.
-    */
+    /**
+     * Adds an instance of <code>Funcionario</code> related through the <code>Funcionario</code> role.
+     * @param funcionario The instance to add to the <code>Funcionario</code> role.
+     */
     public void add2Funcionario(Funcionario funcionario) {
         this.funcionario.add(funcionario);
     }
     /**
      * Removes an instance of <code>Funcionario</code> related through the <code>Funcionario</code> role.
-     * @param dominios The instance to be removed
+     * @param funcionario The instance to be removed
      */
     public void removeFromFuncionario(Funcionario funcionario) {
     	this.funcionario.remove(funcionario);

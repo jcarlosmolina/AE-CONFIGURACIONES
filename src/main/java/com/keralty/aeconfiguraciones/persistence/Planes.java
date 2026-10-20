@@ -545,10 +545,10 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
         return getDominioRepository().findByPlanT(this);
     }
 
-   /**
-    * Adds an instance of <code>Dominio</code> related through the <code>Dominios</code> role.
-    * @param dominios The instance to add to the <code>Dominios</code> role.
-    */
+    /**
+     * Adds an instance of <code>Dominio</code> related through the <code>Dominios</code> role.
+     * @param dominios The instance to add to the <code>Dominios</code> role.
+     */
     public void add2Dominios(Dominio dominios) {
         this.dominios.add(dominios);
     }
@@ -588,16 +588,16 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
         return getTarifaRepository().findByPlanT(this);
     }
 
-   /**
-    * Adds an instance of <code>Tarifa</code> related through the <code>Tarifas</code> role.
-    * @param tarifas The instance to add to the <code>Tarifas</code> role.
-    */
+    /**
+     * Adds an instance of <code>Tarifa</code> related through the <code>Tarifas</code> role.
+     * @param tarifas The instance to add to the <code>Tarifas</code> role.
+     */
     public void add2Tarifas(Tarifa tarifas) {
         this.tarifas.add(tarifas);
     }
     /**
      * Removes an instance of <code>Tarifa</code> related through the <code>Tarifas</code> role.
-     * @param dominios The instance to be removed
+     * @param tarifas The instance to be removed
      */
     public void removeFromTarifas(Tarifa tarifas) {
     	this.tarifas.remove(tarifas);
@@ -631,16 +631,16 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
         return getGrupoAsociadoRepository().findByPlanT(this);
     }
 
-   /**
-    * Adds an instance of <code>GrupoAsociado</code> related through the <code>GruposAsociados</code> role.
-    * @param gruposAsociados The instance to add to the <code>GruposAsociados</code> role.
-    */
+    /**
+     * Adds an instance of <code>GrupoAsociado</code> related through the <code>GruposAsociados</code> role.
+     * @param gruposAsociados The instance to add to the <code>GruposAsociados</code> role.
+     */
     public void add2GruposAsociados(GrupoAsociado gruposAsociados) {
         this.gruposAsociados.add(gruposAsociados);
     }
     /**
      * Removes an instance of <code>GrupoAsociado</code> related through the <code>GruposAsociados</code> role.
-     * @param dominios The instance to be removed
+     * @param gruposAsociados The instance to be removed
      */
     public void removeFromGruposAsociados(GrupoAsociado gruposAsociados) {
     	this.gruposAsociados.remove(gruposAsociados);
@@ -674,16 +674,16 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
         return getTipoIVARepository().findByPlanT(this);
     }
 
-   /**
-    * Adds an instance of <code>TipoIVA</code> related through the <code>TiposIVA</code> role.
-    * @param tiposIVA The instance to add to the <code>TiposIVA</code> role.
-    */
+    /**
+     * Adds an instance of <code>TipoIVA</code> related through the <code>TiposIVA</code> role.
+     * @param tiposIVA The instance to add to the <code>TiposIVA</code> role.
+     */
     public void add2TiposIVA(TipoIVA tiposIVA) {
         this.tiposIVA.add(tiposIVA);
     }
     /**
      * Removes an instance of <code>TipoIVA</code> related through the <code>TiposIVA</code> role.
-     * @param dominios The instance to be removed
+     * @param tiposIVA The instance to be removed
      */
     public void removeFromTiposIVA(TipoIVA tiposIVA) {
     	this.tiposIVA.remove(tiposIVA);
@@ -717,16 +717,16 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
         return getAesolicitudesRepository().findByPlanT(this);
     }
 
-   /**
-    * Adds an instance of <code>Aesolicitudes</code> related through the <code>AESOLICITUDES</code> role.
-    * @param aESOLICITUDES The instance to add to the <code>AESOLICITUDES</code> role.
-    */
+    /**
+     * Adds an instance of <code>Aesolicitudes</code> related through the <code>AESOLICITUDES</code> role.
+     * @param aESOLICITUDES The instance to add to the <code>AESOLICITUDES</code> role.
+     */
     public void add2AESOLICITUDES(Aesolicitudes aESOLICITUDES) {
         this.aESOLICITUDES.add(aESOLICITUDES);
     }
     /**
      * Removes an instance of <code>Aesolicitudes</code> related through the <code>AESOLICITUDES</code> role.
-     * @param dominios The instance to be removed
+     * @param aESOLICITUDES The instance to be removed
      */
     public void removeFromAESOLICITUDES(Aesolicitudes aESOLICITUDES) {
     	this.aESOLICITUDES.remove(aESOLICITUDES);
@@ -760,16 +760,16 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
         return getContratoCRepository().findByPlanC(this);
     }
 
-   /**
-    * Adds an instance of <code>ContratoC</code> related through the <code>ContratosC</code> role.
-    * @param contratosC The instance to add to the <code>ContratosC</code> role.
-    */
+    /**
+     * Adds an instance of <code>ContratoC</code> related through the <code>ContratosC</code> role.
+     * @param contratosC The instance to add to the <code>ContratosC</code> role.
+     */
     public void add2ContratosC(ContratoC contratosC) {
         this.contratosC.add(contratosC);
     }
     /**
      * Removes an instance of <code>ContratoC</code> related through the <code>ContratosC</code> role.
-     * @param dominios The instance to be removed
+     * @param contratosC The instance to be removed
      */
     public void removeFromContratosC(ContratoC contratosC) {
     	this.contratosC.remove(contratosC);
@@ -803,16 +803,16 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
         return afiliaciones;
     }
 
-   /**
-    * Adds an instance of <code>Afiliaciones</code> related through the <code>Afiliaciones</code> role.
-    * @param afiliaciones The instance to add to the <code>Afiliaciones</code> role.
-    */
+    /**
+     * Adds an instance of <code>Afiliaciones</code> related through the <code>Afiliaciones</code> role.
+     * @param afiliaciones The instance to add to the <code>Afiliaciones</code> role.
+     */
     public void add2Afiliaciones(Afiliaciones afiliaciones) {
         this.afiliaciones.add(afiliaciones);
     }
     /**
      * Removes an instance of <code>Afiliaciones</code> related through the <code>Afiliaciones</code> role.
-     * @param dominios The instance to be removed
+     * @param afiliaciones The instance to be removed
      */
     public void removeFromAfiliaciones(Afiliaciones afiliaciones) {
     	this.afiliaciones.remove(afiliaciones);
@@ -846,16 +846,16 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
         return getSolicitudNovedadRepository().findByPlanT(this);
     }
 
-   /**
-    * Adds an instance of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedad</code> role.
-    * @param solicitudesNovedad The instance to add to the <code>SolicitudesNovedad</code> role.
-    */
+    /**
+     * Adds an instance of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedad</code> role.
+     * @param solicitudesNovedad The instance to add to the <code>SolicitudesNovedad</code> role.
+     */
     public void add2SolicitudesNovedad(SolicitudNovedad solicitudesNovedad) {
         this.solicitudesNovedad.add(solicitudesNovedad);
     }
     /**
      * Removes an instance of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedad</code> role.
-     * @param dominios The instance to be removed
+     * @param solicitudesNovedad The instance to be removed
      */
     public void removeFromSolicitudesNovedad(SolicitudNovedad solicitudesNovedad) {
     	this.solicitudesNovedad.remove(solicitudesNovedad);
@@ -903,10 +903,10 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
         return (productoT == null ? new Productos(null) : productoT);
     }
 
-   /**
-    * Adds an instance of <code>Productos</code> related through the <code>ProductoT</code> role.
-    * @param productoT The instance to add to the <code>ProductoT</code> role.
-    */
+    /**
+     * Adds an instance of <code>Productos</code> related through the <code>ProductoT</code> role.
+     * @param productoT The instance to add to the <code>ProductoT</code> role.
+     */
     public void add2ProductoT(Productos productoT) {
         if (productoT == null || productoT.isNull()) {
             this.modifiedProductoT = true;

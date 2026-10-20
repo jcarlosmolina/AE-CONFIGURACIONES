@@ -466,10 +466,10 @@ public class FamiliaC extends AbstractAppEntity {
         return (personaCTitular == null ? new PersonaC(null) : personaCTitular);
     }
 
-   /**
-    * Adds an instance of <code>PersonaC</code> related through the <code>PersonaCTitular</code> role.
-    * @param personaCTitular The instance to add to the <code>PersonaCTitular</code> role.
-    */
+    /**
+     * Adds an instance of <code>PersonaC</code> related through the <code>PersonaCTitular</code> role.
+     * @param personaCTitular The instance to add to the <code>PersonaCTitular</code> role.
+     */
     public void add2PersonaCTitular(PersonaC personaCTitular) {
         this.personaCTitular = (personaCTitular == null  || personaCTitular.isNull() ? null : personaCTitular);
     }
@@ -495,16 +495,16 @@ public class FamiliaC extends AbstractAppEntity {
         return getBeneficiarioCRepository().findByFamiliasC(this);
     }
 
-   /**
-    * Adds an instance of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.
-    * @param beneficiariosC The instance to add to the <code>BeneficiariosC</code> role.
-    */
+    /**
+     * Adds an instance of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.
+     * @param beneficiariosC The instance to add to the <code>BeneficiariosC</code> role.
+     */
     public void add2BeneficiariosC(BeneficiarioC beneficiariosC) {
         this.beneficiariosC.add(beneficiariosC);
     }
     /**
      * Removes an instance of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.
-     * @param dominios The instance to be removed
+     * @param beneficiariosC The instance to be removed
      */
     public void removeFromBeneficiariosC(BeneficiarioC beneficiariosC) {
     	this.beneficiariosC.remove(beneficiariosC);
@@ -552,10 +552,10 @@ public class FamiliaC extends AbstractAppEntity {
         return (contratoC == null ? new ContratoC(null) : contratoC);
     }
 
-   /**
-    * Adds an instance of <code>ContratoC</code> related through the <code>ContratoC</code> role.
-    * @param contratoC The instance to add to the <code>ContratoC</code> role.
-    */
+    /**
+     * Adds an instance of <code>ContratoC</code> related through the <code>ContratoC</code> role.
+     * @param contratoC The instance to add to the <code>ContratoC</code> role.
+     */
     public void add2ContratoC(ContratoC contratoC) {
         if (contratoC == null || contratoC.isNull()) {
             this.modifiedContratoC = true;
@@ -601,10 +601,10 @@ public class FamiliaC extends AbstractAppEntity {
         return (municipioC == null ? new Municipio(null) : municipioC);
     }
 
-   /**
-    * Adds an instance of <code>Municipio</code> related through the <code>MunicipioC</code> role.
-    * @param municipioC The instance to add to the <code>MunicipioC</code> role.
-    */
+    /**
+     * Adds an instance of <code>Municipio</code> related through the <code>MunicipioC</code> role.
+     * @param municipioC The instance to add to the <code>MunicipioC</code> role.
+     */
     public void add2MunicipioC(Municipio municipioC) {
         if (municipioC == null || municipioC.isNull()) {
             this.modifiedMunicipioC = true;

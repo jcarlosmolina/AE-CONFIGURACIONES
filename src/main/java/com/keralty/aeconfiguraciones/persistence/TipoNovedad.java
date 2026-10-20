@@ -319,16 +319,16 @@ public class TipoNovedad extends AbstractAppEntity {
         return getNovedadRepository().findByTipoNovedad(this);
     }
 
-   /**
-    * Adds an instance of <code>Novedad</code> related through the <code>Novedades</code> role.
-    * @param novedades The instance to add to the <code>Novedades</code> role.
-    */
+    /**
+     * Adds an instance of <code>Novedad</code> related through the <code>Novedades</code> role.
+     * @param novedades The instance to add to the <code>Novedades</code> role.
+     */
     public void add2Novedades(Novedad novedades) {
         this.novedades.add(novedades);
     }
     /**
      * Removes an instance of <code>Novedad</code> related through the <code>Novedades</code> role.
-     * @param dominios The instance to be removed
+     * @param novedades The instance to be removed
      */
     public void removeFromNovedades(Novedad novedades) {
     	this.novedades.remove(novedades);

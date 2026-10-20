@@ -229,16 +229,16 @@ public class Companyia extends AbstractAppEntity {
         return getUsuarioRepository().findByCompanyia(this);
     }
 
-   /**
-    * Adds an instance of <code>Usuario</code> related through the <code>AtributosUsuario</code> role.
-    * @param atributosUsuario The instance to add to the <code>AtributosUsuario</code> role.
-    */
+    /**
+     * Adds an instance of <code>Usuario</code> related through the <code>AtributosUsuario</code> role.
+     * @param atributosUsuario The instance to add to the <code>AtributosUsuario</code> role.
+     */
     public void add2AtributosUsuario(Usuario atributosUsuario) {
         this.atributosUsuario.add(atributosUsuario);
     }
     /**
      * Removes an instance of <code>Usuario</code> related through the <code>AtributosUsuario</code> role.
-     * @param dominios The instance to be removed
+     * @param atributosUsuario The instance to be removed
      */
     public void removeFromAtributosUsuario(Usuario atributosUsuario) {
     	this.atributosUsuario.remove(atributosUsuario);
@@ -272,16 +272,16 @@ public class Companyia extends AbstractAppEntity {
         return getBeneficiarioCRepository().findByCompanyiaMPC(this);
     }
 
-   /**
-    * Adds an instance of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.
-    * @param beneficiariosC The instance to add to the <code>BeneficiariosC</code> role.
-    */
+    /**
+     * Adds an instance of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.
+     * @param beneficiariosC The instance to add to the <code>BeneficiariosC</code> role.
+     */
     public void add2BeneficiariosC(BeneficiarioC beneficiariosC) {
         this.beneficiariosC.add(beneficiariosC);
     }
     /**
      * Removes an instance of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.
-     * @param dominios The instance to be removed
+     * @param beneficiariosC The instance to be removed
      */
     public void removeFromBeneficiariosC(BeneficiarioC beneficiariosC) {
     	this.beneficiariosC.remove(beneficiariosC);

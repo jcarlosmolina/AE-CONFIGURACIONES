@@ -854,16 +854,16 @@ Si se selecciona “No condicionada”, no será obligatorio diligenciar el dato
         return valores;
     }
 
-   /**
-    * Adds an instance of <code>Valor</code> related through the <code>Valores</code> role.
-    * @param valores The instance to add to the <code>Valores</code> role.
-    */
+    /**
+     * Adds an instance of <code>Valor</code> related through the <code>Valores</code> role.
+     * @param valores The instance to add to the <code>Valores</code> role.
+     */
     public void add2Valores(Valor valores) {
         this.valores.add(valores);
     }
     /**
      * Removes an instance of <code>Valor</code> related through the <code>Valores</code> role.
-     * @param dominios The instance to be removed
+     * @param valores The instance to be removed
      */
     public void removeFromValores(Valor valores) {
     	this.valores.remove(valores);
@@ -897,16 +897,16 @@ Si se selecciona “No condicionada”, no será obligatorio diligenciar el dato
         return getPreguntaPRepository().findByPregunta(this);
     }
 
-   /**
-    * Adds an instance of <code>PreguntaP</code> related through the <code>PreguntasPersona</code> role.
-    * @param preguntasPersona The instance to add to the <code>PreguntasPersona</code> role.
-    */
+    /**
+     * Adds an instance of <code>PreguntaP</code> related through the <code>PreguntasPersona</code> role.
+     * @param preguntasPersona The instance to add to the <code>PreguntasPersona</code> role.
+     */
     public void add2PreguntasPersona(PreguntaP preguntasPersona) {
         this.preguntasPersona.add(preguntasPersona);
     }
     /**
      * Removes an instance of <code>PreguntaP</code> related through the <code>PreguntasPersona</code> role.
-     * @param dominios The instance to be removed
+     * @param preguntasPersona The instance to be removed
      */
     public void removeFromPreguntasPersona(PreguntaP preguntasPersona) {
     	this.preguntasPersona.remove(preguntasPersona);
@@ -954,10 +954,10 @@ Si se selecciona “No condicionada”, no será obligatorio diligenciar el dato
         return (seccion == null ? new Seccion(null) : seccion);
     }
 
-   /**
-    * Adds an instance of <code>Seccion</code> related through the <code>Seccion</code> role.
-    * @param seccion The instance to add to the <code>Seccion</code> role.
-    */
+    /**
+     * Adds an instance of <code>Seccion</code> related through the <code>Seccion</code> role.
+     * @param seccion The instance to add to the <code>Seccion</code> role.
+     */
     public void add2Seccion(Seccion seccion) {
         if (seccion == null || seccion.isNull()) {
             this.modifiedSeccion = true;

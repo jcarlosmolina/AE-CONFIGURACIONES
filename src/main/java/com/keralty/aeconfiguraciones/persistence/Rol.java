@@ -179,16 +179,16 @@ public class Rol extends AbstractAppEntity {
         return getFuncionarioRepository().findByRol(this);
     }
 
-   /**
-    * Adds an instance of <code>Funcionario</code> related through the <code>Agentes</code> role.
-    * @param agentes The instance to add to the <code>Agentes</code> role.
-    */
+    /**
+     * Adds an instance of <code>Funcionario</code> related through the <code>Agentes</code> role.
+     * @param agentes The instance to add to the <code>Agentes</code> role.
+     */
     public void add2Agentes(Funcionario agentes) {
         this.agentes.add(agentes);
     }
     /**
      * Removes an instance of <code>Funcionario</code> related through the <code>Agentes</code> role.
-     * @param dominios The instance to be removed
+     * @param agentes The instance to be removed
      */
     public void removeFromAgentes(Funcionario agentes) {
     	this.agentes.remove(agentes);
@@ -222,10 +222,10 @@ public class Rol extends AbstractAppEntity {
         return dominios;
     }
 
-   /**
-    * Adds an instance of <code>Dominio</code> related through the <code>Dominios</code> role.
-    * @param dominios The instance to add to the <code>Dominios</code> role.
-    */
+    /**
+     * Adds an instance of <code>Dominio</code> related through the <code>Dominios</code> role.
+     * @param dominios The instance to add to the <code>Dominios</code> role.
+     */
     public void add2Dominios(Dominio dominios) {
         this.dominios.add(dominios);
     }

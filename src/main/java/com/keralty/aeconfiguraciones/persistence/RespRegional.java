@@ -1264,10 +1264,10 @@ RADIO=1;
         return firma;
     }
 
-   /**
-    * Adds an instance of <code>Firma</code> related through the <code>Firma</code> role.
-    * @param firma The instance to add to the <code>Firma</code> role.
-    */
+    /**
+     * Adds an instance of <code>Firma</code> related through the <code>Firma</code> role.
+     * @param firma The instance to add to the <code>Firma</code> role.
+     */
     public void add2Firma(Firma firma) {
         this.firma = (firma == null  || firma.isNull() ? null : firma);
     }
@@ -1476,10 +1476,10 @@ RADIO=1;
         return (regional == null ? new Regional(null) : regional);
     }
 
-   /**
-    * Adds an instance of <code>Regional</code> related through the <code>Regional</code> role.
-    * @param regional The instance to add to the <code>Regional</code> role.
-    */
+    /**
+     * Adds an instance of <code>Regional</code> related through the <code>Regional</code> role.
+     * @param regional The instance to add to the <code>Regional</code> role.
+     */
     public void add2Regional(Regional regional) {
         if (regional == null || regional.isNull()) {
             this.modifiedRegional = true;

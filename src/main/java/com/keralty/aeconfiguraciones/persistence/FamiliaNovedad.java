@@ -968,16 +968,16 @@ public class FamiliaNovedad extends AbstractAppEntity {
         return getUsuarioNovedadRepository().findByFamiliaNovedad(this);
     }
 
-   /**
-    * Adds an instance of <code>UsuarioNovedad</code> related through the <code>UsuarioNovedad</code> role.
-    * @param usuarioNovedad The instance to add to the <code>UsuarioNovedad</code> role.
-    */
+    /**
+     * Adds an instance of <code>UsuarioNovedad</code> related through the <code>UsuarioNovedad</code> role.
+     * @param usuarioNovedad The instance to add to the <code>UsuarioNovedad</code> role.
+     */
     public void add2UsuarioNovedad(UsuarioNovedad usuarioNovedad) {
         this.usuarioNovedad.add(usuarioNovedad);
     }
     /**
      * Removes an instance of <code>UsuarioNovedad</code> related through the <code>UsuarioNovedad</code> role.
-     * @param dominios The instance to be removed
+     * @param usuarioNovedad The instance to be removed
      */
     public void removeFromUsuarioNovedad(UsuarioNovedad usuarioNovedad) {
     	this.usuarioNovedad.remove(usuarioNovedad);
@@ -1011,10 +1011,10 @@ public class FamiliaNovedad extends AbstractAppEntity {
         return novedadCT;
     }
 
-   /**
-    * Adds an instance of <code>NovedadCT</code> related through the <code>NovedadCT</code> role.
-    * @param novedadCT The instance to add to the <code>NovedadCT</code> role.
-    */
+    /**
+     * Adds an instance of <code>NovedadCT</code> related through the <code>NovedadCT</code> role.
+     * @param novedadCT The instance to add to the <code>NovedadCT</code> role.
+     */
     public void add2NovedadCT(NovedadCT novedadCT) {
         this.novedadCT = (novedadCT == null  || novedadCT.isNull() ? null : novedadCT);
     }
@@ -1040,10 +1040,10 @@ public class FamiliaNovedad extends AbstractAppEntity {
         return novedadMD;
     }
 
-   /**
-    * Adds an instance of <code>NovedadMD</code> related through the <code>NovedadMD</code> role.
-    * @param novedadMD The instance to add to the <code>NovedadMD</code> role.
-    */
+    /**
+     * Adds an instance of <code>NovedadMD</code> related through the <code>NovedadMD</code> role.
+     * @param novedadMD The instance to add to the <code>NovedadMD</code> role.
+     */
     public void add2NovedadMD(NovedadMD novedadMD) {
         this.novedadMD = (novedadMD == null  || novedadMD.isNull() ? null : novedadMD);
     }
@@ -1083,10 +1083,10 @@ public class FamiliaNovedad extends AbstractAppEntity {
         return (solicitud == null ? new SolicitudNovedad(null) : solicitud);
     }
 
-   /**
-    * Adds an instance of <code>SolicitudNovedad</code> related through the <code>Solicitud</code> role.
-    * @param solicitud The instance to add to the <code>Solicitud</code> role.
-    */
+    /**
+     * Adds an instance of <code>SolicitudNovedad</code> related through the <code>Solicitud</code> role.
+     * @param solicitud The instance to add to the <code>Solicitud</code> role.
+     */
     public void add2Solicitud(SolicitudNovedad solicitud) {
         if (solicitud == null || solicitud.isNull()) {
             this.modifiedSolicitud = true;
@@ -1132,10 +1132,10 @@ public class FamiliaNovedad extends AbstractAppEntity {
         return (tipoIdentificacion == null ? new TipoIdentificacion(null) : tipoIdentificacion);
     }
 
-   /**
-    * Adds an instance of <code>TipoIdentificacion</code> related through the <code>TipoIdentificacion</code> role.
-    * @param tipoIdentificacion The instance to add to the <code>TipoIdentificacion</code> role.
-    */
+    /**
+     * Adds an instance of <code>TipoIdentificacion</code> related through the <code>TipoIdentificacion</code> role.
+     * @param tipoIdentificacion The instance to add to the <code>TipoIdentificacion</code> role.
+     */
     public void add2TipoIdentificacion(TipoIdentificacion tipoIdentificacion) {
         if (tipoIdentificacion == null || tipoIdentificacion.isNull()) {
             this.modifiedTipoIdentificacion = true;
@@ -1167,10 +1167,10 @@ public class FamiliaNovedad extends AbstractAppEntity {
         return firma;
     }
 
-   /**
-    * Adds an instance of <code>Firma</code> related through the <code>Firma</code> role.
-    * @param firma The instance to add to the <code>Firma</code> role.
-    */
+    /**
+     * Adds an instance of <code>Firma</code> related through the <code>Firma</code> role.
+     * @param firma The instance to add to the <code>Firma</code> role.
+     */
     public void add2Firma(Firma firma) {
         if (firma == null || firma.isNull()) {
             this.modifiedFirma = true;

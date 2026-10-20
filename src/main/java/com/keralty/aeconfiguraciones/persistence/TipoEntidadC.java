@@ -163,16 +163,16 @@ public class TipoEntidadC extends AbstractAppEntity {
         return getPersonaCRepository().findByTipoEntidadC(this);
     }
 
-   /**
-    * Adds an instance of <code>PersonaC</code> related through the <code>PersonasC</code> role.
-    * @param personasC The instance to add to the <code>PersonasC</code> role.
-    */
+    /**
+     * Adds an instance of <code>PersonaC</code> related through the <code>PersonasC</code> role.
+     * @param personasC The instance to add to the <code>PersonasC</code> role.
+     */
     public void add2PersonasC(PersonaC personasC) {
         this.personasC.add(personasC);
     }
     /**
      * Removes an instance of <code>PersonaC</code> related through the <code>PersonasC</code> role.
-     * @param dominios The instance to be removed
+     * @param personasC The instance to be removed
      */
     public void removeFromPersonasC(PersonaC personasC) {
     	this.personasC.remove(personasC);

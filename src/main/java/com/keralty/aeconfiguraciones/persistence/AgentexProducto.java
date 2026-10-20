@@ -436,10 +436,10 @@ public class AgentexProducto extends AbstractAppEntity {
         return (productoT == null ? new Productos(null) : productoT);
     }
 
-   /**
-    * Adds an instance of <code>Productos</code> related through the <code>ProductoT</code> role.
-    * @param productoT The instance to add to the <code>ProductoT</code> role.
-    */
+    /**
+     * Adds an instance of <code>Productos</code> related through the <code>ProductoT</code> role.
+     * @param productoT The instance to add to the <code>ProductoT</code> role.
+     */
     public void add2ProductoT(Productos productoT) {
         if (productoT == null || productoT.isNull()) {
             this.modifiedProductoT = true;
@@ -485,10 +485,10 @@ public class AgentexProducto extends AbstractAppEntity {
         return (asesor == null ? new Asesor(null) : asesor);
     }
 
-   /**
-    * Adds an instance of <code>Asesor</code> related through the <code>Asesor</code> role.
-    * @param asesor The instance to add to the <code>Asesor</code> role.
-    */
+    /**
+     * Adds an instance of <code>Asesor</code> related through the <code>Asesor</code> role.
+     * @param asesor The instance to add to the <code>Asesor</code> role.
+     */
     public void add2Asesor(Asesor asesor) {
         if (asesor == null || asesor.isNull()) {
             this.modifiedAsesor = true;
@@ -520,10 +520,10 @@ public class AgentexProducto extends AbstractAppEntity {
         return dominios;
     }
 
-   /**
-    * Adds an instance of <code>Dominio</code> related through the <code>Dominios</code> role.
-    * @param dominios The instance to add to the <code>Dominios</code> role.
-    */
+    /**
+     * Adds an instance of <code>Dominio</code> related through the <code>Dominios</code> role.
+     * @param dominios The instance to add to the <code>Dominios</code> role.
+     */
     public void add2Dominios(Dominio dominios) {
         this.dominios.add(dominios);
     }
