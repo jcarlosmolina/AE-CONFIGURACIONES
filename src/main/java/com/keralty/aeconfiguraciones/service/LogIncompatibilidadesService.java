@@ -63,7 +63,7 @@ public class LogIncompatibilidadesService extends AbstractService {
         return repository.solveQuery(processQueryRequest(request, LogIncompatibilidadesConstants.CLASS_NAME), request.getPageSize(), request.getPageNumber());
     }
     
-    private int solveLogIncompatibilidadesTypedCountQuery(QueryRequest request) {
+    private int solveTypedCountQuery(QueryRequest request) {
         return repository.solveCountQuery(processCountQueryRequest(request, LogIncompatibilidadesConstants.CLASS_NAME));
     }
 
@@ -108,7 +108,7 @@ public class LogIncompatibilidadesService extends AbstractService {
         if (queryRequest.getDisplaySetName() == null || queryRequest.getDisplaySetName().isEmpty()) {
             return new PopulationResponseViewModel(solveLogIncompatibilidadesTypedQuery(queryRequest).stream()
                     .map(instance -> buildDynamicObject(instance, queryRequest.getDisplaySetItems()))
-                    .collect(Collectors.toList()), pageSize != 0 ? solveLogIncompatibilidadesTypedCountQuery(queryRequest) : 0);
+                    .collect(Collectors.toList()), pageSize != 0 ? solveTypedCountQuery(queryRequest) : 0);
         } else {
             return new PreloadResponseViewModel();
         }
