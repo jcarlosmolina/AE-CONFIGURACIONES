@@ -100,7 +100,7 @@ public class LogIncompatibilidadesService extends AbstractService {
      */
     @Transactional(Transactional.TxType.SUPPORTS)
     public QueryResponse getDynamic(QueryRequest queryRequest) {
-        int requestedPageSize = request.getPageSize();
+        int requestedPageSize = queryRequest.getPageSize();
         int pageSize = requestedPageSize >= 0
                 && requestedPageSize <= Constants.MAX_BLOCKSIZE
                 ? requestedPageSize
