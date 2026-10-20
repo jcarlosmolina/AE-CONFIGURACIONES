@@ -1682,7 +1682,7 @@ RADIO=1;
     * @param reportes The instance to add to the <code>Reportes</code> role.
     */
     public void add2Reportes(ReportesProcAlm reportes) {
-        this.getReportes().add(reportes);
+        this.reportes.add(reportes);
     }
     /**
      * Sets instances of <code>ReportesProcAlm</code> related through the <code>Reportes</code> role.

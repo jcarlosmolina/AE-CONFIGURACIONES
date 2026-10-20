@@ -58,7 +58,7 @@ public class SQLWhereOperandLiteral extends SQLWhereOperand {
         // Obtain the parameter related to the literal
         SQLParam param = new SQLParam("", literal, this.getType());
         // Add the parameter to the parameter list
-        getParameters().add(param);
+        addParameter(param);
 
         this.setOperandText("?");
     }
@@ -79,7 +79,7 @@ public class SQLWhereOperandLiteral extends SQLWhereOperand {
             this.setOperandText(getOperandText() + " is null");
         } else {
             this.setOperandText(getOperandText() + " " + operator + " ?");
-            getParameters().add(new SQLParam("", null, ""));
+            addParameter(new SQLParam("", null, ""));
         }
 
         super.setComparisonWithNull(operator);
@@ -96,11 +96,11 @@ public class SQLWhereOperandLiteral extends SQLWhereOperand {
             return;
         }
 
-        getParameters().clear();
+        clearParameters();
         // Add the special character to the parameter value
         SQLParam param = new SQLParam("", literal + "%", this.getType());
         // Add the parameter to the parameter list
-        getParameters().add(param);
+        addParameter(param);
 
         super.processForLikeOperator();
     }
@@ -116,11 +116,11 @@ public class SQLWhereOperandLiteral extends SQLWhereOperand {
             return;
         }
 
-        getParameters().clear();
+        clearParameters();
         // Add the special character to the parameter value
         SQLParam param = new SQLParam("", "%" + literal + "%", this.getType());
         // Add the parameter to the parameter list
-        getParameters().add(param);
+        addParameter(param);
 
         super.processForContainsOperator();
     }

@@ -522,14 +522,13 @@ public class SQLSelect {
     public void setTargetEntityName(String targetEntityName) {
         this.targetEntityName = targetEntityName;
     }
-
+   
     /**
-     * SELECT part of the SQL sentence.
-     * 
-     * @return {@link List}<{@link String}> SELECT part of the SQL sentence
+     * Adds an item to the SELECT part
+     * @param item Item to add
      */
-    public List<String> getSelectPart() {
-        return selectPart;
+    public void addToSelectPart(String item) {
+    	selectPart.add(item);
     }
 
     /**
@@ -549,7 +548,7 @@ public class SQLSelect {
     public String getSelectPartText() {
         StringBuilder select = new StringBuilder("");
 
-        for (String sel : getSelectPart()) {
+        for (String sel : selectPart) {
             if (select.toString().isEmpty()) {
                 select = new StringBuilder(sel);
             } else {
@@ -763,14 +762,13 @@ public class SQLSelect {
      *                     (multivalued table)
      * @return {@link SQLAlias} Alias structure
      */
-    public SQLAlias createAlias(String table, String path, String facet, Boolean intermediate) {
-        return createAlias(table, path, facet, facet, intermediate, null);
+    public SQLAlias createAlias(String path, String facet, Boolean intermediate) {
+        return createAlias(path, facet, facet, intermediate, null);
     }
 
     /**
      * Create a new SQLAlias with a valid name.
      * 
-     * @param table         Table name of the alias
      * @param path          Path that represents the alias
      * @param facet         Target class of the path
      * @param proposedAlias Proposed alias name
@@ -779,7 +777,7 @@ public class SQLSelect {
      * @param originAlias   original alias structure
      * @return {@link SQLAlias}
      */
-    public SQLAlias createAlias(String table, String path, String facet, String proposedAlias, Boolean intermediate,
+    public SQLAlias createAlias(String path, String facet, String proposedAlias, Boolean intermediate,
             SQLAlias originAlias) {
         String aliasString = proposedAlias;
 
@@ -857,7 +855,7 @@ public class SQLSelect {
         List<SQLJoin> joinList = new ArrayList<>();
         SQLAlias alias = addInheritanceJoins(initialAlias, sourceClass, targetClass, joinList);
 
-        alias.getSqlFrom().getJoins().addAll(joinList);
+        alias.getSqlFrom().addAllJoins(joinList);
 
         return alias;
     }
@@ -891,7 +889,7 @@ public class SQLSelect {
                     if (nextAlias == null) {
                         // if the alias does not exist, a new one is created.
                         String nextTable = Constants.nameTable(sanitizeFacetName(nextFacet));
-                        nextAlias = createAlias(nextTable, initialAlias.getPath(), sanitizeFacetName(nextFacet), nextFacet, false,
+                        nextAlias = createAlias(initialAlias.getPath(), sanitizeFacetName(nextFacet), nextFacet, false,
                                 currentAlias);
                         // add a new join
                         SQLJoin currentjoin = new SQLJoin(Constants.LEFTJOIN, nextTable, currentAlias, nextAlias);
@@ -962,7 +960,7 @@ public class SQLSelect {
         List<SQLJoin> joinList = new ArrayList<>();
         SQLAlias alias = addAggregationJoins(initialAlias, sourceClass, path, joinType, initialPath, joinList);
 
-        alias.getSqlFrom().getJoins().addAll(joinList);
+        alias.getSqlFrom().addAllJoins(joinList);
 
         return alias;
     }
@@ -1055,7 +1053,7 @@ public class SQLSelect {
             // if the alias does not exist, a new one is created and a new one for the MM
             // table
             // Create the M to M table alias
-            SQLAlias tableMMAlias = createAlias(tableMMName, processedPath.toString(), currentAlias.getFacet(),
+            SQLAlias tableMMAlias = createAlias(processedPath.toString(), currentAlias.getFacet(),
                     tableMMName, true, currentAlias);
             // add a new join
             SQLJoin tableMMjoin = new SQLJoin(joinType, tableMMName, currentAlias, tableMMAlias);
@@ -1063,13 +1061,13 @@ public class SQLSelect {
 
             // Create the next table Alias
             String nextTable = Constants.nameTable(ownerClass);
-            nextAlias = createAlias(nextTable, processedPath.toString(), ownerClass, ownerClass, false,
+            nextAlias = createAlias(processedPath.toString(), ownerClass, ownerClass, false,
                     tableMMAlias);
             // add a new join
             SQLJoin currentjoin = new SQLJoin(joinType, nextTable, tableMMAlias, nextAlias);
             joinList.add(currentjoin);
 
-            completeJoin(targetClass, role, currentAlias.getAlias(), tableMMjoin, tableMMAlias.getAlias(),
+            completeJoin(currentAlias.getAlias(), tableMMjoin, tableMMAlias.getAlias(),
                     currentjoin, nextAlias.getAlias());
 
             // Increase the multivaluated counter
@@ -1077,14 +1075,14 @@ public class SQLSelect {
         } else {
             // if the alias does not exist, a new one is created.
             String nextTable = Constants.nameTable(ownerClass);
-            nextAlias = createAlias(nextTable, processedPath.toString(), ownerClass, ownerClass, false,
+            nextAlias = createAlias(processedPath.toString(), ownerClass, ownerClass, false,
                     currentAlias);
             nextAlias.setSqlFrom(currentAlias.getSqlFrom());
             // add a new join
             SQLJoin currentjoin = new SQLJoin(joinType, nextTable, currentAlias, nextAlias);
             joinList.add(currentjoin);
 
-            completeJoin(targetClass, role, currentAlias.getAlias(), currentjoin, nextAlias.getAlias());
+            completeJoin(role, currentAlias.getAlias(), currentjoin, nextAlias.getAlias());
 
             // Increase the multivaluated counter
             increaseMultivaluatedCounter(nextAlias, currentjoin);
@@ -1154,13 +1152,12 @@ public class SQLSelect {
     /**
      * Completes join.
      * 
-     * @param targetClass  Target class name
      * @param roleName     Role name
      * @param currentAlias String with the current alias
      * @param join         SQLJoin
      * @param nextAlias    String with the next alias
      */
-    protected void completeJoin(String targetClass, String roleName, String currentAlias, SQLJoin join,
+    protected void completeJoin(String roleName, String currentAlias, SQLJoin join,
             String nextAlias) {
         Class<?>[] params = new Class[3];
         params[0] = String.class;
@@ -1175,15 +1172,13 @@ public class SQLSelect {
     /**
      * Completes join.
      * 
-     * @param targetClass  Target class name
-     * @param roleName     Role name
      * @param currentAlias String with the current alias
      * @param tableMMjoin  SQLJoin with the MM table
      * @param aliasMM      MM table alias
      * @param join         SQL join
      * @param nextAlias    String with the next alias
      */
-    protected void completeJoin(String targetClass, String roleName, String currentAlias, SQLJoin tableMMjoin,
+    protected void completeJoin(String currentAlias, SQLJoin tableMMjoin,
             String aliasMM, SQLJoin join, String nextAlias) {
         Class<?>[] params = new Class[5];
         params[0] = String.class;
@@ -1345,7 +1340,7 @@ public class SQLSelect {
         Object[] oidValues = instance.getValue();
         String[] oidDataTypes = instance.getDataTypes();
         for (int i = 0; i < oidValues.length; i++) {
-            conjunction.getParameters().add(new SQLParam("", oidValues[i], oidDataTypes[i]));
+            conjunction.addParameter(new SQLParam("", oidValues[i], oidDataTypes[i]));
         }
     }
 
@@ -1389,13 +1384,13 @@ public class SQLSelect {
         Object[] oidValues = instance1.getValue();
         String[] oidDataTypes = instance1.getDataTypes();
         for (int i = 0; i < oidValues.length; i++) {
-            conjunction.getParameters().add(new SQLParam("", oidValues[i], oidDataTypes[i]));
+            conjunction.addParameter(new SQLParam("", oidValues[i], oidDataTypes[i]));
         }
 
         oidValues = instance2.getValue();
         oidDataTypes = instance2.getDataTypes();
         for (int i = 0; i < oidValues.length; i++) {
-            conjunction.getParameters().add(new SQLParam("", oidValues[i], oidDataTypes[i]));
+            conjunction.addParameter(new SQLParam("", oidValues[i], oidDataTypes[i]));
         }
     }
 
@@ -1440,15 +1435,15 @@ public class SQLSelect {
         Object[] oidValues = instance1.getValue();
         String[] oidDataTypes = instance1.getDataTypes();
         for (int i = 0; i < oidValues.length; i++) {
-            dis.getParameters().add(new SQLParam("", oidValues[i], oidDataTypes[i]));
-            con.getParameters().add(new SQLParam("", oidValues[i], oidDataTypes[i]));
+            dis.addParameter(new SQLParam("", oidValues[i], oidDataTypes[i]));
+            con.addParameter(new SQLParam("", oidValues[i], oidDataTypes[i]));
         }
 
         if (reflexive) {
             oidValues = instance1.getValue();
             oidDataTypes = instance1.getDataTypes();
             for (int i = 0; i < oidValues.length; i++) {
-                dis.getParameters().add(new SQLParam("", oidValues[i], oidDataTypes[i]));
+                dis.addParameter(new SQLParam("", oidValues[i], oidDataTypes[i]));
             }
         }
     }
