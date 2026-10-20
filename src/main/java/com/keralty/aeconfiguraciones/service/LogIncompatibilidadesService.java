@@ -100,10 +100,15 @@ public class LogIncompatibilidadesService extends AbstractService {
      */
     @Transactional(Transactional.TxType.SUPPORTS)
     public QueryResponse getDynamic(QueryRequest queryRequest) {
+        int requestedPageSize = request.getPageSize();
+        int pageSize = requestedPageSize >= 0
+                && requestedPageSize <= Constants.MAX_BLOCKSIZE
+                ? requestedPageSize
+                : Constants.DEFAULT_BLOCKSIZE;
         if (queryRequest.getDisplaySetName() == null || queryRequest.getDisplaySetName().isEmpty()) {
             return new PopulationResponseViewModel(solveLogIncompatibilidadesTypedQuery(queryRequest).stream()
                     .map(instance -> buildDynamicObject(instance, queryRequest.getDisplaySetItems()))
-                    .collect(Collectors.toList()), queryRequest.getPageSize() != 0 ? solveLogIncompatibilidadesTypedCountQuery(queryRequest) : 0);
+                    .collect(Collectors.toList()), pageSize != 0 ? solveLogIncompatibilidadesTypedCountQuery(queryRequest) : 0);
         } else {
             return new PreloadResponseViewModel();
         }
