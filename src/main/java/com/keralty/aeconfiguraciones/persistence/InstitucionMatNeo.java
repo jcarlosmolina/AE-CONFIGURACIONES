@@ -513,6 +513,13 @@ public class InstitucionMatNeo extends AbstractAppEntity {
         this.anexoMat.add(anexoMat);
     }
     /**
+     * Removes an instance of <code>AnexoMat</code> related through the <code>AnexoMat</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromAnexoMat(AnexoMat anexoMat) {
+    	this.anexoMat.remove(anexoMat);
+    }
+    /**
      * Sets instances of <code>AnexoMat</code> related through the <code>AnexoMat</code> role.
      * @param anexoMat The new value for the <code>AnexoMat</code> role.
      */
@@ -547,6 +554,13 @@ public class InstitucionMatNeo extends AbstractAppEntity {
     */
     public void add2AnexoNeo(AnexoNeo anexoNeo) {
         this.anexoNeo.add(anexoNeo);
+    }
+    /**
+     * Removes an instance of <code>AnexoNeo</code> related through the <code>AnexoNeo</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromAnexoNeo(AnexoNeo anexoNeo) {
+    	this.anexoNeo.remove(anexoNeo);
     }
     /**
      * Sets instances of <code>AnexoNeo</code> related through the <code>AnexoNeo</code> role.

@@ -302,6 +302,13 @@ public class Tarifa extends AbstractAppEntity {
         this.contratosC.add(contratosC);
     }
     /**
+     * Removes an instance of <code>ContratoC</code> related through the <code>ContratosC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromContratosC(ContratoC contratosC) {
+    	this.contratosC.remove(contratosC);
+    }
+    /**
      * Sets instances of <code>ContratoC</code> related through the <code>ContratosC</code> role.
      * @param contratosC The new value for the <code>ContratosC</code> role.
      */
@@ -338,6 +345,13 @@ public class Tarifa extends AbstractAppEntity {
         this.detallesTarifa.add(detallesTarifa);
     }
     /**
+     * Removes an instance of <code>DetalleTarifa</code> related through the <code>DetallesTarifa</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDetallesTarifa(DetalleTarifa detallesTarifa) {
+    	this.detallesTarifa.remove(detallesTarifa);
+    }
+    /**
      * Sets instances of <code>DetalleTarifa</code> related through the <code>DetallesTarifa</code> role.
      * @param detallesTarifa The new value for the <code>DetallesTarifa</code> role.
      */
@@ -372,6 +386,13 @@ public class Tarifa extends AbstractAppEntity {
     */
     public void add2InstitucionMatNeo(InstitucionMatNeo institucionMatNeo) {
         this.institucionMatNeo.add(institucionMatNeo);
+    }
+    /**
+     * Removes an instance of <code>InstitucionMatNeo</code> related through the <code>InstitucionMatNeo</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromInstitucionMatNeo(InstitucionMatNeo institucionMatNeo) {
+    	this.institucionMatNeo.remove(institucionMatNeo);
     }
     /**
      * Sets instances of <code>InstitucionMatNeo</code> related through the <code>InstitucionMatNeo</code> role.

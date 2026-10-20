@@ -811,6 +811,13 @@ public class DocumentoG extends AbstractAppEntity {
         this.obsEstado.add(obsEstado);
     }
     /**
+     * Removes an instance of <code>ObsEstado</code> related through the <code>ObsEstado</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromObsEstado(ObsEstado obsEstado) {
+    	this.obsEstado.remove(obsEstado);
+    }
+    /**
      * Sets instances of <code>ObsEstado</code> related through the <code>ObsEstado</code> role.
      * @param obsEstado The new value for the <code>ObsEstado</code> role.
      */

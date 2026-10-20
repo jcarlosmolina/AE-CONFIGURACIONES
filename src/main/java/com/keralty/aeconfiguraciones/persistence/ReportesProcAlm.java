@@ -306,6 +306,13 @@ public class ReportesProcAlm extends AbstractAppEntity {
         this.parametros.add(parametros);
     }
     /**
+     * Removes an instance of <code>ParamReporte</code> related through the <code>Parametros</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromParametros(ParamReporte parametros) {
+    	this.parametros.remove(parametros);
+    }
+    /**
      * Sets instances of <code>ParamReporte</code> related through the <code>Parametros</code> role.
      * @param parametros The new value for the <code>Parametros</code> role.
      */
@@ -340,6 +347,13 @@ public class ReportesProcAlm extends AbstractAppEntity {
     */
     public void add2Funcionarios(Funcionario funcionarios) {
         this.funcionarios.add(funcionarios);
+    }
+    /**
+     * Removes an instance of <code>Funcionario</code> related through the <code>Funcionarios</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromFuncionarios(Funcionario funcionarios) {
+    	this.funcionarios.remove(funcionarios);
     }
     /**
      * Sets instances of <code>Funcionario</code> related through the <code>Funcionarios</code> role.

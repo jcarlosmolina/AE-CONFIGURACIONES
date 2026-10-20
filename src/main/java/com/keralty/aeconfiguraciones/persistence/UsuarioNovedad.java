@@ -1474,6 +1474,13 @@ Si existe un conyuge no activo su vigencia no puede estar traslapada con el nuev
         this.documentos.add(documentos);
     }
     /**
+     * Removes an instance of <code>DocumentoNovedad</code> related through the <code>Documentos</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDocumentos(DocumentoNovedad documentos) {
+    	this.documentos.remove(documentos);
+    }
+    /**
      * Sets instances of <code>DocumentoNovedad</code> related through the <code>Documentos</code> role.
      * @param documentos The new value for the <code>Documentos</code> role.
      */

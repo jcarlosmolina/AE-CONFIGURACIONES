@@ -183,6 +183,13 @@ public class Valor extends AbstractAppEntity {
         this.preguntas.add(preguntas);
     }
     /**
+     * Removes an instance of <code>Pregunta</code> related through the <code>Preguntas</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromPreguntas(Pregunta preguntas) {
+    	this.preguntas.remove(preguntas);
+    }
+    /**
      * Sets instances of <code>Pregunta</code> related through the <code>Preguntas</code> role.
      * @param preguntas The new value for the <code>Preguntas</code> role.
      */

@@ -726,7 +726,7 @@ public class GrupoAsignacionService extends AbstractService {
         request.checkArguments();
         GrupoAsignacion instance = grupoAsignacionAddFuncionarioGrupopthisGrupoAsignacion;
 
-        instance.getFuncionario().add(grupoAsignacionAddFuncionarioGrupopevcFuncionario);
+        instance.add2Funcionario(grupoAsignacionAddFuncionarioGrupopevcFuncionario);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.funcionario.siu.AddFuncionarioGrupoRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.funcionario.siu.AddFuncionarioGrupoRequest();
             relatedRequest.setFuncionarioAddFuncionarioGrupopthisFuncionarioInstance(grupoAsignacionAddFuncionarioGrupopevcFuncionario);
@@ -794,7 +794,7 @@ public class GrupoAsignacionService extends AbstractService {
         request.checkArguments();
         GrupoAsignacion instance = grupoAsignacionDelFuncionarioGrupopthisGrupoAsignacion;
 
-        instance.getFuncionario().remove(grupoAsignacionDelFuncionarioGrupopevcFuncionario);
+        instance.removeFromFuncionario(grupoAsignacionDelFuncionarioGrupopevcFuncionario);
         grupoAsignacionDelFuncionarioGrupopevcFuncionario.getGrupoAsignacion().remove(instance);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.funcionario.siu.DelFuncionarioGrupoRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.funcionario.siu.DelFuncionarioGrupoRequest();

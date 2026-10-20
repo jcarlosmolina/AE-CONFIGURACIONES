@@ -1444,6 +1444,13 @@ RADIO=1;
         this.planes.add(planes);
     }
     /**
+     * Removes an instance of <code>Planes</code> related through the <code>Planes</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromPlanes(Planes planes) {
+    	this.planes.remove(planes);
+    }
+    /**
      * Sets instances of <code>Planes</code> related through the <code>Planes</code> role.
      * @param planes The new value for the <code>Planes</code> role.
      */

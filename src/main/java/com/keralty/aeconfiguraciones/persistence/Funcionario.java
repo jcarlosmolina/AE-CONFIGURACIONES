@@ -1577,6 +1577,13 @@ RADIO=1;
         this.solicitudes.add(solicitudes);
     }
     /**
+     * Removes an instance of <code>Solicitud</code> related through the <code>Solicitudes</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromSolicitudes(Solicitud solicitudes) {
+    	this.solicitudes.remove(solicitudes);
+    }
+    /**
      * Sets instances of <code>Solicitud</code> related through the <code>Solicitudes</code> role.
      * @param solicitudes The new value for the <code>Solicitudes</code> role.
      */
@@ -1611,6 +1618,13 @@ RADIO=1;
     */
     public void add2SolicitudesAfiliacion(Solicitud solicitudesAfiliacion) {
         this.solicitudesAfiliacion.add(solicitudesAfiliacion);
+    }
+    /**
+     * Removes an instance of <code>Solicitud</code> related through the <code>SolicitudesAfiliacion</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromSolicitudesAfiliacion(Solicitud solicitudesAfiliacion) {
+    	this.solicitudesAfiliacion.remove(solicitudesAfiliacion);
     }
     /**
      * Sets instances of <code>Solicitud</code> related through the <code>SolicitudesAfiliacion</code> role.
@@ -1649,6 +1663,13 @@ RADIO=1;
         this.obsEstado.add(obsEstado);
     }
     /**
+     * Removes an instance of <code>ObsEstado</code> related through the <code>ObsEstado</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromObsEstado(ObsEstado obsEstado) {
+    	this.obsEstado.remove(obsEstado);
+    }
+    /**
      * Sets instances of <code>ObsEstado</code> related through the <code>ObsEstado</code> role.
      * @param obsEstado The new value for the <code>ObsEstado</code> role.
      */
@@ -1683,6 +1704,13 @@ RADIO=1;
     */
     public void add2Reportes(ReportesProcAlm reportes) {
         this.reportes.add(reportes);
+    }
+    /**
+     * Removes an instance of <code>ReportesProcAlm</code> related through the <code>Reportes</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromReportes(ReportesProcAlm reportes) {
+    	this.reportes.remove(reportes);
     }
     /**
      * Sets instances of <code>ReportesProcAlm</code> related through the <code>Reportes</code> role.
@@ -1721,6 +1749,13 @@ RADIO=1;
         this.solicitudesNovedad.add(solicitudesNovedad);
     }
     /**
+     * Removes an instance of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedad</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromSolicitudesNovedad(SolicitudNovedad solicitudesNovedad) {
+    	this.solicitudesNovedad.remove(solicitudesNovedad);
+    }
+    /**
      * Sets instances of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedad</code> role.
      * @param solicitudesNovedad The new value for the <code>SolicitudesNovedad</code> role.
      */
@@ -1755,6 +1790,13 @@ RADIO=1;
     */
     public void add2SolNovAifliaciones(SolicitudNovedad solNovAifliaciones) {
         this.solNovAifliaciones.add(solNovAifliaciones);
+    }
+    /**
+     * Removes an instance of <code>SolicitudNovedad</code> related through the <code>SolNovAifliaciones</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromSolNovAifliaciones(SolicitudNovedad solNovAifliaciones) {
+    	this.solNovAifliaciones.remove(solNovAifliaciones);
     }
     /**
      * Sets instances of <code>SolicitudNovedad</code> related through the <code>SolNovAifliaciones</code> role.
@@ -1793,6 +1835,13 @@ RADIO=1;
         this.grupoAsignacion.add(grupoAsignacion);
     }
     /**
+     * Removes an instance of <code>GrupoAsignacion</code> related through the <code>GrupoAsignacion</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromGrupoAsignacion(GrupoAsignacion grupoAsignacion) {
+    	this.grupoAsignacion.remove(grupoAsignacion);
+    }
+    /**
      * Sets instances of <code>GrupoAsignacion</code> related through the <code>GrupoAsignacion</code> role.
      * @param grupoAsignacion The new value for the <code>GrupoAsignacion</code> role.
      */
@@ -1827,6 +1876,13 @@ RADIO=1;
     */
     public void add2LogFuncionario(LogFuncionario logFuncionario) {
         this.logFuncionario.add(logFuncionario);
+    }
+    /**
+     * Removes an instance of <code>LogFuncionario</code> related through the <code>LogFuncionario</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromLogFuncionario(LogFuncionario logFuncionario) {
+    	this.logFuncionario.remove(logFuncionario);
     }
     /**
      * Sets instances of <code>LogFuncionario</code> related through the <code>LogFuncionario</code> role.

@@ -664,7 +664,7 @@ public class ValorService extends AbstractService {
         request.checkArguments();
         Valor instance = valorInsValorPreguntapthisValor;
 
-        instance.getPreguntas().add(valorInsValorPreguntapevcPregunta);
+        instance.add2Preguntas(valorInsValorPreguntapevcPregunta);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.pregunta.siu.InsValorPreguntaRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.pregunta.siu.InsValorPreguntaRequest();
             relatedRequest.setPreguntaInsValorPreguntapthisPreguntaInstance(valorInsValorPreguntapevcPregunta);
@@ -732,7 +732,7 @@ public class ValorService extends AbstractService {
         request.checkArguments();
         Valor instance = valorDelValorPreguntapthisValor;
 
-        instance.getPreguntas().remove(valorDelValorPreguntapevcPregunta);
+        instance.removeFromPreguntas(valorDelValorPreguntapevcPregunta);
         valorDelValorPreguntapevcPregunta.getValores().remove(instance);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.pregunta.siu.DelValorPreguntaRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.pregunta.siu.DelValorPreguntaRequest();

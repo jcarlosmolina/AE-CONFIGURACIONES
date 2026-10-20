@@ -553,6 +553,13 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
         this.dominios.add(dominios);
     }
     /**
+     * Removes an instance of <code>Dominio</code> related through the <code>Dominios</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDominios(Dominio dominios) {
+    	this.dominios.remove(dominios);
+    }
+    /**
      * Sets instances of <code>Dominio</code> related through the <code>Dominios</code> role.
      * @param dominios The new value for the <code>Dominios</code> role.
      */
@@ -587,6 +594,13 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
     */
     public void add2Tarifas(Tarifa tarifas) {
         this.tarifas.add(tarifas);
+    }
+    /**
+     * Removes an instance of <code>Tarifa</code> related through the <code>Tarifas</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromTarifas(Tarifa tarifas) {
+    	this.tarifas.remove(tarifas);
     }
     /**
      * Sets instances of <code>Tarifa</code> related through the <code>Tarifas</code> role.
@@ -625,6 +639,13 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
         this.gruposAsociados.add(gruposAsociados);
     }
     /**
+     * Removes an instance of <code>GrupoAsociado</code> related through the <code>GruposAsociados</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromGruposAsociados(GrupoAsociado gruposAsociados) {
+    	this.gruposAsociados.remove(gruposAsociados);
+    }
+    /**
      * Sets instances of <code>GrupoAsociado</code> related through the <code>GruposAsociados</code> role.
      * @param gruposAsociados The new value for the <code>GruposAsociados</code> role.
      */
@@ -659,6 +680,13 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
     */
     public void add2TiposIVA(TipoIVA tiposIVA) {
         this.tiposIVA.add(tiposIVA);
+    }
+    /**
+     * Removes an instance of <code>TipoIVA</code> related through the <code>TiposIVA</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromTiposIVA(TipoIVA tiposIVA) {
+    	this.tiposIVA.remove(tiposIVA);
     }
     /**
      * Sets instances of <code>TipoIVA</code> related through the <code>TiposIVA</code> role.
@@ -697,6 +725,13 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
         this.aESOLICITUDES.add(aESOLICITUDES);
     }
     /**
+     * Removes an instance of <code>Aesolicitudes</code> related through the <code>AESOLICITUDES</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromAESOLICITUDES(Aesolicitudes aESOLICITUDES) {
+    	this.aESOLICITUDES.remove(aESOLICITUDES);
+    }
+    /**
      * Sets instances of <code>Aesolicitudes</code> related through the <code>AESOLICITUDES</code> role.
      * @param aESOLICITUDES The new value for the <code>AESOLICITUDES</code> role.
      */
@@ -731,6 +766,13 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
     */
     public void add2ContratosC(ContratoC contratosC) {
         this.contratosC.add(contratosC);
+    }
+    /**
+     * Removes an instance of <code>ContratoC</code> related through the <code>ContratosC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromContratosC(ContratoC contratosC) {
+    	this.contratosC.remove(contratosC);
     }
     /**
      * Sets instances of <code>ContratoC</code> related through the <code>ContratosC</code> role.
@@ -769,6 +811,13 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
         this.afiliaciones.add(afiliaciones);
     }
     /**
+     * Removes an instance of <code>Afiliaciones</code> related through the <code>Afiliaciones</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromAfiliaciones(Afiliaciones afiliaciones) {
+    	this.afiliaciones.remove(afiliaciones);
+    }
+    /**
      * Sets instances of <code>Afiliaciones</code> related through the <code>Afiliaciones</code> role.
      * @param afiliaciones The new value for the <code>Afiliaciones</code> role.
      */
@@ -803,6 +852,13 @@ que no lo son. Para ello, se añadirá una nueva marca en la paramétrica amplia
     */
     public void add2SolicitudesNovedad(SolicitudNovedad solicitudesNovedad) {
         this.solicitudesNovedad.add(solicitudesNovedad);
+    }
+    /**
+     * Removes an instance of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedad</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromSolicitudesNovedad(SolicitudNovedad solicitudesNovedad) {
+    	this.solicitudesNovedad.remove(solicitudesNovedad);
     }
     /**
      * Sets instances of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedad</code> role.

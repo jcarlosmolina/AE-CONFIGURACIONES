@@ -1408,6 +1408,13 @@ public class PersonaC extends AbstractAppEntity {
         this.direccionesC.add(direccionesC);
     }
     /**
+     * Removes an instance of <code>DireccionC</code> related through the <code>DireccionesC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDireccionesC(DireccionC direccionesC) {
+    	this.direccionesC.remove(direccionesC);
+    }
+    /**
      * Sets instances of <code>DireccionC</code> related through the <code>DireccionesC</code> role.
      * @param direccionesC The new value for the <code>DireccionesC</code> role.
      */
@@ -1442,6 +1449,13 @@ public class PersonaC extends AbstractAppEntity {
     */
     public void add2ProteccionesDatosC(ProteccionDatosC proteccionesDatosC) {
         this.proteccionesDatosC.add(proteccionesDatosC);
+    }
+    /**
+     * Removes an instance of <code>ProteccionDatosC</code> related through the <code>ProteccionesDatosC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromProteccionesDatosC(ProteccionDatosC proteccionesDatosC) {
+    	this.proteccionesDatosC.remove(proteccionesDatosC);
     }
     /**
      * Sets instances of <code>ProteccionDatosC</code> related through the <code>ProteccionesDatosC</code> role.
@@ -1480,6 +1494,13 @@ public class PersonaC extends AbstractAppEntity {
         this.pregsCuesMedC.add(pregsCuesMedC);
     }
     /**
+     * Removes an instance of <code>PregCuesMedC</code> related through the <code>PregsCuesMedC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromPregsCuesMedC(PregCuesMedC pregsCuesMedC) {
+    	this.pregsCuesMedC.remove(pregsCuesMedC);
+    }
+    /**
      * Sets instances of <code>PregCuesMedC</code> related through the <code>PregsCuesMedC</code> role.
      * @param pregsCuesMedC The new value for the <code>PregsCuesMedC</code> role.
      */
@@ -1514,6 +1535,13 @@ public class PersonaC extends AbstractAppEntity {
     */
     public void add2DirSucursalesC(DirSucursalC dirSucursalesC) {
         this.dirSucursalesC.add(dirSucursalesC);
+    }
+    /**
+     * Removes an instance of <code>DirSucursalC</code> related through the <code>DirSucursalesC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDirSucursalesC(DirSucursalC dirSucursalesC) {
+    	this.dirSucursalesC.remove(dirSucursalesC);
     }
     /**
      * Sets instances of <code>DirSucursalC</code> related through the <code>DirSucursalesC</code> role.
@@ -1552,6 +1580,13 @@ public class PersonaC extends AbstractAppEntity {
         this.preexistenciasC.add(preexistenciasC);
     }
     /**
+     * Removes an instance of <code>PreexistenciaC</code> related through the <code>PreexistenciasC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromPreexistenciasC(PreexistenciaC preexistenciasC) {
+    	this.preexistenciasC.remove(preexistenciasC);
+    }
+    /**
      * Sets instances of <code>PreexistenciaC</code> related through the <code>PreexistenciasC</code> role.
      * @param preexistenciasC The new value for the <code>PreexistenciasC</code> role.
      */
@@ -1586,6 +1621,13 @@ public class PersonaC extends AbstractAppEntity {
     */
     public void add2MarcasMedicasC(MarcaMedicaC marcasMedicasC) {
         this.marcasMedicasC.add(marcasMedicasC);
+    }
+    /**
+     * Removes an instance of <code>MarcaMedicaC</code> related through the <code>MarcasMedicasC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromMarcasMedicasC(MarcaMedicaC marcasMedicasC) {
+    	this.marcasMedicasC.remove(marcasMedicasC);
     }
     /**
      * Sets instances of <code>MarcaMedicaC</code> related through the <code>MarcasMedicasC</code> role.

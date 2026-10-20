@@ -2823,6 +2823,13 @@ Este derivado sirve para:
         this.familias.add(familias);
     }
     /**
+     * Removes an instance of <code>FamiliaNovedad</code> related through the <code>Familias</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromFamilias(FamiliaNovedad familias) {
+    	this.familias.remove(familias);
+    }
+    /**
      * Sets instances of <code>FamiliaNovedad</code> related through the <code>Familias</code> role.
      * @param familias The new value for the <code>Familias</code> role.
      */
@@ -2857,6 +2864,13 @@ Este derivado sirve para:
     */
     public void add2Documentos(DocumentoNovedad documentos) {
         this.documentos.add(documentos);
+    }
+    /**
+     * Removes an instance of <code>DocumentoNovedad</code> related through the <code>Documentos</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDocumentos(DocumentoNovedad documentos) {
+    	this.documentos.remove(documentos);
     }
     /**
      * Sets instances of <code>DocumentoNovedad</code> related through the <code>Documentos</code> role.
@@ -2895,6 +2909,13 @@ Este derivado sirve para:
         this.logEstados.add(logEstados);
     }
     /**
+     * Removes an instance of <code>LogEstadoSN</code> related through the <code>LogEstados</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromLogEstados(LogEstadoSN logEstados) {
+    	this.logEstados.remove(logEstados);
+    }
+    /**
      * Sets instances of <code>LogEstadoSN</code> related through the <code>LogEstados</code> role.
      * @param logEstados The new value for the <code>LogEstados</code> role.
      */
@@ -2929,6 +2950,13 @@ Este derivado sirve para:
     */
     public void add2LogUsrSolNov(LogUsrSolNov logUsrSolNov) {
         this.logUsrSolNov.add(logUsrSolNov);
+    }
+    /**
+     * Removes an instance of <code>LogUsrSolNov</code> related through the <code>LogUsrSolNov</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromLogUsrSolNov(LogUsrSolNov logUsrSolNov) {
+    	this.logUsrSolNov.remove(logUsrSolNov);
     }
     /**
      * Sets instances of <code>LogUsrSolNov</code> related through the <code>LogUsrSolNov</code> role.

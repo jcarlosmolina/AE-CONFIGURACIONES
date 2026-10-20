@@ -210,6 +210,13 @@ public class Sucursal extends AbstractAppEntity {
         this.agentes.add(agentes);
     }
     /**
+     * Removes an instance of <code>Funcionario</code> related through the <code>Agentes</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromAgentes(Funcionario agentes) {
+    	this.agentes.remove(agentes);
+    }
+    /**
      * Sets instances of <code>Funcionario</code> related through the <code>Agentes</code> role.
      * @param agentes The new value for the <code>Agentes</code> role.
      */
@@ -244,6 +251,13 @@ public class Sucursal extends AbstractAppEntity {
     */
     public void add2ContratosC(ContratoC contratosC) {
         this.contratosC.add(contratosC);
+    }
+    /**
+     * Removes an instance of <code>ContratoC</code> related through the <code>ContratosC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromContratosC(ContratoC contratosC) {
+    	this.contratosC.remove(contratosC);
     }
     /**
      * Sets instances of <code>ContratoC</code> related through the <code>ContratosC</code> role.

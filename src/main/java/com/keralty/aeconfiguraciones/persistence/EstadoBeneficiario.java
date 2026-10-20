@@ -379,6 +379,13 @@ public class EstadoBeneficiario extends AbstractAppEntity {
         this.estadoBeneficiarioAE.add(estadoBeneficiarioAE);
     }
     /**
+     * Removes an instance of <code>EstadoBeneficiarioAE</code> related through the <code>EstadoBeneficiarioAE</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromEstadoBeneficiarioAE(EstadoBeneficiarioAE estadoBeneficiarioAE) {
+    	this.estadoBeneficiarioAE.remove(estadoBeneficiarioAE);
+    }
+    /**
      * Sets instances of <code>EstadoBeneficiarioAE</code> related through the <code>EstadoBeneficiarioAE</code> role.
      * @param estadoBeneficiarioAE The new value for the <code>EstadoBeneficiarioAE</code> role.
      */
@@ -413,6 +420,13 @@ public class EstadoBeneficiario extends AbstractAppEntity {
     */
     public void add2UsuarioS(Usuario usuarioS) {
         this.usuarioS.add(usuarioS);
+    }
+    /**
+     * Removes an instance of <code>Usuario</code> related through the <code>UsuarioS</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromUsuarioS(Usuario usuarioS) {
+    	this.usuarioS.remove(usuarioS);
     }
     /**
      * Sets instances of <code>Usuario</code> related through the <code>UsuarioS</code> role.
@@ -451,6 +465,13 @@ public class EstadoBeneficiario extends AbstractAppEntity {
         this.beneficiariosC.add(beneficiariosC);
     }
     /**
+     * Removes an instance of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromBeneficiariosC(BeneficiarioC beneficiariosC) {
+    	this.beneficiariosC.remove(beneficiariosC);
+    }
+    /**
      * Sets instances of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.
      * @param beneficiariosC The new value for the <code>BeneficiariosC</code> role.
      */
@@ -487,6 +508,13 @@ public class EstadoBeneficiario extends AbstractAppEntity {
         this.usuariosReg.add(usuariosReg);
     }
     /**
+     * Removes an instance of <code>UsuarioReg</code> related through the <code>UsuariosReg</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromUsuariosReg(UsuarioReg usuariosReg) {
+    	this.usuariosReg.remove(usuariosReg);
+    }
+    /**
      * Sets instances of <code>UsuarioReg</code> related through the <code>UsuariosReg</code> role.
      * @param usuariosReg The new value for the <code>UsuariosReg</code> role.
      */
@@ -521,6 +549,13 @@ public class EstadoBeneficiario extends AbstractAppEntity {
     */
     public void add2UsuariosNovedad(UsuarioNovedad usuariosNovedad) {
         this.usuariosNovedad.add(usuariosNovedad);
+    }
+    /**
+     * Removes an instance of <code>UsuarioNovedad</code> related through the <code>UsuariosNovedad</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromUsuariosNovedad(UsuarioNovedad usuariosNovedad) {
+    	this.usuariosNovedad.remove(usuariosNovedad);
     }
     /**
      * Sets instances of <code>UsuarioNovedad</code> related through the <code>UsuariosNovedad</code> role.

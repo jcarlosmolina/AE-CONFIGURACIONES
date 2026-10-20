@@ -564,6 +564,13 @@ public class Productos extends AbstractAppEntity {
         this.planes.add(planes);
     }
     /**
+     * Removes an instance of <code>Planes</code> related through the <code>Planes</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromPlanes(Planes planes) {
+    	this.planes.remove(planes);
+    }
+    /**
      * Sets instances of <code>Planes</code> related through the <code>Planes</code> role.
      * @param planes The new value for the <code>Planes</code> role.
      */
@@ -598,6 +605,13 @@ public class Productos extends AbstractAppEntity {
     */
     public void add2Dominios(Dominio dominios) {
         this.dominios.add(dominios);
+    }
+    /**
+     * Removes an instance of <code>Dominio</code> related through the <code>Dominios</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDominios(Dominio dominios) {
+    	this.dominios.remove(dominios);
     }
     /**
      * Sets instances of <code>Dominio</code> related through the <code>Dominios</code> role.
@@ -636,6 +650,13 @@ public class Productos extends AbstractAppEntity {
         this.tarifas.add(tarifas);
     }
     /**
+     * Removes an instance of <code>Tarifa</code> related through the <code>Tarifas</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromTarifas(Tarifa tarifas) {
+    	this.tarifas.remove(tarifas);
+    }
+    /**
      * Sets instances of <code>Tarifa</code> related through the <code>Tarifas</code> role.
      * @param tarifas The new value for the <code>Tarifas</code> role.
      */
@@ -670,6 +691,13 @@ public class Productos extends AbstractAppEntity {
     */
     public void add2GruposAsociados(GrupoAsociado gruposAsociados) {
         this.gruposAsociados.add(gruposAsociados);
+    }
+    /**
+     * Removes an instance of <code>GrupoAsociado</code> related through the <code>GruposAsociados</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromGruposAsociados(GrupoAsociado gruposAsociados) {
+    	this.gruposAsociados.remove(gruposAsociados);
     }
     /**
      * Sets instances of <code>GrupoAsociado</code> related through the <code>GruposAsociados</code> role.
@@ -708,6 +736,13 @@ public class Productos extends AbstractAppEntity {
         this.tiposIVA.add(tiposIVA);
     }
     /**
+     * Removes an instance of <code>TipoIVA</code> related through the <code>TiposIVA</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromTiposIVA(TipoIVA tiposIVA) {
+    	this.tiposIVA.remove(tiposIVA);
+    }
+    /**
      * Sets instances of <code>TipoIVA</code> related through the <code>TiposIVA</code> role.
      * @param tiposIVA The new value for the <code>TiposIVA</code> role.
      */
@@ -742,6 +777,13 @@ public class Productos extends AbstractAppEntity {
     */
     public void add2AESOLICITUDES(Aesolicitudes aESOLICITUDES) {
         this.aESOLICITUDES.add(aESOLICITUDES);
+    }
+    /**
+     * Removes an instance of <code>Aesolicitudes</code> related through the <code>AESOLICITUDES</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromAESOLICITUDES(Aesolicitudes aESOLICITUDES) {
+    	this.aESOLICITUDES.remove(aESOLICITUDES);
     }
     /**
      * Sets instances of <code>Aesolicitudes</code> related through the <code>AESOLICITUDES</code> role.
@@ -780,6 +822,13 @@ public class Productos extends AbstractAppEntity {
         this.proteccionDatosC.add(proteccionDatosC);
     }
     /**
+     * Removes an instance of <code>ProteccionDatosC</code> related through the <code>ProteccionDatosC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromProteccionDatosC(ProteccionDatosC proteccionDatosC) {
+    	this.proteccionDatosC.remove(proteccionDatosC);
+    }
+    /**
      * Sets instances of <code>ProteccionDatosC</code> related through the <code>ProteccionDatosC</code> role.
      * @param proteccionDatosC The new value for the <code>ProteccionDatosC</code> role.
      */
@@ -814,6 +863,13 @@ public class Productos extends AbstractAppEntity {
     */
     public void add2ProteccionesDatos(ProteccionDatos proteccionesDatos) {
         this.proteccionesDatos.add(proteccionesDatos);
+    }
+    /**
+     * Removes an instance of <code>ProteccionDatos</code> related through the <code>ProteccionesDatos</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromProteccionesDatos(ProteccionDatos proteccionesDatos) {
+    	this.proteccionesDatos.remove(proteccionesDatos);
     }
     /**
      * Sets instances of <code>ProteccionDatos</code> related through the <code>ProteccionesDatos</code> role.
@@ -852,6 +908,13 @@ public class Productos extends AbstractAppEntity {
         this.contratosC.add(contratosC);
     }
     /**
+     * Removes an instance of <code>ContratoC</code> related through the <code>ContratosC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromContratosC(ContratoC contratosC) {
+    	this.contratosC.remove(contratosC);
+    }
+    /**
      * Sets instances of <code>ContratoC</code> related through the <code>ContratosC</code> role.
      * @param contratosC The new value for the <code>ContratosC</code> role.
      */
@@ -888,6 +951,13 @@ public class Productos extends AbstractAppEntity {
         this.marcaMedicaC.add(marcaMedicaC);
     }
     /**
+     * Removes an instance of <code>MarcaMedicaC</code> related through the <code>MarcaMedicaC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromMarcaMedicaC(MarcaMedicaC marcaMedicaC) {
+    	this.marcaMedicaC.remove(marcaMedicaC);
+    }
+    /**
      * Sets instances of <code>MarcaMedicaC</code> related through the <code>MarcaMedicaC</code> role.
      * @param marcaMedicaC The new value for the <code>MarcaMedicaC</code> role.
      */
@@ -922,6 +992,13 @@ public class Productos extends AbstractAppEntity {
     */
     public void add2AgentexProducto(AgentexProducto agentexProducto) {
         this.agentexProducto.add(agentexProducto);
+    }
+    /**
+     * Removes an instance of <code>AgentexProducto</code> related through the <code>AgentexProducto</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromAgentexProducto(AgentexProducto agentexProducto) {
+    	this.agentexProducto.remove(agentexProducto);
     }
     /**
      * Sets instances of <code>AgentexProducto</code> related through the <code>AgentexProducto</code> role.

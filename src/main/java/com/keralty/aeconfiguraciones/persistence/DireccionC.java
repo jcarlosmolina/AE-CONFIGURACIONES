@@ -430,6 +430,13 @@ public class DireccionC extends AbstractAppEntity {
         this.telefonosC.add(telefonosC);
     }
     /**
+     * Removes an instance of <code>TelefonoC</code> related through the <code>TelefonosC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromTelefonosC(TelefonoC telefonosC) {
+    	this.telefonosC.remove(telefonosC);
+    }
+    /**
      * Sets instances of <code>TelefonoC</code> related through the <code>TelefonosC</code> role.
      * @param telefonosC The new value for the <code>TelefonosC</code> role.
      */

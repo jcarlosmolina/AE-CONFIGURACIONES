@@ -385,6 +385,13 @@ public class PlantillaReporte extends AbstractAppEntity {
         this.reportesDominio.add(reportesDominio);
     }
     /**
+     * Removes an instance of <code>ReportesDominio</code> related through the <code>ReportesDominio</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromReportesDominio(ReportesDominio reportesDominio) {
+    	this.reportesDominio.remove(reportesDominio);
+    }
+    /**
      * Sets instances of <code>ReportesDominio</code> related through the <code>ReportesDominio</code> role.
      * @param reportesDominio The new value for the <code>ReportesDominio</code> role.
      */

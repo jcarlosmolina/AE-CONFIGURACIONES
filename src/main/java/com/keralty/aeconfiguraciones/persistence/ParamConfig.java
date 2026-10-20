@@ -275,6 +275,13 @@ public class ParamConfig extends AbstractAppEntity {
         this.logs.add(logs);
     }
     /**
+     * Removes an instance of <code>LogParam</code> related through the <code>Logs</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromLogs(LogParam logs) {
+    	this.logs.remove(logs);
+    }
+    /**
      * Sets instances of <code>LogParam</code> related through the <code>Logs</code> role.
      * @param logs The new value for the <code>Logs</code> role.
      */

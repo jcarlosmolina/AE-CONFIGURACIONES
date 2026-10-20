@@ -1349,6 +1349,13 @@ Condiciones:
         this.solicitudesContratante.add(solicitudesContratante);
     }
     /**
+     * Removes an instance of <code>Solicitud</code> related through the <code>SolicitudesContratante</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromSolicitudesContratante(Solicitud solicitudesContratante) {
+    	this.solicitudesContratante.remove(solicitudesContratante);
+    }
+    /**
      * Sets instances of <code>Solicitud</code> related through the <code>SolicitudesContratante</code> role.
      * @param solicitudesContratante The new value for the <code>SolicitudesContratante</code> role.
      */
@@ -1385,6 +1392,13 @@ Condiciones:
         this.solicitudesTitular.add(solicitudesTitular);
     }
     /**
+     * Removes an instance of <code>Solicitud</code> related through the <code>SolicitudesTitular</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromSolicitudesTitular(Solicitud solicitudesTitular) {
+    	this.solicitudesTitular.remove(solicitudesTitular);
+    }
+    /**
      * Sets instances of <code>Solicitud</code> related through the <code>SolicitudesTitular</code> role.
      * @param solicitudesTitular The new value for the <code>SolicitudesTitular</code> role.
      */
@@ -1419,6 +1433,13 @@ Condiciones:
     */
     public void add2Direcciones(Direccion direcciones) {
         this.direcciones.add(direcciones);
+    }
+    /**
+     * Removes an instance of <code>Direccion</code> related through the <code>Direcciones</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDirecciones(Direccion direcciones) {
+    	this.direcciones.remove(direcciones);
     }
     /**
      * Sets instances of <code>Direccion</code> related through the <code>Direcciones</code> role.
@@ -1492,6 +1513,13 @@ Condiciones:
     */
     public void add2DocumentosG(DocumentoG documentosG) {
         this.documentosG.add(documentosG);
+    }
+    /**
+     * Removes an instance of <code>DocumentoG</code> related through the <code>DocumentosG</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDocumentosG(DocumentoG documentosG) {
+    	this.documentosG.remove(documentosG);
     }
     /**
      * Sets instances of <code>DocumentoG</code> related through the <code>DocumentosG</code> role.

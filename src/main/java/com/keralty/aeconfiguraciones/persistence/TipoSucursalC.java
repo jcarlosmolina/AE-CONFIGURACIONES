@@ -167,6 +167,13 @@ public class TipoSucursalC extends AbstractAppEntity {
         this.dirSucursalesC.add(dirSucursalesC);
     }
     /**
+     * Removes an instance of <code>DirSucursalC</code> related through the <code>DirSucursalesC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDirSucursalesC(DirSucursalC dirSucursalesC) {
+    	this.dirSucursalesC.remove(dirSucursalesC);
+    }
+    /**
      * Sets instances of <code>DirSucursalC</code> related through the <code>DirSucursalesC</code> role.
      * @param dirSucursalesC The new value for the <code>DirSucursalesC</code> role.
      */

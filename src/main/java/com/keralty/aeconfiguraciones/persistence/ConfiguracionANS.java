@@ -769,6 +769,13 @@ RADIO=1;
         this.logConfiguracionANS.add(logConfiguracionANS);
     }
     /**
+     * Removes an instance of <code>LogConfiguracionANS</code> related through the <code>LogConfiguracionANS</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromLogConfiguracionANS(LogConfiguracionANS logConfiguracionANS) {
+    	this.logConfiguracionANS.remove(logConfiguracionANS);
+    }
+    /**
      * Sets instances of <code>LogConfiguracionANS</code> related through the <code>LogConfiguracionANS</code> role.
      * @param logConfiguracionANS The new value for the <code>LogConfiguracionANS</code> role.
      */

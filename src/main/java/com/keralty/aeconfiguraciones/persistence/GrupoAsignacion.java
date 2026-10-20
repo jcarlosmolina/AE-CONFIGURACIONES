@@ -339,6 +339,13 @@ public class GrupoAsignacion extends AbstractAppEntity {
         this.dominioAsesores.add(dominioAsesores);
     }
     /**
+     * Removes an instance of <code>Dominio</code> related through the <code>DominioAsesores</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDominioAsesores(Dominio dominioAsesores) {
+    	this.dominioAsesores.remove(dominioAsesores);
+    }
+    /**
      * Sets instances of <code>Dominio</code> related through the <code>DominioAsesores</code> role.
      * @param dominioAsesores The new value for the <code>DominioAsesores</code> role.
      */
@@ -373,6 +380,13 @@ public class GrupoAsignacion extends AbstractAppEntity {
     */
     public void add2DominioAreaMedica(Dominio dominioAreaMedica) {
         this.dominioAreaMedica.add(dominioAreaMedica);
+    }
+    /**
+     * Removes an instance of <code>Dominio</code> related through the <code>DominioAreaMedica</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDominioAreaMedica(Dominio dominioAreaMedica) {
+    	this.dominioAreaMedica.remove(dominioAreaMedica);
     }
     /**
      * Sets instances of <code>Dominio</code> related through the <code>DominioAreaMedica</code> role.
@@ -411,6 +425,13 @@ public class GrupoAsignacion extends AbstractAppEntity {
         this.logGrupoAsignacion.add(logGrupoAsignacion);
     }
     /**
+     * Removes an instance of <code>LogGrupoAsignacion</code> related through the <code>LogGrupoAsignacion</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromLogGrupoAsignacion(LogGrupoAsignacion logGrupoAsignacion) {
+    	this.logGrupoAsignacion.remove(logGrupoAsignacion);
+    }
+    /**
      * Sets instances of <code>LogGrupoAsignacion</code> related through the <code>LogGrupoAsignacion</code> role.
      * @param logGrupoAsignacion The new value for the <code>LogGrupoAsignacion</code> role.
      */
@@ -447,6 +468,13 @@ public class GrupoAsignacion extends AbstractAppEntity {
         this.dominioCausalUsuario.add(dominioCausalUsuario);
     }
     /**
+     * Removes an instance of <code>GrupoAsignacionNovedad</code> related through the <code>DominioCausalUsuario</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDominioCausalUsuario(GrupoAsignacionNovedad dominioCausalUsuario) {
+    	this.dominioCausalUsuario.remove(dominioCausalUsuario);
+    }
+    /**
      * Sets instances of <code>GrupoAsignacionNovedad</code> related through the <code>DominioCausalUsuario</code> role.
      * @param dominioCausalUsuario The new value for the <code>DominioCausalUsuario</code> role.
      */
@@ -481,6 +509,13 @@ public class GrupoAsignacion extends AbstractAppEntity {
     */
     public void add2Funcionario(Funcionario funcionario) {
         this.funcionario.add(funcionario);
+    }
+    /**
+     * Removes an instance of <code>Funcionario</code> related through the <code>Funcionario</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromFuncionario(Funcionario funcionario) {
+    	this.funcionario.remove(funcionario);
     }
     /**
      * Sets instances of <code>Funcionario</code> related through the <code>Funcionario</code> role.

@@ -1139,6 +1139,13 @@ Cambiado el 26/8/2016 a petición de JC Quinche<br>
         this.anexosC.add(anexosC);
     }
     /**
+     * Removes an instance of <code>AnexoC</code> related through the <code>AnexosC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromAnexosC(AnexoC anexosC) {
+    	this.anexosC.remove(anexosC);
+    }
+    /**
      * Sets instances of <code>AnexoC</code> related through the <code>AnexosC</code> role.
      * @param anexosC The new value for the <code>AnexosC</code> role.
      */
@@ -1173,6 +1180,13 @@ Cambiado el 26/8/2016 a petición de JC Quinche<br>
     */
     public void add2ConceptosC(ConceptoC conceptosC) {
         this.conceptosC.add(conceptosC);
+    }
+    /**
+     * Removes an instance of <code>ConceptoC</code> related through the <code>ConceptosC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromConceptosC(ConceptoC conceptosC) {
+    	this.conceptosC.remove(conceptosC);
     }
     /**
      * Sets instances of <code>ConceptoC</code> related through the <code>ConceptosC</code> role.

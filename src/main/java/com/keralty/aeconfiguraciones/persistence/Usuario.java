@@ -2194,6 +2194,13 @@ Se solicita cambiar el nombre de 'Póliza internacional' por 'Respaldo global'.<
         this.preexistencias.add(preexistencias);
     }
     /**
+     * Removes an instance of <code>Preexistencia</code> related through the <code>Preexistencias</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromPreexistencias(Preexistencia preexistencias) {
+    	this.preexistencias.remove(preexistencias);
+    }
+    /**
      * Sets instances of <code>Preexistencia</code> related through the <code>Preexistencias</code> role.
      * @param preexistencias The new value for the <code>Preexistencias</code> role.
      */

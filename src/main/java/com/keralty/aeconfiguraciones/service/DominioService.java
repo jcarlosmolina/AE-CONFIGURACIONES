@@ -1108,7 +1108,7 @@ public class DominioService extends AbstractService {
         request.checkArguments();
         Dominio instance = dominioInsPeriodicidadDominiopthisDominio;
 
-        instance.getPeriodicidades().add(dominioInsPeriodicidadDominiopevcPeriodicidad);
+        instance.add2Periodicidades(dominioInsPeriodicidadDominiopevcPeriodicidad);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.periodicidad.siu.InsPeriodicidadDominioRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.periodicidad.siu.InsPeriodicidadDominioRequest();
             relatedRequest.setPeriodicidadInsPeriodicidadDominiopthisPeriodicidadInstance(dominioInsPeriodicidadDominiopevcPeriodicidad);
@@ -1176,7 +1176,7 @@ public class DominioService extends AbstractService {
         request.checkArguments();
         Dominio instance = dominioDelPeriodicidadDominiopthisDominio;
 
-        instance.getPeriodicidades().remove(dominioDelPeriodicidadDominiopevcPeriodicidad);
+        instance.removeFromPeriodicidades(dominioDelPeriodicidadDominiopevcPeriodicidad);
         dominioDelPeriodicidadDominiopevcPeriodicidad.getDominios().remove(instance);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.periodicidad.siu.DelPeriodicidadDominioRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.periodicidad.siu.DelPeriodicidadDominioRequest();
@@ -1245,7 +1245,7 @@ public class DominioService extends AbstractService {
         request.checkArguments();
         Dominio instance = dominioInsRolDominiopthisDominio;
 
-        instance.getRoles().add(dominioInsRolDominiopevcRol);
+        instance.add2Roles(dominioInsRolDominiopevcRol);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.rol.siu.InsRolDominioRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.rol.siu.InsRolDominioRequest();
             relatedRequest.setRolInsRolDominiopthisRolInstance(dominioInsRolDominiopevcRol);
@@ -1313,7 +1313,7 @@ public class DominioService extends AbstractService {
         request.checkArguments();
         Dominio instance = dominioDelRollDominiopthisDominio;
 
-        instance.getRoles().remove(dominioDelRollDominiopevcRol);
+        instance.removeFromRoles(dominioDelRollDominiopevcRol);
         dominioDelRollDominiopevcRol.getDominios().remove(instance);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.rol.siu.DelRollDominioRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.rol.siu.DelRollDominioRequest();
@@ -1582,7 +1582,7 @@ public class DominioService extends AbstractService {
         request.checkArguments();
         Dominio instance = dominioInsFormaPagopthisDominio;
 
-        instance.getFormasPago().add(dominioInsFormaPagopevcFormaPago);
+        instance.add2FormasPago(dominioInsFormaPagopevcFormaPago);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.formapago.siu.InsFormaPagoRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.formapago.siu.InsFormaPagoRequest();
             relatedRequest.setFormaPagoInsFormaPagopthisFormaPagoInstance(dominioInsFormaPagopevcFormaPago);
@@ -1650,7 +1650,7 @@ public class DominioService extends AbstractService {
         request.checkArguments();
         Dominio instance = dominioDelFormaPagopthisDominio;
 
-        instance.getFormasPago().remove(dominioDelFormaPagopevcFormaPago);
+        instance.removeFromFormasPago(dominioDelFormaPagopevcFormaPago);
         dominioDelFormaPagopevcFormaPago.getDominios().remove(instance);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.formapago.siu.DelFormaPagoRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.formapago.siu.DelFormaPagoRequest();
@@ -1820,7 +1820,7 @@ public class DominioService extends AbstractService {
         request.checkArguments();
         Dominio instance = dominioInsPlantillapthisDominio;
 
-        instance.getPlantillas().add(dominioInsPlantillapevcPlantillaEmail);
+        instance.add2Plantillas(dominioInsPlantillapevcPlantillaEmail);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.plantillaemail.siu.InsPlantillaRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.plantillaemail.siu.InsPlantillaRequest();
             relatedRequest.setPlantillaEmailInsPlantillapthisPlantillaEmailInstance(dominioInsPlantillapevcPlantillaEmail);
@@ -1888,7 +1888,7 @@ public class DominioService extends AbstractService {
         request.checkArguments();
         Dominio instance = dominioDelPlantillapthisDominio;
 
-        instance.getPlantillas().remove(dominioDelPlantillapevcPlantillaEmail);
+        instance.removeFromPlantillas(dominioDelPlantillapevcPlantillaEmail);
         dominioDelPlantillapevcPlantillaEmail.getDominios().remove(instance);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.plantillaemail.siu.DelPlantillaRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.plantillaemail.siu.DelPlantillaRequest();
@@ -1957,7 +1957,7 @@ public class DominioService extends AbstractService {
         request.checkArguments();
         Dominio instance = dominioInsNovedadpthisDominio;
 
-        instance.getNovedades().add(dominioInsNovedadpevcNovedad);
+        instance.add2Novedades(dominioInsNovedadpevcNovedad);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.novedad.siu.InsNovedadRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.novedad.siu.InsNovedadRequest();
             relatedRequest.setNovedadInsNovedadpthisNovedadInstance(dominioInsNovedadpevcNovedad);
@@ -2025,7 +2025,7 @@ public class DominioService extends AbstractService {
         request.checkArguments();
         Dominio instance = dominioDelNovedadpthisDominio;
 
-        instance.getNovedades().remove(dominioDelNovedadpevcNovedad);
+        instance.removeFromNovedades(dominioDelNovedadpevcNovedad);
         dominioDelNovedadpevcNovedad.getDominios().remove(instance);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.novedad.siu.DelNovedadRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.novedad.siu.DelNovedadRequest();
@@ -2568,7 +2568,7 @@ public class DominioService extends AbstractService {
         insIncompatiblePreconditions(request);
         Dominio instance = dominioInsIncompatiblepthisDominio;
 
-        instance.getDominiosIncompatibles().add(dominioInsIncompatiblepevcDominio);
+        instance.add2DominiosIncompatibles(dominioInsIncompatiblepevcDominio);
 
 
         response.setInstance(repository.save(instance));
@@ -2663,7 +2663,7 @@ public class DominioService extends AbstractService {
         request.checkArguments();
         Dominio instance = dominioDelIncompatiblepthisDominio;
 
-        instance.getDominiosIncompatibles().remove(dominioDelIncompatiblepevcDominio);
+        instance.removeFromDominiosIncompatibles(dominioDelIncompatiblepevcDominio);
 
 
         response.setInstance(repository.save(instance));

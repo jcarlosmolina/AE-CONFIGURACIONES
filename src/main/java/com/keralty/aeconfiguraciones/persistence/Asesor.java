@@ -1443,6 +1443,13 @@ Indica el número de solicitudes no terminadas que tiene asignadas el usuario. S
         this.contratosC.add(contratosC);
     }
     /**
+     * Removes an instance of <code>ContratoC</code> related through the <code>ContratosC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromContratosC(ContratoC contratosC) {
+    	this.contratosC.remove(contratosC);
+    }
+    /**
      * Sets instances of <code>ContratoC</code> related through the <code>ContratosC</code> role.
      * @param contratosC The new value for the <code>ContratosC</code> role.
      */
@@ -1477,6 +1484,13 @@ Indica el número de solicitudes no terminadas que tiene asignadas el usuario. S
     */
     public void add2AgentexProducto(AgentexProducto agentexProducto) {
         this.agentexProducto.add(agentexProducto);
+    }
+    /**
+     * Removes an instance of <code>AgentexProducto</code> related through the <code>AgentexProducto</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromAgentexProducto(AgentexProducto agentexProducto) {
+    	this.agentexProducto.remove(agentexProducto);
     }
     /**
      * Sets instances of <code>AgentexProducto</code> related through the <code>AgentexProducto</code> role.
@@ -1515,6 +1529,13 @@ Indica el número de solicitudes no terminadas que tiene asignadas el usuario. S
         this.logInformacionAsesor.add(logInformacionAsesor);
     }
     /**
+     * Removes an instance of <code>LogInformacionAsesor</code> related through the <code>LogInformacionAsesor</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromLogInformacionAsesor(LogInformacionAsesor logInformacionAsesor) {
+    	this.logInformacionAsesor.remove(logInformacionAsesor);
+    }
+    /**
      * Sets instances of <code>LogInformacionAsesor</code> related through the <code>LogInformacionAsesor</code> role.
      * @param logInformacionAsesor The new value for the <code>LogInformacionAsesor</code> role.
      */
@@ -1549,6 +1570,13 @@ Indica el número de solicitudes no terminadas que tiene asignadas el usuario. S
     */
     public void add2LogHistoricoPlanes(LogHistoricoPlanes logHistoricoPlanes) {
         this.logHistoricoPlanes.add(logHistoricoPlanes);
+    }
+    /**
+     * Removes an instance of <code>LogHistoricoPlanes</code> related through the <code>LogHistoricoPlanes</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromLogHistoricoPlanes(LogHistoricoPlanes logHistoricoPlanes) {
+    	this.logHistoricoPlanes.remove(logHistoricoPlanes);
     }
     /**
      * Sets instances of <code>LogHistoricoPlanes</code> related through the <code>LogHistoricoPlanes</code> role.

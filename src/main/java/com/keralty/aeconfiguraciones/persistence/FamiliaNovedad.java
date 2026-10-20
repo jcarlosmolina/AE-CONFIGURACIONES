@@ -976,6 +976,13 @@ public class FamiliaNovedad extends AbstractAppEntity {
         this.usuarioNovedad.add(usuarioNovedad);
     }
     /**
+     * Removes an instance of <code>UsuarioNovedad</code> related through the <code>UsuarioNovedad</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromUsuarioNovedad(UsuarioNovedad usuarioNovedad) {
+    	this.usuarioNovedad.remove(usuarioNovedad);
+    }
+    /**
      * Sets instances of <code>UsuarioNovedad</code> related through the <code>UsuarioNovedad</code> role.
      * @param usuarioNovedad The new value for the <code>UsuarioNovedad</code> role.
      */

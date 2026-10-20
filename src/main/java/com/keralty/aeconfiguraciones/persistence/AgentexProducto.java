@@ -528,6 +528,13 @@ public class AgentexProducto extends AbstractAppEntity {
         this.dominios.add(dominios);
     }
     /**
+     * Removes an instance of <code>Dominio</code> related through the <code>Dominios</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDominios(Dominio dominios) {
+    	this.dominios.remove(dominios);
+    }
+    /**
      * Sets instances of <code>Dominio</code> related through the <code>Dominios</code> role.
      * @param dominios The new value for the <code>Dominios</code> role.
      */

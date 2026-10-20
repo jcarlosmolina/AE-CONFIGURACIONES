@@ -176,6 +176,13 @@ public class MotivoExcepcionSolNov extends AbstractAppEntity {
         this.solicitudes.add(solicitudes);
     }
     /**
+     * Removes an instance of <code>SolicitudNovedad</code> related through the <code>Solicitudes</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromSolicitudes(SolicitudNovedad solicitudes) {
+    	this.solicitudes.remove(solicitudes);
+    }
+    /**
      * Sets instances of <code>SolicitudNovedad</code> related through the <code>Solicitudes</code> role.
      * @param solicitudes The new value for the <code>Solicitudes</code> role.
      */

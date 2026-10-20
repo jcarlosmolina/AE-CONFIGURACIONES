@@ -685,6 +685,13 @@ En el caso de novedad solo será documento de identificación. Lo mantenemos com
         this.logEstadoDocNov.add(logEstadoDocNov);
     }
     /**
+     * Removes an instance of <code>LogEstadoDocNov</code> related through the <code>LogEstadoDocNov</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromLogEstadoDocNov(LogEstadoDocNov logEstadoDocNov) {
+    	this.logEstadoDocNov.remove(logEstadoDocNov);
+    }
+    /**
      * Sets instances of <code>LogEstadoDocNov</code> related through the <code>LogEstadoDocNov</code> role.
      * @param logEstadoDocNov The new value for the <code>LogEstadoDocNov</code> role.
      */

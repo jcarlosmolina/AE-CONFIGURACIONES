@@ -238,6 +238,13 @@ public class Regional extends AbstractAppEntity {
         this.sucursales.add(sucursales);
     }
     /**
+     * Removes an instance of <code>Sucursal</code> related through the <code>Sucursales</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromSucursales(Sucursal sucursales) {
+    	this.sucursales.remove(sucursales);
+    }
+    /**
      * Sets instances of <code>Sucursal</code> related through the <code>Sucursales</code> role.
      * @param sucursales The new value for the <code>Sucursales</code> role.
      */
@@ -272,6 +279,13 @@ public class Regional extends AbstractAppEntity {
     */
     public void add2DirSucursalC(DirSucursalC dirSucursalC) {
         this.dirSucursalC.add(dirSucursalC);
+    }
+    /**
+     * Removes an instance of <code>DirSucursalC</code> related through the <code>DirSucursalC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDirSucursalC(DirSucursalC dirSucursalC) {
+    	this.dirSucursalC.remove(dirSucursalC);
     }
     /**
      * Sets instances of <code>DirSucursalC</code> related through the <code>DirSucursalC</code> role.

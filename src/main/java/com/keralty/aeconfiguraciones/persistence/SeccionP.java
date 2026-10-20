@@ -297,6 +297,13 @@ public class SeccionP extends AbstractAppEntity {
         this.preguntas.add(preguntas);
     }
     /**
+     * Removes an instance of <code>PreguntaP</code> related through the <code>Preguntas</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromPreguntas(PreguntaP preguntas) {
+    	this.preguntas.remove(preguntas);
+    }
+    /**
      * Sets instances of <code>PreguntaP</code> related through the <code>Preguntas</code> role.
      * @param preguntas The new value for the <code>Preguntas</code> role.
      */

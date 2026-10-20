@@ -516,6 +516,13 @@ public class Municipio extends AbstractAppEntity {
         this.personas.add(personas);
     }
     /**
+     * Removes an instance of <code>Persona</code> related through the <code>Personas</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromPersonas(Persona personas) {
+    	this.personas.remove(personas);
+    }
+    /**
      * Sets instances of <code>Persona</code> related through the <code>Personas</code> role.
      * @param personas The new value for the <code>Personas</code> role.
      */
@@ -550,6 +557,13 @@ public class Municipio extends AbstractAppEntity {
     */
     public void add2PersonasC(PersonaC personasC) {
         this.personasC.add(personasC);
+    }
+    /**
+     * Removes an instance of <code>PersonaC</code> related through the <code>PersonasC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromPersonasC(PersonaC personasC) {
+    	this.personasC.remove(personasC);
     }
     /**
      * Sets instances of <code>PersonaC</code> related through the <code>PersonasC</code> role.
@@ -588,6 +602,13 @@ public class Municipio extends AbstractAppEntity {
         this.direccionesC.add(direccionesC);
     }
     /**
+     * Removes an instance of <code>DireccionC</code> related through the <code>DireccionesC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDireccionesC(DireccionC direccionesC) {
+    	this.direccionesC.remove(direccionesC);
+    }
+    /**
      * Sets instances of <code>DireccionC</code> related through the <code>DireccionesC</code> role.
      * @param direccionesC The new value for the <code>DireccionesC</code> role.
      */
@@ -622,6 +643,13 @@ public class Municipio extends AbstractAppEntity {
     */
     public void add2Direcciones(Direccion direcciones) {
         this.direcciones.add(direcciones);
+    }
+    /**
+     * Removes an instance of <code>Direccion</code> related through the <code>Direcciones</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDirecciones(Direccion direcciones) {
+    	this.direcciones.remove(direcciones);
     }
     /**
      * Sets instances of <code>Direccion</code> related through the <code>Direcciones</code> role.
@@ -660,6 +688,13 @@ public class Municipio extends AbstractAppEntity {
         this.contratantes.add(contratantes);
     }
     /**
+     * Removes an instance of <code>Contratante</code> related through the <code>Contratantes</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromContratantes(Contratante contratantes) {
+    	this.contratantes.remove(contratantes);
+    }
+    /**
      * Sets instances of <code>Contratante</code> related through the <code>Contratantes</code> role.
      * @param contratantes The new value for the <code>Contratantes</code> role.
      */
@@ -694,6 +729,13 @@ public class Municipio extends AbstractAppEntity {
     */
     public void add2ContratanteRes(Contratante contratanteRes) {
         this.contratanteRes.add(contratanteRes);
+    }
+    /**
+     * Removes an instance of <code>Contratante</code> related through the <code>ContratanteRes</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromContratanteRes(Contratante contratanteRes) {
+    	this.contratanteRes.remove(contratanteRes);
     }
     /**
      * Sets instances of <code>Contratante</code> related through the <code>ContratanteRes</code> role.
@@ -732,6 +774,13 @@ public class Municipio extends AbstractAppEntity {
         this.contratosC.add(contratosC);
     }
     /**
+     * Removes an instance of <code>ContratoC</code> related through the <code>ContratosC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromContratosC(ContratoC contratosC) {
+    	this.contratosC.remove(contratosC);
+    }
+    /**
      * Sets instances of <code>ContratoC</code> related through the <code>ContratosC</code> role.
      * @param contratosC The new value for the <code>ContratosC</code> role.
      */
@@ -766,6 +815,13 @@ public class Municipio extends AbstractAppEntity {
     */
     public void add2DirSucursalC(DirSucursalC dirSucursalC) {
         this.dirSucursalC.add(dirSucursalC);
+    }
+    /**
+     * Removes an instance of <code>DirSucursalC</code> related through the <code>DirSucursalC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDirSucursalC(DirSucursalC dirSucursalC) {
+    	this.dirSucursalC.remove(dirSucursalC);
     }
     /**
      * Sets instances of <code>DirSucursalC</code> related through the <code>DirSucursalC</code> role.
@@ -804,6 +860,13 @@ public class Municipio extends AbstractAppEntity {
         this.familiaC.add(familiaC);
     }
     /**
+     * Removes an instance of <code>FamiliaC</code> related through the <code>FamiliaC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromFamiliaC(FamiliaC familiaC) {
+    	this.familiaC.remove(familiaC);
+    }
+    /**
      * Sets instances of <code>FamiliaC</code> related through the <code>FamiliaC</code> role.
      * @param familiaC The new value for the <code>FamiliaC</code> role.
      */
@@ -838,6 +901,13 @@ public class Municipio extends AbstractAppEntity {
     */
     public void add2Titulares(Titular titulares) {
         this.titulares.add(titulares);
+    }
+    /**
+     * Removes an instance of <code>Titular</code> related through the <code>Titulares</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromTitulares(Titular titulares) {
+    	this.titulares.remove(titulares);
     }
     /**
      * Sets instances of <code>Titular</code> related through the <code>Titulares</code> role.
@@ -876,6 +946,13 @@ public class Municipio extends AbstractAppEntity {
         this.institucionMatNeo.add(institucionMatNeo);
     }
     /**
+     * Removes an instance of <code>InstitucionMatNeo</code> related through the <code>InstitucionMatNeo</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromInstitucionMatNeo(InstitucionMatNeo institucionMatNeo) {
+    	this.institucionMatNeo.remove(institucionMatNeo);
+    }
+    /**
      * Sets instances of <code>InstitucionMatNeo</code> related through the <code>InstitucionMatNeo</code> role.
      * @param institucionMatNeo The new value for the <code>InstitucionMatNeo</code> role.
      */
@@ -910,6 +987,13 @@ public class Municipio extends AbstractAppEntity {
     */
     public void add2NovedadCTNac(NovedadCT novedadCTNac) {
         this.novedadCTNac.add(novedadCTNac);
+    }
+    /**
+     * Removes an instance of <code>NovedadCT</code> related through the <code>NovedadCTNac</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromNovedadCTNac(NovedadCT novedadCTNac) {
+    	this.novedadCTNac.remove(novedadCTNac);
     }
     /**
      * Sets instances of <code>NovedadCT</code> related through the <code>NovedadCTNac</code> role.
@@ -948,6 +1032,13 @@ public class Municipio extends AbstractAppEntity {
         this.novedadCTRes.add(novedadCTRes);
     }
     /**
+     * Removes an instance of <code>NovedadCT</code> related through the <code>NovedadCTRes</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromNovedadCTRes(NovedadCT novedadCTRes) {
+    	this.novedadCTRes.remove(novedadCTRes);
+    }
+    /**
      * Sets instances of <code>NovedadCT</code> related through the <code>NovedadCTRes</code> role.
      * @param novedadCTRes The new value for the <code>NovedadCTRes</code> role.
      */
@@ -982,6 +1073,13 @@ public class Municipio extends AbstractAppEntity {
     */
     public void add2NovedadesMD(NovedadMD novedadesMD) {
         this.novedadesMD.add(novedadesMD);
+    }
+    /**
+     * Removes an instance of <code>NovedadMD</code> related through the <code>NovedadesMD</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromNovedadesMD(NovedadMD novedadesMD) {
+    	this.novedadesMD.remove(novedadesMD);
     }
     /**
      * Sets instances of <code>NovedadMD</code> related through the <code>NovedadesMD</code> role.

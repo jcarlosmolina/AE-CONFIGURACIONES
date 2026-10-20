@@ -187,6 +187,13 @@ public class Rol extends AbstractAppEntity {
         this.agentes.add(agentes);
     }
     /**
+     * Removes an instance of <code>Funcionario</code> related through the <code>Agentes</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromAgentes(Funcionario agentes) {
+    	this.agentes.remove(agentes);
+    }
+    /**
      * Sets instances of <code>Funcionario</code> related through the <code>Agentes</code> role.
      * @param agentes The new value for the <code>Agentes</code> role.
      */
@@ -221,6 +228,13 @@ public class Rol extends AbstractAppEntity {
     */
     public void add2Dominios(Dominio dominios) {
         this.dominios.add(dominios);
+    }
+    /**
+     * Removes an instance of <code>Dominio</code> related through the <code>Dominios</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDominios(Dominio dominios) {
+    	this.dominios.remove(dominios);
     }
     /**
      * Sets instances of <code>Dominio</code> related through the <code>Dominios</code> role.

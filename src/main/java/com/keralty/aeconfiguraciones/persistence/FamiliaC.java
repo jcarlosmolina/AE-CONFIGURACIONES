@@ -503,6 +503,13 @@ public class FamiliaC extends AbstractAppEntity {
         this.beneficiariosC.add(beneficiariosC);
     }
     /**
+     * Removes an instance of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromBeneficiariosC(BeneficiarioC beneficiariosC) {
+    	this.beneficiariosC.remove(beneficiariosC);
+    }
+    /**
      * Sets instances of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.
      * @param beneficiariosC The new value for the <code>BeneficiariosC</code> role.
      */

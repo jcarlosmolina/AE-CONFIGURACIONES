@@ -327,6 +327,13 @@ public class TipoFactura extends AbstractAppEntity {
         this.solicitudes.add(solicitudes);
     }
     /**
+     * Removes an instance of <code>Solicitud</code> related through the <code>Solicitudes</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromSolicitudes(Solicitud solicitudes) {
+    	this.solicitudes.remove(solicitudes);
+    }
+    /**
      * Sets instances of <code>Solicitud</code> related through the <code>Solicitudes</code> role.
      * @param solicitudes The new value for the <code>Solicitudes</code> role.
      */

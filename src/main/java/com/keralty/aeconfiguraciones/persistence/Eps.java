@@ -237,6 +237,13 @@ public class Eps extends AbstractAppEntity {
         this.atributosUsuario.add(atributosUsuario);
     }
     /**
+     * Removes an instance of <code>Usuario</code> related through the <code>AtributosUsuario</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromAtributosUsuario(Usuario atributosUsuario) {
+    	this.atributosUsuario.remove(atributosUsuario);
+    }
+    /**
      * Sets instances of <code>Usuario</code> related through the <code>AtributosUsuario</code> role.
      * @param atributosUsuario The new value for the <code>AtributosUsuario</code> role.
      */
@@ -271,6 +278,13 @@ public class Eps extends AbstractAppEntity {
     */
     public void add2BeneficiariosC(BeneficiarioC beneficiariosC) {
         this.beneficiariosC.add(beneficiariosC);
+    }
+    /**
+     * Removes an instance of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromBeneficiariosC(BeneficiarioC beneficiariosC) {
+    	this.beneficiariosC.remove(beneficiariosC);
     }
     /**
      * Sets instances of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.

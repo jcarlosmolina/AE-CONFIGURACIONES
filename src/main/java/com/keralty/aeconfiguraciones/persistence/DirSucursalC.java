@@ -586,6 +586,13 @@ public class DirSucursalC extends AbstractAppEntity {
         this.telefonosC.add(telefonosC);
     }
     /**
+     * Removes an instance of <code>TelefonoC</code> related through the <code>TelefonosC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromTelefonosC(TelefonoC telefonosC) {
+    	this.telefonosC.remove(telefonosC);
+    }
+    /**
      * Sets instances of <code>TelefonoC</code> related through the <code>TelefonosC</code> role.
      * @param telefonosC The new value for the <code>TelefonosC</code> role.
      */
@@ -669,6 +676,13 @@ public class DirSucursalC extends AbstractAppEntity {
     */
     public void add2TiposSucursalC(TipoSucursalC tiposSucursalC) {
         this.tiposSucursalC.add(tiposSucursalC);
+    }
+    /**
+     * Removes an instance of <code>TipoSucursalC</code> related through the <code>TiposSucursalC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromTiposSucursalC(TipoSucursalC tiposSucursalC) {
+    	this.tiposSucursalC.remove(tiposSucursalC);
     }
     /**
      * Sets instances of <code>TipoSucursalC</code> related through the <code>TiposSucursalC</code> role.

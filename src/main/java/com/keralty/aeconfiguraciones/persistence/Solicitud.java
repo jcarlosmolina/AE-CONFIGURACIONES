@@ -4492,6 +4492,13 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         this.usuarios.add(usuarios);
     }
     /**
+     * Removes an instance of <code>Usuario</code> related through the <code>Usuarios</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromUsuarios(Usuario usuarios) {
+    	this.usuarios.remove(usuarios);
+    }
+    /**
      * Sets instances of <code>Usuario</code> related through the <code>Usuarios</code> role.
      * @param usuarios The new value for the <code>Usuarios</code> role.
      */
@@ -4652,6 +4659,13 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         this.usuariosRegistrados.add(usuariosRegistrados);
     }
     /**
+     * Removes an instance of <code>UsuarioReg</code> related through the <code>UsuariosRegistrados</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromUsuariosRegistrados(UsuarioReg usuariosRegistrados) {
+    	this.usuariosRegistrados.remove(usuariosRegistrados);
+    }
+    /**
      * Sets instances of <code>UsuarioReg</code> related through the <code>UsuariosRegistrados</code> role.
      * @param usuariosRegistrados The new value for the <code>UsuariosRegistrados</code> role.
      */
@@ -4725,6 +4739,13 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         this.documentosGestor.add(documentosGestor);
     }
     /**
+     * Removes an instance of <code>DocumentoG</code> related through the <code>DocumentosGestor</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDocumentosGestor(DocumentoG documentosGestor) {
+    	this.documentosGestor.remove(documentosGestor);
+    }
+    /**
      * Sets instances of <code>DocumentoG</code> related through the <code>DocumentosGestor</code> role.
      * @param documentosGestor The new value for the <code>DocumentosGestor</code> role.
      */
@@ -4759,6 +4780,13 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
     */
     public void add2ErroresWS(ErrorWS erroresWS) {
         this.erroresWS.add(erroresWS);
+    }
+    /**
+     * Removes an instance of <code>ErrorWS</code> related through the <code>ErroresWS</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromErroresWS(ErrorWS erroresWS) {
+    	this.erroresWS.remove(erroresWS);
     }
     /**
      * Sets instances of <code>ErrorWS</code> related through the <code>ErroresWS</code> role.
@@ -4797,6 +4825,13 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
         this.logEstado.add(logEstado);
     }
     /**
+     * Removes an instance of <code>LogEstado</code> related through the <code>LogEstado</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromLogEstado(LogEstado logEstado) {
+    	this.logEstado.remove(logEstado);
+    }
+    /**
      * Sets instances of <code>LogEstado</code> related through the <code>LogEstado</code> role.
      * @param logEstado The new value for the <code>LogEstado</code> role.
      */
@@ -4831,6 +4866,13 @@ Se requiere que el nuevo estado “Recibido” sea homologado en la pantalla de 
     */
     public void add2LogAsignaciones(LogAsignaciones logAsignaciones) {
         this.logAsignaciones.add(logAsignaciones);
+    }
+    /**
+     * Removes an instance of <code>LogAsignaciones</code> related through the <code>LogAsignaciones</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromLogAsignaciones(LogAsignaciones logAsignaciones) {
+    	this.logAsignaciones.remove(logAsignaciones);
     }
     /**
      * Sets instances of <code>LogAsignaciones</code> related through the <code>LogAsignaciones</code> role.

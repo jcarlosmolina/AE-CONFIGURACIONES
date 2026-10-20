@@ -525,6 +525,13 @@ RADIO=1;
         this.solicitudes.add(solicitudes);
     }
     /**
+     * Removes an instance of <code>SolicitudNovedad</code> related through the <code>Solicitudes</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromSolicitudes(SolicitudNovedad solicitudes) {
+    	this.solicitudes.remove(solicitudes);
+    }
+    /**
      * Sets instances of <code>SolicitudNovedad</code> related through the <code>Solicitudes</code> role.
      * @param solicitudes The new value for the <code>Solicitudes</code> role.
      */
@@ -561,6 +568,13 @@ RADIO=1;
         this.grupoAsignacionNovedad.add(grupoAsignacionNovedad);
     }
     /**
+     * Removes an instance of <code>GrupoAsignacionNovedad</code> related through the <code>GrupoAsignacionNovedad</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromGrupoAsignacionNovedad(GrupoAsignacionNovedad grupoAsignacionNovedad) {
+    	this.grupoAsignacionNovedad.remove(grupoAsignacionNovedad);
+    }
+    /**
      * Sets instances of <code>GrupoAsignacionNovedad</code> related through the <code>GrupoAsignacionNovedad</code> role.
      * @param grupoAsignacionNovedad The new value for the <code>GrupoAsignacionNovedad</code> role.
      */
@@ -595,6 +609,13 @@ RADIO=1;
     */
     public void add2ConfiguracionesANS(ConfiguracionANS configuracionesANS) {
         this.configuracionesANS.add(configuracionesANS);
+    }
+    /**
+     * Removes an instance of <code>ConfiguracionANS</code> related through the <code>ConfiguracionesANS</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromConfiguracionesANS(ConfiguracionANS configuracionesANS) {
+    	this.configuracionesANS.remove(configuracionesANS);
     }
     /**
      * Sets instances of <code>ConfiguracionANS</code> related through the <code>ConfiguracionesANS</code> role.

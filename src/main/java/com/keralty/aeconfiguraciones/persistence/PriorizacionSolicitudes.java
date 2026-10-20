@@ -199,6 +199,13 @@ public class PriorizacionSolicitudes extends AbstractAppEntity {
         this.logPriorizacionSol.add(logPriorizacionSol);
     }
     /**
+     * Removes an instance of <code>LogPriorizacionSol</code> related through the <code>LogPriorizacionSol</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromLogPriorizacionSol(LogPriorizacionSol logPriorizacionSol) {
+    	this.logPriorizacionSol.remove(logPriorizacionSol);
+    }
+    /**
      * Sets instances of <code>LogPriorizacionSol</code> related through the <code>LogPriorizacionSol</code> role.
      * @param logPriorizacionSol The new value for the <code>LogPriorizacionSol</code> role.
      */

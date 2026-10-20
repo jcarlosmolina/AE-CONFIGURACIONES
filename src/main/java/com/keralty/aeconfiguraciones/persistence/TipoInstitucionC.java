@@ -171,6 +171,13 @@ public class TipoInstitucionC extends AbstractAppEntity {
         this.personasC.add(personasC);
     }
     /**
+     * Removes an instance of <code>PersonaC</code> related through the <code>PersonasC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromPersonasC(PersonaC personasC) {
+    	this.personasC.remove(personasC);
+    }
+    /**
      * Sets instances of <code>PersonaC</code> related through the <code>PersonasC</code> role.
      * @param personasC The new value for the <code>PersonasC</code> role.
      */

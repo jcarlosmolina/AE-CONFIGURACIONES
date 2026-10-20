@@ -862,6 +862,13 @@ Si se selecciona “No condicionada”, no será obligatorio diligenciar el dato
         this.valores.add(valores);
     }
     /**
+     * Removes an instance of <code>Valor</code> related through the <code>Valores</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromValores(Valor valores) {
+    	this.valores.remove(valores);
+    }
+    /**
      * Sets instances of <code>Valor</code> related through the <code>Valores</code> role.
      * @param valores The new value for the <code>Valores</code> role.
      */
@@ -896,6 +903,13 @@ Si se selecciona “No condicionada”, no será obligatorio diligenciar el dato
     */
     public void add2PreguntasPersona(PreguntaP preguntasPersona) {
         this.preguntasPersona.add(preguntasPersona);
+    }
+    /**
+     * Removes an instance of <code>PreguntaP</code> related through the <code>PreguntasPersona</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromPreguntasPersona(PreguntaP preguntasPersona) {
+    	this.preguntasPersona.remove(preguntasPersona);
     }
     /**
      * Sets instances of <code>PreguntaP</code> related through the <code>PreguntasPersona</code> role.

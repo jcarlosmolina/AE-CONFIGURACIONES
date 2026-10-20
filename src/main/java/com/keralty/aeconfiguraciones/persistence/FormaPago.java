@@ -300,6 +300,13 @@ public class FormaPago extends AbstractAppEntity {
         this.dominios.add(dominios);
     }
     /**
+     * Removes an instance of <code>Dominio</code> related through the <code>Dominios</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDominios(Dominio dominios) {
+    	this.dominios.remove(dominios);
+    }
+    /**
      * Sets instances of <code>Dominio</code> related through the <code>Dominios</code> role.
      * @param dominios The new value for the <code>Dominios</code> role.
      */
@@ -336,6 +343,13 @@ public class FormaPago extends AbstractAppEntity {
         this.solicitudes.add(solicitudes);
     }
     /**
+     * Removes an instance of <code>Solicitud</code> related through the <code>Solicitudes</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromSolicitudes(Solicitud solicitudes) {
+    	this.solicitudes.remove(solicitudes);
+    }
+    /**
      * Sets instances of <code>Solicitud</code> related through the <code>Solicitudes</code> role.
      * @param solicitudes The new value for the <code>Solicitudes</code> role.
      */
@@ -370,6 +384,13 @@ public class FormaPago extends AbstractAppEntity {
     */
     public void add2ContratosC(ContratoC contratosC) {
         this.contratosC.add(contratosC);
+    }
+    /**
+     * Removes an instance of <code>ContratoC</code> related through the <code>ContratosC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromContratosC(ContratoC contratosC) {
+    	this.contratosC.remove(contratosC);
     }
     /**
      * Sets instances of <code>ContratoC</code> related through the <code>ContratosC</code> role.

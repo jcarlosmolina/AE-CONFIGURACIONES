@@ -850,6 +850,13 @@ public class TipoIdentificacion extends AbstractAppEntity {
         this.asesores.add(asesores);
     }
     /**
+     * Removes an instance of <code>Asesor</code> related through the <code>Asesores</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromAsesores(Asesor asesores) {
+    	this.asesores.remove(asesores);
+    }
+    /**
      * Sets instances of <code>Asesor</code> related through the <code>Asesores</code> role.
      * @param asesores The new value for the <code>Asesores</code> role.
      */
@@ -884,6 +891,13 @@ public class TipoIdentificacion extends AbstractAppEntity {
     */
     public void add2Personas(Persona personas) {
         this.personas.add(personas);
+    }
+    /**
+     * Removes an instance of <code>Persona</code> related through the <code>Personas</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromPersonas(Persona personas) {
+    	this.personas.remove(personas);
     }
     /**
      * Sets instances of <code>Persona</code> related through the <code>Personas</code> role.
@@ -922,6 +936,13 @@ public class TipoIdentificacion extends AbstractAppEntity {
         this.personasC.add(personasC);
     }
     /**
+     * Removes an instance of <code>PersonaC</code> related through the <code>PersonasC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromPersonasC(PersonaC personasC) {
+    	this.personasC.remove(personasC);
+    }
+    /**
      * Sets instances of <code>PersonaC</code> related through the <code>PersonasC</code> role.
      * @param personasC The new value for the <code>PersonasC</code> role.
      */
@@ -956,6 +977,13 @@ public class TipoIdentificacion extends AbstractAppEntity {
     */
     public void add2UsuarioS(Usuario usuarioS) {
         this.usuarioS.add(usuarioS);
+    }
+    /**
+     * Removes an instance of <code>Usuario</code> related through the <code>UsuarioS</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromUsuarioS(Usuario usuarioS) {
+    	this.usuarioS.remove(usuarioS);
     }
     /**
      * Sets instances of <code>Usuario</code> related through the <code>UsuarioS</code> role.
@@ -994,6 +1022,13 @@ public class TipoIdentificacion extends AbstractAppEntity {
         this.contratantes.add(contratantes);
     }
     /**
+     * Removes an instance of <code>Contratante</code> related through the <code>Contratantes</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromContratantes(Contratante contratantes) {
+    	this.contratantes.remove(contratantes);
+    }
+    /**
      * Sets instances of <code>Contratante</code> related through the <code>Contratantes</code> role.
      * @param contratantes The new value for the <code>Contratantes</code> role.
      */
@@ -1028,6 +1063,13 @@ public class TipoIdentificacion extends AbstractAppEntity {
     */
     public void add2AnexosC(AnexoC anexosC) {
         this.anexosC.add(anexosC);
+    }
+    /**
+     * Removes an instance of <code>AnexoC</code> related through the <code>AnexosC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromAnexosC(AnexoC anexosC) {
+    	this.anexosC.remove(anexosC);
     }
     /**
      * Sets instances of <code>AnexoC</code> related through the <code>AnexosC</code> role.
@@ -1066,6 +1108,13 @@ public class TipoIdentificacion extends AbstractAppEntity {
         this.titulares.add(titulares);
     }
     /**
+     * Removes an instance of <code>Titular</code> related through the <code>Titulares</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromTitulares(Titular titulares) {
+    	this.titulares.remove(titulares);
+    }
+    /**
      * Sets instances of <code>Titular</code> related through the <code>Titulares</code> role.
      * @param titulares The new value for the <code>Titulares</code> role.
      */
@@ -1100,6 +1149,13 @@ public class TipoIdentificacion extends AbstractAppEntity {
     */
     public void add2InstitucionMatNeo(InstitucionMatNeo institucionMatNeo) {
         this.institucionMatNeo.add(institucionMatNeo);
+    }
+    /**
+     * Removes an instance of <code>InstitucionMatNeo</code> related through the <code>InstitucionMatNeo</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromInstitucionMatNeo(InstitucionMatNeo institucionMatNeo) {
+    	this.institucionMatNeo.remove(institucionMatNeo);
     }
     /**
      * Sets instances of <code>InstitucionMatNeo</code> related through the <code>InstitucionMatNeo</code> role.
@@ -1138,6 +1194,13 @@ public class TipoIdentificacion extends AbstractAppEntity {
         this.solicitudesNovedad.add(solicitudesNovedad);
     }
     /**
+     * Removes an instance of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedad</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromSolicitudesNovedad(SolicitudNovedad solicitudesNovedad) {
+    	this.solicitudesNovedad.remove(solicitudesNovedad);
+    }
+    /**
      * Sets instances of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedad</code> role.
      * @param solicitudesNovedad The new value for the <code>SolicitudesNovedad</code> role.
      */
@@ -1172,6 +1235,13 @@ public class TipoIdentificacion extends AbstractAppEntity {
     */
     public void add2FamiliasNovedad(FamiliaNovedad familiasNovedad) {
         this.familiasNovedad.add(familiasNovedad);
+    }
+    /**
+     * Removes an instance of <code>FamiliaNovedad</code> related through the <code>FamiliasNovedad</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromFamiliasNovedad(FamiliaNovedad familiasNovedad) {
+    	this.familiasNovedad.remove(familiasNovedad);
     }
     /**
      * Sets instances of <code>FamiliaNovedad</code> related through the <code>FamiliasNovedad</code> role.
@@ -1210,6 +1280,13 @@ public class TipoIdentificacion extends AbstractAppEntity {
         this.usuariosNovedad.add(usuariosNovedad);
     }
     /**
+     * Removes an instance of <code>UsuarioNovedad</code> related through the <code>UsuariosNovedad</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromUsuariosNovedad(UsuarioNovedad usuariosNovedad) {
+    	this.usuariosNovedad.remove(usuariosNovedad);
+    }
+    /**
      * Sets instances of <code>UsuarioNovedad</code> related through the <code>UsuariosNovedad</code> role.
      * @param usuariosNovedad The new value for the <code>UsuariosNovedad</code> role.
      */
@@ -1246,6 +1323,13 @@ public class TipoIdentificacion extends AbstractAppEntity {
         this.usuarioNovedad.add(usuarioNovedad);
     }
     /**
+     * Removes an instance of <code>UsuarioNovedad</code> related through the <code>UsuarioNovedad</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromUsuarioNovedad(UsuarioNovedad usuarioNovedad) {
+    	this.usuarioNovedad.remove(usuarioNovedad);
+    }
+    /**
      * Sets instances of <code>UsuarioNovedad</code> related through the <code>UsuarioNovedad</code> role.
      * @param usuarioNovedad The new value for the <code>UsuarioNovedad</code> role.
      */
@@ -1280,6 +1364,13 @@ public class TipoIdentificacion extends AbstractAppEntity {
     */
     public void add2NovedadesCT(NovedadCT novedadesCT) {
         this.novedadesCT.add(novedadesCT);
+    }
+    /**
+     * Removes an instance of <code>NovedadCT</code> related through the <code>NovedadesCT</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromNovedadesCT(NovedadCT novedadesCT) {
+    	this.novedadesCT.remove(novedadesCT);
     }
     /**
      * Sets instances of <code>NovedadCT</code> related through the <code>NovedadesCT</code> role.

@@ -466,7 +466,7 @@ public class AgentexProductoService extends AbstractService {
         request.checkArguments();
         AgentexProducto instance = agentexProductoInsDominiopthisAgentexProducto;
 
-        instance.getDominios().add(agentexProductoInsDominiopevcDominio);
+        instance.add2Dominios(agentexProductoInsDominiopevcDominio);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.dominio.siu.InsDominioRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.dominio.siu.InsDominioRequest();
             relatedRequest.setDominioInsDominiopthisDominioInstance(agentexProductoInsDominiopevcDominio);
@@ -534,7 +534,7 @@ public class AgentexProductoService extends AbstractService {
         request.checkArguments();
         AgentexProducto instance = agentexProductoDelDominiopthisAgentexProducto;
 
-        instance.getDominios().remove(agentexProductoDelDominiopevcDominio);
+        instance.removeFromDominios(agentexProductoDelDominiopevcDominio);
         agentexProductoDelDominiopevcDominio.getAgentexProducto().remove(instance);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.dominio.siu.DelDominioRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.dominio.siu.DelDominioRequest();

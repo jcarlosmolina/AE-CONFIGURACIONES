@@ -1255,6 +1255,13 @@ RADIO=1;
         this.solicitudesArMe.add(solicitudesArMe);
     }
     /**
+     * Removes an instance of <code>Solicitud</code> related through the <code>SolicitudesArMe</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromSolicitudesArMe(Solicitud solicitudesArMe) {
+    	this.solicitudesArMe.remove(solicitudesArMe);
+    }
+    /**
      * Sets instances of <code>Solicitud</code> related through the <code>SolicitudesArMe</code> role.
      * @param solicitudesArMe The new value for the <code>SolicitudesArMe</code> role.
      */

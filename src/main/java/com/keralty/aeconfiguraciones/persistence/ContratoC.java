@@ -1619,6 +1619,13 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
         this.solicitud.add(solicitud);
     }
     /**
+     * Removes an instance of <code>Solicitud</code> related through the <code>Solicitud</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromSolicitud(Solicitud solicitud) {
+    	this.solicitud.remove(solicitud);
+    }
+    /**
      * Sets instances of <code>Solicitud</code> related through the <code>Solicitud</code> role.
      * @param solicitud The new value for the <code>Solicitud</code> role.
      */
@@ -1692,6 +1699,13 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
         this.direccionesC.add(direccionesC);
     }
     /**
+     * Removes an instance of <code>DireccionC</code> related through the <code>DireccionesC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDireccionesC(DireccionC direccionesC) {
+    	this.direccionesC.remove(direccionesC);
+    }
+    /**
      * Sets instances of <code>DireccionC</code> related through the <code>DireccionesC</code> role.
      * @param direccionesC The new value for the <code>DireccionesC</code> role.
      */
@@ -1726,6 +1740,13 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
     */
     public void add2ObservacionesC(ObservacionesC observacionesC) {
         this.observacionesC.add(observacionesC);
+    }
+    /**
+     * Removes an instance of <code>ObservacionesC</code> related through the <code>ObservacionesC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromObservacionesC(ObservacionesC observacionesC) {
+    	this.observacionesC.remove(observacionesC);
     }
     /**
      * Sets instances of <code>ObservacionesC</code> related through the <code>ObservacionesC</code> role.
@@ -1764,6 +1785,13 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
         this.beneficiariosC.add(beneficiariosC);
     }
     /**
+     * Removes an instance of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromBeneficiariosC(BeneficiarioC beneficiariosC) {
+    	this.beneficiariosC.remove(beneficiariosC);
+    }
+    /**
      * Sets instances of <code>BeneficiarioC</code> related through the <code>BeneficiariosC</code> role.
      * @param beneficiariosC The new value for the <code>BeneficiariosC</code> role.
      */
@@ -1798,6 +1826,13 @@ Modificado el 26/8/2016 a petición de JC Quinche<br>
     */
     public void add2FamiliasC(FamiliaC familiasC) {
         this.familiasC.add(familiasC);
+    }
+    /**
+     * Removes an instance of <code>FamiliaC</code> related through the <code>FamiliasC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromFamiliasC(FamiliaC familiasC) {
+    	this.familiasC.remove(familiasC);
     }
     /**
      * Sets instances of <code>FamiliaC</code> related through the <code>FamiliasC</code> role.

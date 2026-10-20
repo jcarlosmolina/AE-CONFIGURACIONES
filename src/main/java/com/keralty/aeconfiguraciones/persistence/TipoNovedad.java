@@ -327,6 +327,13 @@ public class TipoNovedad extends AbstractAppEntity {
         this.novedades.add(novedades);
     }
     /**
+     * Removes an instance of <code>Novedad</code> related through the <code>Novedades</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromNovedades(Novedad novedades) {
+    	this.novedades.remove(novedades);
+    }
+    /**
      * Sets instances of <code>Novedad</code> related through the <code>Novedades</code> role.
      * @param novedades The new value for the <code>Novedades</code> role.
      */

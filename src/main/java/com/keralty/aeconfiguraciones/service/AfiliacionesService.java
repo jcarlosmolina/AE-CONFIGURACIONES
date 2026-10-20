@@ -589,7 +589,7 @@ public class AfiliacionesService extends AbstractService {
         request.checkArguments();
         Afiliaciones instance = afiliacionesInsPlanpthisAfiliaciones;
 
-        instance.getPlanes().add(afiliacionesInsPlanpevcPlanes);
+        instance.add2Planes(afiliacionesInsPlanpevcPlanes);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.planes.siu.InsPlanRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.planes.siu.InsPlanRequest();
             relatedRequest.setPlanesInsPlanpthisPlanesInstance(afiliacionesInsPlanpevcPlanes);
@@ -657,7 +657,7 @@ public class AfiliacionesService extends AbstractService {
         request.checkArguments();
         Afiliaciones instance = afiliacionesDelPlanpthisAfiliaciones;
 
-        instance.getPlanes().remove(afiliacionesDelPlanpevcPlanes);
+        instance.removeFromPlanes(afiliacionesDelPlanpevcPlanes);
         afiliacionesDelPlanpevcPlanes.getAfiliaciones().remove(instance);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.planes.siu.DelPlanRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.planes.siu.DelPlanRequest();

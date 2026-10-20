@@ -2026,6 +2026,13 @@ RADIO=1;
         this.dominiosConIncompatibilidad.add(dominiosConIncompatibilidad);
     }
     /**
+     * Removes an instance of <code>Dominio</code> related through the <code>DominiosConIncompatibilidad</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDominiosConIncompatibilidad(Dominio dominiosConIncompatibilidad) {
+    	this.dominiosConIncompatibilidad.remove(dominiosConIncompatibilidad);
+    }
+    /**
      * Sets instances of <code>Dominio</code> related through the <code>DominiosConIncompatibilidad</code> role.
      * @param dominiosConIncompatibilidad The new value for the <code>DominiosConIncompatibilidad</code> role.
      */
@@ -2060,6 +2067,13 @@ RADIO=1;
     */
     public void add2ParentescosDom(ParentescoDom parentescosDom) {
         this.parentescosDom.add(parentescosDom);
+    }
+    /**
+     * Removes an instance of <code>ParentescoDom</code> related through the <code>ParentescosDom</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromParentescosDom(ParentescoDom parentescosDom) {
+    	this.parentescosDom.remove(parentescosDom);
     }
     /**
      * Sets instances of <code>ParentescoDom</code> related through the <code>ParentescosDom</code> role.
@@ -2098,6 +2112,13 @@ RADIO=1;
         this.agentexProducto.add(agentexProducto);
     }
     /**
+     * Removes an instance of <code>AgentexProducto</code> related through the <code>AgentexProducto</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromAgentexProducto(AgentexProducto agentexProducto) {
+    	this.agentexProducto.remove(agentexProducto);
+    }
+    /**
      * Sets instances of <code>AgentexProducto</code> related through the <code>AgentexProducto</code> role.
      * @param agentexProducto The new value for the <code>AgentexProducto</code> role.
      */
@@ -2132,6 +2153,13 @@ RADIO=1;
     */
     public void add2Prorrateos(Prorrateo prorrateos) {
         this.prorrateos.add(prorrateos);
+    }
+    /**
+     * Removes an instance of <code>Prorrateo</code> related through the <code>Prorrateos</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromProrrateos(Prorrateo prorrateos) {
+    	this.prorrateos.remove(prorrateos);
     }
     /**
      * Sets instances of <code>Prorrateo</code> related through the <code>Prorrateos</code> role.
@@ -2170,6 +2198,13 @@ RADIO=1;
         this.logGruposUsuarios.add(logGruposUsuarios);
     }
     /**
+     * Removes an instance of <code>LogGruposUsuarios</code> related through the <code>LogGruposUsuarios</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromLogGruposUsuarios(LogGruposUsuarios logGruposUsuarios) {
+    	this.logGruposUsuarios.remove(logGruposUsuarios);
+    }
+    /**
      * Sets instances of <code>LogGruposUsuarios</code> related through the <code>LogGruposUsuarios</code> role.
      * @param logGruposUsuarios The new value for the <code>LogGruposUsuarios</code> role.
      */
@@ -2204,6 +2239,13 @@ RADIO=1;
     */
     public void add2GrupoAsignacionNovedad(GrupoAsignacionNovedad grupoAsignacionNovedad) {
         this.grupoAsignacionNovedad.add(grupoAsignacionNovedad);
+    }
+    /**
+     * Removes an instance of <code>GrupoAsignacionNovedad</code> related through the <code>GrupoAsignacionNovedad</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromGrupoAsignacionNovedad(GrupoAsignacionNovedad grupoAsignacionNovedad) {
+    	this.grupoAsignacionNovedad.remove(grupoAsignacionNovedad);
     }
     /**
      * Sets instances of <code>GrupoAsignacionNovedad</code> related through the <code>GrupoAsignacionNovedad</code> role.
@@ -2242,6 +2284,13 @@ RADIO=1;
         this.configuracionesANS.add(configuracionesANS);
     }
     /**
+     * Removes an instance of <code>ConfiguracionANS</code> related through the <code>ConfiguracionesANS</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromConfiguracionesANS(ConfiguracionANS configuracionesANS) {
+    	this.configuracionesANS.remove(configuracionesANS);
+    }
+    /**
      * Sets instances of <code>ConfiguracionANS</code> related through the <code>ConfiguracionesANS</code> role.
      * @param configuracionesANS The new value for the <code>ConfiguracionesANS</code> role.
      */
@@ -2276,6 +2325,13 @@ RADIO=1;
     */
     public void add2ReportesDominio(ReportesDominio reportesDominio) {
         this.reportesDominio.add(reportesDominio);
+    }
+    /**
+     * Removes an instance of <code>ReportesDominio</code> related through the <code>ReportesDominio</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromReportesDominio(ReportesDominio reportesDominio) {
+    	this.reportesDominio.remove(reportesDominio);
     }
     /**
      * Sets instances of <code>ReportesDominio</code> related through the <code>ReportesDominio</code> role.
@@ -2314,6 +2370,13 @@ RADIO=1;
         this.logIncompatibilidades.add(logIncompatibilidades);
     }
     /**
+     * Removes an instance of <code>LogIncompatibilidades</code> related through the <code>LogIncompatibilidades</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromLogIncompatibilidades(LogIncompatibilidades logIncompatibilidades) {
+    	this.logIncompatibilidades.remove(logIncompatibilidades);
+    }
+    /**
      * Sets instances of <code>LogIncompatibilidades</code> related through the <code>LogIncompatibilidades</code> role.
      * @param logIncompatibilidades The new value for the <code>LogIncompatibilidades</code> role.
      */
@@ -2348,6 +2411,13 @@ RADIO=1;
     */
     public void add2LogDatosDominio(LogDatosDominio logDatosDominio) {
         this.logDatosDominio.add(logDatosDominio);
+    }
+    /**
+     * Removes an instance of <code>LogDatosDominio</code> related through the <code>LogDatosDominio</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromLogDatosDominio(LogDatosDominio logDatosDominio) {
+    	this.logDatosDominio.remove(logDatosDominio);
     }
     /**
      * Sets instances of <code>LogDatosDominio</code> related through the <code>LogDatosDominio</code> role.
@@ -2484,6 +2554,13 @@ RADIO=1;
         this.periodicidades.add(periodicidades);
     }
     /**
+     * Removes an instance of <code>Periodicidad</code> related through the <code>Periodicidades</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromPeriodicidades(Periodicidad periodicidades) {
+    	this.periodicidades.remove(periodicidades);
+    }
+    /**
      * Sets instances of <code>Periodicidad</code> related through the <code>Periodicidades</code> role.
      * @param periodicidades The new value for the <code>Periodicidades</code> role.
      */
@@ -2518,6 +2595,13 @@ RADIO=1;
     */
     public void add2Roles(Rol roles) {
         this.roles.add(roles);
+    }
+    /**
+     * Removes an instance of <code>Rol</code> related through the <code>Roles</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromRoles(Rol roles) {
+    	this.roles.remove(roles);
     }
     /**
      * Sets instances of <code>Rol</code> related through the <code>Roles</code> role.
@@ -2556,6 +2640,13 @@ RADIO=1;
         this.formasPago.add(formasPago);
     }
     /**
+     * Removes an instance of <code>FormaPago</code> related through the <code>FormasPago</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromFormasPago(FormaPago formasPago) {
+    	this.formasPago.remove(formasPago);
+    }
+    /**
      * Sets instances of <code>FormaPago</code> related through the <code>FormasPago</code> role.
      * @param formasPago The new value for the <code>FormasPago</code> role.
      */
@@ -2592,6 +2683,13 @@ RADIO=1;
         this.plantillas.add(plantillas);
     }
     /**
+     * Removes an instance of <code>PlantillaEmail</code> related through the <code>Plantillas</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromPlantillas(PlantillaEmail plantillas) {
+    	this.plantillas.remove(plantillas);
+    }
+    /**
      * Sets instances of <code>PlantillaEmail</code> related through the <code>Plantillas</code> role.
      * @param plantillas The new value for the <code>Plantillas</code> role.
      */
@@ -2626,6 +2724,13 @@ RADIO=1;
     */
     public void add2Novedades(Novedad novedades) {
         this.novedades.add(novedades);
+    }
+    /**
+     * Removes an instance of <code>Novedad</code> related through the <code>Novedades</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromNovedades(Novedad novedades) {
+    	this.novedades.remove(novedades);
     }
     /**
      * Sets instances of <code>Novedad</code> related through the <code>Novedades</code> role.
@@ -2760,6 +2865,13 @@ RADIO=1;
     */
     public void add2DominiosIncompatibles(Dominio dominiosIncompatibles) {
         this.dominiosIncompatibles.add(dominiosIncompatibles);
+    }
+    /**
+     * Removes an instance of <code>Dominio</code> related through the <code>DominiosIncompatibles</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDominiosIncompatibles(Dominio dominiosIncompatibles) {
+    	this.dominiosIncompatibles.remove(dominiosIncompatibles);
     }
     /**
      * Sets instances of <code>Dominio</code> related through the <code>DominiosIncompatibles</code> role.

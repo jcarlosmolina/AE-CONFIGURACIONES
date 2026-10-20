@@ -212,7 +212,7 @@ public class SQLPopulation extends SQLSelect {
                 }
                 addToSelectPart(nextalias.getAlias() + "." + displaySetMember.trim());
             } else {
-            	addToSelectPart(localAlias.getAlias() + "." + displaySetMember.trim());
+                addToSelectPart(localAlias.getAlias() + "." + displaySetMember.trim());
             }
         }
 

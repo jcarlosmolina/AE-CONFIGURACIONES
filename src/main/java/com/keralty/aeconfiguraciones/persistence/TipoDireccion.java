@@ -289,6 +289,13 @@ public class TipoDireccion extends AbstractAppEntity {
         this.direccionesC.add(direccionesC);
     }
     /**
+     * Removes an instance of <code>DireccionC</code> related through the <code>DireccionesC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDireccionesC(DireccionC direccionesC) {
+    	this.direccionesC.remove(direccionesC);
+    }
+    /**
      * Sets instances of <code>DireccionC</code> related through the <code>DireccionesC</code> role.
      * @param direccionesC The new value for the <code>DireccionesC</code> role.
      */
@@ -323,6 +330,13 @@ public class TipoDireccion extends AbstractAppEntity {
     */
     public void add2Direcciones(Direccion direcciones) {
         this.direcciones.add(direcciones);
+    }
+    /**
+     * Removes an instance of <code>Direccion</code> related through the <code>Direcciones</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDirecciones(Direccion direcciones) {
+    	this.direcciones.remove(direcciones);
     }
     /**
      * Sets instances of <code>Direccion</code> related through the <code>Direcciones</code> role.

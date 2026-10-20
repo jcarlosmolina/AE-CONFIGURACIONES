@@ -560,6 +560,13 @@ Nos guardamos en código de Tarifa enviado por el CORE, lo utilizaremos para loc
         this.solicitudes.add(solicitudes);
     }
     /**
+     * Removes an instance of <code>Solicitud</code> related through the <code>Solicitudes</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromSolicitudes(Solicitud solicitudes) {
+    	this.solicitudes.remove(solicitudes);
+    }
+    /**
      * Sets instances of <code>Solicitud</code> related through the <code>Solicitudes</code> role.
      * @param solicitudes The new value for the <code>Solicitudes</code> role.
      */
@@ -596,6 +603,13 @@ Nos guardamos en código de Tarifa enviado por el CORE, lo utilizaremos para loc
         this.contratosC.add(contratosC);
     }
     /**
+     * Removes an instance of <code>ContratoC</code> related through the <code>ContratosC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromContratosC(ContratoC contratosC) {
+    	this.contratosC.remove(contratosC);
+    }
+    /**
      * Sets instances of <code>ContratoC</code> related through the <code>ContratosC</code> role.
      * @param contratosC The new value for the <code>ContratosC</code> role.
      */
@@ -630,6 +644,13 @@ Nos guardamos en código de Tarifa enviado por el CORE, lo utilizaremos para loc
     */
     public void add2SolicitudesNovedad(SolicitudNovedad solicitudesNovedad) {
         this.solicitudesNovedad.add(solicitudesNovedad);
+    }
+    /**
+     * Removes an instance of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedad</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromSolicitudesNovedad(SolicitudNovedad solicitudesNovedad) {
+    	this.solicitudesNovedad.remove(solicitudesNovedad);
     }
     /**
      * Sets instances of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedad</code> role.

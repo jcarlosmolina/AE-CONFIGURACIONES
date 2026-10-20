@@ -219,6 +219,13 @@ public class Pais extends AbstractAppEntity {
         this.direccionesC.add(direccionesC);
     }
     /**
+     * Removes an instance of <code>DireccionC</code> related through the <code>DireccionesC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDireccionesC(DireccionC direccionesC) {
+    	this.direccionesC.remove(direccionesC);
+    }
+    /**
      * Sets instances of <code>DireccionC</code> related through the <code>DireccionesC</code> role.
      * @param direccionesC The new value for the <code>DireccionesC</code> role.
      */
@@ -253,6 +260,13 @@ public class Pais extends AbstractAppEntity {
     */
     public void add2Direcciones(Direccion direcciones) {
         this.direcciones.add(direcciones);
+    }
+    /**
+     * Removes an instance of <code>Direccion</code> related through the <code>Direcciones</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDirecciones(Direccion direcciones) {
+    	this.direcciones.remove(direcciones);
     }
     /**
      * Sets instances of <code>Direccion</code> related through the <code>Direcciones</code> role.
@@ -291,6 +305,13 @@ public class Pais extends AbstractAppEntity {
         this.dirSucursalC.add(dirSucursalC);
     }
     /**
+     * Removes an instance of <code>DirSucursalC</code> related through the <code>DirSucursalC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromDirSucursalC(DirSucursalC dirSucursalC) {
+    	this.dirSucursalC.remove(dirSucursalC);
+    }
+    /**
      * Sets instances of <code>DirSucursalC</code> related through the <code>DirSucursalC</code> role.
      * @param dirSucursalC The new value for the <code>DirSucursalC</code> role.
      */
@@ -327,6 +348,13 @@ public class Pais extends AbstractAppEntity {
         this.novedadCT.add(novedadCT);
     }
     /**
+     * Removes an instance of <code>NovedadCT</code> related through the <code>NovedadCT</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromNovedadCT(NovedadCT novedadCT) {
+    	this.novedadCT.remove(novedadCT);
+    }
+    /**
      * Sets instances of <code>NovedadCT</code> related through the <code>NovedadCT</code> role.
      * @param novedadCT The new value for the <code>NovedadCT</code> role.
      */
@@ -361,6 +389,13 @@ public class Pais extends AbstractAppEntity {
     */
     public void add2NovedadesMD(NovedadMD novedadesMD) {
         this.novedadesMD.add(novedadesMD);
+    }
+    /**
+     * Removes an instance of <code>NovedadMD</code> related through the <code>NovedadesMD</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromNovedadesMD(NovedadMD novedadesMD) {
+    	this.novedadesMD.remove(novedadesMD);
     }
     /**
      * Sets instances of <code>NovedadMD</code> related through the <code>NovedadesMD</code> role.

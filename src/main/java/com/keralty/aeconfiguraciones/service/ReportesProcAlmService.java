@@ -690,7 +690,7 @@ public class ReportesProcAlmService extends AbstractService {
         request.checkArguments();
         ReportesProcAlm instance = reportesProcAlmInsReporteFuncionariopthisReportesProcAlm;
 
-        instance.getFuncionarios().add(reportesProcAlmInsReporteFuncionariopevcFuncionario);
+        instance.add2Funcionarios(reportesProcAlmInsReporteFuncionariopevcFuncionario);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.funcionario.siu.InsReporteFuncionarioRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.funcionario.siu.InsReporteFuncionarioRequest();
             relatedRequest.setFuncionarioInsReporteFuncionariopthisFuncionarioInstance(reportesProcAlmInsReporteFuncionariopevcFuncionario);
@@ -758,7 +758,7 @@ public class ReportesProcAlmService extends AbstractService {
         request.checkArguments();
         ReportesProcAlm instance = reportesProcAlmDelReporteFuncionariopthisReportesProcAlm;
 
-        instance.getFuncionarios().remove(reportesProcAlmDelReporteFuncionariopevcFuncionario);
+        instance.removeFromFuncionarios(reportesProcAlmDelReporteFuncionariopevcFuncionario);
         reportesProcAlmDelReporteFuncionariopevcFuncionario.getReportes().remove(instance);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.funcionario.siu.DelReporteFuncionarioRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.funcionario.siu.DelReporteFuncionarioRequest();

@@ -199,6 +199,13 @@ public class EstadoContrato extends AbstractAppEntity {
         this.aESOLICITUDES.add(aESOLICITUDES);
     }
     /**
+     * Removes an instance of <code>Aesolicitudes</code> related through the <code>AESOLICITUDES</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromAESOLICITUDES(Aesolicitudes aESOLICITUDES) {
+    	this.aESOLICITUDES.remove(aESOLICITUDES);
+    }
+    /**
      * Sets instances of <code>Aesolicitudes</code> related through the <code>AESOLICITUDES</code> role.
      * @param aESOLICITUDES The new value for the <code>AESOLICITUDES</code> role.
      */
@@ -235,6 +242,13 @@ public class EstadoContrato extends AbstractAppEntity {
         this.contratosC.add(contratosC);
     }
     /**
+     * Removes an instance of <code>ContratoC</code> related through the <code>ContratosC</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromContratosC(ContratoC contratosC) {
+    	this.contratosC.remove(contratosC);
+    }
+    /**
      * Sets instances of <code>ContratoC</code> related through the <code>ContratosC</code> role.
      * @param contratosC The new value for the <code>ContratosC</code> role.
      */
@@ -269,6 +283,13 @@ public class EstadoContrato extends AbstractAppEntity {
     */
     public void add2SolicitudesNovedad(SolicitudNovedad solicitudesNovedad) {
         this.solicitudesNovedad.add(solicitudesNovedad);
+    }
+    /**
+     * Removes an instance of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedad</code> role.
+     * @param dominios The instance to be removed
+     */
+    public void removeFromSolicitudesNovedad(SolicitudNovedad solicitudesNovedad) {
+    	this.solicitudesNovedad.remove(solicitudesNovedad);
     }
     /**
      * Sets instances of <code>SolicitudNovedad</code> related through the <code>SolicitudesNovedad</code> role.
