@@ -368,9 +368,9 @@ public class Agent implements UserCrudService {
 
     @Override
     public Optional<User> find(String id) {
-    	if (id != null && !id.isBlank()) {
-    		return findByUsername(id);
-    	}
+        if (id != null && !id.isBlank()) {
+            return findByUsername(id);
+        }
         return Optional.empty();
     }
 
