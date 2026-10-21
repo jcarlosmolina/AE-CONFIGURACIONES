@@ -1392,7 +1392,6 @@ public class ProductosService extends AbstractService {
         // EXIST( pContratoC.EstadoContratoC ) WHERE (pContratoC.EstadoContratoC.Codigo = 4) = true
 
         ContratoC productosdummyVerificarContratoIncpContratoC = request.getProductosdummyVerificarContratoIncpContratoCInstance();
-        Productos productosdummyVerificarContratoIncpthisProducto = request.getProductosdummyVerificarContratoIncpthisProductoInstance();
         try {
             boolean preconditionHolds = repository.assocOperator006(productosdummyVerificarContratoIncpContratoC).equals(true);
             if (!preconditionHolds) throw new PreconditionException("El contrato seleccionado no se encuentra en estado liquidado");
@@ -1408,7 +1407,6 @@ public class ProductosService extends AbstractService {
 
         String productosdummyVerificarContratoIncpNumFamilia = request.getProductosdummyVerificarContratoIncpNumFamilia();
         ContratoC productosdummyVerificarContratoIncpContratoC = request.getProductosdummyVerificarContratoIncpContratoCInstance();
-        Productos productosdummyVerificarContratoIncpthisProducto = request.getProductosdummyVerificarContratoIncpthisProductoInstance();
         try {
             boolean preconditionHolds = productosdummyVerificarContratoIncpNumFamilia == null || repository.assocOperator007(productosdummyVerificarContratoIncpContratoC, productosdummyVerificarContratoIncpNumFamilia).equals(true);
             if (!preconditionHolds) throw new PreconditionException("No existe ninguna familia con el número proporcionado");
@@ -1424,7 +1422,6 @@ public class ProductosService extends AbstractService {
 
         String productosdummyVerificarContratoIncpNumFamilia = request.getProductosdummyVerificarContratoIncpNumFamilia();
         ContratoC productosdummyVerificarContratoIncpContratoC = request.getProductosdummyVerificarContratoIncpContratoCInstance();
-        Productos productosdummyVerificarContratoIncpthisProducto = request.getProductosdummyVerificarContratoIncpthisProductoInstance();
         try {
             boolean preconditionHolds = productosdummyVerificarContratoIncpNumFamilia == null || repository.assocOperator008(productosdummyVerificarContratoIncpContratoC, productosdummyVerificarContratoIncpNumFamilia).equals(true);
             if (!preconditionHolds) throw new PreconditionException("La familia indicada no se encuentra activa");
@@ -1441,7 +1438,6 @@ public class ProductosService extends AbstractService {
         String productosdummyVerificarContratoIncpNumFamilia = request.getProductosdummyVerificarContratoIncpNumFamilia();
         ContratoC productosdummyVerificarContratoIncpContratoC = request.getProductosdummyVerificarContratoIncpContratoCInstance();
         Date productosdummyVerificarContratoIncpFechaInicioContrato = request.getProductosdummyVerificarContratoIncpFechaInicioContrato();
-        Productos productosdummyVerificarContratoIncpthisProducto = request.getProductosdummyVerificarContratoIncpthisProductoInstance();
         try {
             boolean preconditionHolds = productosdummyVerificarContratoIncpNumFamilia == null || repository.assocOperator009(productosdummyVerificarContratoIncpContratoC, productosdummyVerificarContratoIncpNumFamilia, productosdummyVerificarContratoIncpFechaInicioContrato).equals(true);
             if (!preconditionHolds) throw new PreconditionException("Al contrato no se le puede realizar la inclusión por que no se ha renovado");
