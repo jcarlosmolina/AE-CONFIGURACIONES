@@ -502,7 +502,7 @@ public class ReportesProcAlm extends AbstractAppEntity {
 
 
         if (getAgent().isFacetActive(Constants.AGENT_FUNCIONARIO) || getAgent().isFacetActive(Constants.AGENT_ASESOR) || getAgent().isFacetActive(Constants.AGENT_AREAMEDICA) || getAgent().isFacetActive(Constants.AGENT_AFILIACIONES) || getAgent().isFacetActive(Constants.AGENT_RESPREGIONAL) || getAgent().isFacetActive(Constants.AGENT_GESTOR) || getAgent().isFacetActive(Constants.AGENT_MESADEAPOYO) && (!getAgent().isFacetActive(Constants.AGENT_ADMIN) || !getAgent().isFacetActive(Constants.AGENT_SUPERADMIN))) {
-            //Funcionario agentInstance = (Funcionario) getAgent().getAgentInstance(Constants.FUNCIONARIO);
+            Funcionario agentInstance = (Funcionario) getAgent().getAgentInstance(Constants.FUNCIONARIO);
 
             // Check the HV formula.
             /* 
