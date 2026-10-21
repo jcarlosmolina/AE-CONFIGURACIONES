@@ -71,13 +71,13 @@ public interface DominioJpaRepositoryCustom {
     
     SQLPopulation assocOperator006Range1Query(Dominio instance) throws SystemException;
 
-    Collection<Periodicidad> assocOperator007(Dominio instance, Dominio dominioTELIMINARpthisDominio) throws SystemException;
+    Collection<Periodicidad> assocOperator007(Dominio instance) throws SystemException;
 
     Collection<Periodicidad> assocOperator007Range1(Dominio instance) throws SystemException;
     
     SQLPopulation assocOperator007Range1Query(Dominio instance) throws SystemException;
 
-    Collection<Rol> assocOperator008(Dominio instance, Dominio dominioTELIMINARpthisDominio) throws SystemException;
+    Collection<Rol> assocOperator008(Dominio instance) throws SystemException;
 
     Collection<Rol> assocOperator008Range1(Dominio instance) throws SystemException;
     
@@ -107,7 +107,7 @@ public interface DominioJpaRepositoryCustom {
     
     SQLPopulation assocOperator012Range1Query(Dominio instance) throws SystemException;
 
-    Collection<PlantillaEmail> assocOperator013(Dominio instance, Dominio dominioTINSPLANTILLApthisDominio, PlantillaEmail dominioTINSPLANTILLAptPlantilla) throws SystemException;
+    Collection<PlantillaEmail> assocOperator013(Dominio instance, PlantillaEmail dominioTINSPLANTILLAptPlantilla) throws SystemException;
 
     Collection<PlantillaEmail> assocOperator013Range1(Dominio instance, PlantillaEmail dominioTINSPLANTILLAptPlantilla) throws SystemException;
     

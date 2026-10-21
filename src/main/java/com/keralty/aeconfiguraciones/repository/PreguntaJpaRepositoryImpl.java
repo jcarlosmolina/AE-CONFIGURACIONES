@@ -116,7 +116,7 @@ public class PreguntaJpaRepositoryImpl extends AbstractRepository implements Pre
 
     // AssocOperator: AssocOperator001
 	@Override
-    public Collection<Valor> assocOperator001(Pregunta instance, Pregunta preguntaTELIMINARpthisPregunta) throws SystemException {
+    public Collection<Valor> assocOperator001(Pregunta instance) throws SystemException {
         try {
             // FOR ALL Valores DO Valores.DelValorPregunta(Valores, this)
         return assocOperator001Range1(instance);

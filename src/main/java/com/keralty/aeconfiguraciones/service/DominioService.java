@@ -2819,14 +2819,14 @@ public class DominioService extends AbstractService {
             parentescoDomSrv.eliminarImplementation(step1Request);
         }
 
-        for(Periodicidad step2Entity : repository.assocOperator007(dominioTELIMINARpthisDominio, dominioTELIMINARpthisDominio)) {
+        for(Periodicidad step2Entity : repository.assocOperator007(dominioTELIMINARpthisDominio)) {
             com.keralty.aeconfiguraciones.viewmodel.dominio.siu.DelPeriodicidadDominioRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.dominio.siu.DelPeriodicidadDominioRequest();
             step2Request.setDominioDelPeriodicidadDominiopthisDominioInstance(dominioTELIMINARpthisDominio);
             step2Request.setDominioDelPeriodicidadDominiopevcPeriodicidadInstance(step2Entity);
             dominioSrv.delPeriodicidadDominioImplementation(step2Request, true);
         }
 
-        for(Rol step3Entity : repository.assocOperator008(dominioTELIMINARpthisDominio, dominioTELIMINARpthisDominio)) {
+        for(Rol step3Entity : repository.assocOperator008(dominioTELIMINARpthisDominio)) {
             com.keralty.aeconfiguraciones.viewmodel.dominio.siu.DelRollDominioRequest step3Request = new com.keralty.aeconfiguraciones.viewmodel.dominio.siu.DelRollDominioRequest();
             step3Request.setDominioDelRollDominiopthisDominioInstance(dominioTELIMINARpthisDominio);
             step3Request.setDominioDelRollDominiopevcRolInstance(step3Entity);
@@ -2920,7 +2920,7 @@ public class DominioService extends AbstractService {
         request.checkArguments();
         Dominio instance = dominioTINSPLANTILLApthisDominio;
 
-        for(PlantillaEmail step1Entity : repository.assocOperator013(dominioTINSPLANTILLApthisDominio, dominioTINSPLANTILLApthisDominio, dominioTINSPLANTILLAptPlantilla)) {
+        for(PlantillaEmail step1Entity : repository.assocOperator013(dominioTINSPLANTILLApthisDominio, dominioTINSPLANTILLAptPlantilla)) {
             com.keralty.aeconfiguraciones.viewmodel.dominio.siu.DelPlantillaRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.dominio.siu.DelPlantillaRequest();
             step1Request.setDominioDelPlantillapthisDominioInstance(dominioTINSPLANTILLApthisDominio);
             step1Request.setDominioDelPlantillapevcPlantillaEmailInstance(step1Entity);

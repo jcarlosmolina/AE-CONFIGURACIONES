@@ -444,7 +444,7 @@ public class DominioJpaRepositoryImpl extends AbstractRepository implements Domi
 
     // AssocOperator: AssocOperator007
 	@Override
-    public Collection<Periodicidad> assocOperator007(Dominio instance, Dominio dominioTELIMINARpthisDominio) throws SystemException {
+    public Collection<Periodicidad> assocOperator007(Dominio instance) throws SystemException {
         try {
             // FOR ALL Periodicidades DO DelPeriodicidadDominio(this, Periodicidades)
         return assocOperator007Range1(instance);
@@ -477,7 +477,7 @@ public class DominioJpaRepositoryImpl extends AbstractRepository implements Domi
 
     // AssocOperator: AssocOperator008
 	@Override
-    public Collection<Rol> assocOperator008(Dominio instance, Dominio dominioTELIMINARpthisDominio) throws SystemException {
+    public Collection<Rol> assocOperator008(Dominio instance) throws SystemException {
         try {
             // FOR ALL Roles DO DelRollDominio(this, Roles)
         return assocOperator008Range1(instance);
@@ -642,7 +642,7 @@ public class DominioJpaRepositoryImpl extends AbstractRepository implements Domi
 
     // AssocOperator: AssocOperator013
 	@Override
-    public Collection<PlantillaEmail> assocOperator013(Dominio instance, Dominio dominioTINSPLANTILLApthisDominio, PlantillaEmail dominioTINSPLANTILLAptPlantilla) throws SystemException {
+    public Collection<PlantillaEmail> assocOperator013(Dominio instance, PlantillaEmail dominioTINSPLANTILLAptPlantilla) throws SystemException {
         try {
             // FOR ALL Plantillas WHERE (Plantillas.Codigo = ptPlantilla.Codigo) DO DelPlantilla(this, Plantillas)
         return assocOperator013Range1(instance, dominioTINSPLANTILLAptPlantilla);

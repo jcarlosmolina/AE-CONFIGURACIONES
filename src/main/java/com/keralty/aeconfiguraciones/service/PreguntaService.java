@@ -1347,7 +1347,7 @@ public class PreguntaService extends AbstractService {
         step1Request.setSeccionTCAMBIARORDENPREGSptOrdenHasta(Long.valueOf(9999));
         seccionSrv.tCAMBIARORDENPREGSImplementation(step1Request);
 
-        for(Valor step2Entity : repository.assocOperator001(preguntaTELIMINARpthisPregunta, preguntaTELIMINARpthisPregunta)) {
+        for(Valor step2Entity : repository.assocOperator001(preguntaTELIMINARpthisPregunta)) {
             com.keralty.aeconfiguraciones.viewmodel.valor.siu.DelValorPreguntaRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.valor.siu.DelValorPreguntaRequest();
             step2Request.setValorDelValorPreguntapthisValorInstance(step2Entity);
             step2Request.setValorDelValorPreguntapevcPreguntaInstance(preguntaTELIMINARpthisPregunta);

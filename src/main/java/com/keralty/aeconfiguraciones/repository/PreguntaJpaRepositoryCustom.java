@@ -25,7 +25,7 @@ public interface PreguntaJpaRepositoryCustom {
     
     SQLExists assocOperator000Range1Query(Seccion preguntaTCREARptpagrSeccion, Long preguntaTCREARptpatrNumero, SQLSelect superQuery) throws SystemException;
 
-    Collection<Valor> assocOperator001(Pregunta instance, Pregunta preguntaTELIMINARpthisPregunta) throws SystemException;
+    Collection<Valor> assocOperator001(Pregunta instance) throws SystemException;
 
     Collection<Valor> assocOperator001Range1(Pregunta instance) throws SystemException;
     
