@@ -759,7 +759,7 @@ public class ReportesProcAlmService extends AbstractService {
         ReportesProcAlm instance = reportesProcAlmDelReporteFuncionariopthisReportesProcAlm;
 
         instance.removeFromFuncionarios(reportesProcAlmDelReporteFuncionariopevcFuncionario);
-        reportesProcAlmDelReporteFuncionariopevcFuncionario.getReportes().remove(instance);
+        reportesProcAlmDelReporteFuncionariopevcFuncionario.removeFromReportes(instance);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.funcionario.siu.DelReporteFuncionarioRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.funcionario.siu.DelReporteFuncionarioRequest();
             relatedRequest.setFuncionarioDelReporteFuncionariopthisFuncionarioInstance(reportesProcAlmDelReporteFuncionariopevcFuncionario);

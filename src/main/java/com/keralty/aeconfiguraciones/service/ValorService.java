@@ -733,7 +733,7 @@ public class ValorService extends AbstractService {
         Valor instance = valorDelValorPreguntapthisValor;
 
         instance.removeFromPreguntas(valorDelValorPreguntapevcPregunta);
-        valorDelValorPreguntapevcPregunta.getValores().remove(instance);
+        valorDelValorPreguntapevcPregunta.removeFromValores(instance);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.pregunta.siu.DelValorPreguntaRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.pregunta.siu.DelValorPreguntaRequest();
             relatedRequest.setPreguntaDelValorPreguntapthisPreguntaInstance(valorDelValorPreguntapevcPregunta);

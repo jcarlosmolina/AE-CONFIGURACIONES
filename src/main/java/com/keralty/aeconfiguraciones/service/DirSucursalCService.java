@@ -413,7 +413,7 @@ public class DirSucursalCService extends AbstractService {
         DirSucursalC instance = dirSucursalCDelTiposSucursalCpthisDirSucursalC;
 
         instance.removeFromTiposSucursalC(dirSucursalCDelTiposSucursalCpevcTipoSucursalC);
-        dirSucursalCDelTiposSucursalCpevcTipoSucursalC.getDirSucursalesC().remove(instance);
+        dirSucursalCDelTiposSucursalCpevcTipoSucursalC.removeFromDirSucursalesC(instance);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.tiposucursalc.siu.DelTiposSucursalCRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.tiposucursalc.siu.DelTiposSucursalCRequest();
             relatedRequest.setTipoSucursalCDelTiposSucursalCpthisTipoSucursalCInstance(dirSucursalCDelTiposSucursalCpevcTipoSucursalC);

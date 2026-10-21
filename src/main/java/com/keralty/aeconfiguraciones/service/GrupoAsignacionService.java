@@ -795,7 +795,7 @@ public class GrupoAsignacionService extends AbstractService {
         GrupoAsignacion instance = grupoAsignacionDelFuncionarioGrupopthisGrupoAsignacion;
 
         instance.removeFromFuncionario(grupoAsignacionDelFuncionarioGrupopevcFuncionario);
-        grupoAsignacionDelFuncionarioGrupopevcFuncionario.getGrupoAsignacion().remove(instance);
+        grupoAsignacionDelFuncionarioGrupopevcFuncionario.removeFromGrupoAsignacion(instance);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.funcionario.siu.DelFuncionarioGrupoRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.funcionario.siu.DelFuncionarioGrupoRequest();
             relatedRequest.setFuncionarioDelFuncionarioGrupopthisFuncionarioInstance(grupoAsignacionDelFuncionarioGrupopevcFuncionario);

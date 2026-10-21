@@ -658,7 +658,7 @@ public class AfiliacionesService extends AbstractService {
         Afiliaciones instance = afiliacionesDelPlanpthisAfiliaciones;
 
         instance.removeFromPlanes(afiliacionesDelPlanpevcPlanes);
-        afiliacionesDelPlanpevcPlanes.getAfiliaciones().remove(instance);
+        afiliacionesDelPlanpevcPlanes.removeFromAfiliaciones(instance);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.planes.siu.DelPlanRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.planes.siu.DelPlanRequest();
             relatedRequest.setPlanesDelPlanpthisPlanesInstance(afiliacionesDelPlanpevcPlanes);

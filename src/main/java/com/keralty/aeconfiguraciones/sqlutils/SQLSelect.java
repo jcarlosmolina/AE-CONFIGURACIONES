@@ -1054,7 +1054,6 @@ public class SQLSelect {
     
     private SQLAlias calculateNextAlias(String ownerClass, String role, SQLAlias currentAlias, String joinType, StringBuilder processedPath, List<SQLJoin> joinList) {
     	SQLAlias nextAlias;
-    	String targetClass = Constants.getTargetFacetElement(ownerClass, role);
         // Check if the relationship is M:M
         String tableMMName = Constants.getManyToManyTableName(currentAlias.getFacet(), role);
         if (!tableMMName.isEmpty() && tableMMName.equalsIgnoreCase("-DEPRECATED-")) {
@@ -1090,7 +1089,7 @@ public class SQLSelect {
             SQLJoin currentjoin = new SQLJoin(joinType, nextTable, currentAlias, nextAlias);
             joinList.add(currentjoin);
 
-            completeJoin(role, currentAlias.getAlias(), currentjoin, nextAlias.getAlias());
+            completeJoin(currentAlias.getAlias(), currentjoin, nextAlias.getAlias());
 
             // Increase the multivaluated counter
             increaseMultivaluatedCounter(nextAlias, currentjoin);
@@ -1160,12 +1159,11 @@ public class SQLSelect {
     /**
      * Completes join.
      * 
-     * @param roleName     Role name
      * @param currentAlias String with the current alias
      * @param join         SQLJoin
      * @param nextAlias    String with the next alias
      */
-    protected void completeJoin(String roleName, String currentAlias, SQLJoin join,
+    protected void completeJoin(String currentAlias, SQLJoin join,
             String nextAlias) {
         Class<?>[] params = new Class[3];
         params[0] = String.class;

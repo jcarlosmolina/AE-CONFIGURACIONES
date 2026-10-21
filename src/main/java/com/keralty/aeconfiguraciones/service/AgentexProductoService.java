@@ -535,7 +535,7 @@ public class AgentexProductoService extends AbstractService {
         AgentexProducto instance = agentexProductoDelDominiopthisAgentexProducto;
 
         instance.removeFromDominios(agentexProductoDelDominiopevcDominio);
-        agentexProductoDelDominiopevcDominio.getAgentexProducto().remove(instance);
+        agentexProductoDelDominiopevcDominio.removeFromAgentexProducto(instance);
         if (isEntryPoint) {
             com.keralty.aeconfiguraciones.viewmodel.dominio.siu.DelDominioRequest relatedRequest = new com.keralty.aeconfiguraciones.viewmodel.dominio.siu.DelDominioRequest();
             relatedRequest.setDominioDelDominiopthisDominioInstance(agentexProductoDelDominiopevcDominio);
