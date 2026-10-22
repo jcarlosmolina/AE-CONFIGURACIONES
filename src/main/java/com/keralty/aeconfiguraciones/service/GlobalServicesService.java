@@ -277,6 +277,11 @@ public class GlobalServicesService extends AbstractService {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCPRODUCTOSRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
 
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGSINCPRODUCTOSImplementation");
+        }
+
+
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PRODUCTORequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PRODUCTORequest();
         step1Request.setTGSINC1PRODUCTOptpatrNumero(Long.valueOf(0));
         step1Request.setTGSINC1PRODUCTOptpatrDescripcion("0");
@@ -407,6 +412,11 @@ public class GlobalServicesService extends AbstractService {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCPLANESRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
 
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGSINCPLANESImplementation");
+        }
+
+
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PLANRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PLANRequest();
         step1Request.setTGSINC1PLANptpatrNumero(Long.valueOf(0));
         step1Request.setTGSINC1PLANptpatrCodigo(Long.valueOf(0));
@@ -498,6 +508,11 @@ public class GlobalServicesService extends AbstractService {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCPARENTESCOSRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
 
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGSINCPARENTESCOSImplementation");
+        }
+
+
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PARENTESCORequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PARENTESCORequest();
         step1Request.setTGSINC1PARENTESCOptpatrCodigo(Long.valueOf(0));
         step1Request.setTGSINC1PARENTESCOptpatrDescripcion("0");
@@ -581,6 +596,11 @@ public class GlobalServicesService extends AbstractService {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCPERIODICIDADESRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
 
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGSINCPERIODICIDADESImplementation");
+        }
+
+
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PERIODICIDADRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PERIODICIDADRequest();
         step1Request.setTGSINC1PERIODICIDADptpatrCodigo(Long.valueOf(0));
         step1Request.setTGSINC1PERIODICIDADptpatrDescripcion("0");
@@ -662,6 +682,11 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse tGSINCESTADOSCONTRATOImplementation(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCESTADOSCONTRATORequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
+
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGSINCESTADOSCONTRATOImplementation");
+        }
+
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOCONTRATORequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOCONTRATORequest();
         step1Request.setTGSINC1ESTADOCONTRATOptpatrCodigo(Long.valueOf(0));
@@ -745,6 +770,11 @@ public class GlobalServicesService extends AbstractService {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCESTADOSBENEFICIARIORequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
 
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGSINCESTADOSBENEFICIARIOImplementation");
+        }
+
+
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOBENEFICIARIORequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOBENEFICIARIORequest();
         step1Request.setTGSINC1ESTADOBENEFICIARIOptpatrCodigo(Long.valueOf(0));
         step1Request.setTGSINC1ESTADOBENEFICIARIOptpatrDescripcion("0");
@@ -827,6 +857,11 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse tGSINCREGIONALESImplementation(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCREGIONALESRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
+
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGSINCREGIONALESImplementation");
+        }
+
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1REGIONALRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1REGIONALRequest();
         step1Request.setTGSINC1REGIONALptpatrCodigo(Long.valueOf(0));
@@ -947,6 +982,11 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse oGSINCSUCURSALESImplementation(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCSUCURSALESRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
+
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to oGSINCSUCURSALESImplementation");
+        }
+
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1SUCURSALRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1SUCURSALRequest();
         step1Request.setTGSINC1SUCURSALptpatrCodigo(Long.valueOf(0));
@@ -1155,6 +1195,11 @@ public class GlobalServicesService extends AbstractService {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCGRUPOSASOCIADOSRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
 
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to oGSINCGRUPOSASOCIADOSImplementation");
+        }
+
+
         try {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1GRUPOASOCRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1GRUPOASOCRequest();
             step1Request.setTGSINC1GRUPOASOCptpatrNumero("0");
@@ -1251,6 +1296,11 @@ public class GlobalServicesService extends AbstractService {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCESTADOSCIVILESRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
 
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGSINCESTADOSCIVILESImplementation");
+        }
+
+
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOCIVILRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOCIVILRequest();
         step1Request.setTGSINC1ESTADOCIVILptpatrCodigo(Long.valueOf(0));
         step1Request.setTGSINC1ESTADOCIVILptpatrDescripcion("0");
@@ -1336,6 +1386,11 @@ public class GlobalServicesService extends AbstractService {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCDEPARTAMENTOSRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
 
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGSINCDEPARTAMENTOSImplementation");
+        }
+
+
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1DEPARTAMENTORequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1DEPARTAMENTORequest();
         step1Request.setTGSINC1DEPARTAMENTOptpatrCodigo(Long.valueOf(0));
         step1Request.setTGSINC1DEPARTAMENTOptpatrDescripcion("0");
@@ -1419,6 +1474,11 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse oGSINCOMPANIASImplementation(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCOMPANIASRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
+
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to oGSINCOMPANIASImplementation");
+        }
+
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1COMPANIARequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1COMPANIARequest();
         step1Request.setTGSINC1COMPANIAptpatrCodigo(Long.valueOf(0));
@@ -1538,6 +1598,11 @@ public class GlobalServicesService extends AbstractService {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCMUNICIPIOSRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
 
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to oGSINCMUNICIPIOSImplementation");
+        }
+
+
         try {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCDEPARTAMENTOSRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCDEPARTAMENTOSRequest();
             globalServicesSrv.tGSINCDEPARTAMENTOSTxn(step1Request);
@@ -1633,6 +1698,11 @@ public class GlobalServicesService extends AbstractService {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCTIPOSDIRECCIONRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
 
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGSINCTIPOSDIRECCIONImplementation");
+        }
+
+
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPODIRECCIONRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPODIRECCIONRequest();
         step1Request.setTGSINC1TIPODIRECCIONptpatrCodigo(Long.valueOf(0));
         step1Request.setTGSINC1TIPODIRECCIONptpatrDescripcion("0");
@@ -1719,6 +1789,11 @@ public class GlobalServicesService extends AbstractService {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCESTADOSPERSONARequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
 
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGSINCESTADOSPERSONAImplementation");
+        }
+
+
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOPERSONARequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOPERSONARequest();
         step1Request.setTGSINC1ESTADOPERSONAptpatrCodigo(Long.valueOf(0));
         step1Request.setTGSINC1ESTADOPERSONAptpatrDescripcion("0");
@@ -1802,6 +1877,11 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse tGSINCFORMASPAGOImplementation(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCFORMASPAGORequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
+
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGSINCFORMASPAGOImplementation");
+        }
+
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1FORMAPAGORequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1FORMAPAGORequest();
         step1Request.setTGSINC1FORMAPAGOptpatrCodigo(Long.valueOf(0));
@@ -1897,6 +1977,11 @@ public class GlobalServicesService extends AbstractService {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCTIPOSIDENTIFICACIONRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
 
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGSINCTIPOSIDENTIFICACIONImplementation");
+        }
+
+
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOIDENTIFICACIONRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOIDENTIFICACIONRequest();
         step1Request.setTGSINC1TIPOIDENTIFICACIONptpatrCodigo(Long.valueOf(0));
         step1Request.setTGSINC1TIPOIDENTIFICACIONptpatrDescripcion("0");
@@ -1981,6 +2066,11 @@ public class GlobalServicesService extends AbstractService {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCEPSSRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
 
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to oGSINCEPSSImplementation");
+        }
+
+
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1EPSRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1EPSRequest();
         step1Request.setTGSINC1EPSptpatrCodigo(Long.valueOf(0));
         step1Request.setTGSINC1EPSptpatrDescripcion("0");
@@ -2062,6 +2152,11 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse tGSINCPAISESImplementation(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCPAISESRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
+
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGSINCPAISESImplementation");
+        }
+
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PAISRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PAISRequest();
         step1Request.setTGSINC1PAISptpatrCodigo("0");
@@ -2241,6 +2336,11 @@ public class GlobalServicesService extends AbstractService {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCENTIDADESFINRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
 
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGSINCENTIDADESFINImplementation");
+        }
+
+
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ENTIDADFINRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ENTIDADFINRequest();
         step1Request.setTGSINC1ENTIDADFINptpatrCodigo(Long.valueOf(0));
         step1Request.setTGSINC1ENTIDADFINptpatrDescripcion("0");
@@ -2290,6 +2390,11 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse tGSINCTIPOSDEENTIDADImplementation(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCTIPOSDEENTIDADRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
+
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGSINCTIPOSDEENTIDADImplementation");
+        }
+
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOENTIDADRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOENTIDADRequest();
         step1Request.setTGSINC1TIPOENTIDADptpatrCodigo(Long.valueOf(0));
@@ -2341,6 +2446,11 @@ public class GlobalServicesService extends AbstractService {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCTIPOSINSTITUCIONRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
 
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGSINCTIPOSINSTITUCIONImplementation");
+        }
+
+
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOINSTITUCIONRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOINSTITUCIONRequest();
         step1Request.setTGSINC1TIPOINSTITUCIONptpatrCodigo(Long.valueOf(0));
         step1Request.setTGSINC1TIPOINSTITUCIONptpatrNombre("0");
@@ -2390,6 +2500,11 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse tGSINCTIPOSSUCURSALImplementation(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCTIPOSSUCURSALRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
+
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGSINCTIPOSSUCURSALImplementation");
+        }
+
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOSUCURSALRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOSUCURSALRequest();
         step1Request.setTGSINC1TIPOSUCURSALptpatrCodigo(Long.valueOf(0));
@@ -3496,6 +3611,11 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse oGSINCRONIZARPARAMETRICASImplementation(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCRONIZARPARAMETRICASRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
+
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to oGSINCRONIZARPARAMETRICASImplementation");
+        }
+
 
         try {
             for(FrecuenciaAct step1Entity : globalServicesRepository.assocOperator158()) {

@@ -16,6 +16,7 @@ import com.keralty.aeconfiguraciones.sqlutils.SQLWhereConjunction;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereDisjunction;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandLiteral;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandPathAttribute;
+import com.keralty.aeconfiguraciones.utils.Utilities;
 import com.keralty.aeconfiguraciones.viewmodel.FilterRequest;
 import com.keralty.aeconfiguraciones.viewmodel.FilterVariableRequest;
 import com.keralty.aeconfiguraciones.viewmodel.InstanceResponseViewModel;
@@ -637,7 +638,7 @@ public class EstadoBeneficiarioAEService extends AbstractService {
         step1Request.setEstadoBeneficiarioAEmodificarpDescripcion(estadoBeneficiarioAETMODIFICARptpDescripcion);
         estadoBeneficiarioAESrv.modificarImplementation(step1Request);
 
-        boolean guard2 = !(estadoBeneficiarioAETMODIFICARpthisEstadoBeneficiarioAE.getEstadoBeneficiarioCORE().equalsObject(estadoBeneficiarioAETMODIFICARptpevcEstadoBeneficiario));
+        boolean guard2 = !Utilities.isEqual(estadoBeneficiarioAETMODIFICARpthisEstadoBeneficiarioAE.getEstadoBeneficiarioCORE(), estadoBeneficiarioAETMODIFICARptpevcEstadoBeneficiario);
 
         if (guard2) {
             com.keralty.aeconfiguraciones.viewmodel.estadobeneficiarioae.siu.CambEstadoBeneficiarioCORERequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.estadobeneficiarioae.siu.CambEstadoBeneficiarioCORERequest();

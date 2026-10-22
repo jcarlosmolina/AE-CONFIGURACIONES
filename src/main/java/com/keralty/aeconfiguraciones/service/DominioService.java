@@ -60,6 +60,7 @@ import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandOVParameter;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandPathAttribute;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandPathInstance;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandSubQuery;
+import com.keralty.aeconfiguraciones.utils.Utilities;
 import com.keralty.aeconfiguraciones.viewmodel.FilterRequest;
 import com.keralty.aeconfiguraciones.viewmodel.FilterVariableRequest;
 import com.keralty.aeconfiguraciones.viewmodel.InstanceResponseViewModel;
@@ -3057,7 +3058,7 @@ public class DominioService extends AbstractService {
         Dominio instance = dominioTADDGRPASESORESpthisDominio;
 
         /* Action 1: IF (GrupoAsesores <> ptGrupo) */
-        boolean ifCondition1 = !(dominioTADDGRPASESORESpthisDominio.getGrupoAsesores().equalsObject(dominioTADDGRPASESORESptGrupo));
+        boolean ifCondition1 = !Utilities.isEqual(dominioTADDGRPASESORESpthisDominio.getGrupoAsesores(), dominioTADDGRPASESORESptGrupo);
         if (ifCondition1) {
             com.keralty.aeconfiguraciones.viewmodel.dominio.siu.TDELGRPASESORESRequest step10Request = new com.keralty.aeconfiguraciones.viewmodel.dominio.siu.TDELGRPASESORESRequest();
             step10Request.setDominioTDELGRPASESORESpthisDominioInstance(dominioTADDGRPASESORESpthisDominio);
@@ -3206,7 +3207,7 @@ public class DominioService extends AbstractService {
         Dominio instance = dominioTADDGRPMEDICOpthisDominio;
 
         /* Action 1: IF (GrupoAreaMedica <> ptGrupo) */
-        boolean ifCondition1 = !(dominioTADDGRPMEDICOpthisDominio.getGrupoAreaMedica().equalsObject(dominioTADDGRPMEDICOptGrupo));
+        boolean ifCondition1 = !Utilities.isEqual(dominioTADDGRPMEDICOpthisDominio.getGrupoAreaMedica(), dominioTADDGRPMEDICOptGrupo);
         if (ifCondition1) {
             com.keralty.aeconfiguraciones.viewmodel.dominio.siu.TDELGRPMEDICORequest step10Request = new com.keralty.aeconfiguraciones.viewmodel.dominio.siu.TDELGRPMEDICORequest();
             step10Request.setDominioTDELGRPMEDICOpthisDominioInstance(dominioTADDGRPMEDICOpthisDominio);

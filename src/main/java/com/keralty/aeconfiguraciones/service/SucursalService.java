@@ -22,6 +22,7 @@ import com.keralty.aeconfiguraciones.sqlutils.SQLWhereConjunction;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereDisjunction;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandLiteral;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandPathAttribute;
+import com.keralty.aeconfiguraciones.utils.Utilities;
 import com.keralty.aeconfiguraciones.viewmodel.FilterRequest;
 import com.keralty.aeconfiguraciones.viewmodel.FilterVariableRequest;
 import com.keralty.aeconfiguraciones.viewmodel.InstanceResponseViewModel;
@@ -748,7 +749,7 @@ public class SucursalService extends AbstractService {
         step1Request.setSucursalsincronizarpDescripcion(sucursalTSINCRONIZARptpDescripcion);
         sucursalSrv.sincronizarImplementation(step1Request);
 
-        boolean guard2 = !(sucursalTSINCRONIZARpthisSucursal.getRegional().equalsObject(sucursalTSINCRONIZARptpevcRegional));
+        boolean guard2 = !Utilities.isEqual(sucursalTSINCRONIZARpthisSucursal.getRegional(), sucursalTSINCRONIZARptpevcRegional);
 
         if (guard2) {
             com.keralty.aeconfiguraciones.viewmodel.sucursal.siu.CambRegionalSucursalRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.sucursal.siu.CambRegionalSucursalRequest();

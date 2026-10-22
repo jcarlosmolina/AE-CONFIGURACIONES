@@ -23,6 +23,7 @@ import com.keralty.aeconfiguraciones.sqlutils.SQLSelect;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereComparison;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandLiteral;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandPathAttribute;
+import com.keralty.aeconfiguraciones.utils.Utilities;
 import com.keralty.aeconfiguraciones.viewmodel.FilterRequest;
 import com.keralty.aeconfiguraciones.viewmodel.FilterVariableRequest;
 import com.keralty.aeconfiguraciones.viewmodel.InstanceResponseViewModel;
@@ -1188,7 +1189,7 @@ public class PreguntaService extends AbstractService {
         preguntaSrv.modificarImplementation(step1Request);
 
         /* Action 2: IF (ptpevcSeccion <> Seccion) */
-        boolean ifCondition2 = !(preguntaTMODIFICARptpevcSeccion.equalsObject(preguntaTMODIFICARpthisPregunta.getSeccion()));
+        boolean ifCondition2 = !Utilities.isEqual(preguntaTMODIFICARptpevcSeccion, preguntaTMODIFICARpthisPregunta.getSeccion());
         if (ifCondition2) {
             com.keralty.aeconfiguraciones.viewmodel.seccion.siu.TCAMBIARORDENPREGSRequest step20Request = new com.keralty.aeconfiguraciones.viewmodel.seccion.siu.TCAMBIARORDENPREGSRequest();
             step20Request.setSeccionTCAMBIARORDENPREGSpthisSeccionInstance(preguntaTMODIFICARpthisPregunta.getSeccion());

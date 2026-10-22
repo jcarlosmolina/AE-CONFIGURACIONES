@@ -59,6 +59,7 @@ import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandOVParameter;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandPathAttribute;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandPathInstance;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandSubQuery;
+import com.keralty.aeconfiguraciones.utils.Utilities;
 import com.keralty.aeconfiguraciones.viewmodel.FilterRequest;
 import com.keralty.aeconfiguraciones.viewmodel.FilterVariableRequest;
 import com.keralty.aeconfiguraciones.viewmodel.InstanceResponseViewModel;
@@ -3144,7 +3145,7 @@ public class MunicipioService extends AbstractService {
         }
 
         /* Action 4: IF (EXIST (Departamento) = true AND fugetDepartamentoCL(leftSubstring(CodigoLegal, 2)) <> NULL AND Departamento <> fugetDepartamentoCL(leftSubstring(CodigoLegal, 2))) */
-        boolean ifCondition4 = repository.assocOperator004(municipioTSINCRONIZARpthisMunicipio).equals(true) && userFunctionsSrv.fugetDepartamentoCLFun(STDFunctions.leftSubstringFun(municipioTSINCRONIZARpthisMunicipio.getMunicipioCodigoLegal(), Long.valueOf(2))) != null && !(municipioTSINCRONIZARpthisMunicipio.getDepartamento().equalsObject(userFunctionsSrv.fugetDepartamentoCLFun(STDFunctions.leftSubstringFun(municipioTSINCRONIZARpthisMunicipio.getMunicipioCodigoLegal(), Long.valueOf(2)))));
+        boolean ifCondition4 = repository.assocOperator004(municipioTSINCRONIZARpthisMunicipio).equals(true) && userFunctionsSrv.fugetDepartamentoCLFun(STDFunctions.leftSubstringFun(municipioTSINCRONIZARpthisMunicipio.getMunicipioCodigoLegal(), Long.valueOf(2))) != null && !Utilities.isEqual(municipioTSINCRONIZARpthisMunicipio.getDepartamento(), userFunctionsSrv.fugetDepartamentoCLFun(STDFunctions.leftSubstringFun(municipioTSINCRONIZARpthisMunicipio.getMunicipioCodigoLegal(), Long.valueOf(2))));
         if (ifCondition4) {
             com.keralty.aeconfiguraciones.viewmodel.municipio.siu.DelMunicipioDepartamentoRequest step40Request = new com.keralty.aeconfiguraciones.viewmodel.municipio.siu.DelMunicipioDepartamentoRequest();
             step40Request.setMunicipioDelMunicipioDepartamentopthisMunicipioInstance(municipioTSINCRONIZARpthisMunicipio);

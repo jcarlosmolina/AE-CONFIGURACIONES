@@ -32,6 +32,7 @@ import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandOVParameter;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandPathAttribute;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandPathInstance;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandSubQuery;
+import com.keralty.aeconfiguraciones.utils.Utilities;
 import com.keralty.aeconfiguraciones.viewmodel.FilterRequest;
 import com.keralty.aeconfiguraciones.viewmodel.FilterVariableRequest;
 import com.keralty.aeconfiguraciones.viewmodel.InstanceResponseViewModel;
@@ -580,7 +581,7 @@ public class TarifaService extends AbstractService {
 
         Planes tarifacrearpagrPlanT = request.getTarifacrearpagrPlanTInstance();
         Productos tarifacrearpagrProductoT = request.getTarifacrearpagrProductoTInstance();
-        boolean preconditionHolds = tarifacrearpagrPlanT.getProductoT().equalsObject(tarifacrearpagrProductoT);
+        boolean preconditionHolds = Utilities.isEqual(tarifacrearpagrPlanT.getProductoT(), tarifacrearpagrProductoT);
         if (!preconditionHolds) throw new PreconditionException("El Plan seleccionado no pertenece al Producto");
     }
 
@@ -1018,7 +1019,7 @@ public class TarifaService extends AbstractService {
         step1Request.setTarifasincronizarpTipoContrato(tarifaTSINCRONIZARptpTipoContrato);
         tarifaSrv.sincronizarImplementation(step1Request);
 
-        boolean guard2 = !(tarifaTSINCRONIZARptpevcPlan.equalsObject(tarifaTSINCRONIZARpthisTarifa.getPlanT()));
+        boolean guard2 = !Utilities.isEqual(tarifaTSINCRONIZARptpevcPlan, tarifaTSINCRONIZARpthisTarifa.getPlanT());
 
         if (guard2) {
             com.keralty.aeconfiguraciones.viewmodel.tarifa.siu.CambPlanTarifaRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.tarifa.siu.CambPlanTarifaRequest();
@@ -1027,7 +1028,7 @@ public class TarifaService extends AbstractService {
             tarifaSrv.cambPlanTarifaImplementation(step2Request, true);
         }
 
-        boolean guard3 = !(tarifaTSINCRONIZARptpevcProducto.equalsObject(tarifaTSINCRONIZARpthisTarifa.getProductoT()));
+        boolean guard3 = !Utilities.isEqual(tarifaTSINCRONIZARptpevcProducto, tarifaTSINCRONIZARpthisTarifa.getProductoT());
 
         if (guard3) {
             com.keralty.aeconfiguraciones.viewmodel.tarifa.siu.CambProductoTarifaRequest step3Request = new com.keralty.aeconfiguraciones.viewmodel.tarifa.siu.CambProductoTarifaRequest();

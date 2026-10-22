@@ -31,6 +31,7 @@ import com.keralty.aeconfiguraciones.sqlutils.SQLWhereConjunction;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereDisjunction;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandLiteral;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandPathAttribute;
+import com.keralty.aeconfiguraciones.utils.Utilities;
 import com.keralty.aeconfiguraciones.viewmodel.FilterRequest;
 import com.keralty.aeconfiguraciones.viewmodel.FilterVariableRequest;
 import com.keralty.aeconfiguraciones.viewmodel.InstanceResponseViewModel;
@@ -1133,7 +1134,7 @@ public class InstitucionMatNeoService extends AbstractService {
         institucionMatNeoSrv.modificarImplementation(step1Request);
 
         /* Action 2: IF (Municipio <> ptpevcMunicipio) */
-        boolean ifCondition2 = !(institucionMatNeoTMODIFICARpthisInstitucionMatNeo.getMunicipio().equalsObject(institucionMatNeoTMODIFICARptpevcMunicipio));
+        boolean ifCondition2 = !Utilities.isEqual(institucionMatNeoTMODIFICARpthisInstitucionMatNeo.getMunicipio(), institucionMatNeoTMODIFICARptpevcMunicipio);
         if (ifCondition2) {
             com.keralty.aeconfiguraciones.viewmodel.institucionmatneo.siu.CambiarMunicipioInstRequest step20Request = new com.keralty.aeconfiguraciones.viewmodel.institucionmatneo.siu.CambiarMunicipioInstRequest();
             step20Request.setInstitucionMatNeoCambiarMunicipioInstpthisInstitucionMatNeoInstance(institucionMatNeoTMODIFICARpthisInstitucionMatNeo);
@@ -1142,7 +1143,7 @@ public class InstitucionMatNeoService extends AbstractService {
         }
 
         /* Action 3: IF (Tarifa <> ptpevcTarifa) */
-        boolean ifCondition3 = !(institucionMatNeoTMODIFICARpthisInstitucionMatNeo.getTarifa().equalsObject(institucionMatNeoTMODIFICARptpevcTarifa));
+        boolean ifCondition3 = !Utilities.isEqual(institucionMatNeoTMODIFICARpthisInstitucionMatNeo.getTarifa(), institucionMatNeoTMODIFICARptpevcTarifa);
         if (ifCondition3) {
             com.keralty.aeconfiguraciones.viewmodel.institucionmatneo.siu.CambiarTarifaRequest step30Request = new com.keralty.aeconfiguraciones.viewmodel.institucionmatneo.siu.CambiarTarifaRequest();
             step30Request.setInstitucionMatNeoCambiarTarifapthisInstitucionMatNeoInstance(institucionMatNeoTMODIFICARpthisInstitucionMatNeo);
@@ -1151,7 +1152,7 @@ public class InstitucionMatNeoService extends AbstractService {
         }
 
         /* Action 4: IF (TipoIdentificacion <> ptpevcTipoIdentificacion) */
-        boolean ifCondition4 = !(institucionMatNeoTMODIFICARpthisInstitucionMatNeo.getTipoIdentificacion().equalsObject(institucionMatNeoTMODIFICARptpevcTipoIdentificacion));
+        boolean ifCondition4 = !Utilities.isEqual(institucionMatNeoTMODIFICARpthisInstitucionMatNeo.getTipoIdentificacion(), institucionMatNeoTMODIFICARptpevcTipoIdentificacion);
         if (ifCondition4) {
             com.keralty.aeconfiguraciones.viewmodel.institucionmatneo.siu.CambiarTipoIdentificacionRequest step40Request = new com.keralty.aeconfiguraciones.viewmodel.institucionmatneo.siu.CambiarTipoIdentificacionRequest();
             step40Request.setInstitucionMatNeoCambiarTipoIdentificacionpthisInstitucionMatNeoInstance(institucionMatNeoTMODIFICARpthisInstitucionMatNeo);

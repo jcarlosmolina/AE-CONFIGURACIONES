@@ -48,6 +48,7 @@ import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandOVParameter;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandPathAttribute;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandPathInstance;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandSubQuery;
+import com.keralty.aeconfiguraciones.utils.Utilities;
 import com.keralty.aeconfiguraciones.viewmodel.FilterRequest;
 import com.keralty.aeconfiguraciones.viewmodel.FilterVariableRequest;
 import com.keralty.aeconfiguraciones.viewmodel.InstanceResponseViewModel;
@@ -1849,7 +1850,7 @@ public class PlanesService extends AbstractService {
         step1Request.setPlanessincronizarpCodigoLegal(planesTSINCRONIZARpCodigoLegal);
         planesSrv.sincronizarImplementation(step1Request);
 
-        boolean guard2 = !(planesTSINCRONIZARptpevcProducto.equalsObject(planesTSINCRONIZARpthisPlan.getProductoT()));
+        boolean guard2 = !Utilities.isEqual(planesTSINCRONIZARptpevcProducto, planesTSINCRONIZARpthisPlan.getProductoT());
 
         if (guard2) {
             com.keralty.aeconfiguraciones.viewmodel.planes.siu.CambPlanDeProductoRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.planes.siu.CambPlanDeProductoRequest();

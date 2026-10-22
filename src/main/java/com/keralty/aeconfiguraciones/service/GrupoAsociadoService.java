@@ -34,6 +34,7 @@ import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandNull;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandOVParameter;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandPathAttribute;
 import com.keralty.aeconfiguraciones.sqlutils.SQLWhereOperandPathInstance;
+import com.keralty.aeconfiguraciones.utils.Utilities;
 import com.keralty.aeconfiguraciones.viewmodel.FilterRequest;
 import com.keralty.aeconfiguraciones.viewmodel.FilterVariableRequest;
 import com.keralty.aeconfiguraciones.viewmodel.InstanceResponseViewModel;
@@ -1379,7 +1380,7 @@ public class GrupoAsociadoService extends AbstractService {
         step1Request.setGrupoAsociadosincronizarpCodigoLegal(grupoAsociadoTSINCRONIZARptpCodigoLegal);
         grupoAsociadoSrv.sincronizarImplementation(step1Request);
 
-        boolean guard2 = !(grupoAsociadoTSINCRONIZARpthisGrupoAsociado.getPlanT().equalsObject(grupoAsociadoTSINCRONIZARptpevcPlan));
+        boolean guard2 = !Utilities.isEqual(grupoAsociadoTSINCRONIZARpthisGrupoAsociado.getPlanT(), grupoAsociadoTSINCRONIZARptpevcPlan);
 
         if (guard2) {
             com.keralty.aeconfiguraciones.viewmodel.grupoasociado.siu.CambPlanGrupoAsociadoRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.grupoasociado.siu.CambPlanGrupoAsociadoRequest();
@@ -1388,7 +1389,7 @@ public class GrupoAsociadoService extends AbstractService {
             grupoAsociadoSrv.cambPlanGrupoAsociadoImplementation(step2Request, true);
         }
 
-        boolean guard3 = !(grupoAsociadoTSINCRONIZARpthisGrupoAsociado.getProductoT().equalsObject(grupoAsociadoTSINCRONIZARptpevcProducto));
+        boolean guard3 = !Utilities.isEqual(grupoAsociadoTSINCRONIZARpthisGrupoAsociado.getProductoT(), grupoAsociadoTSINCRONIZARptpevcProducto);
 
         if (guard3) {
             com.keralty.aeconfiguraciones.viewmodel.grupoasociado.siu.CambProductoGrupoAsociadoRequest step3Request = new com.keralty.aeconfiguraciones.viewmodel.grupoasociado.siu.CambProductoGrupoAsociadoRequest();
