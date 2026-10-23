@@ -19,7 +19,7 @@ public class JWTTokenService implements TokenService {
     String tokenExpirationInSeconds;
     
     @Override
-    public String issue(User user) {
+    public String issue(User user, String misesionid) {
     	long tokenExpiratiLong;
     	try {
     		tokenExpiratiLong = tokenExpirationInSeconds != null && !tokenExpirationInSeconds.isEmpty()
@@ -32,14 +32,21 @@ public class JWTTokenService implements TokenService {
         .upn(user.getUsername())
         .groups(new HashSet<>(user.getRoles()))
         .expiresIn(Duration.ofSeconds(tokenExpiratiLong))
+        .claim("misesionid", misesionid != null ? misesionid : "")
         .sign();
         return token;
     }
 
     @Override
+    public String issue(User user) {
+    	return issue(user, null);
+    }  
+
+    @Override
     public String renew(JsonWebToken jwt) {
+    	String misesionid = jwt.getClaim("misesionid");
         User user = new User(jwt.getName(), "", Lists.newArrayList(jwt.getGroups()), jwt.getClaim("facetName"));
-        return issue(user);
+        return issue(user, misesionid);
     }
     
 }

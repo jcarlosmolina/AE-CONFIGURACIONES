@@ -48,11 +48,17 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.POST;
 import org.eclipse.microprofile.jwt.JsonWebToken;
 
+import com.keralty.aeconfiguraciones.service.GlobalServicesItSelf;
+import org.eclipse.microprofile.rest.client.inject.RestClient;
+
 @Path("/api/GlobalServicesApi")
 @RequestScoped
 public class GlobalServicesApi {
 
     GlobalServicesService service;
+
+    @RestClient
+    GlobalServicesItSelf globalServicesItSelf;
 
     public GlobalServicesApi(GlobalServicesService service, JsonWebToken jwt) {
         this.service = service;
@@ -371,6 +377,16 @@ public class GlobalServicesApi {
     @Path(value = "/OGSINCRONIZARPARAMETRICAS")
     @RolesAllowed({"SuperAdmin","UsuarioSistemaExterno"})
     public ServiceResponse oGSINCRONIZARPARAMETRICAS(OGSINCRONIZARPARAMETRICASRequest request) {
+    	// Llama a un REST que es el mismo, pero sin esperar respuesta
+    	globalServicesItSelf.oGSINCRONIZARPARAMETRICAS_Async(request);
+		// Devolvemos Ok 
+    	return new ServiceResponse();
+    }
+
+    @POST
+    @Path(value = "/OGSINCRONIZARPARAMETRICAS_Async")
+    @RolesAllowed({"SuperAdmin","UsuarioSistemaExterno"})
+    public ServiceResponse oGSINCRONIZARPARAMETRICAS_Async(OGSINCRONIZARPARAMETRICASRequest request) {
         return service.oGSINCRONIZARPARAMETRICAS(request);
     }
 

@@ -30,9 +30,16 @@ public final class STDFunctions {
 	
 	private static SecureRandom random = new SecureRandom();
 
+	public static final String MSGERRORTECNICO = "Estamos presentando fallas tecnicas. Pruebe de nuevo pasados unos minutos.";
+	
 	private STDFunctions() {
 
 	}
+
+	public static String getTextoErrorUsuarioFinal(String codigo) {
+		if (codigo != null) return MSGERRORTECNICO + " " + codigo;
+		return MSGERRORTECNICO;
+	}	
 
 	/**
 	 * Sets date formats

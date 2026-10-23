@@ -43,7 +43,23 @@ import com.keralty.aeconfiguraciones.persistence.TipoSucursalC;
 import com.keralty.aeconfiguraciones.persistence.UsuarioSistemaExterno;
 import com.keralty.aeconfiguraciones.repository.GlobalServicesJpaRepository;
 import com.keralty.aeconfiguraciones.viewmodel.ServiceResponse;
+import com.keralty.integraciones.organization.getorganization.ConsultarOrganizationResponse;
+import com.keralty.integraciones.organization.getorganization.OrganizationUtils;
+import com.keralty.integraciones.organization.getorganization.response.Contact;
+import com.keralty.integraciones.organization.getorganization.response.Entry;
+import com.keralty.integraciones.organization.getorganization.response.PurposeCoding;
+import com.keralty.integraciones.parametricas.DatoParametrica;
+import com.keralty.integraciones.parametricas.ParametricasUtils;
+import java.util.ArrayList;
+import java.util.List;
+import com.keralty.aeconfiguraciones.global.FrecuenciaActConstants;
+import com.keralty.aeconfiguraciones.repository.FrecuenciaActJpaRepository;
+import com.keralty.aeconfiguraciones.sqlutils.SQLPopulation;
+import io.quarkus.arc.Arc;
+import org.eclipse.microprofile.rest.client.inject.RestClient;
+
 import jakarta.enterprise.context.ApplicationScoped;
+
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import java.sql.Date;
@@ -52,6 +68,16 @@ import org.slf4j.LoggerFactory;
 @Transactional
 @ApplicationScoped
 public class GlobalServicesService extends AbstractService {
+
+    @Inject
+    ParametricasUtils parametricasUtils;
+
+    @Inject
+    OrganizationUtils organizationUtils;
+
+    @RestClient
+    GlobalServiceDeAEUsuarios globalServiceDeAEUsuarios;
+    
 
     GlobalServicesService globalServicesSrv;
 
@@ -282,15 +308,24 @@ public class GlobalServicesService extends AbstractService {
         }
 
 
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PRODUCTORequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PRODUCTORequest();
-        step1Request.setTGSINC1PRODUCTOptpatrNumero(Long.valueOf(0));
-        step1Request.setTGSINC1PRODUCTOptpatrDescripcion("0");
-        step1Request.setTGSINC1PRODUCTOptpatrCodigoLegal("0");
-        globalServicesSrv.tGSINC1PRODUCTOImplementation(step1Request);
+        String resultado = "Exito";
+        List<DatoParametrica> lista = parametricasUtils.getProductosCORE();
+        if (lista != null && !lista.isEmpty()) {
+	        for(DatoParametrica datoParametrica : lista) {
+	
+	            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PRODUCTORequest req = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PRODUCTORequest();
+	            req.setTGSINC1PRODUCTOptpatrNumero(Long.parseLong(datoParametrica.getCode()));
+	            req.setTGSINC1PRODUCTOptpatrDescripcion(datoParametrica.getName());
+	            req.setTGSINC1PRODUCTOptpatrCodigoLegal(datoParametrica.getLegalCode());
+	            globalServicesSrv.tGSINC1PRODUCTOImplementation(req);
+	        }        
+        } else {
+        	resultado = "No se han recuperado datos de la parametrica";
+        }
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
         step2Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(2));
-        step2Request.setTGFIJARDATOSSINCptResultado("Exito");
+        step2Request.setTGFIJARDATOSSINCptResultado(resultado);
         globalServicesSrv.tGFIJARDATOSSINCImplementation(step2Request);
         return response;
     }
@@ -417,16 +452,25 @@ public class GlobalServicesService extends AbstractService {
         }
 
 
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PLANRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PLANRequest();
-        step1Request.setTGSINC1PLANptpatrNumero(Long.valueOf(0));
-        step1Request.setTGSINC1PLANptpatrCodigo(Long.valueOf(0));
-        step1Request.setTGSINC1PLANptpatrNombre("0");
-        step1Request.setTGSINC1PLANptpatrCodigoLegal("0");
-        globalServicesSrv.tGSINC1PLANImplementation(step1Request);
+        String resultado = "Exito";
+        List<DatoParametrica> lista = parametricasUtils.getPlanesCORE();
+        if (lista != null && !lista.isEmpty()) {
+	        for(DatoParametrica datoParametrica : lista) {
+	
+	            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PLANRequest req = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PLANRequest();
+	            req.setTGSINC1PLANptpatrNumero(Long.parseLong(datoParametrica.getValorDeAdicional("ID_PRODUCTO")));
+	            req.setTGSINC1PLANptpatrCodigo(Long.parseLong(datoParametrica.getCode()));
+	            req.setTGSINC1PLANptpatrNombre(datoParametrica.getName());
+	            req.setTGSINC1PLANptpatrCodigoLegal(datoParametrica.getLegalCode());
+	            globalServicesSrv.tGSINC1PLANImplementation(req);
+	        }          
+        } else {
+        	resultado = "No se han recuperado datos de la parametrica";
+        }
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
         step2Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(1));
-        step2Request.setTGFIJARDATOSSINCptResultado("Exito");
+        step2Request.setTGFIJARDATOSSINCptResultado(resultado);
         globalServicesSrv.tGFIJARDATOSSINCImplementation(step2Request);
         return response;
     }
@@ -513,15 +557,24 @@ public class GlobalServicesService extends AbstractService {
         }
 
 
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PARENTESCORequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PARENTESCORequest();
-        step1Request.setTGSINC1PARENTESCOptpatrCodigo(Long.valueOf(0));
-        step1Request.setTGSINC1PARENTESCOptpatrDescripcion("0");
-        step1Request.setTGSINC1PARENTESCOptpatrNombreCorto("0");
-        globalServicesSrv.tGSINC1PARENTESCOImplementation(step1Request);
+        String resultado = "Exito";
+        List<DatoParametrica> lista = parametricasUtils.getParentescosCORE();
+        if (lista != null && !lista.isEmpty()) {
+	        for(DatoParametrica datoParametrica : lista) {
+	
+	            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PARENTESCORequest req = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PARENTESCORequest();
+	            req.setTGSINC1PARENTESCOptpatrCodigo(Long.parseLong(datoParametrica.getCode()));
+	            req.setTGSINC1PARENTESCOptpatrDescripcion(datoParametrica.getDescription());
+	            req.setTGSINC1PARENTESCOptpatrNombreCorto(datoParametrica.getName());
+	            globalServicesSrv.tGSINC1PARENTESCOImplementation(req);
+	        } 
+        } else {
+        	resultado = "No se han recuperado datos de la parametrica";
+        }
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
         step2Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(10));
-        step2Request.setTGFIJARDATOSSINCptResultado("Exito");
+        step2Request.setTGFIJARDATOSSINCptResultado(resultado);
         globalServicesSrv.tGFIJARDATOSSINCImplementation(step2Request);
         return response;
     }
@@ -601,14 +654,22 @@ public class GlobalServicesService extends AbstractService {
         }
 
 
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PERIODICIDADRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PERIODICIDADRequest();
-        step1Request.setTGSINC1PERIODICIDADptpatrCodigo(Long.valueOf(0));
-        step1Request.setTGSINC1PERIODICIDADptpatrDescripcion("0");
-        globalServicesSrv.tGSINC1PERIODICIDADImplementation(step1Request);
+        String resultado = "Exito";
+        List<DatoParametrica> lista = parametricasUtils.getPeriodicidadesCORE();
+        if (lista != null && !lista.isEmpty()) {
+	        for(DatoParametrica datoParametrica : lista) {
+	            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PERIODICIDADRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PERIODICIDADRequest();
+	            step1Request.setTGSINC1PERIODICIDADptpatrCodigo(Long.parseLong(datoParametrica.getCode()));
+	            step1Request.setTGSINC1PERIODICIDADptpatrDescripcion(datoParametrica.getDescription());
+	            globalServicesSrv.tGSINC1PERIODICIDADImplementation(step1Request);
+	        }
+        } else {
+        	resultado = "No se han recuperado datos de la parametrica";
+        }
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
         step2Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(12));
-        step2Request.setTGFIJARDATOSSINCptResultado("Exito");
+        step2Request.setTGFIJARDATOSSINCptResultado(resultado);
         globalServicesSrv.tGFIJARDATOSSINCImplementation(step2Request);
         return response;
     }
@@ -688,14 +749,23 @@ public class GlobalServicesService extends AbstractService {
         }
 
 
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOCONTRATORequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOCONTRATORequest();
-        step1Request.setTGSINC1ESTADOCONTRATOptpatrCodigo(Long.valueOf(0));
-        step1Request.setTGSINC1ESTADOCONTRATOptpatrDescripcion("0");
-        globalServicesSrv.tGSINC1ESTADOCONTRATOImplementation(step1Request);
+        String resultado = "Exito";
+        List<DatoParametrica> lista = parametricasUtils.getEstadosContratoCORE();
+        if (lista != null && !lista.isEmpty()) {
+	        for(DatoParametrica datoParametrica : lista) {
+	
+	            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOCONTRATORequest req = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOCONTRATORequest();
+	            req.setTGSINC1ESTADOCONTRATOptpatrCodigo(Long.parseLong(datoParametrica.getCode()));
+	            req.setTGSINC1ESTADOCONTRATOptpatrDescripcion(datoParametrica.getDescription());
+	            globalServicesSrv.tGSINC1ESTADOCONTRATOImplementation(req);
+	        }        
+        } else {
+        	resultado = "No se han recuperado datos de la parametrica";
+        }
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
         step2Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(17));
-        step2Request.setTGFIJARDATOSSINCptResultado("Exito");
+        step2Request.setTGFIJARDATOSSINCptResultado(resultado);
         globalServicesSrv.tGFIJARDATOSSINCImplementation(step2Request);
         return response;
     }
@@ -775,14 +845,23 @@ public class GlobalServicesService extends AbstractService {
         }
 
 
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOBENEFICIARIORequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOBENEFICIARIORequest();
-        step1Request.setTGSINC1ESTADOBENEFICIARIOptpatrCodigo(Long.valueOf(0));
-        step1Request.setTGSINC1ESTADOBENEFICIARIOptpatrDescripcion("0");
-        globalServicesSrv.tGSINC1ESTADOBENEFICIARIOImplementation(step1Request);
+        String resultado = "Exito";
+        List<DatoParametrica> lista = parametricasUtils.getEstadosBeneficiarioCORE();
+        if (lista != null && !lista.isEmpty()) {
+	        for(DatoParametrica datoParametrica : lista) {
+	
+	            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOBENEFICIARIORequest req = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOBENEFICIARIORequest();
+	            req.setTGSINC1ESTADOBENEFICIARIOptpatrCodigo(Long.parseLong(datoParametrica.getCode()));
+	            req.setTGSINC1ESTADOBENEFICIARIOptpatrDescripcion(datoParametrica.getDescription());
+	            globalServicesSrv.tGSINC1ESTADOBENEFICIARIOImplementation(req);
+	        }
+        } else {
+        	resultado = "No se han recuperado datos de la parametrica";
+        }
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
         step2Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(20));
-        step2Request.setTGFIJARDATOSSINCptResultado("Exito");
+        step2Request.setTGFIJARDATOSSINCptResultado(resultado);
         globalServicesSrv.tGFIJARDATOSSINCImplementation(step2Request);
         return response;
     }
@@ -863,14 +942,23 @@ public class GlobalServicesService extends AbstractService {
         }
 
 
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1REGIONALRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1REGIONALRequest();
-        step1Request.setTGSINC1REGIONALptpatrCodigo(Long.valueOf(0));
-        step1Request.setTGSINC1REGIONALptpatrDescripcion("0");
-        globalServicesSrv.tGSINC1REGIONALImplementation(step1Request);
+        String resultado = "Exito";
+        List<DatoParametrica> lista = parametricasUtils.getRegionalesCORE();
+        if (lista != null && !lista.isEmpty()) {
+	        for(DatoParametrica datoParametrica : lista) {
+	
+	            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1REGIONALRequest req = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1REGIONALRequest();
+	            req.setTGSINC1REGIONALptpatrCodigo(Long.parseLong(datoParametrica.getCode()));
+	            req.setTGSINC1REGIONALptpatrDescripcion(datoParametrica.getDescription());
+	            globalServicesSrv.tGSINC1REGIONALImplementation(req);
+	        }
+        } else {
+        	resultado = "No se han recuperado datos de la parametrica";
+        }
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
         step2Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(21));
-        step2Request.setTGFIJARDATOSSINCptResultado("Exito");
+        step2Request.setTGFIJARDATOSSINCptResultado(resultado);
         globalServicesSrv.tGFIJARDATOSSINCImplementation(step2Request);
         return response;
     }
@@ -954,11 +1042,102 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse oGSINCSUCURSALES(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCSUCURSALESRequest request) {
         ServiceResponse response = new ServiceResponse();
+		String resultado = "Exito";
+		int numFallos = 0;
+		int numSucursalesSincronizadas = 0;
         try {
-            response = globalServicesSrv.oGSINCSUCURSALESTxn(request);
+    		ConsultarOrganizationResponse sucursales = organizationUtils.consultarSucursales();
+    		org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("Inicio proceso sincronizacion sucursales");
+    		if (sucursales == null || sucursales.getGetOrganizationResponse() == null || !sucursales.isExito()) {
+    			org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("    Error al recuperar sucursales");
+    			return response;
+    		}
+
+    		List<String> listaCodigos = new ArrayList<String>();
+    		
+    		for (Entry entry : sucursales.getGetOrganizationResponse().getEntry()) {
+    			if (entry.getResource() != null && entry.getResource().getSchema() != null) {
+    				String regional = entry.getResource().getSchema().getRegional();
+    				String nombre = entry.getResource().getSchema().getName();
+    				String codigo = "";
+    				
+    				
+					// Validación del Estado de la Sucursal (Requiere "Activa"):
+					//	Se debe verificar el estado de la sucursal a través del siguiente objeto:
+					//
+					//	Sucursal Activa:
+					//	{
+					//	"system": "BH/branchType",
+					//	"use": "No Principal",
+					//	"status": "Activa"
+					//	}
+    				PurposeCoding estado = null;
+    				if (entry.getResource().getSchema().getType() != null && entry.getResource().getSchema().getType().getCoding() != null) {
+    		    		for (PurposeCoding code : entry.getResource().getSchema().getType().getCoding()) {
+    		    			if ("BH/branchType".equals(code.getSystem())) {
+    		    				estado = code;
+    		    				break;
+    		    			}
+    		    		}
+    		    	}    				
+    				if (estado == null || !"Activa".equals(estado.getStatus())) {
+    					continue;
+    				}
+
+    				
+    				if (entry.getResource().getSchema().getIdentifier() != null && !entry.getResource().getSchema().getIdentifier().isEmpty()) {
+    					codigo = entry.getResource().getSchema().getIdentifier().get(0).getValue();
+    					// Comprobamos que no la hayamos añadido previamente
+    					if (!listaCodigos.contains(codigo)) {
+    						listaCodigos.add(codigo);	    					try {
+	    						com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1SUCURSALRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1SUCURSALRequest();
+	    						step1Request.setTGSINC1SUCURSALptpatrCodigo(Long.valueOf(regional));
+	    						step1Request.setTGSINC1SUCURSALptpatrDescripcion(nombre);
+	    						step1Request.setTGSINC1SUCURSALptpatrCodigoSucursal(Long.valueOf(codigo));
+	    						ServiceResponse resp = globalServicesSrv.tGSINC1SUCURSALImplementation(step1Request);
+	    						if (!resp.isOk()) {
+	        						numFallos++;
+	        						org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("    Error al sincronizar una sucursal");
+	        						org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("    Datos recibidos:");
+	        						org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("        Codigo: " + codigo);
+	        						org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("        Nombre: " + nombre);
+	        						org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("        Regional: " + regional);
+	        						org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("        Error: " + resp.getResultCode() + " - " + resp.getResultDescription());
+	    						} else {
+	    							numSucursalesSincronizadas++;
+	    						}
+	    					} catch(Exception e) {
+	    						numFallos++;
+	    						org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("    Error al sincronizar una sucursal");
+	    						org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("    Datos recibidos:");
+	    						org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("        Codigo: " + codigo);
+	    						org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("        Nombre: " + nombre);
+	    						org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("        Regional: " + regional);
+	    						org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("        Error: " + e.getMessage());
+	    					}
+    					} 
+    				} else {
+						numFallos++;
+    					org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("    Identifier vacio");
+    				}
+    			} else {
+					numFallos++;
+    				org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("    Schema vacio");
+    			}
+    		}
+    		if (numFallos > 0) {
+    			resultado = String.valueOf(numFallos) + " fallos de " + String.valueOf(sucursales.getGetOrganizationResponse().getEntry().size());
+    		}
+
+
+    		com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest requestFijar = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
+    		requestFijar.setTGFIJARDATOSSINCptNumParametrica(16L);
+    		requestFijar.setTGFIJARDATOSSINCptResultado(resultado);
+    		globalServicesSrv.tGFIJARDATOSSINC(requestFijar );
         } catch (Exception e) {
             response.setException(e);
         }
+		org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("Fin proceso sincronizacion sucursales. Sincronizadas: " + numSucursalesSincronizadas + ". Fallos:" + numFallos);
         return response;
     }
 
@@ -983,21 +1162,6 @@ public class GlobalServicesService extends AbstractService {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCSUCURSALESRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
 
-        if (request == null) {
-            throw new IllegalArgumentException("Invalid request to oGSINCSUCURSALESImplementation");
-        }
-
-
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1SUCURSALRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1SUCURSALRequest();
-        step1Request.setTGSINC1SUCURSALptpatrCodigo(Long.valueOf(0));
-        step1Request.setTGSINC1SUCURSALptpatrDescripcion("0");
-        step1Request.setTGSINC1SUCURSALptpatrCodigoSucursal(Long.valueOf(0));
-        globalServicesSrv.tGSINC1SUCURSALImplementation(step1Request);
-
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
-        step2Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(16));
-        step2Request.setTGFIJARDATOSSINCptResultado("Exito");
-        globalServicesSrv.tGFIJARDATOSSINCImplementation(step2Request);
         return response;
     }
 
@@ -1166,11 +1330,93 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse oGSINCGRUPOSASOCIADOS(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCGRUPOSASOCIADOSRequest request) {
         ServiceResponse response = new ServiceResponse();
+    	String textoLogParametrica = "Exito";
         try {
-            response = globalServicesSrv.oGSINCGRUPOSASOCIADOSTxn(request);
+	        org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("Inicio proceso sincronizacion Grupos Asociados");
+
+	    	int numTotal = 0;
+	    	int numFallos = 0;
+            String codigoLegalProducto = null;
+            String codigoLegalPlan = null;
+            String codigoTarifa = null;
+            String estado = null;
+            Long estadoInt = null;
+            Long codigoGA = null;
+            List<DatoParametrica> grupos = parametricasUtils.getGruposAsociadosCORE();
+	        if (grupos == null) {
+	            textoLogParametrica = "    Grupos asociados no recuperados";
+	            org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info(textoLogParametrica);        
+	        } else {         
+	        	numTotal = grupos.size();
+	        	
+	        	for(DatoParametrica grp : grupos) {
+	
+	            	codigoLegalProducto = grp.getValorDeAdicional("codProducto");
+	            	codigoLegalPlan = grp.getValorDeAdicional("codPlan");
+	            	try {
+	            		codigoGA = Long.valueOf(grp.getCode());
+	            	} catch (Exception e) {
+	            		//Si da error es porque no ha podido convertir a Integer, entonces este grupo no lo creamos
+	            		codigoGA = null;
+	            	}
+	
+	            	codigoTarifa = grp.getValorDeAdicional("codTarifa");
+	
+	            	estado = grp.getValorDeAdicional("estado");
+	            	estadoInt = !estado.isEmpty() ? Long.parseLong(estado) : 1;
+	
+	
+	            	String fechaInicioVigenciaStr = grp.getValorDeAdicional("fechaInicio");
+	            	String fechaFinVigenciaStr = grp.getValorDeAdicional("fechaFin");
+	
+	            	java.sql.Date fechaInicio;
+	            	try {
+	            		fechaInicio = ParametricasUtils.parseDate(fechaInicioVigenciaStr, "dd/MM/yyyy hh:mm:ss");
+	            	} catch ( Exception e) {
+	            		fechaInicio = null;
+	            	}
+	
+	            	java.sql.Date fechaFin;
+	            	try {
+	            		fechaFin = ParametricasUtils.parseDate(fechaFinVigenciaStr, "dd/MM/yyyy hh:mm:ss");
+	            	} catch ( Exception e) {
+	            		fechaFin = null;
+	            	}
+	            	if (codigoGA != null) {
+	            		com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1GRUPOASOCRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1GRUPOASOCRequest();
+	            		step1Request.setTGSINC1GRUPOASOCptpatrNumero(codigoLegalProducto);
+	            		step1Request.setTGSINC1GRUPOASOCptpatrCodigo(codigoLegalPlan);
+	            		step1Request.setTGSINC1GRUPOASOCptpatrCodigoLegal(grp.getLegalCode());
+	            		step1Request.setTGSINC1GRUPOASOCptpatrDescripcion(grp.getDescription());
+	            		step1Request.setTGSINC1GRUPOASOCptpatrFIniVigencia(fechaInicio);
+	            		step1Request.setTGSINC1GRUPOASOCptpatrFFinVigencia(fechaFin);
+	            		step1Request.setTGSINC1GRUPOASOCptpatrEstado(estadoInt);
+	            		step1Request.setTGSINC1GRUPOASOCptCodTarifaCORE(codigoTarifa);
+	            		step1Request.setTGSINC1GRUPOASOCptpatrCodigoGA(codigoGA);
+	            		ServiceResponse resp = globalServicesSrv.tGSINC1GRUPOASOC( step1Request);
+	            		if (!resp.isOk()) {
+			                String textoParaError = "Error sincronizando Grupo Asociado con Codigo: " + grp.getLegalCode();
+			        		org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("    " + textoParaError);
+			        		org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("    " + resp.getResultCode() + " " + resp.getResultDescription());
+
+	            			numFallos++;
+	            		}
+	            	}
+	            }        
+	
+		        textoLogParametrica = "Exito " + numTotal;
+		        if (numFallos> 0){
+		        	textoLogParametrica = String.valueOf(numFallos) + " fallos de " + String.valueOf(numTotal);
+		        }
+	    		com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest requestFijar = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
+	    		requestFijar.setTGFIJARDATOSSINCptNumParametrica(3L);
+	    		requestFijar.setTGFIJARDATOSSINCptResultado(textoLogParametrica);
+	    		globalServicesSrv.tGFIJARDATOSSINC(requestFijar );
+	        }
         } catch (Exception e) {
             response.setException(e);
         }
+        org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("Fin proceso sincronizacion Grupos Asociados. Resultado: " + textoLogParametrica);
         return response;
     }
 
@@ -1195,31 +1441,6 @@ public class GlobalServicesService extends AbstractService {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCGRUPOSASOCIADOSRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
 
-        if (request == null) {
-            throw new IllegalArgumentException("Invalid request to oGSINCGRUPOSASOCIADOSImplementation");
-        }
-
-
-        try {
-            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1GRUPOASOCRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1GRUPOASOCRequest();
-            step1Request.setTGSINC1GRUPOASOCptpatrNumero("0");
-            step1Request.setTGSINC1GRUPOASOCptpatrCodigo("0");
-            step1Request.setTGSINC1GRUPOASOCptpatrCodigoLegal("0");
-            step1Request.setTGSINC1GRUPOASOCptpatrDescripcion("0");
-            step1Request.setTGSINC1GRUPOASOCptpatrFIniVigencia(STDFunctions.systemDateFun());
-            step1Request.setTGSINC1GRUPOASOCptpatrFFinVigencia(STDFunctions.systemDateFun());
-            step1Request.setTGSINC1GRUPOASOCptpatrEstado(Long.valueOf(0));
-            step1Request.setTGSINC1GRUPOASOCptCodTarifaCORE("0");
-            step1Request.setTGSINC1GRUPOASOCptpatrCodigoGA(Long.valueOf(0));
-            globalServicesSrv.tGSINC1GRUPOASOCTxn(step1Request);
-        } catch (Exception e) { }
-
-        try {
-            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
-            step2Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(3));
-            step2Request.setTGFIJARDATOSSINCptResultado("Exito");
-            globalServicesSrv.tGFIJARDATOSSINCTxn(step2Request);
-        } catch (Exception e) { }
         return response;
     }
 
@@ -1301,15 +1522,24 @@ public class GlobalServicesService extends AbstractService {
         }
 
 
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOCIVILRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOCIVILRequest();
-        step1Request.setTGSINC1ESTADOCIVILptpatrCodigo(Long.valueOf(0));
-        step1Request.setTGSINC1ESTADOCIVILptpatrDescripcion("0");
-        step1Request.setTGSINC1ESTADOCIVILptpatrNombreCorto("0");
-        globalServicesSrv.tGSINC1ESTADOCIVILImplementation(step1Request);
+        String resultado = "Exito";
+        List<DatoParametrica> lista = parametricasUtils.getEstadosCivilesCORE();
+        if (lista != null && !lista.isEmpty()) {
+	        for(DatoParametrica datoParametrica : lista) {
+	
+	            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOCIVILRequest req = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOCIVILRequest();
+	            req.setTGSINC1ESTADOCIVILptpatrCodigo(Long.parseLong(datoParametrica.getCode()));
+	            req.setTGSINC1ESTADOCIVILptpatrNombreCorto(datoParametrica.getName());
+	            req.setTGSINC1ESTADOCIVILptpatrDescripcion(datoParametrica.getDescription());
+	            globalServicesSrv.tGSINC1ESTADOCIVILImplementation(req);
+	        }
+        } else {
+        	resultado = "No se han recuperado datos de la parametrica";
+        }
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
         step2Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(7));
-        step2Request.setTGFIJARDATOSSINCptResultado("Exito");
+        step2Request.setTGFIJARDATOSSINCptResultado(resultado);
         globalServicesSrv.tGFIJARDATOSSINCImplementation(step2Request);
         return response;
     }
@@ -1391,15 +1621,23 @@ public class GlobalServicesService extends AbstractService {
         }
 
 
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1DEPARTAMENTORequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1DEPARTAMENTORequest();
-        step1Request.setTGSINC1DEPARTAMENTOptpatrCodigo(Long.valueOf(0));
-        step1Request.setTGSINC1DEPARTAMENTOptpatrDescripcion("0");
-        step1Request.setTGSINC1DEPARTAMENTOptpatrCodigoLegal("0");
-        globalServicesSrv.tGSINC1DEPARTAMENTOImplementation(step1Request);
+        String resultado = "Exito";
+        List<DatoParametrica> lista = parametricasUtils.getDepartamentosCORE();
+        if (lista != null && !lista.isEmpty()) {
+        	for(DatoParametrica datoParametrica : lista) {
+	            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1DEPARTAMENTORequest req = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1DEPARTAMENTORequest();
+	            req.setTGSINC1DEPARTAMENTOptpatrCodigo(Long.parseLong(datoParametrica.getCode()));
+	            req.setTGSINC1DEPARTAMENTOptpatrCodigoLegal(datoParametrica.getLegalCode());
+	            req.setTGSINC1DEPARTAMENTOptpatrDescripcion(datoParametrica.getDescription());
+	            globalServicesSrv.tGSINC1DEPARTAMENTOImplementation(req);
+	        }
+        } else {
+        	resultado = "No se han recuperado datos de la parametrica";
+        }
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
         step2Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(5));
-        step2Request.setTGFIJARDATOSSINCptResultado("Exito");
+        step2Request.setTGFIJARDATOSSINCptResultado(resultado);
         globalServicesSrv.tGFIJARDATOSSINCImplementation(step2Request);
         return response;
     }
@@ -1446,11 +1684,55 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse oGSINCOMPANIAS(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCOMPANIASRequest request) {
         ServiceResponse response = new ServiceResponse();
+        String resultado = "Exito";
         try {
-            response = globalServicesSrv.oGSINCOMPANIASTxn(request);
-        } catch (Exception e) {
-            response.setException(e);
-        }
+        	 ConsultarOrganizationResponse sucursales = organizationUtils.consultarCompanyas();
+             org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("Inicio proceso sincronizacion companyas");
+             if (sucursales == null || sucursales.getGetOrganizationResponse() == null || !sucursales.isExito()) {
+             	org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("    Error al recuperar companyas");
+             	return response;
+             }
+             
+             String numTotal = String.valueOf(sucursales.getGetOrganizationResponse().getEntry().size());
+             int numFallos = 0;
+             for (Entry entry : sucursales.getGetOrganizationResponse().getEntry()) {
+         		String codigo = entry.getCodeBySystem("BH/codeLegal");
+         		String nombre = entry.getNombre();
+            	if (codigo != null && !codigo.isEmpty()) {
+         			try {
+         		        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1COMPANIARequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1COMPANIARequest();
+         		        step1Request.setTGSINC1COMPANIAptpatrCodigo(Long.valueOf(codigo));
+         		        step1Request.setTGSINC1COMPANIAptpatrNombre(nombre);
+         		        globalServicesSrv.tGSINC1COMPANIAImplementation(step1Request);        				
+         			} catch(Exception e) {
+         				numFallos++;
+         				org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("    Error al sincronizar una companya");
+         				org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("    Datos recibidos:");
+         				org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("        Codigo: " + codigo);
+         				org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("        Nombre: " + nombre);
+         				org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("        Error: " + e.getMessage());
+         			}
+             			
+            	} else {
+    				numFallos++;
+        			org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("    BH/codeLegal no encontrado para " + nombre);
+            	}
+             }
+             
+			if (numFallos > 0) {
+				resultado = String.valueOf(numFallos) + " fallos de " + numTotal;
+			}
+	         
+			com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest requestFijar = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
+			requestFijar.setTGFIJARDATOSSINCptNumParametrica(11L);
+			requestFijar.setTGFIJARDATOSSINCptResultado(resultado);
+			globalServicesSrv.tGFIJARDATOSSINC(requestFijar );
+		
+         } catch (Exception e) {
+             response.setException(e);
+         }
+		org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("    " + resultado);
+        org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("Fin proceso sincronizacion companyas");
         return response;
     }
 
@@ -1475,20 +1757,6 @@ public class GlobalServicesService extends AbstractService {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCOMPANIASRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
 
-        if (request == null) {
-            throw new IllegalArgumentException("Invalid request to oGSINCOMPANIASImplementation");
-        }
-
-
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1COMPANIARequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1COMPANIARequest();
-        step1Request.setTGSINC1COMPANIAptpatrCodigo(Long.valueOf(0));
-        step1Request.setTGSINC1COMPANIAptpatrNombre("0");
-        globalServicesSrv.tGSINC1COMPANIAImplementation(step1Request);
-
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
-        step2Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(11));
-        step2Request.setTGFIJARDATOSSINCptResultado("Exito");
-        globalServicesSrv.tGFIJARDATOSSINCImplementation(step2Request);
         return response;
     }
 
@@ -1569,11 +1837,46 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse oGSINCMUNICIPIOS(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCMUNICIPIOSRequest request) {
         ServiceResponse response = new ServiceResponse();
+        String textoLogParametrica = "Exito";
         try {
-            response = globalServicesSrv.oGSINCMUNICIPIOSTxn(request);
+            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCDEPARTAMENTOSRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCDEPARTAMENTOSRequest();
+            globalServicesSrv.tGSINCDEPARTAMENTOS(step1Request);
+
+	        int numFallos = 0;
+
+	        org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("Inicio proceso sincronizacion Municipios");
+            for(DatoParametrica datoParametrica : parametricasUtils.getMunicipiosCORE()) {
+
+            	boolean validoEPS = false;
+            	if ("1".equalsIgnoreCase(datoParametrica.getValorDeAdicional(("coberturaGeografica")))) {
+        			validoEPS = true;
+        		}
+            	
+                com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1MUNICIPIORequest req = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1MUNICIPIORequest();
+                req.setTGSINC1MUNICIPIOptpatrCodigo(Long.parseLong(datoParametrica.getCode()));
+                req.setTGSINC1MUNICIPIOptpatrCodigoLegal(datoParametrica.getLegalCode());
+                req.setTGSINC1MUNICIPIOptpatrDescripcion(datoParametrica.getDescription());
+                req.setTGSINC1MUNICIPIOptpatrEsValidoEPS(validoEPS);
+                ServiceResponse resp = globalServicesSrv.tGSINC1MUNICIPIO(req);
+                if ( !resp.isOk()) {
+	        		org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("    Error sincronizando Municipio: " + datoParametrica.getCode() + " " + resp.getResultCode() + " - " + resp.getResultDescription());
+	        		numFallos++;
+                }
+                
+            }          
+
+	        textoLogParametrica = "Exito";
+	        if (numFallos > 0){
+	        	textoLogParametrica = String.valueOf(numFallos) + " fallos de " + String.valueOf(numFallos);
+	        }
+    		com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest requestFijar = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
+    		requestFijar.setTGFIJARDATOSSINCptNumParametrica(6L);
+    		requestFijar.setTGFIJARDATOSSINCptResultado(textoLogParametrica);
+    		globalServicesSrv.tGFIJARDATOSSINC(requestFijar );
         } catch (Exception e) {
             response.setException(e);
         }
+        org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("Fin proceso sincronizacion Municipios. Resultado: " + textoLogParametrica);
         return response;
     }
 
@@ -1598,31 +1901,6 @@ public class GlobalServicesService extends AbstractService {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCMUNICIPIOSRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
 
-        if (request == null) {
-            throw new IllegalArgumentException("Invalid request to oGSINCMUNICIPIOSImplementation");
-        }
-
-
-        try {
-            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCDEPARTAMENTOSRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCDEPARTAMENTOSRequest();
-            globalServicesSrv.tGSINCDEPARTAMENTOSTxn(step1Request);
-        } catch (Exception e) { }
-
-        try {
-            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1MUNICIPIORequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1MUNICIPIORequest();
-            step2Request.setTGSINC1MUNICIPIOptpatrCodigo(Long.valueOf(0));
-            step2Request.setTGSINC1MUNICIPIOptpatrDescripcion("");
-            step2Request.setTGSINC1MUNICIPIOptpatrCodigoLegal("");
-            step2Request.setTGSINC1MUNICIPIOptpatrEsValidoEPS(Boolean.FALSE);
-            globalServicesSrv.tGSINC1MUNICIPIOTxn(step2Request);
-        } catch (Exception e) { }
-
-        try {
-            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step3Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
-            step3Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(6));
-            step3Request.setTGFIJARDATOSSINCptResultado("Exito");
-            globalServicesSrv.tGFIJARDATOSSINCTxn(step3Request);
-        } catch (Exception e) { }
         return response;
     }
 
@@ -1703,14 +1981,23 @@ public class GlobalServicesService extends AbstractService {
         }
 
 
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPODIRECCIONRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPODIRECCIONRequest();
-        step1Request.setTGSINC1TIPODIRECCIONptpatrCodigo(Long.valueOf(0));
-        step1Request.setTGSINC1TIPODIRECCIONptpatrDescripcion("0");
-        globalServicesSrv.tGSINC1TIPODIRECCIONImplementation(step1Request);
+        String resultado = "Exito";
+        List<DatoParametrica> lista = parametricasUtils.getTiposDireccionCORE();
+        if (lista != null && !lista.isEmpty()) {
+	        for(DatoParametrica datoParametrica : lista) {
+	
+	            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPODIRECCIONRequest req = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPODIRECCIONRequest();
+	            req.setTGSINC1TIPODIRECCIONptpatrCodigo(Long.parseLong(datoParametrica.getCode()));
+	            req.setTGSINC1TIPODIRECCIONptpatrDescripcion(datoParametrica.getName());
+	            globalServicesSrv.tGSINC1TIPODIRECCIONImplementation(req);
+	        }         
+        } else {
+        	resultado = "No se han recuperado datos de la parametrica";
+        }
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
         step2Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(18));
-        step2Request.setTGFIJARDATOSSINCptResultado("Exito");
+        step2Request.setTGFIJARDATOSSINCptResultado(resultado);
         globalServicesSrv.tGFIJARDATOSSINCImplementation(step2Request);
         return response;
     }
@@ -1794,14 +2081,23 @@ public class GlobalServicesService extends AbstractService {
         }
 
 
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOPERSONARequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOPERSONARequest();
-        step1Request.setTGSINC1ESTADOPERSONAptpatrCodigo(Long.valueOf(0));
-        step1Request.setTGSINC1ESTADOPERSONAptpatrDescripcion("0");
-        globalServicesSrv.tGSINC1ESTADOPERSONAImplementation(step1Request);
+        String resultado = "Exito";
+        List<DatoParametrica> lista = parametricasUtils.getEstadosPersonaCORE();
+        if (lista != null && !lista.isEmpty()) {
+	        for(DatoParametrica datoParametrica : lista) {
+	
+	            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOPERSONARequest req = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ESTADOPERSONARequest();
+	            req.setTGSINC1ESTADOPERSONAptpatrCodigo(Long.parseLong(datoParametrica.getCode()));
+	            req.setTGSINC1ESTADOPERSONAptpatrDescripcion(datoParametrica.getDescription());
+	            globalServicesSrv.tGSINC1ESTADOPERSONAImplementation(req);
+	        }
+        } else {
+        	resultado = "No se han recuperado datos de la parametrica";
+        }
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
         step2Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(22));
-        step2Request.setTGFIJARDATOSSINCptResultado("Exito");
+        step2Request.setTGFIJARDATOSSINCptResultado(resultado);
         globalServicesSrv.tGFIJARDATOSSINCImplementation(step2Request);
         return response;
     }
@@ -1883,14 +2179,23 @@ public class GlobalServicesService extends AbstractService {
         }
 
 
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1FORMAPAGORequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1FORMAPAGORequest();
-        step1Request.setTGSINC1FORMAPAGOptpatrCodigo(Long.valueOf(0));
-        step1Request.setTGSINC1FORMAPAGOptpatrDescripcion("0");
-        globalServicesSrv.tGSINC1FORMAPAGOImplementation(step1Request);
+        String resultado = "Exito";
+        List<DatoParametrica> lista = parametricasUtils.getFormasPagoCORE();
+        if (lista != null && !lista.isEmpty()) {
+	        for(DatoParametrica datoParametrica : lista) {
+	
+	            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1FORMAPAGORequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1FORMAPAGORequest();
+	            step1Request.setTGSINC1FORMAPAGOptpatrCodigo(Long.parseLong(datoParametrica.getCode()));
+	            step1Request.setTGSINC1FORMAPAGOptpatrDescripcion(datoParametrica.getDescription());
+	            globalServicesSrv.tGSINC1FORMAPAGOImplementation(step1Request);
+	        }
+        } else {
+        	resultado = "No se han recuperado datos de la parametrica";
+        }
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
         step2Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(15));
-        step2Request.setTGFIJARDATOSSINCptResultado("Exito");
+        step2Request.setTGFIJARDATOSSINCptResultado(resultado);
         globalServicesSrv.tGFIJARDATOSSINCImplementation(step2Request);
         return response;
     }
@@ -1982,15 +2287,24 @@ public class GlobalServicesService extends AbstractService {
         }
 
 
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOIDENTIFICACIONRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOIDENTIFICACIONRequest();
-        step1Request.setTGSINC1TIPOIDENTIFICACIONptpatrCodigo(Long.valueOf(0));
-        step1Request.setTGSINC1TIPOIDENTIFICACIONptpatrDescripcion("0");
-        step1Request.setTGSINC1TIPOIDENTIFICACIONptpatrNombreCorto("0");
-        globalServicesSrv.tGSINC1TIPOIDENTIFICACIONImplementation(step1Request);
+        String resultado = "Exito";
+        List<DatoParametrica> lista = parametricasUtils.getTiposIdentificacionCORE();
+        if (lista != null && !lista.isEmpty()) {
+	        for(DatoParametrica datoParametrica : lista) {
+	
+	            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOIDENTIFICACIONRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOIDENTIFICACIONRequest();
+	            step1Request.setTGSINC1TIPOIDENTIFICACIONptpatrCodigo(Long.parseLong(datoParametrica.getCode()));
+	            step1Request.setTGSINC1TIPOIDENTIFICACIONptpatrDescripcion(datoParametrica.getDescription());
+	            step1Request.setTGSINC1TIPOIDENTIFICACIONptpatrNombreCorto(datoParametrica.getName());
+	            globalServicesSrv.tGSINC1TIPOIDENTIFICACIONImplementation(step1Request);
+	        }        
+        } else {
+        	resultado = "No se han recuperado datos de la parametrica";
+        }
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
         step2Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(19));
-        step2Request.setTGFIJARDATOSSINCptResultado("Exito");
+        step2Request.setTGFIJARDATOSSINCptResultado(resultado);
         globalServicesSrv.tGFIJARDATOSSINCImplementation(step2Request);
         return response;
     }
@@ -2037,11 +2351,55 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse oGSINCEPSS(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCEPSSRequest request) {
         ServiceResponse response = new ServiceResponse();
+        String resultado = "Exito";
         try {
-            response = globalServicesSrv.oGSINCEPSSTxn(request);
+            ConsultarOrganizationResponse listaEPS = organizationUtils.consultarEPS();
+            org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("Inicio proceso sincronizacion EPS");
+            if (listaEPS == null || listaEPS.getGetOrganizationResponse() == null || !listaEPS.isExito()) {
+            	org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("    Error al recuperar EPS");
+            	return response;
+            }
+            
+            String numTotal = String.valueOf(listaEPS.getGetOrganizationResponse().getEntry().size());
+            int numFallos = 0;
+            
+            for (Entry entry : listaEPS.getGetOrganizationResponse().getEntry()) {
+        		String codigo = entry.getCodeBySystem("BH/codeLegal");
+        		String nombre = entry.getNombre();
+            	if (codigo != null && !codigo.isEmpty()) {
+            			try {
+            				com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1EPSRequest  step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1EPSRequest();
+    	        	        step1Request.setTGSINC1EPSptpatrCodigo(Long.valueOf(codigo));
+    	        	        step1Request.setTGSINC1EPSptpatrDescripcion(nombre);
+    	        	        globalServicesSrv.tGSINC1EPSImplementation(step1Request);
+            			} catch(Exception e) {
+            				numFallos++;
+            				org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("    Error al sincronizar una EPS");
+            				org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("    Datos recibidos:");
+            				org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("        Codigo: " + codigo);
+            				org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("        Nombre: " + nombre);
+            				org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("        Error: " + e.getMessage());
+            			}
+            	} else {
+    				numFallos++;
+        			org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("    BH/codeLegal no encontrado para " + nombre);
+            	}
+            }
+            
+    		if (numFallos > 0) {
+    			resultado = String.valueOf(numFallos) + " fallos de " + numTotal;
+    		}
+            
+    		com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest requestFijar = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
+    		requestFijar.setTGFIJARDATOSSINCptNumParametrica(9L);
+    		requestFijar.setTGFIJARDATOSSINCptResultado(resultado);
+    		globalServicesSrv.tGFIJARDATOSSINC(requestFijar );
+
         } catch (Exception e) {
             response.setException(e);
         }
+        org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("    " + resultado);
+        org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("Fin proceso sincronizacion EPS");
         return response;
     }
 
@@ -2066,20 +2424,6 @@ public class GlobalServicesService extends AbstractService {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCEPSSRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
 
-        if (request == null) {
-            throw new IllegalArgumentException("Invalid request to oGSINCEPSSImplementation");
-        }
-
-
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1EPSRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1EPSRequest();
-        step1Request.setTGSINC1EPSptpatrCodigo(Long.valueOf(0));
-        step1Request.setTGSINC1EPSptpatrDescripcion("0");
-        globalServicesSrv.tGSINC1EPSImplementation(step1Request);
-
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
-        step2Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(9));
-        step2Request.setTGFIJARDATOSSINCptResultado("Exito");
-        globalServicesSrv.tGFIJARDATOSSINCImplementation(step2Request);
         return response;
     }
 
@@ -2158,14 +2502,23 @@ public class GlobalServicesService extends AbstractService {
         }
 
 
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PAISRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PAISRequest();
-        step1Request.setTGSINC1PAISptpatrCodigo("0");
-        step1Request.setTGSINC1PAISptpatrDescripcion("0");
-        globalServicesSrv.tGSINC1PAISImplementation(step1Request);
+        String resultado = "Exito";
+        List<DatoParametrica> lista = parametricasUtils.getPaisesCORE();
+        if (lista != null && !lista.isEmpty()) {
+	        for(DatoParametrica datoParametrica : lista) {
+	
+	            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PAISRequest req = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1PAISRequest();
+	            req.setTGSINC1PAISptpatrCodigo(datoParametrica.getCode());
+	            req.setTGSINC1PAISptpatrDescripcion(datoParametrica.getDescription());
+	            globalServicesSrv.tGSINC1PAISImplementation(req);
+	        }        
+        } else {
+        	resultado = "No se han recuperado datos de la parametrica";
+        }
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
         step2Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(23));
-        step2Request.setTGFIJARDATOSSINCptResultado("Exito");
+        step2Request.setTGFIJARDATOSSINCptResultado(resultado);
         globalServicesSrv.tGFIJARDATOSSINCImplementation(step2Request);
         return response;
     }
@@ -2341,14 +2694,23 @@ public class GlobalServicesService extends AbstractService {
         }
 
 
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ENTIDADFINRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ENTIDADFINRequest();
-        step1Request.setTGSINC1ENTIDADFINptpatrCodigo(Long.valueOf(0));
-        step1Request.setTGSINC1ENTIDADFINptpatrDescripcion("0");
-        globalServicesSrv.tGSINC1ENTIDADFINImplementation(step1Request);
+        String resultado = "Exito";
+        List<DatoParametrica> lista = parametricasUtils.getEntidadesFinancierasCORE();
+        if (lista != null && !lista.isEmpty()) {
+	        for(DatoParametrica datoParametrica : lista) {
+	
+	            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ENTIDADFINRequest req = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1ENTIDADFINRequest();
+	            req.setTGSINC1ENTIDADFINptpatrCodigo(Long.valueOf(datoParametrica.getCode()));
+	            req.setTGSINC1ENTIDADFINptpatrDescripcion(datoParametrica.getDescription());
+	            globalServicesSrv.tGSINC1ENTIDADFINImplementation(req);
+	        }
+        } else {
+        	resultado = "No se han recuperado datos de la parametrica";
+        }
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
         step2Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(24));
-        step2Request.setTGFIJARDATOSSINCptResultado("Exito");
+        step2Request.setTGFIJARDATOSSINCptResultado(resultado);
         globalServicesSrv.tGFIJARDATOSSINCImplementation(step2Request);
         return response;
     }
@@ -2396,14 +2758,23 @@ public class GlobalServicesService extends AbstractService {
         }
 
 
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOENTIDADRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOENTIDADRequest();
-        step1Request.setTGSINC1TIPOENTIDADptpatrCodigo(Long.valueOf(0));
-        step1Request.setTGSINC1TIPOENTIDADptpatrDescripcion("0");
-        globalServicesSrv.tGSINC1TIPOENTIDADImplementation(step1Request);
+        String resultado = "Exito";
+        List<DatoParametrica> lista = parametricasUtils.getTiposEntidadCORE();
+        if (lista != null && !lista.isEmpty()) {
+	        for(DatoParametrica datoParametrica : lista) {
+	
+	            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOENTIDADRequest req = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOENTIDADRequest();
+	            req.setTGSINC1TIPOENTIDADptpatrCodigo(Long.parseLong(datoParametrica.getCode()));
+	            req.setTGSINC1TIPOENTIDADptpatrDescripcion(datoParametrica.getDescription());
+	            globalServicesSrv.tGSINC1TIPOENTIDADImplementation(req);
+	        }
+        } else {
+        	resultado = "No se han recuperado datos de la parametrica";
+        }
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
         step2Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(25));
-        step2Request.setTGFIJARDATOSSINCptResultado("Exito");
+        step2Request.setTGFIJARDATOSSINCptResultado(resultado);
         globalServicesSrv.tGFIJARDATOSSINCImplementation(step2Request);
         return response;
     }
@@ -2451,14 +2822,23 @@ public class GlobalServicesService extends AbstractService {
         }
 
 
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOINSTITUCIONRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOINSTITUCIONRequest();
-        step1Request.setTGSINC1TIPOINSTITUCIONptpatrCodigo(Long.valueOf(0));
-        step1Request.setTGSINC1TIPOINSTITUCIONptpatrNombre("0");
-        globalServicesSrv.tGSINC1TIPOINSTITUCIONImplementation(step1Request);
+        String resultado = "Exito";
+        List<DatoParametrica> lista = parametricasUtils.getTiposInstitucionCORE();
+        if (lista != null && !lista.isEmpty()) {
+	        for(DatoParametrica datoParametrica : lista) {
+	
+	            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOINSTITUCIONRequest req = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOINSTITUCIONRequest();
+	            req.setTGSINC1TIPOINSTITUCIONptpatrCodigo(Long.parseLong(datoParametrica.getCode()));
+	            req.setTGSINC1TIPOINSTITUCIONptpatrNombre(datoParametrica.getDescription());
+	            globalServicesSrv.tGSINC1TIPOINSTITUCIONImplementation(req);
+	        }
+        } else {
+        	resultado = "No se han recuperado datos de la parametrica";
+        }
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
         step2Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(26));
-        step2Request.setTGFIJARDATOSSINCptResultado("Exito");
+        step2Request.setTGFIJARDATOSSINCptResultado(resultado);
         globalServicesSrv.tGFIJARDATOSSINCImplementation(step2Request);
         return response;
     }
@@ -2506,14 +2886,23 @@ public class GlobalServicesService extends AbstractService {
         }
 
 
-        com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOSUCURSALRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOSUCURSALRequest();
-        step1Request.setTGSINC1TIPOSUCURSALptpatrCodigo(Long.valueOf(0));
-        step1Request.setTGSINC1TIPOSUCURSALptpatrDescripcion("0");
-        globalServicesSrv.tGSINC1TIPOSUCURSALImplementation(step1Request);
+        String resultado = "Exito";
+        List<DatoParametrica> lista = parametricasUtils.getTiposSucursalCORE();
+        if (lista != null && !lista.isEmpty()) {
+	        for(DatoParametrica datoParametrica : lista) {
+	
+	            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOSUCURSALRequest req = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINC1TIPOSUCURSALRequest();
+	            req.setTGSINC1TIPOSUCURSALptpatrCodigo(Long.parseLong(datoParametrica.getCode()));
+	            req.setTGSINC1TIPOSUCURSALptpatrDescripcion(datoParametrica.getDescription());
+	            globalServicesSrv.tGSINC1TIPOSUCURSALImplementation(req);
+	        }
+        } else {
+        	resultado = "No se han recuperado datos de la parametrica";
+        }
 
         com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest step2Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGFIJARDATOSSINCRequest();
         step2Request.setTGFIJARDATOSSINCptNumParametrica(Long.valueOf(27));
-        step2Request.setTGFIJARDATOSSINCptResultado("Exito");
+        step2Request.setTGFIJARDATOSSINCptResultado(resultado);
         globalServicesSrv.tGFIJARDATOSSINCImplementation(step2Request);
         return response;
     }
@@ -3582,53 +3971,158 @@ public class GlobalServicesService extends AbstractService {
     @Transactional(Transactional.TxType.NOT_SUPPORTED)
     public ServiceResponse oGSINCRONIZARPARAMETRICAS(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCRONIZARPARAMETRICASRequest request) {
-        ServiceResponse response = new ServiceResponse();
-        try {
-            response = globalServicesSrv.oGSINCRONIZARPARAMETRICASTxn(request);
-        } catch (Exception e) {
-            response.setException(e);
-        }
+    	ServiceResponse response = new ServiceResponse();
+
+    	final int PARAMETRICA_PLAN_CODE = 1;
+    	final int PARAMETRICA_PRODUCTO_CODE = 2;
+    	final int PARAMETRICA_GRUPOASOCIADO_CODE = 3;
+    	final int PARAMETRICA_ASESOR_CODE = 4;
+    	final int PARAMETRICA_DEPARTAMENTO_CODE = 5;
+    	final int PARAMETRICA_MUNICIPIO_CODE = 6;
+    	final int PARAMETRICA_ESTADOCIVIL_CODE = 7;
+    	final int PARAMETRICA_EPS_CODE = 9;
+    	final int PARAMETRICA_PARENTESCO_CODE = 10;
+    	final int PARAMETRICA_EMPRESA_CODE = 11;
+    	final int PARAMETRICA_PERIODICIDAD_CODE = 12;
+    	final int PARAMETRICA_FORMASPAGO_CODE = 15;
+    	final int PARAMETRICA_SUCURSAL_CODE = 16;
+    	final int PARAMETRICA_ESTADOSCONTRATO_CODE = 17;
+    	final int PARAMETRICA_TIPOSDIRECCION_CODE = 18;
+    	final int PARAMETRICA_TIPOSIDENTIFICACION_CODE = 19;
+    	final int PARAMETRICA_ESTADOSBENEFICIARIO_CODE = 20;
+    	final int PARAMETRICA_REGIONAL_CODE = 21;
+    	final int PARAMETRICA_ESTADOSPERSONA_CODE = 22;
+    	final int PARAMETRICA_PAIS_CODE = 23;
+    	final int PARAMETRICA_ENTIDADESFINANCIERAS_CODE = 24;
+    	final int PARAMETRICA_TIPOSENTIDAD_CODE = 25;
+    	final int PARAMETRICA_TIPOSINSTITUCION_CODE = 26;
+    	final int PARAMETRICA_TIPOSSUCURSAL_CODE = 27;
+    	LoggerFactory.getLogger(this.getClass()).info("\nINICIO PROCESO SINCRONIZACION PARAMETRICAS");
+    	try {
+    		SQLPopulation query = new SQLPopulation(FrecuenciaActConstants.CLASS_NAME);
+
+    		List<FrecuenciaAct> lista = Arc.container().select(FrecuenciaActJpaRepository.class).get()
+    				.solveQuery(query);
+    		
+    		boolean sucursalesSincronizadas = false;
+    		boolean tiposidentificacionSincronizados = false;
+    		if (lista != null && !lista.isEmpty()) {
+    			for (FrecuenciaAct frec : lista) {
+
+    				// Condiciones para sincronizar:
+    				// Que no se haya sincronizada nunca -> FechaUltimaSinc es null
+    				// Que la frecuencia sea cero
+    				// Que hayan pasado tantos dÃ­as desde la ultima sincronizaciÃ³n como indica la
+    				// frecuencia
+    				if (frec.getFrecuenciaActFechaUltimaSinc() == null
+    						|| frec.getFrecuenciaActFrecuencia() == Long.valueOf(0)
+    						|| (STDFunctions.daysDifferenceFromDateFun(frec.getFrecuenciaActFechaUltimaSinc(),
+    								STDFunctions.systemDateFun()) >= frec.getFrecuenciaActFrecuencia())) {
+
+    					int codInt = frec.getFrecuenciaActParametrica().intValue();
+
+    					switch (codInt) {
+    					case PARAMETRICA_PLAN_CODE:
+    						globalServicesSrv.tGSINCPLANES(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCPLANESRequest());
+    						break;
+    					case PARAMETRICA_PRODUCTO_CODE:
+    						globalServicesSrv.tGSINCPRODUCTOS(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCPRODUCTOSRequest());
+    						break;
+    					case PARAMETRICA_GRUPOASOCIADO_CODE:
+    						globalServicesSrv.oGSINCGRUPOSASOCIADOS(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCGRUPOSASOCIADOSRequest());
+    						break;
+    					case PARAMETRICA_ASESOR_CODE: {
+    						// La sincronizaciÃ³n de asesores requiere de la de Tipos de identificaciÃ³n y sucursales
+    						if (!sucursalesSincronizadas) {
+    							globalServicesSrv.oGSINCSUCURSALES(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCSUCURSALESRequest());
+    							sucursalesSincronizadas = true;
+    						}
+    						if (!tiposidentificacionSincronizados) {
+    							globalServicesSrv.tGSINCTIPOSIDENTIFICACION(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCTIPOSIDENTIFICACIONRequest());
+    							tiposidentificacionSincronizados = true;
+    						}
+    						globalServiceDeAEUsuarios.oGSINCSUCURSALES(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCTIPOSIDENTIFICACIONRequest());
+    						break;
+    					}
+    					case PARAMETRICA_DEPARTAMENTO_CODE:
+    						globalServicesSrv.tGSINCDEPARTAMENTOS(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCDEPARTAMENTOSRequest());
+    						break;
+    					case PARAMETRICA_MUNICIPIO_CODE:
+    						globalServicesSrv.oGSINCMUNICIPIOS(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCMUNICIPIOSRequest());
+    						break;
+    					case PARAMETRICA_ESTADOCIVIL_CODE:
+    						globalServicesSrv.tGSINCESTADOSCIVILES(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCESTADOSCIVILESRequest());
+    						break;
+    					case PARAMETRICA_EPS_CODE:
+    						globalServicesSrv.oGSINCEPSS(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCEPSSRequest());
+    						break;
+    					case PARAMETRICA_PARENTESCO_CODE:
+    						globalServicesSrv.tGSINCPARENTESCOS(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCPARENTESCOSRequest());
+    						break;
+    					case PARAMETRICA_EMPRESA_CODE:
+    						globalServicesSrv.oGSINCOMPANIAS(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCOMPANIASRequest());
+    						break;
+    					case PARAMETRICA_PERIODICIDAD_CODE:
+    						globalServicesSrv.tGSINCPERIODICIDADES(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCPERIODICIDADESRequest());
+    						break;
+    					case PARAMETRICA_FORMASPAGO_CODE:
+    						globalServicesSrv.tGSINCFORMASPAGO(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCFORMASPAGORequest());
+    						break;
+    					case PARAMETRICA_SUCURSAL_CODE:
+    						if (!sucursalesSincronizadas) {
+    							globalServicesSrv.oGSINCSUCURSALES(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCSUCURSALESRequest());
+    							sucursalesSincronizadas = true;
+    						}
+    						break;
+    					case PARAMETRICA_ESTADOSCONTRATO_CODE:
+    						globalServicesSrv.tGSINCESTADOSCONTRATO(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCESTADOSCONTRATORequest());
+    						break;
+    					case PARAMETRICA_TIPOSDIRECCION_CODE:
+    						globalServicesSrv.tGSINCTIPOSDIRECCION(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCTIPOSDIRECCIONRequest());
+    						break;
+    					case PARAMETRICA_TIPOSIDENTIFICACION_CODE:
+    						if (!tiposidentificacionSincronizados) {
+    							globalServicesSrv.tGSINCTIPOSIDENTIFICACION(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCTIPOSIDENTIFICACIONRequest());
+    							tiposidentificacionSincronizados = true;
+    						}
+    						break;
+    					case PARAMETRICA_ESTADOSBENEFICIARIO_CODE:
+    						globalServicesSrv.tGSINCESTADOSBENEFICIARIO(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCESTADOSBENEFICIARIORequest());
+    						break;
+    					case PARAMETRICA_REGIONAL_CODE:
+    						globalServicesSrv.tGSINCREGIONALES(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCREGIONALESRequest());
+    						break;
+    					case PARAMETRICA_ESTADOSPERSONA_CODE:
+    						globalServicesSrv.tGSINCESTADOSPERSONA(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCESTADOSPERSONARequest());
+    						break;
+    					case PARAMETRICA_PAIS_CODE:
+    						globalServicesSrv.tGSINCPAISES(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCPAISESRequest());
+    						break;
+    					case PARAMETRICA_ENTIDADESFINANCIERAS_CODE:
+    						globalServicesSrv.tGSINCENTIDADESFIN(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCENTIDADESFINRequest());
+    						break;
+    					case PARAMETRICA_TIPOSENTIDAD_CODE:
+    						globalServicesSrv.tGSINCTIPOSDEENTIDAD(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCTIPOSDEENTIDADRequest());
+    						break;
+    					case PARAMETRICA_TIPOSINSTITUCION_CODE:
+    						globalServicesSrv.tGSINCTIPOSINSTITUCION(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCTIPOSINSTITUCIONRequest());
+    						break;
+    					case PARAMETRICA_TIPOSSUCURSAL_CODE:
+    						globalServicesSrv.tGSINCTIPOSSUCURSAL(new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCTIPOSSUCURSALRequest());
+    						break;
+    					}
+
+    				}
+    			}
+    		}
+    	} catch (Exception e) {
+    		LoggerFactory.getLogger(this.getClass()).error("Error en OGSINCRONIZARPARAMETRICAS: " + e.getMessage());
+    	}
+    	LoggerFactory.getLogger(this.getClass()).info("\nFIN PROCESO SINCRONIZACION PARAMETRICAS");
         return response;
     }
 
-    /*
-     * Transactional entry point for global service OGSINCRONIZARPARAMETRICAS
-     * @param request Service request viewmodel
-     * @return Service response viewmodel with the execution results
-     */
-    @Transactional(Transactional.TxType.REQUIRES_NEW)
-    public ServiceResponse oGSINCRONIZARPARAMETRICASTxn(
-            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCRONIZARPARAMETRICASRequest request) throws ModelException, SystemException {
-        return globalServicesSrv.oGSINCRONIZARPARAMETRICASImplementation(request);
-    }
 
-    /*
-     * Implements global service OGSINCRONIZARPARAMETRICAS
-     * @param request Service request viewmodel
-     * @return Service response viewmodel with the execution results
-     */
-    @Transactional(Transactional.TxType.REQUIRED)
-    public ServiceResponse oGSINCRONIZARPARAMETRICASImplementation(
-            com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCRONIZARPARAMETRICASRequest request) throws ModelException, SystemException {
-        ServiceResponse response = new ServiceResponse();
-
-        if (request == null) {
-            throw new IllegalArgumentException("Invalid request to oGSINCRONIZARPARAMETRICASImplementation");
-        }
-
-
-        try {
-            for(FrecuenciaAct step1Entity : globalServicesRepository.assocOperator158()) {
-                try {
-                    com.keralty.aeconfiguraciones.viewmodel.frecuenciaact.siu.ModificarRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.frecuenciaact.siu.ModificarRequest();
-                    step1Request.setFrecuenciaActmodificarpthisFrecuenciaActInstance(step1Entity);
-                    step1Request.setFrecuenciaActmodificarpFrecuencia(Long.valueOf(0));
-                    frecuenciaActSrv.modificarTxn(step1Request);
-                } catch (Exception e) { }
-            }
-        } catch (Exception e) { }
-        return response;
-    }
 
     /*
      * Entry point for global service TGFIJARDATOSSINC

@@ -401,9 +401,9 @@ public class PlanesService extends AbstractService {
             clas1434549485568784FiltNav2(filterRequest, sql);
         if ("SolicitudNovedad_TCREAR_pt_p_agrPlan_NavFilter0".equalsIgnoreCase(filterRequest.getName()))
             clas1581421428736234FiltNav2(filterRequest, sql);
-        if ("SolicitudNovedad_TCREAR_pt_p_agrPlan_NavFilter1".equalsIgnoreCase(filterRequest.getName()))
+        if (getAgentAsesor() != null && !getAgentAsesor().isNull() && "SolicitudNovedad_TCREAR_pt_p_agrPlan_NavFilter1".equalsIgnoreCase(filterRequest.getName()))
             clas1581421428736234FiltNav27(filterRequest, sql);
-        if ("SolicitudNovedad_TCREAREXCEPCION_pt_p_agrPlan_NavFilter0".equalsIgnoreCase(filterRequest.getName()))
+        if (getAgentAsesor() != null && !getAgentAsesor().isNull() && "SolicitudNovedad_TCREAREXCEPCION_pt_p_agrPlan_NavFilter0".equalsIgnoreCase(filterRequest.getName()))
             clas1581421428736234FiltNav11(filterRequest, sql);
         if ("TGCREARTARIFA_pPlan_NavFilter0".equalsIgnoreCase(filterRequest.getName()))
             iGl1445874368512966FiltNav1(filterRequest, sql);

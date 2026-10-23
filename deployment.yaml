@@ -24,7 +24,7 @@ spec:
       containers:
         - name: ae-configuraciones
 # Replace the placeholder below with the name of your OpenShift namespace/project
-          image: 'image-registry.openshift-image-registry.svc:5000/${YourNamespaceOrProjectNameHere}/ae-configuraciones:latest'
+          image: 'image-registry.openshift-image-registry.svc:5000/soporte-colsanitas-dev/ae-configuraciones:latest'
           ports:
             - containerPort: 8082
               protocol: TCP
@@ -92,11 +92,152 @@ spec:
               configMapKeyRef:
                 name: ae-config
                 key: ae-generasolicitud-url
+          - name: quarkus.rest-client.integraciones.token.url
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones_token-url
+          - name: com.keralty.integraciones.token.hash
+            valueFrom:
+              secretKeyRef:
+                name: ae-secret
+                key: integraciones-token-hash
+          - name: com.keralty.integraciones.token.usr
+            valueFrom:
+              secretKeyRef:
+                name: ae-secret
+                key: integraciones-token-usr
+          - name: com.keralty.integraciones.token.pwd
+            valueFrom:
+              secretKeyRef:
+                name: ae-secret
+                key: integraciones-token-pwd
+          - name: quarkus.rest-client.integraciones_parametricas.url
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones_parametricas-url
+          - name: com.keralty.integraciones.codaplicacion
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-codaplicacion
+          - name: com.keralty.integraciones.funcionnegocio
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-funcionnegocio
+
+          - name: com.keralty.integraciones.parametricas.user
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-parametricas-user
+          - name: com.keralty.integraciones.parametricas.metodopago.nom_table
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-parametricas-metodopago-nom_table
+          - name: com.keralty.integraciones.parametricas.estadocivil.cod_table
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-parametricas-estadocivil-cod_table
+          - name: com.keralty.integraciones.parametricas.departamento.cod_table
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-parametricas-departamento-cod_table
+          - name: com.keralty.integraciones.parametricas.estadocontrato.cod_table
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-parametricas-estadocontrato-cod_table
+          - name: com.keralty.integraciones.parametricas.regionales.cod_table
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-parametricas-regionales-cod_table
+          - name: com.keralty.integraciones.parametricas.pais.cod_table
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-parametricas-pais-cod_table
+          - name: com.keralty.integraciones.parametricas.entidadfinancier.cod_table
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-parametricas-entidadfinancier-cod_table
+          - name: com.keralty.integraciones.parametricas.tipoentidad.cod_table
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-parametricas-tipoentidad-cod_table
+          - name: com.keralty.integraciones.parametricas.tipoinstitucion.cod_table
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-parametricas-tipoinstitucion-cod_table
+          - name: com.keralty.integraciones.parametricas.producto.cod_table
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-parametricas-producto-cod_table
+          - name: com.keralty.integraciones.parametricas.plan.cod_table
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-parametricas-plan-cod_table
+          - name: com.keralty.integraciones.parametricas.municipio.cod_table
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-parametricas-municipio-cod_table
+          - name: com.keralty.integraciones.parametricas.tipodireccion.cod_table
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-parametricas-tipodireccion-cod_table
+          - name: com.keralty.integraciones.parametricas.estadopersona.cod_table
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-parametricas-estadopersona-cod_table
+          - name: com.keralty.integraciones.parametricas.estadobeneficiario.cod_table
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-parametricas-estadobeneficiario-cod_table
+          - name: com.keralty.integraciones.parametricas.tipoidentificacion.cod_table
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-parametricas-tipoidentificacion-cod_table
+          - name: com.keralty.integraciones.parametricas.periodicidad.cod_table
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-parametricas-periodicidad-cod_table
+          - name: com.keralty.integraciones.parametricas.grupoasociado.cod_table
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-parametricas-grupoasociado-cod_table
+          - name: com.keralty.integraciones.parametricas.tiposucursal.cod_table
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-parametricas-tiposucursal-cod_table
+          - name: com.keralty.integraciones.parametricas.parentesco.cod_table
+            valueFrom:
+              configMapKeyRef:
+                name: ae-config
+                key: integraciones-parametricas-parentesco-cod_table
 # Set the values below according to your preferences to assign resources to this microservice
           resources:
             limits:
-              cpu: '1'
-              memory: 500Mi
+              cpu: 400m
+              memory: 400Mi
             requests:
               cpu: 10m
-              memory: 250Mi
+              memory: 200Mi
