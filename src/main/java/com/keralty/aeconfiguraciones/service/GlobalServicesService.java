@@ -1165,6 +1165,9 @@ public class GlobalServicesService extends AbstractService {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCSUCURSALESRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
 
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to oGSINCSUCURSALESImplementation");
+        }
         return response;
     }
 
@@ -1446,6 +1449,10 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse oGSINCGRUPOSASOCIADOSImplementation(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCGRUPOSASOCIADOSRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
+
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to oGSINCGRUPOSASOCIADOSImplementation");
+        }
 
         return response;
     }
@@ -1766,6 +1773,10 @@ public class GlobalServicesService extends AbstractService {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCOMPANIASRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
 
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to oGSINCOMPANIASImplementation");
+        }
+
         return response;
     }
 
@@ -1912,6 +1923,10 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse oGSINCMUNICIPIOSImplementation(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCMUNICIPIOSRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
+
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to oGSINCMUNICIPIOSImplementation");
+        }
 
         return response;
     }
@@ -2438,6 +2453,10 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse oGSINCEPSSImplementation(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCEPSSRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
+
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to oGSINCEPSSImplementation");
+        }
 
         return response;
     }
@@ -3721,8 +3740,6 @@ public class GlobalServicesService extends AbstractService {
         Date tGMODFINIEPSptpDesde = request.getTGMODFINIEPSptpDesde();
         Date tGMODFINIEPSptpHasta = request.getTGMODFINIEPSptpHasta();
         Date tGMODFINIEPSptpFechaInicioAplicar = request.getTGMODFINIEPSptpFechaInicioAplicar();
-        Long tGMODFINIEPSptTratime = request.getTGMODFINIEPSptTratime();
-        Long tGMODFINIEPSptTipoContrato = request.getTGMODFINIEPSptTipoContrato();
 
         request.checkArguments();
 
