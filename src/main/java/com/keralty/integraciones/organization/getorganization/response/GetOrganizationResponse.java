@@ -35,4 +35,8 @@ public class GetOrganizationResponse {
     public Search getSearch() { return search; }
     @JsonProperty("search")
     public void setSearch(Search value) { this.search = value; }
+    
+    public void addEntry(Entry entry) {
+    	this.entry.add(entry);
+    }
 }

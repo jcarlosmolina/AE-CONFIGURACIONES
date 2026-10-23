@@ -1593,11 +1593,11 @@ public class UserFunctions extends AbstractService {
     	StringBuilder textoParametros = new StringBuilder("");
     	String[] paramArray = new String[0];
     	// (?1, ?2)
-    	if (parametros != null && parametros.length() > 0) {
+    	if (parametros.length() > 0) {
     		paramArray = parametros.toString().split(";");
     		int cont = 1;
     		for (String param : paramArray) {
-    			if (!textoParametros.isEmpty()) {
+    			if (!textoParametros.isEmpty() && !param.isEmpty()) {
     				textoParametros.append(", ");
     			}
     			textoParametros.append("?" + Integer.toString(cont));

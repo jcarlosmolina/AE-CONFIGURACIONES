@@ -28,4 +28,8 @@ public class GetOrganizationRequest {
     public List<Entry> getEntry() { return entry; }
     @JsonProperty("entry")
     public void setEntry(List<Entry> value) { this.entry = value; }
+    
+    public void addEntry(Entry entry) {
+    	this.entry.add(entry);
+    }
 }

@@ -51,7 +51,7 @@ public class OrganizationUtils {
 		entry.setRequest(new Request());
 		entry.getRequest().setMethod("GET");
 		entry.getRequest().setURL("&type=BH/entityType|EPS-");
-		getOrgRequest.getEntry().add(entry);
+		getOrgRequest.addEntry(entry);
 		
 		return  callGetOrganization("3", getOrgRequest);
 	}
@@ -73,7 +73,7 @@ public class OrganizationUtils {
 			
     		for (com.keralty.integraciones.organization.getorganization.response.Entry entry : sucursalesMedisanitas.getGetOrganizationResponse().getEntry()) {
     			if (entry.getResource() != null && entry.getResource().getSchema() != null) {
-    				sucursales.getGetOrganizationResponse().getEntry().add(entry);
+    				sucursales.getGetOrganizationResponse().addEntry(entry);
     			}
     		}
 		} else {
@@ -93,7 +93,7 @@ public class OrganizationUtils {
 		entry.setRequest(new Request());
 		entry.getRequest().setMethod("GET");
 		entry.getRequest().setURL("organization?identifier=BH|" + nit + "&type=BH/organizationType|1-");
-		getOrgRequest.getEntry().add(entry);
+		getOrgRequest.addEntry(entry);
 		
 		return  callGetOrganization("4", getOrgRequest);
 	}
@@ -108,7 +108,7 @@ public class OrganizationUtils {
 		entry.setRequest(new Request());
 		entry.getRequest().setMethod("GET");
 		entry.getRequest().setURL("&type=BH/entityType|MP-");
-		getOrgRequest.getEntry().add(entry);
+		getOrgRequest.addEntry(entry);
 		
 		return  callGetOrganization("3", getOrgRequest);
 	}

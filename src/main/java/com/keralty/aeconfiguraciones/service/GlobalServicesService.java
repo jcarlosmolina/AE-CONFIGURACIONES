@@ -1042,6 +1042,9 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse oGSINCSUCURSALES(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCSUCURSALESRequest request) {
         ServiceResponse response = new ServiceResponse();
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to oGSINCSUCURSALES");
+        }
 		String resultado = "Exito";
 		int numFallos = 0;
 		int numSucursalesSincronizadas = 0;
@@ -1330,6 +1333,9 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse oGSINCGRUPOSASOCIADOS(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCGRUPOSASOCIADOSRequest request) {
         ServiceResponse response = new ServiceResponse();
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to oGSINCGRUPOSASOCIADOS");
+        }
     	String textoLogParametrica = "Exito";
         try {
 	        org.slf4j.LoggerFactory.getLogger(this.getClass().getName()).info("Inicio proceso sincronizacion Grupos Asociados");
@@ -1684,6 +1690,9 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse oGSINCOMPANIAS(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCOMPANIASRequest request) {
         ServiceResponse response = new ServiceResponse();
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to oGSINCOMPANIAS");
+        }
         String resultado = "Exito";
         try {
         	 ConsultarOrganizationResponse sucursales = organizationUtils.consultarCompanyas();
@@ -1837,6 +1846,9 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse oGSINCMUNICIPIOS(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCMUNICIPIOSRequest request) {
         ServiceResponse response = new ServiceResponse();
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to oGSINCMUNICIPIOS");
+        }
         String textoLogParametrica = "Exito";
         try {
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCDEPARTAMENTOSRequest step1Request = new com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.TGSINCDEPARTAMENTOSRequest();
@@ -2351,6 +2363,9 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse oGSINCEPSS(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCEPSSRequest request) {
         ServiceResponse response = new ServiceResponse();
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to oGSINCEPSS");
+        }
         String resultado = "Exito";
         try {
             ConsultarOrganizationResponse listaEPS = organizationUtils.consultarEPS();
@@ -3972,6 +3987,9 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse oGSINCRONIZARPARAMETRICAS(
             com.keralty.aeconfiguraciones.viewmodel.globalservices.siu.OGSINCRONIZARPARAMETRICASRequest request) {
     	ServiceResponse response = new ServiceResponse();
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to oGSINCRONIZARPARAMETRICAS");
+        }
 
     	final int PARAMETRICA_PLAN_CODE = 1;
     	final int PARAMETRICA_PRODUCTO_CODE = 2;
@@ -4015,7 +4033,7 @@ public class GlobalServicesService extends AbstractService {
     				// Que hayan pasado tantos dÃ­as desde la ultima sincronizaciÃ³n como indica la
     				// frecuencia
     				if (frec.getFrecuenciaActFechaUltimaSinc() == null
-    						|| frec.getFrecuenciaActFrecuencia() == Long.valueOf(0)
+    						|| frec.getFrecuenciaActFrecuencia().equals(0L)
     						|| (STDFunctions.daysDifferenceFromDateFun(frec.getFrecuenciaActFechaUltimaSinc(),
     								STDFunctions.systemDateFun()) >= frec.getFrecuenciaActFrecuencia())) {
 
