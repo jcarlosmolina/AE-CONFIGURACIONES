@@ -360,7 +360,7 @@ public class FamiliaNovedadJpaRepositoryImpl extends AbstractRepository implemen
         try {
             // Path starts with a class in the subquery
             if (superQuery == null) {
-            	return new SQLExists(superQuery, FamiliaNovedadConstants.CLASS_NAME, FamiliaNovedadConstants.ROLE_NAME_USUARIONOVEDAD + "." + UsuarioNovedadConstants.ROLE_NAME_TIPOIDENTIFICACIONCD);
+            	return new SQLExists(FamiliaNovedadConstants.CLASS_NAME, FamiliaNovedadConstants.ROLE_NAME_USUARIONOVEDAD + "." + UsuarioNovedadConstants.ROLE_NAME_TIPOIDENTIFICACIONCD, instance.getOid());
             } else {
                 return new SQLExists(superQuery, FamiliaNovedadConstants.CLASS_NAME, FamiliaNovedadConstants.ROLE_NAME_USUARIONOVEDAD + "." + UsuarioNovedadConstants.ROLE_NAME_TIPOIDENTIFICACIONCD);
             }
