@@ -1011,7 +1011,7 @@ public class Usuario extends AbstractAppEntity {
             value = usuariodrvIdentificacionDerivations();
         } catch (Exception e) {
             value = "";
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvIdentificacion");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvIdentificacion");
         }
         return (value == null ? null : value.trim());
     }
@@ -1030,7 +1030,7 @@ public class Usuario extends AbstractAppEntity {
             value = usuariodrvEsElTitularDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvEsElTitular");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvEsElTitular");
         }
         return value;
     }
@@ -1049,7 +1049,7 @@ public class Usuario extends AbstractAppEntity {
             value = usuariodrvAccesoCuesMedDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvAccesoCuesMed");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvAccesoCuesMed");
         }
         return value;
     }
@@ -1068,7 +1068,7 @@ public class Usuario extends AbstractAppEntity {
             value = usuariodrvAceptaAnexoMatDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvAceptaAnexoMat");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvAceptaAnexoMat");
         }
         return value;
     }
@@ -1087,7 +1087,7 @@ public class Usuario extends AbstractAppEntity {
             value = usuariodrvAceptaAnexoNeoDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvAceptaAnexoNeo");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvAceptaAnexoNeo");
         }
         return value;
     }
@@ -1106,7 +1106,7 @@ public class Usuario extends AbstractAppEntity {
             value = usuariodrvTieneAnexoMatDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvTieneAnexoMat");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvTieneAnexoMat");
         }
         return value;
     }
@@ -1167,7 +1167,7 @@ public class Usuario extends AbstractAppEntity {
             value = usuariodrvEdadParaCuotaInsDerivations();
         } catch (Exception e) {
             value = Long.valueOf(0);
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvEdadParaCuotaIns");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvEdadParaCuotaIns");
         }
         return value;
     }
@@ -1186,7 +1186,7 @@ public class Usuario extends AbstractAppEntity {
             value = usuariodrvValorCuotaInscripDerivations();
         } catch (Exception e) {
             value = Double.valueOf(0);
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvValorCuotaInscrip");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvValorCuotaInscrip");
         }
         return value;
     }
@@ -1205,7 +1205,7 @@ public class Usuario extends AbstractAppEntity {
             value = usuariodrvCuesMedOKDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvCuesMedOK");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvCuesMedOK");
         }
         return value;
     }
@@ -1524,7 +1524,7 @@ public class Usuario extends AbstractAppEntity {
             value = usuariodrvNombreCompletoDerivations();
         } catch (Exception e) {
             value = "";
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvNombreCompleto");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvNombreCompleto");
         }
         return (value == null ? null : value.trim());
     }
@@ -1627,7 +1627,7 @@ public class Usuario extends AbstractAppEntity {
             value = usuariodrvConfirmadoDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvConfirmado");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvConfirmado");
         }
         return value;
     }
@@ -1646,7 +1646,7 @@ public class Usuario extends AbstractAppEntity {
             value = usuariodrvTiempoEmbarazoDerivations();
         } catch (Exception e) {
             value = Long.valueOf(0);
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvTiempoEmbarazo");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvTiempoEmbarazo");
         }
         return value;
     }
@@ -1665,7 +1665,7 @@ public class Usuario extends AbstractAppEntity {
             value = usuariodrvEstaActivoDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvEstaActivo");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvEstaActivo");
         }
         return value;
     }
@@ -1684,7 +1684,7 @@ public class Usuario extends AbstractAppEntity {
             value = usuariodrvEdadDerivations();
         } catch (Exception e) {
             value = Long.valueOf(0);
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvEdad");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvEdad");
         }
         return value;
     }
@@ -1704,7 +1704,7 @@ Si no está configurada en el plan no debemos verificar la condición, por eso l
             value = usuariodrvEdadMaxIngresoDerivations();
         } catch (Exception e) {
             value = Long.valueOf(0);
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvEdadMaxIngreso");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvEdadMaxIngreso");
         }
         return value;
     }
@@ -1724,7 +1724,7 @@ Si no está configurada en el plan no debemos verificar la condición, por eso l
             value = usuariodrvEdadMaxPermDerivations();
         } catch (Exception e) {
             value = Long.valueOf(0);
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvEdadMaxPerm");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvEdadMaxPerm");
         }
         return value;
     }
@@ -1743,7 +1743,7 @@ Si no está configurada en el plan no debemos verificar la condición, por eso l
             value = usuariodrvTotalAnexosDerivations();
         } catch (Exception e) {
             value = Double.valueOf(0);
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvTotalAnexos");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvTotalAnexos");
         }
         return value;
     }
@@ -1762,7 +1762,7 @@ Si no está configurada en el plan no debemos verificar la condición, por eso l
             value = usuariodrvTieneEPSSanitasDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvTieneEPSSanitas");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvTieneEPSSanitas");
         }
         return value;
     }
@@ -1786,7 +1786,7 @@ GdC 12 - Usuario Nuevo (que No exista como persona en BH) debe adjuntar document
             value = usuariodrvTieneDocumentosDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvTieneDocumentos");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvTieneDocumentos");
         }
         return value;
     }
@@ -1889,7 +1889,7 @@ GdC 12 - Usuario Nuevo (que No exista como persona en BH) debe adjuntar document
             value = usuariodrvTieneParentescoDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvTieneParentesco");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvTieneParentesco");
         }
         return value;
     }
@@ -1909,7 +1909,7 @@ Para contratos de inclusión colectivo el titular o viene dado o se añade por l
             value = usuariodrvPuedeSerTitularDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvPuedeSerTitular");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvPuedeSerTitular");
         }
         return value;
     }
@@ -1928,7 +1928,7 @@ Para contratos de inclusión colectivo el titular o viene dado o se añade por l
             value = usuariodrvTieneCuesMedDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvTieneCuesMed");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvTieneCuesMed");
         }
         return value;
     }
@@ -1952,7 +1952,7 @@ Para contratos de inclusión colectivo el titular o viene dado o se añade por l
             value = usuariodrvImpTarifaPlanVolDerivations();
         } catch (Exception e) {
             value = Double.valueOf(0);
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvImpTarifaPlanVol");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvImpTarifaPlanVol");
         }
         return value;
     }
@@ -2023,7 +2023,7 @@ Se solicita cambiar el nombre de 'Póliza internacional' por 'Respaldo global'.<
             value = usuariodrvDirResValidoEPSDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: Usuario, Attribute: usuariodrvDirResValidoEPS");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: Usuario, Attribute: usuariodrvDirResValidoEPS");
         }
         return value;
     }

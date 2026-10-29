@@ -139,39 +139,39 @@ public interface GlobalServicesJpaRepository {
 
     Boolean assocOperator089(Long tGSINC1TIPOSUCURSALptpatrCodigo) throws SystemException;
 
-    Long assocOperator139(String tGCREARCOMBOptpatrContratoIntegral, String tGCREARCOMBOptpatrContratoOdontologico) throws SystemException;
+    Long assocOperator133(String tGCREARCOMBOptpatrContratoIntegral, String tGCREARCOMBOptpatrContratoOdontologico) throws SystemException;
 
-    Long assocOperator140(ContratoCombo tGEDITARCOMBOptpthisContratoCombo, String tGEDITARCOMBOptpContratoIntegral, String tGEDITARCOMBOptpContratoOdontologico) throws SystemException;
+    Long assocOperator134(ContratoCombo tGEDITARCOMBOptpthisContratoCombo, String tGEDITARCOMBOptpContratoIntegral, String tGEDITARCOMBOptpContratoOdontologico) throws SystemException;
 
-    Long assocOperator143(Long tGADDPLANTREPptpatrTipo, String tGADDPLANTREPptpatrNombreArchivoPDF) throws SystemException;
+    Long assocOperator137(Long tGADDPLANTREPptpatrTipo, String tGADDPLANTREPptpatrNombreArchivoPDF) throws SystemException;
 
-    Long assocOperator144(PlantillaReporte tGEDITPLANTREPptpthisPlantillaReporte, String tGEDITPLANTREPptpNombreArchivoPDF) throws SystemException;
+    Long assocOperator138(PlantillaReporte tGEDITPLANTREPptpthisPlantillaReporte, String tGEDITPLANTREPptpNombreArchivoPDF) throws SystemException;
 
-    Long assocOperator145(Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException;
+    Long assocOperator139(Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException;
 
-    Long assocOperator146(Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException;
+    Long assocOperator140(Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException;
 
-    Long assocOperator147(Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException;
+    Long assocOperator141(Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException;
 
-    Long assocOperator148(Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException;
+    Long assocOperator142(Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException;
 
-    Long assocOperator149(FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException;
+    Long assocOperator143(FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException;
 
-    Long assocOperator150(FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException;
+    Long assocOperator144(FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException;
 
-    Long assocOperator151(FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException;
+    Long assocOperator145(FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException;
 
-    Long assocOperator152(FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException;
+    Long assocOperator146(FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException;
 
-    Long assocOperator153(String tGCREARCONTEXENTOptpatrNumContrato) throws SystemException;
+    Long assocOperator147(String tGCREARCONTEXENTOptpatrNumContrato) throws SystemException;
 
-    Collection<FrecuenciaAct> assocOperator158() throws SystemException;
+    Collection<FrecuenciaAct> assocOperator152() throws SystemException;
 
-    Collection<FrecuenciaAct> assocOperator159(Long tGFIJARDATOSSINCptNumParametrica) throws SystemException;
+    Collection<FrecuenciaAct> assocOperator153(Long tGFIJARDATOSSINCptNumParametrica) throws SystemException;
 
-    Collection<FrecuenciaAct> assocOperator160(Long tGFIJARDATOSSINCptNumParametrica) throws SystemException;
+    Collection<FrecuenciaAct> assocOperator154(Long tGFIJARDATOSSINCptNumParametrica) throws SystemException;
 
-    Collection<FrecuenciaAct> assocOperator161(Long tGFIJARDATOSSINCptNumParametrica) throws SystemException;
+    Collection<FrecuenciaAct> assocOperator155(Long tGFIJARDATOSSINCptNumParametrica) throws SystemException;
 
     void refreshEntity(Object object);
 }

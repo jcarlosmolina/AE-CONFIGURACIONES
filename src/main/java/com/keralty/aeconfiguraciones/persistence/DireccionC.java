@@ -366,7 +366,7 @@ public class DireccionC extends AbstractAppEntity {
             value = direccionCdrvCiudadDerivations();
         } catch (Exception e) {
             value = "";
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: DireccionC, Attribute: direccionCdrvCiudad");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: DireccionC, Attribute: direccionCdrvCiudad");
         }
         return (value == null ? null : value.trim());
     }
@@ -385,7 +385,7 @@ public class DireccionC extends AbstractAppEntity {
             value = direccionCdrvTieneDepartamentoDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: DireccionC, Attribute: direccionCdrvTieneDepartamento");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: DireccionC, Attribute: direccionCdrvTieneDepartamento");
         }
         return value;
     }
@@ -404,7 +404,7 @@ public class DireccionC extends AbstractAppEntity {
             value = direccionCdrvTieneMunicipioDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: DireccionC, Attribute: direccionCdrvTieneMunicipio");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: DireccionC, Attribute: direccionCdrvTieneMunicipio");
         }
         return value;
     }

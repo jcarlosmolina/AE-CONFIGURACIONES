@@ -1028,7 +1028,7 @@ Datos adicionales: Se debe ingresar el número de meses. El valor mínimo es 6, 
             value = usuarioNovedaddrvEstaActivoDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: UsuarioNovedad, Attribute: usuarioNovedaddrvEstaActivo");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: UsuarioNovedad, Attribute: usuarioNovedaddrvEstaActivo");
         }
         return value;
     }
@@ -1052,7 +1052,7 @@ Si existe un conyuge no activo su vigencia no puede estar traslapada con el nuev
             value = usuarioNovedaddrvParentescoOKDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: UsuarioNovedad, Attribute: usuarioNovedaddrvParentescoOK");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: UsuarioNovedad, Attribute: usuarioNovedaddrvParentescoOK");
         }
         return value;
     }
@@ -1071,7 +1071,7 @@ Si existe un conyuge no activo su vigencia no puede estar traslapada con el nuev
             value = usuarioNovedaddrvEsTitularDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: UsuarioNovedad, Attribute: usuarioNovedaddrvEsTitular");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: UsuarioNovedad, Attribute: usuarioNovedaddrvEsTitular");
         }
         return value;
     }
@@ -1090,7 +1090,7 @@ Si existe un conyuge no activo su vigencia no puede estar traslapada con el nuev
             value = usuarioNovedaddrvEsPadreDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: UsuarioNovedad, Attribute: usuarioNovedaddrvEsPadre");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: UsuarioNovedad, Attribute: usuarioNovedaddrvEsPadre");
         }
         return value;
     }
@@ -1109,7 +1109,7 @@ Si existe un conyuge no activo su vigencia no puede estar traslapada con el nuev
             value = usuarioNovedaddrvEdadDerivations();
         } catch (Exception e) {
             value = Long.valueOf(0);
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: UsuarioNovedad, Attribute: usuarioNovedaddrvEdad");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: UsuarioNovedad, Attribute: usuarioNovedaddrvEdad");
         }
         return value;
     }
@@ -1128,7 +1128,7 @@ Si existe un conyuge no activo su vigencia no puede estar traslapada con el nuev
             value = usuarioNovedaddrvEsHijoDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: UsuarioNovedad, Attribute: usuarioNovedaddrvEsHijo");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: UsuarioNovedad, Attribute: usuarioNovedaddrvEsHijo");
         }
         return value;
     }
@@ -1147,7 +1147,7 @@ Si existe un conyuge no activo su vigencia no puede estar traslapada con el nuev
             value = usuarioNovedaddrvEsConyugeDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: UsuarioNovedad, Attribute: usuarioNovedaddrvEsConyuge");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: UsuarioNovedad, Attribute: usuarioNovedaddrvEsConyuge");
         }
         return value;
     }
@@ -1166,7 +1166,7 @@ Si existe un conyuge no activo su vigencia no puede estar traslapada con el nuev
             value = usuarioNovedaddrvEsElTitularDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: UsuarioNovedad, Attribute: usuarioNovedaddrvEsElTitular");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: UsuarioNovedad, Attribute: usuarioNovedaddrvEsElTitular");
         }
         return value;
     }
@@ -1185,7 +1185,7 @@ Si existe un conyuge no activo su vigencia no puede estar traslapada con el nuev
             value = usuarioNovedaddrvPuedeSerTitularDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: UsuarioNovedad, Attribute: usuarioNovedaddrvPuedeSerTitular");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: UsuarioNovedad, Attribute: usuarioNovedaddrvPuedeSerTitular");
         }
         return value;
     }
@@ -1204,7 +1204,7 @@ Si existe un conyuge no activo su vigencia no puede estar traslapada con el nuev
             value = usuarioNovedaddrvEstaSuspendidoDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: UsuarioNovedad, Attribute: usuarioNovedaddrvEstaSuspendido");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: UsuarioNovedad, Attribute: usuarioNovedaddrvEstaSuspendido");
         }
         return value;
     }
@@ -1391,7 +1391,7 @@ Si existe un conyuge no activo su vigencia no puede estar traslapada con el nuev
             value = usuarioNovedadDrvNombreCompletoDerivations();
         } catch (Exception e) {
             value = "";
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: UsuarioNovedad, Attribute: usuarioNovedadDrvNombreCompleto");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: UsuarioNovedad, Attribute: usuarioNovedadDrvNombreCompleto");
         }
         return (value == null ? null : value.trim());
     }
@@ -1410,7 +1410,7 @@ Si existe un conyuge no activo su vigencia no puede estar traslapada con el nuev
             value = usuarioNovedadDrvIdentificacionDerivations();
         } catch (Exception e) {
             value = "";
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: UsuarioNovedad, Attribute: usuarioNovedadDrvIdentificacion");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: UsuarioNovedad, Attribute: usuarioNovedadDrvIdentificacion");
         }
         return (value == null ? null : value.trim());
     }
@@ -1429,7 +1429,7 @@ Si existe un conyuge no activo su vigencia no puede estar traslapada con el nuev
             value = usuarioNovedadDrvAplicaNovedadDerivations();
         } catch (Exception e) {
             value = false;
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: UsuarioNovedad, Attribute: usuarioNovedadDrvAplicaNovedad");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: UsuarioNovedad, Attribute: usuarioNovedadDrvAplicaNovedad");
         }
         return value;
     }
@@ -1448,7 +1448,7 @@ Si existe un conyuge no activo su vigencia no puede estar traslapada con el nuev
             value = usuarioNovedadDrvNuevaIdentificacionDerivations();
         } catch (Exception e) {
             value = "";
-            org.slf4j.LoggerFactory.getLogger(this.getClass()).error("Definition Class: UsuarioNovedad, Attribute: usuarioNovedadDrvNuevaIdentificacion");
+            org.slf4j.LoggerFactory.getLogger(this.getClass()).debug("Definition Class: UsuarioNovedad, Attribute: usuarioNovedadDrvNuevaIdentificacion");
         }
         return (value == null ? null : value.trim());
     }

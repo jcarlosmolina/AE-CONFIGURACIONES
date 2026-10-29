@@ -2745,14 +2745,14 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
         }
     }
 
-    // AssocOperator: AssocOperator139
+    // AssocOperator: AssocOperator133
 	@Override
-    public Long assocOperator139(String tGCREARCOMBOptpatrContratoIntegral, String tGCREARCOMBOptpatrContratoOdontologico) throws SystemException {
+    public Long assocOperator133(String tGCREARCOMBOptpatrContratoIntegral, String tGCREARCOMBOptpatrContratoOdontologico) throws SystemException {
         try {
             // COUNT (LogContratoCombo) WHERE (LogContratoCombo.ContratoIntegral = pt_p_atrContratoIntegral AND LogContratoCombo.ContratoOdontologico = pt_p_atrContratoOdontologico)
-            return assocOperator139Range1(tGCREARCOMBOptpatrContratoIntegral, tGCREARCOMBOptpatrContratoOdontologico);
+            return assocOperator133Range1(tGCREARCOMBOptpatrContratoIntegral, tGCREARCOMBOptpatrContratoOdontologico);
         } catch (Exception e) {
-            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator139, Method: assocOperator139";
+            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator133, Method: assocOperator133";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
@@ -2760,13 +2760,13 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
 
 
 
-    public Long assocOperator139Range1 (String tGCREARCOMBOptpatrContratoIntegral, String tGCREARCOMBOptpatrContratoOdontologico) throws SystemException {
-        SQLCount sql = assocOperator139Range1Query(tGCREARCOMBOptpatrContratoIntegral, tGCREARCOMBOptpatrContratoOdontologico, null);
+    public Long assocOperator133Range1 (String tGCREARCOMBOptpatrContratoIntegral, String tGCREARCOMBOptpatrContratoOdontologico) throws SystemException {
+        SQLCount sql = assocOperator133Range1Query(tGCREARCOMBOptpatrContratoIntegral, tGCREARCOMBOptpatrContratoOdontologico, null);
         return Long.valueOf(new TypedQueryBuilder<LogContratoCombo>(em, LogContratoCombo.class).build(sql).execute().size());
     }
 
 
-    public SQLCount assocOperator139Range1Query (String tGCREARCOMBOptpatrContratoIntegral, String tGCREARCOMBOptpatrContratoOdontologico, SQLSelect superQuery) throws SystemException {
+    public SQLCount assocOperator133Range1Query (String tGCREARCOMBOptpatrContratoIntegral, String tGCREARCOMBOptpatrContratoOdontologico, SQLSelect superQuery) throws SystemException {
         try {
             SQLCount sql;
             // The path starts with an object
@@ -2807,20 +2807,20 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
             sql.addOperand(conjunction);
             return sql;
         } catch (Exception e) {
-            String exceptionMessage = "Assoc.Operator: AssocOperator139, Method: assocOperator139Range1Query";
+            String exceptionMessage = "Assoc.Operator: AssocOperator133, Method: assocOperator133Range1Query";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
     }
 
-    // AssocOperator: AssocOperator140
+    // AssocOperator: AssocOperator134
 	@Override
-    public Long assocOperator140(ContratoCombo tGEDITARCOMBOptpthisContratoCombo, String tGEDITARCOMBOptpContratoIntegral, String tGEDITARCOMBOptpContratoOdontologico) throws SystemException {
+    public Long assocOperator134(ContratoCombo tGEDITARCOMBOptpthisContratoCombo, String tGEDITARCOMBOptpContratoIntegral, String tGEDITARCOMBOptpContratoOdontologico) throws SystemException {
         try {
             // COUNT (LogContratoCombo) WHERE (LogContratoCombo.Id <> pt_p_thisContratoCombo.Id AND LogContratoCombo.ContratoIntegral = pt_p_ContratoIntegral AND LogContratoCombo.ContratoOdontologico = pt_p_ContratoOdontologico)
-            return assocOperator140Range1(tGEDITARCOMBOptpthisContratoCombo, tGEDITARCOMBOptpContratoIntegral, tGEDITARCOMBOptpContratoOdontologico);
+            return assocOperator134Range1(tGEDITARCOMBOptpthisContratoCombo, tGEDITARCOMBOptpContratoIntegral, tGEDITARCOMBOptpContratoOdontologico);
         } catch (Exception e) {
-            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator140, Method: assocOperator140";
+            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator134, Method: assocOperator134";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
@@ -2828,13 +2828,13 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
 
 
 
-    public Long assocOperator140Range1 (ContratoCombo tGEDITARCOMBOptpthisContratoCombo, String tGEDITARCOMBOptpContratoIntegral, String tGEDITARCOMBOptpContratoOdontologico) throws SystemException {
-        SQLCount sql = assocOperator140Range1Query(tGEDITARCOMBOptpthisContratoCombo, tGEDITARCOMBOptpContratoIntegral, tGEDITARCOMBOptpContratoOdontologico, null);
+    public Long assocOperator134Range1 (ContratoCombo tGEDITARCOMBOptpthisContratoCombo, String tGEDITARCOMBOptpContratoIntegral, String tGEDITARCOMBOptpContratoOdontologico) throws SystemException {
+        SQLCount sql = assocOperator134Range1Query(tGEDITARCOMBOptpthisContratoCombo, tGEDITARCOMBOptpContratoIntegral, tGEDITARCOMBOptpContratoOdontologico, null);
         return Long.valueOf(new TypedQueryBuilder<LogContratoCombo>(em, LogContratoCombo.class).build(sql).execute().size());
     }
 
 
-    public SQLCount assocOperator140Range1Query (ContratoCombo tGEDITARCOMBOptpthisContratoCombo, String tGEDITARCOMBOptpContratoIntegral, String tGEDITARCOMBOptpContratoOdontologico, SQLSelect superQuery) throws SystemException {
+    public SQLCount assocOperator134Range1Query (ContratoCombo tGEDITARCOMBOptpthisContratoCombo, String tGEDITARCOMBOptpContratoIntegral, String tGEDITARCOMBOptpContratoOdontologico, SQLSelect superQuery) throws SystemException {
         try {
             SQLCount sql;
             // The path starts with an object
@@ -2889,20 +2889,20 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
             sql.addOperand(conjunction);
             return sql;
         } catch (Exception e) {
-            String exceptionMessage = "Assoc.Operator: AssocOperator140, Method: assocOperator140Range1Query";
+            String exceptionMessage = "Assoc.Operator: AssocOperator134, Method: assocOperator134Range1Query";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
     }
 
-    // AssocOperator: AssocOperator143
+    // AssocOperator: AssocOperator137
 	@Override
-    public Long assocOperator143(Long tGADDPLANTREPptpatrTipo, String tGADDPLANTREPptpatrNombreArchivoPDF) throws SystemException {
+    public Long assocOperator137(Long tGADDPLANTREPptpatrTipo, String tGADDPLANTREPptpatrNombreArchivoPDF) throws SystemException {
         try {
             // COUNT (PlantillaReporte) WHERE (PlantillaReporte.Tipo <> pt_p_atrTipo AND PlantillaReporte.NombreArchivoPDF = pt_p_atrNombreArchivoPDF)
-            return assocOperator143Range1(tGADDPLANTREPptpatrTipo, tGADDPLANTREPptpatrNombreArchivoPDF);
+            return assocOperator137Range1(tGADDPLANTREPptpatrTipo, tGADDPLANTREPptpatrNombreArchivoPDF);
         } catch (Exception e) {
-            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator143, Method: assocOperator143";
+            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator137, Method: assocOperator137";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
@@ -2910,13 +2910,13 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
 
 
 
-    public Long assocOperator143Range1 (Long tGADDPLANTREPptpatrTipo, String tGADDPLANTREPptpatrNombreArchivoPDF) throws SystemException {
-        SQLCount sql = assocOperator143Range1Query(tGADDPLANTREPptpatrTipo, tGADDPLANTREPptpatrNombreArchivoPDF, null);
+    public Long assocOperator137Range1 (Long tGADDPLANTREPptpatrTipo, String tGADDPLANTREPptpatrNombreArchivoPDF) throws SystemException {
+        SQLCount sql = assocOperator137Range1Query(tGADDPLANTREPptpatrTipo, tGADDPLANTREPptpatrNombreArchivoPDF, null);
         return Long.valueOf(new TypedQueryBuilder<PlantillaReporte>(em, PlantillaReporte.class).build(sql).execute().size());
     }
 
 
-    public SQLCount assocOperator143Range1Query (Long tGADDPLANTREPptpatrTipo, String tGADDPLANTREPptpatrNombreArchivoPDF, SQLSelect superQuery) throws SystemException {
+    public SQLCount assocOperator137Range1Query (Long tGADDPLANTREPptpatrTipo, String tGADDPLANTREPptpatrNombreArchivoPDF, SQLSelect superQuery) throws SystemException {
         try {
             SQLCount sql;
             // The path starts with an object
@@ -2957,20 +2957,20 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
             sql.addOperand(conjunction);
             return sql;
         } catch (Exception e) {
-            String exceptionMessage = "Assoc.Operator: AssocOperator143, Method: assocOperator143Range1Query";
+            String exceptionMessage = "Assoc.Operator: AssocOperator137, Method: assocOperator137Range1Query";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
     }
 
-    // AssocOperator: AssocOperator144
+    // AssocOperator: AssocOperator138
 	@Override
-    public Long assocOperator144(PlantillaReporte tGEDITPLANTREPptpthisPlantillaReporte, String tGEDITPLANTREPptpNombreArchivoPDF) throws SystemException {
+    public Long assocOperator138(PlantillaReporte tGEDITPLANTREPptpthisPlantillaReporte, String tGEDITPLANTREPptpNombreArchivoPDF) throws SystemException {
         try {
             // COUNT (PlantillaReporte) WHERE (PlantillaReporte.Tipo <> pt_p_thisPlantillaReporte.Tipo AND PlantillaReporte.NombreArchivoPDF = pt_p_NombreArchivoPDF)
-            return assocOperator144Range1(tGEDITPLANTREPptpthisPlantillaReporte, tGEDITPLANTREPptpNombreArchivoPDF);
+            return assocOperator138Range1(tGEDITPLANTREPptpthisPlantillaReporte, tGEDITPLANTREPptpNombreArchivoPDF);
         } catch (Exception e) {
-            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator144, Method: assocOperator144";
+            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator138, Method: assocOperator138";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
@@ -2978,13 +2978,13 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
 
 
 
-    public Long assocOperator144Range1 (PlantillaReporte tGEDITPLANTREPptpthisPlantillaReporte, String tGEDITPLANTREPptpNombreArchivoPDF) throws SystemException {
-        SQLCount sql = assocOperator144Range1Query(tGEDITPLANTREPptpthisPlantillaReporte, tGEDITPLANTREPptpNombreArchivoPDF, null);
+    public Long assocOperator138Range1 (PlantillaReporte tGEDITPLANTREPptpthisPlantillaReporte, String tGEDITPLANTREPptpNombreArchivoPDF) throws SystemException {
+        SQLCount sql = assocOperator138Range1Query(tGEDITPLANTREPptpthisPlantillaReporte, tGEDITPLANTREPptpNombreArchivoPDF, null);
         return Long.valueOf(new TypedQueryBuilder<PlantillaReporte>(em, PlantillaReporte.class).build(sql).execute().size());
     }
 
 
-    public SQLCount assocOperator144Range1Query (PlantillaReporte tGEDITPLANTREPptpthisPlantillaReporte, String tGEDITPLANTREPptpNombreArchivoPDF, SQLSelect superQuery) throws SystemException {
+    public SQLCount assocOperator138Range1Query (PlantillaReporte tGEDITPLANTREPptpthisPlantillaReporte, String tGEDITPLANTREPptpNombreArchivoPDF, SQLSelect superQuery) throws SystemException {
         try {
             SQLCount sql;
             // The path starts with an object
@@ -3025,20 +3025,20 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
             sql.addOperand(conjunction);
             return sql;
         } catch (Exception e) {
-            String exceptionMessage = "Assoc.Operator: AssocOperator144, Method: assocOperator144Range1Query";
+            String exceptionMessage = "Assoc.Operator: AssocOperator138, Method: assocOperator138Range1Query";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
     }
 
-    // AssocOperator: AssocOperator145
+    // AssocOperator: AssocOperator139
 	@Override
-    public Long assocOperator145(Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException {
+    public Long assocOperator139(Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException {
         try {
             // COUNT (FechaIniEPS) WHERE (FechaIniEPS.Desde >= pt_p_atrDesde AND FechaIniEPS.Desde <= pt_p_atrHasta AND FechaIniEPS.Tramite = pt_p_atrTramite AND FechaIniEPS.TipoContrato = pt_p_atrTipoContrato)
-            return assocOperator145Range1(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato);
+            return assocOperator139Range1(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato);
         } catch (Exception e) {
-            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator145, Method: assocOperator145";
+            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator139, Method: assocOperator139";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
@@ -3046,13 +3046,13 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
 
 
 
-    public Long assocOperator145Range1 (Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException {
-        SQLCount sql = assocOperator145Range1Query(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato, null);
+    public Long assocOperator139Range1 (Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException {
+        SQLCount sql = assocOperator139Range1Query(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato, null);
         return Long.valueOf(new TypedQueryBuilder<FechaIniEPS>(em, FechaIniEPS.class).build(sql).execute().size());
     }
 
 
-    public SQLCount assocOperator145Range1Query (Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato, SQLSelect superQuery) throws SystemException {
+    public SQLCount assocOperator139Range1Query (Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato, SQLSelect superQuery) throws SystemException {
         try {
             SQLCount sql;
             // The path starts with an object
@@ -3121,19 +3121,19 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
             sql.addOperand(conjunction);
             return sql;
         } catch (Exception e) {
-            String exceptionMessage = "Assoc.Operator: AssocOperator145, Method: assocOperator145Range1Query";
+            String exceptionMessage = "Assoc.Operator: AssocOperator139, Method: assocOperator139Range1Query";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
     }
-    // AssocOperator: AssocOperator146
+    // AssocOperator: AssocOperator140
 	@Override
-    public Long assocOperator146(Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException {
+    public Long assocOperator140(Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException {
         try {
             // COUNT (FechaIniEPS) WHERE (FechaIniEPS.Hasta >= pt_p_atrDesde AND FechaIniEPS.Hasta <= pt_p_atrHasta AND FechaIniEPS.Tramite = pt_p_atrTramite AND FechaIniEPS.TipoContrato = pt_p_atrTipoContrato)
-            return assocOperator146Range1(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato);
+            return assocOperator140Range1(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato);
         } catch (Exception e) {
-            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator146, Method: assocOperator146";
+            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator140, Method: assocOperator140";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
@@ -3141,13 +3141,13 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
 
 
 
-    public Long assocOperator146Range1 (Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException {
-        SQLCount sql = assocOperator146Range1Query(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato, null);
+    public Long assocOperator140Range1 (Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException {
+        SQLCount sql = assocOperator140Range1Query(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato, null);
         return Long.valueOf(new TypedQueryBuilder<FechaIniEPS>(em, FechaIniEPS.class).build(sql).execute().size());
     }
 
 
-    public SQLCount assocOperator146Range1Query (Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato, SQLSelect superQuery) throws SystemException {
+    public SQLCount assocOperator140Range1Query (Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato, SQLSelect superQuery) throws SystemException {
         try {
             SQLCount sql;
             // The path starts with an object
@@ -3216,19 +3216,19 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
             sql.addOperand(conjunction);
             return sql;
         } catch (Exception e) {
-            String exceptionMessage = "Assoc.Operator: AssocOperator146, Method: assocOperator146Range1Query";
+            String exceptionMessage = "Assoc.Operator: AssocOperator140, Method: assocOperator140Range1Query";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
     }
-    // AssocOperator: AssocOperator147
+    // AssocOperator: AssocOperator141
 	@Override
-    public Long assocOperator147(Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException {
+    public Long assocOperator141(Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException {
         try {
             // COUNT (FechaIniEPS) WHERE (FechaIniEPS.Desde <= pt_p_atrDesde AND FechaIniEPS.Hasta >= pt_p_atrHasta AND FechaIniEPS.Tramite = pt_p_atrTramite AND FechaIniEPS.TipoContrato = pt_p_atrTipoContrato)
-            return assocOperator147Range1(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato);
+            return assocOperator141Range1(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato);
         } catch (Exception e) {
-            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator147, Method: assocOperator147";
+            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator141, Method: assocOperator141";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
@@ -3236,13 +3236,13 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
 
 
 
-    public Long assocOperator147Range1 (Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException {
-        SQLCount sql = assocOperator147Range1Query(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato, null);
+    public Long assocOperator141Range1 (Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException {
+        SQLCount sql = assocOperator141Range1Query(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato, null);
         return Long.valueOf(new TypedQueryBuilder<FechaIniEPS>(em, FechaIniEPS.class).build(sql).execute().size());
     }
 
 
-    public SQLCount assocOperator147Range1Query (Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato, SQLSelect superQuery) throws SystemException {
+    public SQLCount assocOperator141Range1Query (Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato, SQLSelect superQuery) throws SystemException {
         try {
             SQLCount sql;
             // The path starts with an object
@@ -3311,19 +3311,19 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
             sql.addOperand(conjunction);
             return sql;
         } catch (Exception e) {
-            String exceptionMessage = "Assoc.Operator: AssocOperator147, Method: assocOperator147Range1Query";
+            String exceptionMessage = "Assoc.Operator: AssocOperator141, Method: assocOperator141Range1Query";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
     }
-    // AssocOperator: AssocOperator148
+    // AssocOperator: AssocOperator142
 	@Override
-    public Long assocOperator148(Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException {
+    public Long assocOperator142(Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException {
         try {
             // COUNT (FechaIniEPS) WHERE (FechaIniEPS.Desde >= pt_p_atrDesde AND FechaIniEPS.Hasta <= pt_p_atrHasta AND FechaIniEPS.Tramite = pt_p_atrTramite AND FechaIniEPS.TipoContrato = pt_p_atrTipoContrato)
-            return assocOperator148Range1(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato);
+            return assocOperator142Range1(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato);
         } catch (Exception e) {
-            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator148, Method: assocOperator148";
+            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator142, Method: assocOperator142";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
@@ -3331,13 +3331,13 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
 
 
 
-    public Long assocOperator148Range1 (Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException {
-        SQLCount sql = assocOperator148Range1Query(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato, null);
+    public Long assocOperator142Range1 (Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato) throws SystemException {
+        SQLCount sql = assocOperator142Range1Query(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato, null);
         return Long.valueOf(new TypedQueryBuilder<FechaIniEPS>(em, FechaIniEPS.class).build(sql).execute().size());
     }
 
 
-    public SQLCount assocOperator148Range1Query (Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato, SQLSelect superQuery) throws SystemException {
+    public SQLCount assocOperator142Range1Query (Date tGCREARFINIEPSptpatrDesde, Date tGCREARFINIEPSptpatrHasta, Long tGCREARFINIEPSptpatrTramite, Long tGCREARFINIEPSptpatrTipoContrato, SQLSelect superQuery) throws SystemException {
         try {
             SQLCount sql;
             // The path starts with an object
@@ -3406,20 +3406,20 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
             sql.addOperand(conjunction);
             return sql;
         } catch (Exception e) {
-            String exceptionMessage = "Assoc.Operator: AssocOperator148, Method: assocOperator148Range1Query";
+            String exceptionMessage = "Assoc.Operator: AssocOperator142, Method: assocOperator142Range1Query";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
     }
 
-    // AssocOperator: AssocOperator149
+    // AssocOperator: AssocOperator143
 	@Override
-    public Long assocOperator149(FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException {
+    public Long assocOperator143(FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException {
         try {
             // COUNT (FechaIniEPS) WHERE (FechaIniEPS.Id <> pt_p_thisFechaIniEPS.Id AND FechaIniEPS.Desde >= pt_p_Desde AND FechaIniEPS.Desde <= pt_p_Hasta AND FechaIniEPS.Tramite = pt_p_thisFechaIniEPS.Tramite AND FechaIniEPS.TipoContrato = pt_p_thisFechaIniEPS.TipoContrato)
-            return assocOperator149Range1(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta);
+            return assocOperator143Range1(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta);
         } catch (Exception e) {
-            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator149, Method: assocOperator149";
+            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator143, Method: assocOperator143";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
@@ -3427,13 +3427,13 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
 
 
 
-    public Long assocOperator149Range1 (FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException {
-        SQLCount sql = assocOperator149Range1Query(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta, null);
+    public Long assocOperator143Range1 (FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException {
+        SQLCount sql = assocOperator143Range1Query(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta, null);
         return Long.valueOf(new TypedQueryBuilder<FechaIniEPS>(em, FechaIniEPS.class).build(sql).execute().size());
     }
 
 
-    public SQLCount assocOperator149Range1Query (FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta, SQLSelect superQuery) throws SystemException {
+    public SQLCount assocOperator143Range1Query (FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta, SQLSelect superQuery) throws SystemException {
         try {
             SQLCount sql;
             // The path starts with an object
@@ -3516,19 +3516,19 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
             sql.addOperand(conjunction);
             return sql;
         } catch (Exception e) {
-            String exceptionMessage = "Assoc.Operator: AssocOperator149, Method: assocOperator149Range1Query";
+            String exceptionMessage = "Assoc.Operator: AssocOperator143, Method: assocOperator143Range1Query";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
     }
-    // AssocOperator: AssocOperator150
+    // AssocOperator: AssocOperator144
 	@Override
-    public Long assocOperator150(FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException {
+    public Long assocOperator144(FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException {
         try {
             // COUNT (FechaIniEPS) WHERE (FechaIniEPS.Id <> pt_p_thisFechaIniEPS.Id AND FechaIniEPS.Hasta >= pt_p_Desde AND FechaIniEPS.Hasta <= pt_p_Hasta AND FechaIniEPS.Tramite = pt_p_thisFechaIniEPS.Tramite AND FechaIniEPS.TipoContrato = pt_p_thisFechaIniEPS.TipoContrato)
-            return assocOperator150Range1(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta);
+            return assocOperator144Range1(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta);
         } catch (Exception e) {
-            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator150, Method: assocOperator150";
+            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator144, Method: assocOperator144";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
@@ -3536,13 +3536,13 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
 
 
 
-    public Long assocOperator150Range1 (FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException {
-        SQLCount sql = assocOperator150Range1Query(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta, null);
+    public Long assocOperator144Range1 (FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException {
+        SQLCount sql = assocOperator144Range1Query(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta, null);
         return Long.valueOf(new TypedQueryBuilder<FechaIniEPS>(em, FechaIniEPS.class).build(sql).execute().size());
     }
 
 
-    public SQLCount assocOperator150Range1Query (FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta, SQLSelect superQuery) throws SystemException {
+    public SQLCount assocOperator144Range1Query (FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta, SQLSelect superQuery) throws SystemException {
         try {
             SQLCount sql;
             // The path starts with an object
@@ -3625,19 +3625,19 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
             sql.addOperand(conjunction);
             return sql;
         } catch (Exception e) {
-            String exceptionMessage = "Assoc.Operator: AssocOperator150, Method: assocOperator150Range1Query";
+            String exceptionMessage = "Assoc.Operator: AssocOperator144, Method: assocOperator144Range1Query";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
     }
-    // AssocOperator: AssocOperator151
+    // AssocOperator: AssocOperator145
 	@Override
-    public Long assocOperator151(FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException {
+    public Long assocOperator145(FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException {
         try {
             // COUNT (FechaIniEPS) WHERE (FechaIniEPS.Id <> pt_p_thisFechaIniEPS.Id AND FechaIniEPS.Desde <= pt_p_Desde AND FechaIniEPS.Hasta >= pt_p_Hasta AND FechaIniEPS.Tramite = pt_p_thisFechaIniEPS.Tramite AND FechaIniEPS.TipoContrato = pt_p_thisFechaIniEPS.TipoContrato)
-            return assocOperator151Range1(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta);
+            return assocOperator145Range1(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta);
         } catch (Exception e) {
-            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator151, Method: assocOperator151";
+            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator145, Method: assocOperator145";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
@@ -3645,13 +3645,13 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
 
 
 
-    public Long assocOperator151Range1 (FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException {
-        SQLCount sql = assocOperator151Range1Query(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta, null);
+    public Long assocOperator145Range1 (FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException {
+        SQLCount sql = assocOperator145Range1Query(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta, null);
         return Long.valueOf(new TypedQueryBuilder<FechaIniEPS>(em, FechaIniEPS.class).build(sql).execute().size());
     }
 
 
-    public SQLCount assocOperator151Range1Query (FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta, SQLSelect superQuery) throws SystemException {
+    public SQLCount assocOperator145Range1Query (FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta, SQLSelect superQuery) throws SystemException {
         try {
             SQLCount sql;
             // The path starts with an object
@@ -3734,19 +3734,19 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
             sql.addOperand(conjunction);
             return sql;
         } catch (Exception e) {
-            String exceptionMessage = "Assoc.Operator: AssocOperator151, Method: assocOperator151Range1Query";
+            String exceptionMessage = "Assoc.Operator: AssocOperator145, Method: assocOperator145Range1Query";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
     }
-    // AssocOperator: AssocOperator152
+    // AssocOperator: AssocOperator146
 	@Override
-    public Long assocOperator152(FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException {
+    public Long assocOperator146(FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException {
         try {
             // COUNT (FechaIniEPS) WHERE (FechaIniEPS.Id <> pt_p_thisFechaIniEPS.Id AND FechaIniEPS.Desde >= pt_p_Desde AND FechaIniEPS.Hasta <= pt_p_Hasta AND FechaIniEPS.Tramite = pt_p_thisFechaIniEPS.Tramite AND FechaIniEPS.TipoContrato = pt_p_thisFechaIniEPS.TipoContrato)
-            return assocOperator152Range1(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta);
+            return assocOperator146Range1(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta);
         } catch (Exception e) {
-            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator152, Method: assocOperator152";
+            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator146, Method: assocOperator146";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
@@ -3754,13 +3754,13 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
 
 
 
-    public Long assocOperator152Range1 (FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException {
-        SQLCount sql = assocOperator152Range1Query(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta, null);
+    public Long assocOperator146Range1 (FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta) throws SystemException {
+        SQLCount sql = assocOperator146Range1Query(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta, null);
         return Long.valueOf(new TypedQueryBuilder<FechaIniEPS>(em, FechaIniEPS.class).build(sql).execute().size());
     }
 
 
-    public SQLCount assocOperator152Range1Query (FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta, SQLSelect superQuery) throws SystemException {
+    public SQLCount assocOperator146Range1Query (FechaIniEPS tGMODFINIEPSptpthisFechaIniEPS, Date tGMODFINIEPSptpDesde, Date tGMODFINIEPSptpHasta, SQLSelect superQuery) throws SystemException {
         try {
             SQLCount sql;
             // The path starts with an object
@@ -3843,20 +3843,20 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
             sql.addOperand(conjunction);
             return sql;
         } catch (Exception e) {
-            String exceptionMessage = "Assoc.Operator: AssocOperator152, Method: assocOperator152Range1Query";
+            String exceptionMessage = "Assoc.Operator: AssocOperator146, Method: assocOperator146Range1Query";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
     }
 
-    // AssocOperator: AssocOperator153
+    // AssocOperator: AssocOperator147
 	@Override
-    public Long assocOperator153(String tGCREARCONTEXENTOptpatrNumContrato) throws SystemException {
+    public Long assocOperator147(String tGCREARCONTEXENTOptpatrNumContrato) throws SystemException {
         try {
             // COUNT (ContratosExentosFIngreso) WHERE (ContratosExentosFIngreso.NumContrato = pt_p_atrNumContrato)
-            return assocOperator153Range1(tGCREARCONTEXENTOptpatrNumContrato);
+            return assocOperator147Range1(tGCREARCONTEXENTOptpatrNumContrato);
         } catch (Exception e) {
-            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator153, Method: assocOperator153";
+            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator147, Method: assocOperator147";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
@@ -3864,13 +3864,13 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
 
 
 
-    public Long assocOperator153Range1 (String tGCREARCONTEXENTOptpatrNumContrato) throws SystemException {
-        SQLCount sql = assocOperator153Range1Query(tGCREARCONTEXENTOptpatrNumContrato, null);
+    public Long assocOperator147Range1 (String tGCREARCONTEXENTOptpatrNumContrato) throws SystemException {
+        SQLCount sql = assocOperator147Range1Query(tGCREARCONTEXENTOptpatrNumContrato, null);
         return Long.valueOf(new TypedQueryBuilder<ContratosExentosFIngreso>(em, ContratosExentosFIngreso.class).build(sql).execute().size());
     }
 
 
-    public SQLCount assocOperator153Range1Query (String tGCREARCONTEXENTOptpatrNumContrato, SQLSelect superQuery) throws SystemException {
+    public SQLCount assocOperator147Range1Query (String tGCREARCONTEXENTOptpatrNumContrato, SQLSelect superQuery) throws SystemException {
         try {
             SQLCount sql;
             // The path starts with an object
@@ -3897,20 +3897,20 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
             sql.addOperand(conjunction);
             return sql;
         } catch (Exception e) {
-            String exceptionMessage = "Assoc.Operator: AssocOperator153, Method: assocOperator153Range1Query";
+            String exceptionMessage = "Assoc.Operator: AssocOperator147, Method: assocOperator147Range1Query";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
     }
 
-    // AssocOperator: AssocOperator158
+    // AssocOperator: AssocOperator152
 	@Override
-    public Collection<FrecuenciaAct> assocOperator158() throws SystemException {
+    public Collection<FrecuenciaAct> assocOperator152() throws SystemException {
         try {
             // FOR ALL FrecuenciaAct DO FrecuenciaAct.modificar(FrecuenciaAct, 0)
-            return assocOperator158Range1();
+            return assocOperator152Range1();
         } catch (Exception e) {
-            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator158, Method: assocOperator158";
+            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator152, Method: assocOperator152";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
@@ -3918,31 +3918,31 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
 
 
 
-    public Collection<FrecuenciaAct> assocOperator158Range1 () throws SystemException {
+    public Collection<FrecuenciaAct> assocOperator152Range1 () throws SystemException {
 
-        SQLSelect sql = assocOperator158Range1Query();
+        SQLSelect sql = assocOperator152Range1Query();
         return new TypedQueryBuilder<FrecuenciaAct>(em, FrecuenciaAct.class).build(sql).execute();
     }
 
 
-    public SQLPopulation assocOperator158Range1Query () throws SystemException {
+    public SQLPopulation assocOperator152Range1Query () throws SystemException {
         try {
             return new SQLPopulation("", FrecuenciaActConstants.CLASS_NAME);
         } catch (Exception e) {
-            String exceptionMessage = "Assoc.Operator: AssocOperator158, Method: assocOperator158Range1Query";
+            String exceptionMessage = "Assoc.Operator: AssocOperator152, Method: assocOperator152Range1Query";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
     }
 
-    // AssocOperator: AssocOperator159
+    // AssocOperator: AssocOperator153
 	@Override
-    public Collection<FrecuenciaAct> assocOperator159(Long tGFIJARDATOSSINCptNumParametrica) throws SystemException {
+    public Collection<FrecuenciaAct> assocOperator153(Long tGFIJARDATOSSINCptNumParametrica) throws SystemException {
         try {
             // FOR ALL FrecuenciaAct WHERE (FrecuenciaAct.Parametrica = ptNumParametrica) DO FrecuenciaAct.fijarSincronizacion(FrecuenciaAct, systemDate(), ptResultado, AGENTFuncionario.Usuario, AGENTFuncionario.drvNombreCompleto)
-            return assocOperator159Range1(tGFIJARDATOSSINCptNumParametrica);
+            return assocOperator153Range1(tGFIJARDATOSSINCptNumParametrica);
         } catch (Exception e) {
-            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator159, Method: assocOperator159";
+            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator153, Method: assocOperator153";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
@@ -3950,14 +3950,14 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
 
 
 
-    public Collection<FrecuenciaAct> assocOperator159Range1 (Long tGFIJARDATOSSINCptNumParametrica) throws SystemException {
+    public Collection<FrecuenciaAct> assocOperator153Range1 (Long tGFIJARDATOSSINCptNumParametrica) throws SystemException {
 
-        SQLSelect sql = assocOperator159Range1Query(tGFIJARDATOSSINCptNumParametrica);
+        SQLSelect sql = assocOperator153Range1Query(tGFIJARDATOSSINCptNumParametrica);
         return new TypedQueryBuilder<FrecuenciaAct>(em, FrecuenciaAct.class).build(sql).execute();
     }
 
 
-    public SQLPopulation assocOperator159Range1Query (Long tGFIJARDATOSSINCptNumParametrica) throws SystemException {
+    public SQLPopulation assocOperator153Range1Query (Long tGFIJARDATOSSINCptNumParametrica) throws SystemException {
         try {
             SQLPopulation sql = new SQLPopulation("", FrecuenciaActConstants.CLASS_NAME);
             SQLWhereConjunction conjunction = new SQLWhereConjunction();
@@ -3978,31 +3978,31 @@ public class GlobalServicesJpaRepositoryImpl extends AbstractRepository implemen
             sql.addOperand(conjunction);
             return sql;
         } catch (Exception e) {
-            String exceptionMessage = "Assoc.Operator: AssocOperator159, Method: assocOperator159Range1Query";
+            String exceptionMessage = "Assoc.Operator: AssocOperator153, Method: assocOperator153Range1Query";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
     }
-    // AssocOperator: AssocOperator160
+    // AssocOperator: AssocOperator154
 	@Override
-    public Collection<FrecuenciaAct> assocOperator160(Long tGFIJARDATOSSINCptNumParametrica) throws SystemException {
+    public Collection<FrecuenciaAct> assocOperator154(Long tGFIJARDATOSSINCptNumParametrica) throws SystemException {
         try {
             // FOR ALL FrecuenciaAct WHERE (FrecuenciaAct.Parametrica = ptNumParametrica) DO FrecuenciaAct.fijarSincronizacion(FrecuenciaAct, systemDate(), ptResultado, AGENTUsuarioSistemaExterno.Login, "")
-            return assocOperator159(tGFIJARDATOSSINCptNumParametrica);
+            return assocOperator153(tGFIJARDATOSSINCptNumParametrica);
         } catch (Exception e) {
-            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator160, Method: assocOperator160";
+            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator154, Method: assocOperator154";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }
     }
-    // AssocOperator: AssocOperator161
+    // AssocOperator: AssocOperator155
 	@Override
-    public Collection<FrecuenciaAct> assocOperator161(Long tGFIJARDATOSSINCptNumParametrica) throws SystemException {
+    public Collection<FrecuenciaAct> assocOperator155(Long tGFIJARDATOSSINCptNumParametrica) throws SystemException {
         try {
             // FOR ALL FrecuenciaAct WHERE (FrecuenciaAct.Parametrica = ptNumParametrica) DO FrecuenciaAct.fijarSincronizacion(FrecuenciaAct, systemDate(), ptResultado, "Auto", "")
-            return assocOperator159(tGFIJARDATOSSINCptNumParametrica);
+            return assocOperator153(tGFIJARDATOSSINCptNumParametrica);
         } catch (Exception e) {
-            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator161, Method: assocOperator161";
+            String exceptionMessage = "Definition Class: GLOBAL, Assoc.Operator: AssocOperator155, Method: assocOperator155";
             org.slf4j.LoggerFactory.getLogger(this.getClass()).error(exceptionMessage);
             throw new SystemException(e, exceptionMessage);
         }

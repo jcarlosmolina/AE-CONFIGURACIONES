@@ -3176,7 +3176,7 @@ public class GlobalServicesService extends AbstractService {
         String tGCREARCOMBOptpatrContratoIntegral = request.getTGCREARCOMBOptpatrContratoIntegral();
         String tGCREARCOMBOptpatrContratoOdontologico = request.getTGCREARCOMBOptpatrContratoOdontologico();
         try {
-            boolean preconditionHolds = (globalServicesRepository.assocOperator139(tGCREARCOMBOptpatrContratoIntegral, tGCREARCOMBOptpatrContratoOdontologico)).equals(Long.valueOf(0));
+            boolean preconditionHolds = (globalServicesRepository.assocOperator133(tGCREARCOMBOptpatrContratoIntegral, tGCREARCOMBOptpatrContratoOdontologico)).equals(Long.valueOf(0));
             if (!preconditionHolds) throw new PreconditionException("Ya existe una configuración para los números de contratos");
         } catch (SystemException e) {
             LoggerFactory.getLogger(this.getClass()).error(e.getMessage());
@@ -3279,7 +3279,7 @@ public class GlobalServicesService extends AbstractService {
         String tGEDITARCOMBOptpContratoIntegral = request.getTGEDITARCOMBOptpContratoIntegral();
         String tGEDITARCOMBOptpContratoOdontologico = request.getTGEDITARCOMBOptpContratoOdontologico();
         try {
-            boolean preconditionHolds = (globalServicesRepository.assocOperator140(tGEDITARCOMBOptpthisContratoCombo, tGEDITARCOMBOptpContratoIntegral, tGEDITARCOMBOptpContratoOdontologico)).equals(Long.valueOf(0));
+            boolean preconditionHolds = (globalServicesRepository.assocOperator134(tGEDITARCOMBOptpthisContratoCombo, tGEDITARCOMBOptpContratoIntegral, tGEDITARCOMBOptpContratoOdontologico)).equals(Long.valueOf(0));
             if (!preconditionHolds) throw new PreconditionException("Ya existe una configuración para los números de contratos");
         } catch (SystemException e) {
             LoggerFactory.getLogger(this.getClass()).error(e.getMessage());
@@ -3428,7 +3428,7 @@ public class GlobalServicesService extends AbstractService {
         Long tGADDPLANTREPptpatrTipo = request.getTGADDPLANTREPptpatrTipo();
         String tGADDPLANTREPptpatrNombreArchivoPDF = request.getTGADDPLANTREPptpatrNombreArchivoPDF();
         try {
-            boolean preconditionHolds = (globalServicesRepository.assocOperator143(tGADDPLANTREPptpatrTipo, tGADDPLANTREPptpatrNombreArchivoPDF)).equals(Long.valueOf(0));
+            boolean preconditionHolds = (globalServicesRepository.assocOperator137(tGADDPLANTREPptpatrTipo, tGADDPLANTREPptpatrNombreArchivoPDF)).equals(Long.valueOf(0));
             if (!preconditionHolds) throw new PreconditionException("No puede crearse el reporte porque ya existe uno de otro tipo con el mismo nombre para el fichero pdf. Utilice otro nombre de fichero");
         } catch (SystemException e) {
             LoggerFactory.getLogger(this.getClass()).error(e.getMessage());
@@ -3525,7 +3525,7 @@ public class GlobalServicesService extends AbstractService {
         PlantillaReporte tGEDITPLANTREPptpthisPlantillaReporte = request.getTGEDITPLANTREPptpthisPlantillaReporteInstance();
         String tGEDITPLANTREPptpNombreArchivoPDF = request.getTGEDITPLANTREPptpNombreArchivoPDF();
         try {
-            boolean preconditionHolds = (globalServicesRepository.assocOperator144(tGEDITPLANTREPptpthisPlantillaReporte, tGEDITPLANTREPptpNombreArchivoPDF)).equals(Long.valueOf(0));
+            boolean preconditionHolds = (globalServicesRepository.assocOperator138(tGEDITPLANTREPptpthisPlantillaReporte, tGEDITPLANTREPptpNombreArchivoPDF)).equals(Long.valueOf(0));
             if (!preconditionHolds) throw new PreconditionException("No puede crearse el reporte porque ya existe uno de otro tipo con el mismo nombre para el fichero pdf. Utilice otro nombre de fichero");
         } catch (SystemException e) {
             LoggerFactory.getLogger(this.getClass()).error(e.getMessage());
@@ -3631,7 +3631,7 @@ public class GlobalServicesService extends AbstractService {
         Long tGCREARFINIEPSptpatrTramite = request.getTGCREARFINIEPSptpatrTramite();
         Long tGCREARFINIEPSptpatrTipoContrato = request.getTGCREARFINIEPSptpatrTipoContrato();
         try {
-            boolean preconditionHolds = (globalServicesRepository.assocOperator145(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato)).equals(Long.valueOf(0));
+            boolean preconditionHolds = (globalServicesRepository.assocOperator139(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato)).equals(Long.valueOf(0));
             if (!preconditionHolds) throw new PreconditionException("Ya existe otro registro para el mismo trámite y tipo de contrato que se solapa en fechas");
         } catch (SystemException e) {
             LoggerFactory.getLogger(this.getClass()).error(e.getMessage());
@@ -3648,7 +3648,7 @@ public class GlobalServicesService extends AbstractService {
         Long tGCREARFINIEPSptpatrTramite = request.getTGCREARFINIEPSptpatrTramite();
         Long tGCREARFINIEPSptpatrTipoContrato = request.getTGCREARFINIEPSptpatrTipoContrato();
         try {
-            boolean preconditionHolds = (globalServicesRepository.assocOperator146(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato)).equals(Long.valueOf(0));
+            boolean preconditionHolds = (globalServicesRepository.assocOperator140(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato)).equals(Long.valueOf(0));
             if (!preconditionHolds) throw new PreconditionException("Ya existe otro registro para el mismo trámite y tipo de contrato que se solapa en fechas");
         } catch (SystemException e) {
             LoggerFactory.getLogger(this.getClass()).error(e.getMessage());
@@ -3665,7 +3665,7 @@ public class GlobalServicesService extends AbstractService {
         Long tGCREARFINIEPSptpatrTramite = request.getTGCREARFINIEPSptpatrTramite();
         Long tGCREARFINIEPSptpatrTipoContrato = request.getTGCREARFINIEPSptpatrTipoContrato();
         try {
-            boolean preconditionHolds = (globalServicesRepository.assocOperator147(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato)).equals(Long.valueOf(0));
+            boolean preconditionHolds = (globalServicesRepository.assocOperator141(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato)).equals(Long.valueOf(0));
             if (!preconditionHolds) throw new PreconditionException("Ya existe otro registro para el mismo trámite y tipo de contrato que se solapa en fechas");
         } catch (SystemException e) {
             LoggerFactory.getLogger(this.getClass()).error(e.getMessage());
@@ -3682,7 +3682,7 @@ public class GlobalServicesService extends AbstractService {
         Long tGCREARFINIEPSptpatrTramite = request.getTGCREARFINIEPSptpatrTramite();
         Long tGCREARFINIEPSptpatrTipoContrato = request.getTGCREARFINIEPSptpatrTipoContrato();
         try {
-            boolean preconditionHolds = (globalServicesRepository.assocOperator148(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato)).equals(Long.valueOf(0));
+            boolean preconditionHolds = (globalServicesRepository.assocOperator142(tGCREARFINIEPSptpatrDesde, tGCREARFINIEPSptpatrHasta, tGCREARFINIEPSptpatrTramite, tGCREARFINIEPSptpatrTipoContrato)).equals(Long.valueOf(0));
             if (!preconditionHolds) throw new PreconditionException("Ya existe otro registro para el mismo trámite y tipo de contrato que se solapa en fechas");
         } catch (SystemException e) {
             LoggerFactory.getLogger(this.getClass()).error(e.getMessage());
@@ -3788,7 +3788,7 @@ public class GlobalServicesService extends AbstractService {
         Date tGMODFINIEPSptpDesde = request.getTGMODFINIEPSptpDesde();
         Date tGMODFINIEPSptpHasta = request.getTGMODFINIEPSptpHasta();
         try {
-            boolean preconditionHolds = (globalServicesRepository.assocOperator149(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta)).equals(Long.valueOf(0));
+            boolean preconditionHolds = (globalServicesRepository.assocOperator143(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta)).equals(Long.valueOf(0));
             if (!preconditionHolds) throw new PreconditionException("Ya existe otro registro para el mismo trámite y tipo de contrato que se solapa en fechas");
         } catch (SystemException e) {
             LoggerFactory.getLogger(this.getClass()).error(e.getMessage());
@@ -3804,7 +3804,7 @@ public class GlobalServicesService extends AbstractService {
         Date tGMODFINIEPSptpDesde = request.getTGMODFINIEPSptpDesde();
         Date tGMODFINIEPSptpHasta = request.getTGMODFINIEPSptpHasta();
         try {
-            boolean preconditionHolds = (globalServicesRepository.assocOperator150(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta)).equals(Long.valueOf(0));
+            boolean preconditionHolds = (globalServicesRepository.assocOperator144(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta)).equals(Long.valueOf(0));
             if (!preconditionHolds) throw new PreconditionException("Ya existe otro registro para el mismo trámite y tipo de contrato que se solapa en fechas");
         } catch (SystemException e) {
             LoggerFactory.getLogger(this.getClass()).error(e.getMessage());
@@ -3820,7 +3820,7 @@ public class GlobalServicesService extends AbstractService {
         Date tGMODFINIEPSptpDesde = request.getTGMODFINIEPSptpDesde();
         Date tGMODFINIEPSptpHasta = request.getTGMODFINIEPSptpHasta();
         try {
-            boolean preconditionHolds = (globalServicesRepository.assocOperator151(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta)).equals(Long.valueOf(0));
+            boolean preconditionHolds = (globalServicesRepository.assocOperator145(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta)).equals(Long.valueOf(0));
             if (!preconditionHolds) throw new PreconditionException("Ya existe otro registro para el mismo trámite y tipo de contrato que se solapa en fechas");
         } catch (SystemException e) {
             LoggerFactory.getLogger(this.getClass()).error(e.getMessage());
@@ -3836,7 +3836,7 @@ public class GlobalServicesService extends AbstractService {
         Date tGMODFINIEPSptpDesde = request.getTGMODFINIEPSptpDesde();
         Date tGMODFINIEPSptpHasta = request.getTGMODFINIEPSptpHasta();
         try {
-            boolean preconditionHolds = (globalServicesRepository.assocOperator152(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta)).equals(Long.valueOf(0));
+            boolean preconditionHolds = (globalServicesRepository.assocOperator146(tGMODFINIEPSptpthisFechaIniEPS, tGMODFINIEPSptpDesde, tGMODFINIEPSptpHasta)).equals(Long.valueOf(0));
             if (!preconditionHolds) throw new PreconditionException("Ya existe otro registro para el mismo trámite y tipo de contrato que se solapa en fechas");
         } catch (SystemException e) {
             LoggerFactory.getLogger(this.getClass()).error(e.getMessage());
@@ -3927,7 +3927,7 @@ public class GlobalServicesService extends AbstractService {
 
         String tGCREARCONTEXENTOptpatrNumContrato = request.getTGCREARCONTEXENTOptpatrNumContrato();
         try {
-            boolean preconditionHolds = (globalServicesRepository.assocOperator153(tGCREARCONTEXENTOptpatrNumContrato)).equals(Long.valueOf(0));
+            boolean preconditionHolds = (globalServicesRepository.assocOperator147(tGCREARCONTEXENTOptpatrNumContrato)).equals(Long.valueOf(0));
             if (!preconditionHolds) throw new PreconditionException("El número de contrato indicado ya está añadido a la paramétrica");
         } catch (SystemException e) {
             LoggerFactory.getLogger(this.getClass()).error(e.getMessage());
@@ -4196,7 +4196,7 @@ public class GlobalServicesService extends AbstractService {
         /* Action 1: IF (AGENTFuncionario <> NULL) */
         boolean ifCondition1 = (((Funcionario) getAgentInstance(FuncionarioConstants.CLASS_NAME)) != null && !((Funcionario) getAgentInstance(FuncionarioConstants.CLASS_NAME)).isNull());
         if (ifCondition1) {
-            for(FrecuenciaAct step110Entity : globalServicesRepository.assocOperator159(tGFIJARDATOSSINCptNumParametrica)) {
+            for(FrecuenciaAct step110Entity : globalServicesRepository.assocOperator153(tGFIJARDATOSSINCptNumParametrica)) {
                 com.keralty.aeconfiguraciones.viewmodel.frecuenciaact.siu.FijarSincronizacionRequest step10Request = new com.keralty.aeconfiguraciones.viewmodel.frecuenciaact.siu.FijarSincronizacionRequest();
                 step10Request.setFrecuenciaActfijarSincronizacionpthisFrecuenciaActInstance(step110Entity);
                 step10Request.setFrecuenciaActfijarSincronizacionpFechaUltimaSinc(STDFunctions.systemDateFun());
@@ -4209,7 +4209,7 @@ public class GlobalServicesService extends AbstractService {
             /* Action 11: IF (AGENTUsuarioSistemaExterno <> NULL) */
             boolean ifCondition11 = (((UsuarioSistemaExterno) getAgentInstance(UsuarioSistemaExternoConstants.CLASS_NAME)) != null && !((UsuarioSistemaExterno) getAgentInstance(UsuarioSistemaExternoConstants.CLASS_NAME)).isNull());
             if (ifCondition11) {
-                for(FrecuenciaAct step1210Entity : globalServicesRepository.assocOperator160(tGFIJARDATOSSINCptNumParametrica)) {
+                for(FrecuenciaAct step1210Entity : globalServicesRepository.assocOperator154(tGFIJARDATOSSINCptNumParametrica)) {
                     com.keralty.aeconfiguraciones.viewmodel.frecuenciaact.siu.FijarSincronizacionRequest step110Request = new com.keralty.aeconfiguraciones.viewmodel.frecuenciaact.siu.FijarSincronizacionRequest();
                     step110Request.setFrecuenciaActfijarSincronizacionpthisFrecuenciaActInstance(step1210Entity);
                     step110Request.setFrecuenciaActfijarSincronizacionpFechaUltimaSinc(STDFunctions.systemDateFun());
@@ -4219,7 +4219,7 @@ public class GlobalServicesService extends AbstractService {
                     frecuenciaActSrv.fijarSincronizacionImplementation(step110Request);
                 }
             } else {
-                for(FrecuenciaAct step1211Entity : globalServicesRepository.assocOperator161(tGFIJARDATOSSINCptNumParametrica)) {
+                for(FrecuenciaAct step1211Entity : globalServicesRepository.assocOperator155(tGFIJARDATOSSINCptNumParametrica)) {
                     com.keralty.aeconfiguraciones.viewmodel.frecuenciaact.siu.FijarSincronizacionRequest step111Request = new com.keralty.aeconfiguraciones.viewmodel.frecuenciaact.siu.FijarSincronizacionRequest();
                     step111Request.setFrecuenciaActfijarSincronizacionpthisFrecuenciaActInstance(step1211Entity);
                     step111Request.setFrecuenciaActfijarSincronizacionpFechaUltimaSinc(STDFunctions.systemDateFun());
